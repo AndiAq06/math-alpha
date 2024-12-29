@@ -6,9 +6,17 @@ body {
 }
 
 a {
-  color: #333;
+  color: #222;
 }
 
+p {
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
+h2 {
+  color: #333;
+}
 .container {
   display: flex;
   height: 100vh;
@@ -34,7 +42,7 @@ a {
   width: 150px;
   height: 150px;
   border-radius: 50%;
-  margin-top: 2rem;
+  margin-top: 1rem;
 }
 
 .logo h2 {
@@ -79,7 +87,7 @@ a {
 .content {
   flex: 1;
   padding: 20px;
-  margin-left: 18rem;
+  margin-left: 19rem;
 }
 
 .content .home {
@@ -87,7 +95,7 @@ a {
 }
 
 .content h3 {
-  color: #777;
+  color: #222;
 }
 
 .post {
@@ -119,7 +127,7 @@ a {
 .social-media {
   width: 100%;
   display: flex;
-  justify-content: start;
+  justify-content: center;
   margin-top: auto;
   margin-bottom: 30px;
   margin-left: 5px;
@@ -158,4 +166,15 @@ a {
 /* konten statistik */
 .content-statistik {
   width: 90%;
+}
+
+/* footer */
+footer {
+  padding-bottom: 20px;
+  font-size: 15px;
+  color: #333;
+}
+
+footer p {
+  text-align: center;
 }
