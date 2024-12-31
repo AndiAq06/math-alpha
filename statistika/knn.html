@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Apa itu KNN?</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles.css" />
+    <meta name="google-site-verification" content="wSwaOWra1NglT7WH5RGbaNJ2Jrsv1nRoWawtwszrBws" />
+    <!-- math.js -->
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="icon" href="/img/logo.png" sizes="32x32" type="image/png" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <div class="logo">
+          <img src="/img/logo.png" alt="Chirpy Logo" />
+          <h2>MathAlpha</h2>
+        </div>
+        <nav class="menu">
+          <a href="/index.html" class="menu-item"> <i class="fas fa-home"></i> Home </a>
+          <a href="/statistika/index.html" class="menu-item"> <i class="fas fa-chart-bar"></i> Statistika </a>
+          <a href="#" class="menu-item"> <i class="fas fa-square-root-alt"></i> Matematika </a>
+          <a href="/sql/index.html" class="menu-item"> <i class="fas fa-database"></i> SQL </a>
+          <a href="/pemprograman/index.html" class="menu-item"> <i class="fas fa-code"></i> Pemrograman </a>
+          <a href="#" class="menu-item"> <i class="fas fa-info-circle"></i> About </a>
+        </nav>
+
+        <!-- Social Media Icons -->
+        <div class="social-media">
+          <a href="https://www.instagram.com/andiaso06/" target="_blank" class="social-icon">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/andi-ardiansyah-7b25072a9/" target="_blank" class="social-icon">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="https://github.com/AndiAq06" target="_blank" class="social-icon">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="https://www.youtube.com/@andimath06" target="_blank" class="social-icon">
+            <i class="fab fa-youtube"></i>
+          </a>
+          <a href="https://www.twitter.com" target="_blank" class="social-icon">
+            <i class="fab fa-x-twitter"></i>
+          </a>
+        </div>
+      </aside>
+
+      <!-- Main Content -->
+      <main class="content">
+        <h3><a href="/statistika/index.html" class="home">Statistika</a> > Algoritma K-Nearest Neighbors (KNN)</h3>
+        <div class="article">
+          <div class="image-container">
+            <img src="/img/knn.webp" alt="Statistika" class="article-image" />
+            <p class="image-source">Sumber: towardsai</p>
+          </div>
+          <div class="content-statistik">
+            <header>
+              <h1>K-Nearest Neighbors (KNN)</h1>
+            </header>
+
+            <section id="definisi">
+              <h2>Definisi KNN</h2>
+              <p>
+                K-Nearest Neighbors (KNN) adalah algoritma supervised learning yang digunakan untuk klasifikasi dan regresi. Algoritma ini bekerja dengan mencari data tetangga terdekat dari suatu data baru berdasarkan metrik jarak tertentu,
+                seperti jarak Euclidean, Manhattan, atau lainnya. Data baru kemudian diklasifikasikan berdasarkan mayoritas label dari tetangganya atau diestimasi nilai rata-ratanya (untuk regresi). Contoh variabel: \( \sqrt{5} \).
+              </p>
+            </section>
+
+            <section id="cara-kerja">
+              <h2>Cara Menghitung KNN</h2>
+              <ol>
+                <li>Tentukan parameter <code>K</code>, yaitu jumlah tetangga terdekat.</li>
+                <li>Hitung jarak antara data baru dengan semua data dalam dataset menggunakan metrik jarak tertentu.</li>
+                <li>Urutkan data berdasarkan jarak terdekat.</li>
+                <li>Pilih <code>K</code> tetangga terdekat.</li>
+                <li>
+                  Klasifikasi: Tentukan kelas mayoritas dari tetangga terdekat.<br />
+                  Regresi: Hitung rata-rata nilai target dari tetangga terdekat.
+                </li>
+              </ol>
+            </section>
+
+            <section id="metrik-jarak">
+              <h2>Metrik Jarak yang Umum Digunakan</h2>
+              <ul>
+                <li><strong>Jarak Euclidean:</strong> \( \sqrt{\sum_{i=1}^n (x_i - y_i)^2} \)</li>
+                <li><strong>Jarak Manhattan:</strong> \( \sum_{i=1}^n |x_i - y_i| \)</li>
+              </ul>
+            </section>
+
+            <section id="contoh-soal">
+              <h2>Contoh Soal KNN</h2>
+              <p><strong>Soal:</strong></p>
+              <p>Diberikan dataset berikut dengan dua fitur (X1 dan X2) dan label:</p>
+              <pre><code>
+        Data:
+        +-------+------+-------+-------+
+        | Index | X1   | X2    | Label |
+        +-------+------+-------+-------+
+        | 1     | 2.0  | 4.0   | A     |
+        | 2     | 4.0  | 2.0   | B     |
+        | 3     | 4.0  | 4.0   | A     |
+        | 4     | 6.0  | 4.0   | B     |
+        +-------+------+-------+-------+
+        </code>
+                </pre>
+              <p>Jika data baru adalah <code>(X1=5.0, X2=4.5)</code> dan menggunakan K=3, tentukan label data baru dengan menggunakan jarak Euclidean.</p>
+              <p><strong>Penyelesaian:</strong></p>
+              <ol>
+                <li>Hitung jarak Euclidean dari data baru ke setiap data dalam dataset:</li>
+                <p>Jarak ke Data 1: \( \sqrt{(5.0 - 2.0)^2 + (4.5 - 4.0)^2} = \sqrt{9 + 0.25} = 3.04 \)</p>
+                <p>Jarak ke Data 2: \( \sqrt{(5.0 - 4.0)^2 + (4.5 - 2.0)^2} = \sqrt{1 + 6.25} = 2.5 \)</p>
+                <p>Jarak ke Data 3: \( \sqrt{(5.0 - 4.0)^2 + (4.5 - 4.0)^2} = \sqrt{1 + 0.25} = 1.12 \)</p>
+                <p>Jarak ke Data 4: \( \sqrt{(5.0 - 6.0)^2 + (4.5 - 4.0)^2} = \sqrt{1 + 0.25} = 1.12 \)</p>
+                <li>Urutkan data berdasarkan jarak terdekat:</li>
+                <pre><code>1. Data 3 (1.12)
+2. Data 4 (1.12)
+3. Data 2 (2.5)
+4. Data 1 (3.04)</code></pre>
+                <li>Pilih 3 tetangga terdekat (K=3): Data 3, Data 4, Data 2.</li>
+                <li>Mayoritas label dari tetangga: Data 3 (A), Data 4 (B), Data 2 (B). Maka, label mayoritas adalah <strong>B</strong>.</li>
+              </ol>
+              <p><strong>Jawaban:</strong> Data baru diklasifikasikan sebagai <strong>B</strong>.</p>
+            </section>
+
+            <section id="penerapan">
+              <h2>Penerapan KNN dalam Machine Learning</h2>
+              <p>KNN sering digunakan dalam berbagai aplikasi, seperti:</p>
+              <ul>
+                <li>
+                  <strong>Klasifikasi gambar:</strong> KNN digunakan untuk mengelompokkan gambar berdasarkan kemiripan fitur, seperti warna, tekstur, atau bentuk. Fitur-fitur ini diekstraksi dari gambar menggunakan algoritma tertentu, dan
+                  kemudian setiap gambar direpresentasikan sebagai vektor dalam ruang multidimensi. Jarak antara vektor menentukan kelompok gambar tersebut.
+                </li>
+                <li>
+                  <strong>Pengenalan wajah:</strong> KNN digunakan dengan membandingkan vektor fitur wajah yang diekstraksi menggunakan algoritma seperti PCA atau deep learning. Setiap wajah direpresentasikan sebagai titik dalam ruang
+                  multidimensi, dan jarak antara vektor wajah menentukan seberapa mirip wajah tersebut dengan wajah dalam dataset pelatihan.
+                </li>
+                <li>
+                  <strong>Sistem rekomendasi:</strong> Dalam sistem rekomendasi, KNN digunakan untuk menemukan pengguna atau item yang mirip berdasarkan preferensi, ulasan, atau karakteristik lainnya. Misalnya, untuk merekomendasikan film,
+                  algoritma ini mencari pengguna dengan preferensi serupa dan menyarankan film yang mereka sukai.
+                </li>
+                <li>
+                  <strong>Analisis data medis:</strong> Dalam analisis data medis, KNN digunakan untuk mengelompokkan pasien berdasarkan kesamaan gejala atau hasil tes. Hal ini membantu dalam diagnosis penyakit atau rekomendasi pengobatan
+                  berdasarkan riwayat pasien lain yang serupa.
+                </li>
+              </ul>
+              <p>Kelebihan KNN adalah kesederhanaannya, namun karena membutuhkan perhitungan jarak untuk setiap data dalam dataset, algoritma ini cenderung lambat untuk dataset besar.</p>
+            </section>
+
+            <section id="keuntungan-kerugian">
+              <h2>Keuntungan dan Kerugian KNN</h2>
+              <h3>Keuntungan</h3>
+              <ul>
+                <li>Mudah diimplementasikan.</li>
+                <li>Tidak memerlukan asumsi khusus tentang data.</li>
+                <li>Fleksibel untuk klasifikasi dan regresi.</li>
+              </ul>
+              <h3>Kerugian</h3>
+              <ul>
+                <li>Kompleksitas komputasi tinggi untuk dataset besar.</li>
+                <li>Sensitif terhadap skala fitur.</li>
+                <li>Memerlukan penyimpanan seluruh dataset selama inferensi.</li>
+              </ul>
+            </section>
+
+            <section id="kode-python">
+              <h2>Implementasi KNN dalam Python</h2>
+              <p>Berikut adalah contoh implementasi sederhana KNN untuk klasifikasi menggunakan library <code>scikit-learn</code>:</p>
+              <pre>
+        <code>from sklearn.datasets import load_iris
+        from sklearn.model_selection import train_test_split
+        from sklearn.neighbors import KNeighborsClassifier
+        from sklearn.metrics import accuracy_score
+        
+        # Load dataset
+        iris = load_iris()
+        X, y = iris.data, iris.target
+        
+        # Bagi data menjadi training dan testing
+        X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+        
+        # Buat model KNN dengan K=3
+        knn = KNeighborsClassifier(n_neighbors=3)
+        knn.fit(X_train, y_train)
+        
+        # Prediksi data testing
+        y_pred = knn.predict(X_test)
+        
+        # Hitung akurasi
+        accuracy = accuracy_score(y_test, y_pred)
+        print(f"Akurasi model: {accuracy * 100:.2f}%")
+        </code>
+                </pre>
+            </section>
+            <footer>
+              <p>&copy; 2024 Math Alpha. Semua Hak Dilindungi.</p>
+            </footer>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
