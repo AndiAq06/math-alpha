@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://math-alpha-iota.vercel.app/sitemap.xml
