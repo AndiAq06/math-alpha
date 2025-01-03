@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Apa itu K-MEANS?</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles.css" />
+    <meta name="google-site-verification" content="wSwaOWra1NglT7WH5RGbaNJ2Jrsv1nRoWawtwszrBws" />
+    <!-- math.js -->
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="icon" href="/img/logo.png" sizes="32x32" type="image/png" />
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1624084859744468" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <div class="logo">
+          <img src="/img/logo.png" alt="Chirpy Logo" />
+          <h2>MathAlpha</h2>
+        </div>
+        <nav class="menu">
+          <a href="/index.html" class="menu-item"> <i class="fas fa-home"></i> Home </a>
+          <a href="/statistika/index.html" class="menu-item"> <i class="fas fa-chart-bar"></i> Statistika </a>
+          <a href="#" class="menu-item"> <i class="fas fa-square-root-alt"></i> Matematika </a>
+          <a href="/sql/index.html" class="menu-item"> <i class="fas fa-database"></i> SQL </a>
+          <a href="/pemprograman/index.html" class="menu-item"> <i class="fas fa-code"></i> Pemrograman </a>
+          <a href="#" class="menu-item"> <i class="fas fa-info-circle"></i> About </a>
+        </nav>
+
+        <!-- Social Media Icons -->
+        <div class="social-media">
+          <a href="https://www.instagram.com/andiaso06/" target="_blank" class="social-icon">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/andi-ardiansyah-7b25072a9/" target="_blank" class="social-icon">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="https://github.com/AndiAq06" target="_blank" class="social-icon">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="https://www.youtube.com/@andimath06" target="_blank" class="social-icon">
+            <i class="fab fa-youtube"></i>
+          </a>
+          <a href="https://www.twitter.com" target="_blank" class="social-icon">
+            <i class="fab fa-x-twitter"></i>
+          </a>
+        </div>
+      </aside>
+
+      <!-- Main Content -->
+      <main class="content">
+        <h3>Algoritma K-Means (contoh soal dan python)</h3>
+        <div class="article">
+          <div class="image-container">
+            <img src="/img/k-means.png" alt="Statistika" class="article-image" />
+            <p class="image-source">Sumber: javatpoint</p>
+          </div>
+          <div class="content-statistik">
+            <header>
+              <h1>Pengantar K-Means Clustering</h1>
+            </header>
+
+            <section id="definisi">
+              <h2>Definisi K-Means Clustering</h2>
+              <p>
+                K-Means Clustering adalah algoritma unsupervised learning yang digunakan untuk mengelompokkan data ke dalam <code>K</code> kelompok (cluster) berdasarkan kemiripan atau jarak tertentu. Algoritma ini berupaya meminimalkan
+                jumlah kuadrat jarak antara data dalam satu cluster dengan centroidnya. Metode ini sering digunakan dalam analisis data eksploratif untuk menemukan pola tersembunyi di dalam dataset.
+              </p>
+            </section>
+
+            <section id="cara-kerja">
+              <h2>Cara Kerja K-Means</h2>
+              <ol>
+                <li>Tentukan jumlah cluster <code>K</code>.</li>
+                <li>Inisialisasi centroid secara acak sebanyak <code>K</code>.</li>
+                <li>Hitung jarak setiap data ke centroid dan tetapkan data ke cluster dengan jarak terdekat.</li>
+                <li>Perbarui posisi centroid dengan menghitung rata-rata posisi data dalam masing-masing cluster.</li>
+                <li>Ulangi langkah 3 dan 4 hingga centroid tidak berubah atau perubahan nilai sangat kecil.</li>
+              </ol>
+              <p>Proses ini dikenal sebagai iterasi ulang-alik (iterative refinement) yang secara bertahap mengurangi nilai fungsi objektif hingga konvergen.</p>
+            </section>
+
+            <section id="rumus">
+              <h2>Rumus-Rumus yang Berkaitan</h2>
+              <ul>
+                <li><strong>Jarak Euclidean:</strong> \( d(x, c) = \sqrt{\sum_{i=1}^n (x_i - c_i)^2} \)</li>
+                <li><strong>Update Centroid:</strong> \( c_j = \frac{1}{|S_j|} \sum_{x \in S_j} x \)</li>
+                <li><strong>Fungsi Objektif:</strong> \( J = \sum_{j=1}^K \sum_{x \in S_j} \|x - c_j\|^2 \)</li>
+              </ul>
+            </section>
+
+            <section id="contoh-soal">
+              <h2>Contoh Soal K-Means</h2>
+              <p><strong>Soal:</strong></p>
+              <p>Diberikan dataset berikut dengan dua fitur (X1 dan X2):</p>
+              <pre>
+            <code>
+Data:
++-------+------+------+  
+| Index | X1   | X2   |  
++-------+------+------+
+| 1     | 1.0  | 1.0  |  
+| 2     | 1.5  | 2.0  |  
+| 3     | 3.0  | 4.0  |  
+| 4     | 5.0  | 7.0  |  
+| 5     | 3.5  | 5.0  |  
+| 6     | 4.5  | 5.0  |  
+| 7     | 3.5  | 4.5  |  
++-------+------+------+
+            </code>
+                </pre>
+              <p>Lakukan clustering dengan K=2. Centroid awal adalah (1.0, 1.0) dan (5.0, 7.0).</p>
+              <p><strong>Penyelesaian:</strong></p>
+              <ol>
+                <li>
+                  <strong>Langkah 1: Hitung jarak setiap titik ke centroid</strong>
+                  <p>Gunakan rumus jarak Euclidean:</p>
+                  <p>\( d(x, c) = \sqrt{(x_1 - c_1)^2 + (x_2 - c_2)^2} \)</p>
+                  <p>Centroid awal:</p>
+                  <ul>
+                    <li>Centroid 1: (1.0, 1.0)</li>
+                    <li>Centroid 2: (5.0, 7.0)</li>
+                  </ul>
+                  <p>Perhitungan jarak:</p>
+                  <table border="1">
+                    <tr>
+                      <th>Data</th>
+                      <th>Ke Centroid 1</th>
+                      <th>Ke Centroid 2</th>
+                      <th>Cluster</th>
+                    </tr>
+                    <tr>
+                      <td>(1.0, 1.0)</td>
+                      <td>0</td>
+                      <td>7.21</td>
+                      <td>1</td>
+                    </tr>
+                    <tr>
+                      <td>(1.5, 2.0)</td>
+                      <td>1.12</td>
+                      <td>6.50</td>
+                      <td>1</td>
+                    </tr>
+                    <tr>
+                      <td>(3.0, 4.0)</td>
+                      <td>3.61</td>
+                      <td>4.72</td>
+                      <td>1</td>
+                    </tr>
+                    <tr>
+                      <td>(5.0, 7.0)</td>
+                      <td>7.21</td>
+                      <td>0</td>
+                      <td>2</td>
+                    </tr>
+                    <tr>
+                      <td>(3.5, 5.0)</td>
+                      <td>5.31</td>
+                      <td>2.50</td>
+                      <td>2</td>
+                    </tr>
+                    <tr>
+                      <td>(4.5, 5.0)</td>
+                      <td>6.40</td>
+                      <td>2.24</td>
+                      <td>2</td>
+                    </tr>
+                    <tr>
+                      <td>(3.5, 4.5)</td>
+                      <td>5.31</td>
+                      <td>2.69</td>
+                      <td>2</td>
+                    </tr>
+                  </table>
+                </li>
+                <li>
+                  <strong>Langkah 2: Perbarui centroid</strong>
+                  <p>Hitung rata-rata posisi data dalam setiap cluster:</p>
+                  <ul>
+                    <li>Centroid 1: Rata-rata dari (1.0, 1.0), (1.5, 2.0), dan (3.0, 4.0)</li>
+                    <li>Centroid baru: \(( \frac{1.0 + 1.5 + 3.0}{3}, \frac{1.0 + 2.0 + 4.0}{3} ) = (1.83, 2.33)\)</li>
+                    <li>Centroid 2: Rata-rata dari (5.0, 7.0), (3.5, 5.0), (4.5, 5.0), dan (3.5, 4.5)</li>
+                    <li>Centroid baru: \(( \frac{5.0 + 3.5 + 4.5 + 3.5}{4}, \frac{7.0 + 5.0 + 5.0 + 4.5}{4} ) = (4.13, 5.38)\)</li>
+                  </ul>
+                </li>
+                <li>
+                  <strong>Langkah 3: Ulangi langkah 1 dan 2 hingga konvergen</strong>
+                  <p>Proses ini dilanjutkan hingga centroid tidak lagi berubah signifikan.</p>
+                </li>
+              </ol>
+            </section>
+
+            <section id="keuntungan-dan-penerapan">
+              <h2>Keuntungan dan Penerapan</h2>
+              <h3>Keuntungan</h3>
+              <ul>
+                <li>Mudah diimplementasikan dan cepat untuk dataset kecil hingga sedang.</li>
+                <li>Efisien untuk data yang memiliki cluster dengan bentuk bulat.</li>
+              </ul>
+              <h3>Kerugian</h3>
+              <ul>
+                <li>Sensitif terhadap inisialisasi centroid awal, yang dapat menghasilkan solusi lokal yang kurang optimal.</li>
+                <li>Kesulitan dalam menangani data yang memiliki ukuran cluster berbeda atau distribusi yang tidak bulat.</li>
+                <li>Sensitif terhadap outlier, yang dapat memengaruhi posisi centroid secara signifikan.</li>
+                <li>Memerlukan pengguna untuk menentukan jumlah cluster <code>K</code> sebelum proses clustering dimulai.</li>
+              </ul>
+              <h3>Kapan Digunakan</h3>
+              <p>
+                K-Means digunakan ketika ingin mengelompokkan data ke dalam sejumlah cluster yang telah ditentukan sebelumnya, terutama jika data memiliki dimensi rendah hingga sedang. Algoritma ini sering digunakan dalam analisis
+                segmentasi pasar, pengelompokan gambar, dan reduksi data.
+              </p>
+            </section>
+
+            <section id="kode-python">
+              <h2>Implementasi K-Means dalam Python</h2>
+              <p>Berikut adalah contoh implementasi sederhana K-Means menggunakan library <code>scikit-learn</code>:</p>
+              <pre>
+        <code>
+from sklearn.cluster import KMeans
+import numpy as np
+
+# Dataset contoh
+data = np.array([
+    [1.0, 1.0],
+    [1.5, 2.0],
+    [3.0, 4.0],
+    [5.0, 7.0],
+    [3.5, 5.0],
+    [4.5, 5.0],
+    [3.5, 4.5]
+])
+
+# Inisialisasi model K-Means
+kmeans = KMeans(n_clusters=2, random_state=42)
+kmeans.fit(data)
+
+# Output hasil clustering
+print("Centroid:", kmeans.cluster_centers_)
+print("Label:", kmeans.labels_)
+        </code>
+                </pre>
+            </section>
+            <footer>
+              <p>&copy; 2024 Math Alpha. Semua Hak Dilindungi.</p>
+            </footer>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
