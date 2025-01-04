@@ -97,15 +97,15 @@
               <p><strong>Soal:</strong></p>
               <p>Diberikan dataset berikut dengan dua fitur (X1 dan X2) dan label:</p>
               <pre><code>
-        Data:
-        +-------+------+-------+-------+
-        | Index | X1   | X2    | Label |
-        +-------+------+-------+-------+
-        | 1     | 2.0  | 4.0   | A     |
-        | 2     | 4.0  | 2.0   | B     |
-        | 3     | 4.0  | 4.0   | A     |
-        | 4     | 6.0  | 4.0   | B     |
-        +-------+------+-------+-------+
+Data:
++-------+------+-------+-------+
+| Index | X1   | X2    | Label |
++-------+------+-------+-------+
+| 1     | 2.0  | 4.0   | A     |
+| 2     | 4.0  | 2.0   | B     |
+| 3     | 4.0  | 4.0   | A     |
+| 4     | 6.0  | 4.0   | B     |
++-------+------+-------+-------+
         </code>
                 </pre>
               <p>Jika data baru adalah <code>(X1=5.0, X2=4.5)</code> dan menggunakan K=3, tentukan label data baru dengan menggunakan jarak Euclidean.</p>
@@ -171,28 +171,29 @@
               <h2>Implementasi KNN dalam Python</h2>
               <p>Berikut adalah contoh implementasi sederhana KNN untuk klasifikasi menggunakan library <code>scikit-learn</code>:</p>
               <pre>
-        <code>from sklearn.datasets import load_iris
-        from sklearn.model_selection import train_test_split
-        from sklearn.neighbors import KNeighborsClassifier
-        from sklearn.metrics import accuracy_score
-        
-        # Load dataset
-        iris = load_iris()
-        X, y = iris.data, iris.target
-        
-        # Bagi data menjadi training dan testing
-        X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
-        
-        # Buat model KNN dengan K=3
-        knn = KNeighborsClassifier(n_neighbors=3)
-        knn.fit(X_train, y_train)
-        
-        # Prediksi data testing
-        y_pred = knn.predict(X_test)
-        
-        # Hitung akurasi
-        accuracy = accuracy_score(y_test, y_pred)
-        print(f"Akurasi model: {accuracy * 100:.2f}%")
+        <code>
+from sklearn.datasets import load_iris
+from sklearn.model_selection import train_test_split
+from sklearn.neighbors import KNeighborsClassifier
+from sklearn.metrics import accuracy_score
+
+# Load dataset
+iris = load_iris()
+X, y = iris.data, iris.target
+
+# Bagi data menjadi training dan testing
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+
+# Buat model KNN dengan K=3
+knn = KNeighborsClassifier(n_neighbors=3)
+knn.fit(X_train, y_train)
+
+# Prediksi data testing
+y_pred = knn.predict(X_test)
+
+# Hitung akurasi
+accuracy = accuracy_score(y_test, y_pred)
+print(f"Akurasi model: {accuracy * 100:.2f}%")
         </code>
                 </pre>
             </section>

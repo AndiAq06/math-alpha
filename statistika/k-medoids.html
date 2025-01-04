@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Apa itu K-Medoid?</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles.css" />
+    <meta name="google-site-verification" content="wSwaOWra1NglT7WH5RGbaNJ2Jrsv1nRoWawtwszrBws" />
+    <!-- math.js -->
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="icon" href="/img/logo.png" sizes="32x32" type="image/png" />
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1624084859744468" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <div class="logo">
+          <img src="/img/logo.png" alt="Chirpy Logo" />
+          <h2>MathAlpha</h2>
+        </div>
+        <nav class="menu">
+          <a href="/index.html" class="menu-item"> <i class="fas fa-home"></i> Home </a>
+          <a href="/statistika/index.html" class="menu-item"> <i class="fas fa-chart-bar"></i> Statistika </a>
+          <a href="#" class="menu-item"> <i class="fas fa-square-root-alt"></i> Matematika </a>
+          <a href="/sql/index.html" class="menu-item"> <i class="fas fa-database"></i> SQL </a>
+          <a href="/pemprograman/index.html" class="menu-item"> <i class="fas fa-code"></i> Pemrograman </a>
+          <a href="#" class="menu-item"> <i class="fas fa-info-circle"></i> About </a>
+        </nav>
+
+        <!-- Social Media Icons -->
+        <div class="social-media">
+          <a href="https://www.instagram.com/andiaso06/" target="_blank" class="social-icon">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/andi-ardiansyah-7b25072a9/" target="_blank" class="social-icon">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="https://github.com/AndiAq06" target="_blank" class="social-icon">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="https://www.youtube.com/@andimath06" target="_blank" class="social-icon">
+            <i class="fab fa-youtube"></i>
+          </a>
+          <a href="https://www.twitter.com" target="_blank" class="social-icon">
+            <i class="fab fa-x-twitter"></i>
+          </a>
+        </div>
+      </aside>
+
+      <!-- Main Content -->
+      <main class="content">
+        <h3>Algoritma K-Medoid</h3>
+        <div class="article">
+          <div class="image-container">
+            <img src="/img/k-medoid.webp" alt="Statistika" class="article-image" />
+            <p class="image-source">Sumber: towardsai</p>
+          </div>
+          <div class="content-statistik">
+            <header>
+              <h1>Pengantar K-Medoid Clustering</h1>
+            </header>
+
+            <section id="definisi">
+              <h2>Definisi K-Medoid Clustering</h2>
+              <p>
+                K-Medoid Clustering adalah algoritma unsupervised learning yang digunakan untuk mengelompokkan data ke dalam <code>K</code> cluster. Berbeda dengan K-Means, K-Medoid memilih data aktual sebagai pusat cluster (medoid)
+                sehingga lebih tahan terhadap outlier dan data yang memiliki distribusi tidak bulat.
+              </p>
+            </section>
+
+            <section id="cara-kerja">
+              <h2>Cara Kerja K-Medoid</h2>
+              <ol>
+                <li>Tentukan jumlah cluster <code>K</code>.</li>
+                <li>Inisialisasi medoid secara acak sebanyak <code>K</code>.</li>
+                <li>Hitung jarak setiap data ke medoid, lalu tetapkan data ke cluster dengan medoid terdekat.</li>
+                <li>Evaluasi total biaya (sum of dissimilarities) untuk setiap cluster.</li>
+                <li>Ganti medoid dengan data lain di cluster jika penggantian tersebut mengurangi total biaya.</li>
+                <li>Ulangi langkah 3 hingga 5 sampai medoid tidak lagi berubah atau perubahan biaya sangat kecil.</li>
+              </ol>
+            </section>
+
+            <section id="jarak">
+              <h2>Jarak yang Digunakan</h2>
+              <p>Algoritma K-Medoid umumnya menggunakan jarak berikut:</p>
+              <ul>
+                <li><strong>Jarak Manhattan:</strong> \( d(x, c) = \sum_{i=1}^n |x_i - c_i| \)</li>
+                <li><strong>Jarak Euclidean:</strong> \( d(x, c) = \sqrt{\sum_{i=1}^n (x_i - c_i)^2} \)</li>
+              </ul>
+            </section>
+
+            <section id="contoh-soal">
+              <h2>Contoh Soal K-Medoid</h2>
+              <p><strong>Soal:</strong></p>
+              <p>Diberikan dataset berikut dengan dua fitur (X1 dan X2):</p>
+              <pre>
+        <code>
+Data:
++-------+------+------+  
+| Index | X1   | X2   |  
++-------+------+------+
+| 1     | 1.0  | 1.0  |  
+| 2     | 1.5  | 2.0  |  
+| 3     | 3.0  | 4.0  |  
+| 4     | 5.0  | 7.0  |  
+| 5     | 3.5  | 5.0  |  
+| 6     | 4.5  | 5.0  |  
+| 7     | 3.5  | 4.5  |  
++-------+------+------+
+        </code>
+                </pre>
+              <p>Lakukan clustering dengan K=2. Medoid awal adalah data ke-1 (1.0, 1.0) dan ke-4 (5.0, 7.0).</p>
+              <p><strong>Penyelesaian:</strong></p>
+              <ol>
+                <li>Hitung jarak setiap titik ke medoid awal dan tetapkan cluster.</li>
+                <li>Hitung total biaya untuk setiap cluster.</li>
+                <li>Coba ganti medoid dengan titik lain di cluster untuk melihat apakah total biaya berkurang.</li>
+                <li>Ulangi hingga medoid tidak lagi berubah.</li>
+              </ol>
+            </section>
+
+            <section id="keunggulan-dan-kelemahan">
+              <h2>Keunggulan dan Kelemahan</h2>
+              <h3>Keunggulan</h3>
+              <ul>
+                <li>Lebih tahan terhadap outlier dibandingkan K-Means.</li>
+                <li>Menggunakan data aktual sebagai medoid, sehingga hasil clustering lebih representatif.</li>
+              </ul>
+              <h3>Kelemahan</h3>
+              <ul>
+                <li>Kompleksitas komputasi lebih tinggi dibandingkan K-Means.</li>
+                <li>Sulit digunakan untuk dataset berukuran besar tanpa optimasi tambahan.</li>
+              </ul>
+            </section>
+
+            <section id="kode-python">
+              <h2>Implementasi K-Medoid dalam Python</h2>
+              <p>Berikut adalah contoh implementasi sederhana K-Medoid menggunakan library <code>scikit-learn</code>:</p>
+              <h3>1. Persiapan Data</h3>
+
+              <pre><code>
+  import numpy as np
+  import pandas as pd
+  
+  # Dataset contoh
+  data = np.array([
+  [1.0, 1.0],
+  [1.5, 2.0],
+  [3.0, 4.0],
+  [5.0, 7.0],
+  [3.5, 5.0],
+  [4.5, 5.0],
+  [3.5, 4.5]
+  ])
+  
+  # Jika ingin menggunakan DataFrame untuk manipulasi lebih lanjut
+  df = pd.DataFrame(data, columns=['X', 'Y'])          
+  </code></pre>
+
+              <h3>2. Menentukan Jumlah Cluster (K)</h3>
+              <p>Ada beberapa metode untuk menentukan jumlah cluster (K) yang optimal. Dua metode yang sering digunakan adalah:</p>
+              <ul>
+                <li>Elbow Method</li>
+                <li>Silhouette Score</li>
+              </ul>
+              <h4>Elbow Method</h4>
+              <p>Metode ini melibatkan plotting dari jumlah cluster (K) yang berbeda dengan nilai "inertia" atau SSE (Sum of Squared Errors) untuk setiap nilai K, dan mencari titik elbow (titik yang mulai melandai).</p>
+
+              <pre><code>
+import matplotlib.pyplot as plt
+from sklearn_extra.cluster import KMedoids
+
+# Menentukan range K yang akan dicoba
+k_range = range(1, 11)
+inertia = []
+
+for k in k_range:
+    kmedoids = KMedoids(n_clusters=k, random_state=42, method='pam')
+    kmedoids.fit(df)
+    inertia.append(kmedoids.inertia_)
+
+# Plot hasil
+plt.plot(k_range, inertia, marker='o')
+plt.title('Elbow Method for Optimal K (K-Medoids)')
+plt.xlabel('Jumlah Cluster (K)')
+plt.ylabel('Inertia')
+plt.show()   
+</code></pre>
+
+              <h4>Silhouette Score</h4>
+              <p>Silhouette Score memberikan informasi tentang seberapa baik setiap titik data terklaster. Nilai skor berkisar antara -1 dan 1, dimana nilai yang lebih tinggi menunjukkan pemisahan yang lebih baik antar cluster.</p>
+
+              <pre><code>
+from sklearn.metrics import silhouette_score
+
+silhouette_scores = []
+
+for k in k_range[1:]:  # K=1 tidak memiliki silhouette score
+    kmedoids = KMedoids(n_clusters=k, random_state=42, method='pam')
+    kmedoids.fit(df)
+    score = silhouette_score(df, kmedoids.labels_)
+    silhouette_scores.append(score)
+
+# Plot hasil
+plt.plot(k_range[1:], silhouette_scores, marker='o')
+plt.title('Silhouette Scores for Optimal K (K-Medoids)')
+plt.xlabel('Jumlah Cluster (K)')
+plt.ylabel('Silhouette Score')
+plt.show()                
+</code></pre>
+
+              <h3>3. Melakukan K-Medoid dengan K Optimal</h3>
+              <p>Setelah menentukan K yang optimal menggunakan Elbow Method atau Silhouette Score, kita dapat melanjutkan untuk melakukan clustering.</p>
+
+              <pre><code>
+# Menentukan jumlah cluster berdasarkan metode sebelumnya (misalnya, K=3)
+kmedoids = KMedoids(n_clusters=3, random_state=42, method='pam')
+kmedoids.fit(df)
+
+# Output hasil clustering
+print("Medoid:", kmedoids.cluster_centers_)
+print("Label:", kmedoids.labels_)                            
+</code></pre>
+
+              <h3>4. Visualisasi</h3>
+
+              <pre><code>
+plt.scatter(df['X'], df['Y'], c=kmedoids.labels_, cmap='viridis')
+plt.scatter(kmedoids.cluster_centers_[:, 0], kmedoids.cluster_centers_[:, 1], s=200, c='red', marker='X')
+plt.title('Hasil Clustering dengan K-Medoids')
+plt.xlabel('X')
+plt.ylabel('Y')
+plt.show()                
+</code></pre>
+
+              <h3>5. Evaluasi Model</h3>
+              <p>
+                Jika kita tahu nilai sebenarnya dari label cluster (misalnya, jika ini adalah tugas semi-supervised), kita bisa mengevaluasi model menggunakan metrik seperti Homogeneity, Completeness, dan V-Measure. Namun, dalam clustering
+                unsupervised, metrik ini sering tidak tersedia.
+              </p>
+
+              <pre><code>
+from sklearn.metrics import homogeneity_score, completeness_score, v_measure_score
+
+# Misalnya, kita memiliki label sebenarnya (true_labels)
+true_labels = np.array([0, 0, 1, 1, 2, 2, 2])  # Ganti dengan label yang sesuai
+print("Homogeneity:", homogeneity_score(true_labels, kmedoids.labels_))
+print("Completeness:", completeness_score(true_labels, kmedoids.labels_))
+print("V-Measure:", v_measure_score(true_labels, kmedoids.labels_))                
+</code></pre>
+            </section>
+            <footer>
+              <p>&copy; 2024 Math Alpha. Semua Hak Dilindungi.</p>
+            </footer>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
