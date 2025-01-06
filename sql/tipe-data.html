@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tipe Data di Database SQL</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles.css" />
+    <meta name="google-site-verification" content="wSwaOWra1NglT7WH5RGbaNJ2Jrsv1nRoWawtwszrBws" />
+    <link rel="icon" href="/img/logo.png" sizes="32x32" type="image/png" />
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1624084859744468" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <div class="logo">
+          <img src="/img/logo.png" alt="Chirpy Logo" />
+          <h2>MathAlpha</h2>
+        </div>
+        <nav class="menu">
+          <a href="/index.html" class="menu-item"> <i class="fas fa-home"></i> Home </a>
+          <a href="/statistika/index.html" class="menu-item"> <i class="fas fa-chart-bar"></i> Statistika </a>
+          <a href="#" class="menu-item"> <i class="fas fa-square-root-alt"></i> Matematika </a>
+          <a href="/sql/index.html" class="menu-item"> <i class="fas fa-database"></i> SQL </a>
+          <a href="/pemprograman/index.html" class="menu-item"> <i class="fas fa-code"></i> Pemrograman </a>
+          <a href="#" class="menu-item"> <i class="fas fa-info-circle"></i> About </a>
+        </nav>
+
+        <!-- Social Media Icons -->
+        <div class="social-media">
+          <a href="https://www.instagram.com/andiaso06/" target="_blank" class="social-icon">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/andi-ardiansyah-7b25072a9/" target="_blank" class="social-icon">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="https://github.com/AndiAq06" target="_blank" class="social-icon">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="https://www.youtube.com/@andimath06" target="_blank" class="social-icon">
+            <i class="fab fa-youtube"></i>
+          </a>
+          <a href="https://www.twitter.com" target="_blank" class="social-icon">
+            <i class="fab fa-x-twitter"></i>
+          </a>
+        </div>
+      </aside>
+
+      <!-- Main Content -->
+      <main class="content">
+        <h3>Pengantar Statistika</h3>
+        <div class="article">
+          <div class="image-container">
+            <img src="/img/tipe-data.png" alt="Statistika" class="article-image" />
+          </div>
+          <div class="content-statistik">
+            <header>
+              <h1>Tipe Data di Database SQL</h1>
+            </header>
+
+            <section id="integer">
+              <h2>Tipe Data Integer</h2>
+              <p>Tipe data integer digunakan untuk menyimpan bilangan bulat. Berikut adalah rincian tipe data integer yang tersedia:</p>
+              <table>
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Length in Bytes</th>
+                    <th>Minimum Value (Signed)</th>
+                    <th>Maximum Value (Signed)</th>
+                    <th>Minimum Value (Unsigned)</th>
+                    <th>Maximum Value (Unsigned)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>TINYINT</td>
+                    <td>1</td>
+                    <td>-128</td>
+                    <td>127</td>
+                    <td>0</td>
+                    <td>255</td>
+                  </tr>
+                  <tr>
+                    <td>SMALLINT</td>
+                    <td>2</td>
+                    <td>-32768</td>
+                    <td>32767</td>
+                    <td>0</td>
+                    <td>65535</td>
+                  </tr>
+                  <tr>
+                    <td>MEDIUMINT</td>
+                    <td>3</td>
+                    <td>-8388608</td>
+                    <td>8388607</td>
+                    <td>0</td>
+                    <td>16777215</td>
+                  </tr>
+                  <tr>
+                    <td>INT</td>
+                    <td>4</td>
+                    <td>-2147483648</td>
+                    <td>2147483647</td>
+                    <td>0</td>
+                    <td>4294967295</td>
+                  </tr>
+                  <tr>
+                    <td>BIGINT</td>
+                    <td>8</td>
+                    <td>-9223372036854775808</td>
+                    <td>9223372036854775807</td>
+                    <td>0</td>
+                    <td>18446744073709551615</td>
+                  </tr>
+                </tbody>
+              </table>
+            </section>
+
+            <section id="floating-point">
+              <h2>Tipe Data Floating Point</h2>
+              <p>Tipe data floating point digunakan untuk menyimpan angka desimal dengan presisi tinggi. Berikut adalah rincian tipe data floating point yang tersedia:</p>
+              <table>
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Length in Bytes</th>
+                    <th>Minimum Value</th>
+                    <th>Maximum Value</th>
+                    <th>Minimum Value</th>
+                    <th>Maximum Value</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>FLOAT</td>
+                    <td>4</td>
+                    <td>-3.402823466E+38</td>
+                    <td>3.402823466E+38</td>
+                    <td>0</td>
+                    <td>3.402823466E+38</td>
+                  </tr>
+                  <tr>
+                    <td>DOUBLE</td>
+                    <td>8</td>
+                    <td>-1.7976931348623157E+308</td>
+                    <td>1.7976931348623157E+308</td>
+                    <td>0</td>
+                    <td>1.7976931348623157E+308</td>
+                  </tr>
+                </tbody>
+              </table>
+            </section>
+
+            <section id="string">
+              <h2>Tipe Data String</h2>
+              <p>Tipe data string digunakan untuk menyimpan teks atau karakter. Berikut adalah rincian tipe data string yang tersedia:</p>
+              <table>
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Maximum Length</th>
+                    <th>Deskripsi</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>CHAR</td>
+                    <td>255</td>
+                    <td>Menyimpan string dengan panjang tetap.</td>
+                  </tr>
+                  <tr>
+                    <td>VARCHAR</td>
+                    <td>65535</td>
+                    <td>Menyimpan string dengan panjang variabel.</td>
+                  </tr>
+                  <tr>
+                    <td>TEXT</td>
+                    <td>65535</td>
+                    <td>Menyimpan string dalam jumlah besar (teks bebas).</td>
+                  </tr>
+                  <tr>
+                    <td>BLOB</td>
+                    <td>65535</td>
+                    <td>Menyimpan data biner besar seperti gambar atau file.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </section>
+
+            <section id="date-time">
+              <h2>Tipe Data Date and Time</h2>
+              <p>Tipe data ini digunakan untuk menyimpan nilai tanggal dan waktu. Berikut adalah rincian tipe data date and time:</p>
+              <table>
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Format</th>
+                    <th>Range</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>DATE</td>
+                    <td>YYYY-MM-DD</td>
+                    <td>1000-01-01 to 9999-12-31</td>
+                  </tr>
+                  <tr>
+                    <td>DATETIME</td>
+                    <td>YYYY-MM-DD HH:MM:SS</td>
+                    <td>1000-01-01 00:00:00 to 9999-12-31 23:59:59</td>
+                  </tr>
+                  <tr>
+                    <td>TIMESTAMP</td>
+                    <td>YYYY-MM-DD HH:MM:SS</td>
+                    <td>1970-01-01 00:00:01 UTC to 2038-01-19 03:14:07 UTC</td>
+                  </tr>
+                  <tr>
+                    <td>TIME</td>
+                    <td>HH:MM:SS</td>
+                    <td>-838:59:59 to 838:59:59</td>
+                  </tr>
+                  <tr>
+                    <td>YEAR</td>
+                    <td>YYYY</td>
+                    <td>1901 to 2155</td>
+                  </tr>
+                </tbody>
+              </table>
+            </section>
+
+            <section id="tipe-data-boolean">
+              <h2>Tipe Data Boolean</h2>
+              <p>Tipe data boolean digunakan untuk menyimpan nilai logika. Nilai yang valid biasanya adalah <code>TRUE</code>, <code>FALSE</code>, atau <code>NULL</code> (bergantung pada implementasi SQL).</p>
+            </section>
+
+            <section id="tipe-data-binary">
+              <h2>Tipe Data Binary</h2>
+              <p>Tipe data binary digunakan untuk menyimpan data dalam format biner, seperti gambar, video, atau file. Contoh:</p>
+              <ul>
+                <li><strong>BLOB:</strong> Binary Large Object untuk data besar seperti gambar atau file.</li>
+                <li><strong>VARBINARY:</strong> Untuk data biner dengan panjang variabel.</li>
+              </ul>
+            </section>
+
+            <section id="contoh-penggunaan">
+              <h2>Contoh Penggunaan Tipe Data SQL</h2>
+              <pre>
+<code>CREATE TABLE contoh_tipe_data (
+    id INT PRIMARY KEY,
+    nama VARCHAR(50),
+    tanggal_lahir DATE,
+    skor FLOAT,
+    aktif BOOLEAN
+);
+        </code>
+                </pre>
+            </section>
+
+            <section id="keuntungan">
+              <h2>Keuntungan Memilih Tipe Data yang Tepat</h2>
+              <ul>
+                <li>Meningkatkan efisiensi penyimpanan.</li>
+                <li>Memastikan validasi data pada tingkat database.</li>
+                <li>Mempercepat performa query karena data terstruktur dengan baik.</li>
+              </ul>
+            </section>
+            <footer>
+              <p>&copy; 2024 Math Alpha. Semua Hak Dilindungi.</p>
+            </footer>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
