@@ -28,6 +28,12 @@ h1 {
   width: 100%;
 }
 
+.container-math {
+  display: flex;
+  height: 100vh;
+  width: 90%;
+}
+
 /* Sidebar Styling */
 .sidebar {
   background-color: #f4f4f4;
