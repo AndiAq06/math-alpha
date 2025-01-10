@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>git --amend</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles.css" />
+    <meta name="google-site-verification" content="wSwaOWra1NglT7WH5RGbaNJ2Jrsv1nRoWawtwszrBws" />
+    <link rel="icon" href="/img/logo.png" sizes="32x32" type="image/png" />
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1624084859744468" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <div class="logo">
+          <img src="/img/logo.png" alt="Chirpy Logo" />
+          <h2>MathAlpha</h2>
+        </div>
+        <nav class="menu">
+          <a href="/index.html" class="menu-item"> <i class="fas fa-home"></i> Home </a>
+          <a href="/statistika/index.html" class="menu-item"> <i class="fas fa-chart-bar"></i> Statistika </a>
+          <a href="#" class="menu-item"> <i class="fas fa-square-root-alt"></i> Matematika </a>
+          <a href="/sql/index.html" class="menu-item"> <i class="fas fa-database"></i> SQL </a>
+          <a href="/pemprograman/index.html" class="menu-item"> <i class="fas fa-code"></i> Pemrograman </a>
+          <a href="#" class="menu-item"> <i class="fas fa-info-circle"></i> About </a>
+        </nav>
+
+        <!-- Social Media Icons -->
+        <div class="social-media">
+          <a href="https://www.instagram.com/andiaso06/" target="_blank" class="social-icon">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/andi-ardiansyah-7b25072a9/" target="_blank" class="social-icon">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="https://github.com/AndiAq06" target="_blank" class="social-icon">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="https://www.youtube.com/@andimath06" target="_blank" class="social-icon">
+            <i class="fab fa-youtube"></i>
+          </a>
+          <a href="https://www.twitter.com" target="_blank" class="social-icon">
+            <i class="fab fa-x-twitter"></i>
+          </a>
+        </div>
+      </aside>
+
+      <!-- Main Content -->
+      <main class="content">
+        <h3>Git commit --amend</h3>
+        <div class="article">
+          <div class="image-container">
+            <img src="/img/git.webp" alt="Statistika" class="article-image" />
+          </div>
+          <div class="content-statistik">
+            <header>
+              <h1>Git commit --amend dan Cara Menggunakannya</h1>
+            </header>
+
+            <section>
+              Perintah <code>git --amend</code> adalah alat yang kuat dalam Git yang memungkinkan Anda untuk memodifikasi commit terbaru. Jika Anda lupa menambahkan file, melakukan kesalahan dalam pesan commit, atau perlu melakukan
+              perubahan menit terakhir, <code>git --amend</code> memungkinkan Anda memperbaiki kesalahan tanpa membuat commit baru.
+            </section>
+
+            <section>
+              <h2>Kasus Penggunaan Umum <code>git --amend</code></h2>
+              <ul>
+                <li><strong>Mengubah Pesan Commit: </strong>Jika Anda membuat kesalahan atau perlu memperjelas pesan commit, Anda dapat dengan mudah memperbaruinya.</li>
+                <li><strong>Menambahkan File ke Commit Terakhir:</strong> Jika Anda lupa menyertakan file atau perlu memperbarui isi commit, Anda dapat mengamend-nya.</li>
+                <li><strong>Memperbaiki Kesalahan Kecil:</strong> Alih-alih membuat commit baru untuk masalah kecil, Anda dapat memperbarui commit sebelumnya.</li>
+              </ul>
+            </section>
+
+            <section>
+              <h2>Cara Menggunakan <code>git --amend</code></h2>
+              <ul>
+                <li>
+                  <strong>Mengubah Pesan Commit Terakhir:</strong>
+                  <p>Jika Anda perlu mengedit pesan dari commit terbaru Anda, gunakan:</p>
+                  <pre><code>git commit --amend -m "Initial commit: menambahkan hello.txt dan README.md"</code></pre>
+                </li>
+                <li>
+                  <strong>Menambahkan Perubahan ke Commit Sebelumnya:</strong>
+                  <p>Misalkan Anda lupa menambahkan file atau membuat perubahan kecil pada file setelah melakukan commit. Daripada membuat commit baru, Anda bisa menambahkan perubahan tersebut ke commit sebelumnya:</p>
+                  <pre><code>
+git add &lt;file&gt;
+git commit --amend --no-edit
+                    </code></pre>
+                  <p><code>--no-edit</code> menjaga pesan commit asli tetap sama sambil menambahkan perubahan baru. Jika Anda ingin mengubah pesan, cukup hilangkan flag <code>--no-edit</code>.</p>
+                </li>
+                <li>
+                  <strong>Amend Interaktif:</strong>
+                  <p>Untuk kontrol lebih detail mengenai apa yang akan disertakan dalam commit yang diubah, Anda dapat menggunakan fitur rebase interaktif Git. Namun, ini adalah topik yang lebih lanjut.</p>
+                </li>
+              </ul>
+            </section>
+
+            <section>
+              <h2>Poin Penting untuk Diingat</h2>
+              <ul>
+                <li>
+                  <strong>Hindari Mengamend Setelah Push:</strong> Setelah Anda mendorong commit ke repository bersama, sebaiknya tidak mengamend commit tersebut karena ini akan mengubah riwayat dan dapat menyebabkan masalah bagi
+                  kolaborator.
+                </li>
+                <li><strong>Gunakan dengan Hati-hati:</strong> Mengamend menulis ulang riwayat commit, jadi pastikan Anda hanya menggunakan ini sebelum commit dipush atau dibagikan dengan orang lain.</li>
+              </ul>
+            </section>
+
+            <section>
+              <h2>Kesimpulan</h2>
+              <p>
+                <code>git --amend</code> adalah perintah yang berguna untuk merapikan commit terbaru, sehingga lebih mudah menjaga riwayat commit tetap bersih dan akurat. Namun, gunakan dengan hati-hati setelah Anda berbagi perubahan dengan
+                orang lain.
+              </p>
+            </section>
+
+            <footer>
+              <p>&copy; 2024 Math Alpha. Semua Hak Dilindungi.</p>
+            </footer>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
