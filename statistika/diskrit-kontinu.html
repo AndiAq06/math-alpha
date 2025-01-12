@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Distribusi Peubah Acak Diskrit dan Kontinu</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles.css" />
+    <meta name="google-site-verification" content="wSwaOWra1NglT7WH5RGbaNJ2Jrsv1nRoWawtwszrBws" />
+    <!-- math.js -->
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="icon" href="/img/logo.png" sizes="32x32" type="image/png" />
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1624084859744468" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <div class="logo">
+          <img src="/img/logo.png" alt="Chirpy Logo" />
+          <h2>MathAlpha</h2>
+        </div>
+        <nav class="menu">
+          <a href="/index.html" class="menu-item"> <i class="fas fa-home"></i> Home </a>
+          <a href="/statistika/index.html" class="menu-item"> <i class="fas fa-chart-bar"></i> Statistika </a>
+          <a href="#" class="menu-item"> <i class="fas fa-square-root-alt"></i> Matematika </a>
+          <a href="/sql/index.html" class="menu-item"> <i class="fas fa-database"></i> SQL </a>
+          <a href="/pemprograman/index.html" class="menu-item"> <i class="fas fa-code"></i> Pemrograman </a>
+          <a href="#" class="menu-item"> <i class="fas fa-info-circle"></i> About </a>
+        </nav>
+
+        <!-- Social Media Icons -->
+        <div class="social-media">
+          <a href="https://www.instagram.com/andiaso06/" target="_blank" class="social-icon">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/andi-ardiansyah-7b25072a9/" target="_blank" class="social-icon">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="https://github.com/AndiAq06" target="_blank" class="social-icon">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="https://www.youtube.com/@andimath06" target="_blank" class="social-icon">
+            <i class="fab fa-youtube"></i>
+          </a>
+          <a href="https://www.twitter.com" target="_blank" class="social-icon">
+            <i class="fab fa-x-twitter"></i>
+          </a>
+        </div>
+      </aside>
+
+      <!-- Main Content -->
+      <main class="content">
+        <h3>Distribusi Peubah Acak Diskrit dan Kontinu</h3>
+        <div class="article">
+          <div class="image-container">
+            <img src="/img/diskrit.png" alt="Statistika" class="article-image" />
+          </div>
+          <div class="content-statistik">
+            <header>
+              <h1>Distribusi Peubah Acak Diskrit dan Kontinu</h1>
+            </header>
+
+            <section id="pengertian">
+              <h2>Pengertian</h2>
+              <p>Dalam statistika dan probabilitas, peubah acak (random variable) adalah suatu variabel yang nilainya merupakan hasil dari suatu proses acak. Peubah acak dapat dibagi menjadi dua jenis utama:</p>
+              <ul>
+                <li><strong>Peubah Acak Diskrit:</strong> Variabel yang hanya dapat mengambil nilai tertentu, biasanya berupa bilangan bulat. Contoh: jumlah kepala dalam pelemparan koin.</li>
+                <li><strong>Peubah Acak Kontinu:</strong> Variabel yang dapat mengambil nilai dalam rentang kontinu (interval). Contoh: tinggi badan seseorang.</li>
+              </ul>
+            </section>
+
+            <section id="diskrit">
+              <h2>Distribusi Peubah Acak Diskrit</h2>
+              <p>Distribusi peubah acak diskrit menggambarkan probabilitas dari setiap nilai yang dapat diambil oleh variabel. Probabilitas setiap nilai harus memenuhi sifat berikut:</p>
+              <ul>
+                <li>Setiap probabilitas individu bernilai antara 0 dan 1.</li>
+                <li>Total dari semua probabilitas adalah 1.</li>
+              </ul>
+
+              <h3>Contoh Distribusi Diskrit</h3>
+              <ul>
+                <li><strong>Distribusi Binomial:</strong> Digunakan untuk menghitung jumlah keberhasilan dalam sejumlah percobaan tertentu. Contoh: Probabilitas mendapatkan 3 kepala dalam 5 pelemparan koin.</li>
+                <li><strong>Distribusi Poisson:</strong> Digunakan untuk memodelkan jumlah kejadian dalam interval waktu tertentu. Contoh: Jumlah panggilan masuk ke call center dalam satu jam.</li>
+              </ul>
+
+              <h3>Rumus Distribusi Binomial</h3>
+              <p>Probabilitas distribusi binomial diberikan oleh rumus:</p>
+              <p>\[ P(X = k) = \binom{n}{k} p^k (1-p)^{n-k} \]</p>
+              <p>Di mana:</p>
+              <ul>
+                <li>\( n \): jumlah percobaan</li>
+                <li>\( k \): jumlah keberhasilan</li>
+                <li>\( p \): probabilitas keberhasilan pada setiap percobaan</li>
+              </ul>
+            </section>
+
+            <section id="kontinu">
+              <h2>Distribusi Peubah Acak Kontinu</h2>
+              <p>Distribusi peubah acak kontinu menggambarkan probabilitas variabel kontinu dengan menggunakan fungsi kepadatan probabilitas (PDF). Probabilitas suatu variabel berada dalam interval \([a, b]\) dihitung dengan integral:</p>
+              <p>\[ P(a \leq X \leq b) = \int_a^b f(x) \, dx \]</p>
+              <p>Di mana \( f(x) \) adalah fungsi kepadatan probabilitas (PDF) dan harus memenuhi:</p>
+              <ul>
+                <li>\( f(x) \geq 0 \) untuk semua \( x \).</li>
+                <li>\( \int_{-\infty}^{\infty} f(x) \, dx = 1 \).</li>
+              </ul>
+
+              <h3>Contoh Distribusi Kontinu</h3>
+              <ul>
+                <li><strong>Distribusi Normal:</strong> Digunakan untuk memodelkan banyak fenomena alam, seperti tinggi badan atau nilai ujian.</li>
+                <li><strong>Distribusi Eksponensial:</strong> Digunakan untuk memodelkan waktu antar kejadian dalam proses Poisson. Contoh: Waktu antara kedatangan pelanggan di restoran.</li>
+              </ul>
+
+              <h3>Rumus Distribusi Normal</h3>
+              <p>Fungsi kepadatan probabilitas distribusi normal diberikan oleh:</p>
+              <p>\[ f(x) = \frac{1}{\sqrt{2\pi \sigma^2}} e^{-\frac{(x-\mu)^2}{2\sigma^2}} \]</p>
+              <p>Di mana:</p>
+              <ul>
+                <li>\( \mu \): rata-rata</li>
+                <li>\( \sigma \): simpangan baku</li>
+              </ul>
+            </section>
+
+            <section id="contoh">
+              <h2>Contoh</h2>
+              <h3>Peubah Acak Diskrit</h3>
+              <p>Misalkan sebuah dadu dilempar, maka peubah acak \( X \) menyatakan jumlah mata dadu yang muncul. Nilai \( X \) adalah salah satu dari \( \{1, 2, 3, 4, 5, 6\} \).</p>
+
+              <h3>Peubah Acak Kontinu</h3>
+              <p>Misalkan tinggi badan seseorang dipilih secara acak dari populasi tertentu, maka peubah acak \( Y \) menyatakan tinggi badan tersebut. Nilai \( Y \) berada pada interval, misalnya \( [150, 200] \) cm.</p>
+            </section>
+
+            <section id="perbandingan">
+              <h2>Perbandingan Peubah Acak Diskrit dan Kontinu</h2>
+              <table>
+                <thead>
+                  <tr>
+                    <th>Aspek</th>
+                    <th>Diskrit</th>
+                    <th>Kontinu</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Nilai</td>
+                    <td>Terbatas, biasanya bilangan bulat</td>
+                    <td>Tak terbatas dalam interval</td>
+                  </tr>
+                  <tr>
+                    <td>Representasi</td>
+                    <td>Distribusi probabilitas</td>
+                    <td>Fungsi kepadatan probabilitas (PDF)</td>
+                  </tr>
+                  <tr>
+                    <td>Contoh</td>
+                    <td>Jumlah anak dalam keluarga</td>
+                    <td>Tinggi badan seseorang</td>
+                  </tr>
+                </tbody>
+              </table>
+            </section>
+
+            <section id="kesimpulan">
+              <h2>Kesimpulan</h2>
+              <p>
+                Peubah acak diskrit dan kontinu merupakan konsep dasar dalam probabilitas dan statistik yang digunakan untuk memodelkan berbagai fenomena. Peubah acak diskrit cocok untuk data yang berupa bilangan bulat atau dapat dihitung,
+                sementara peubah acak kontinu cocok untuk data yang dapat berada dalam suatu interval. Pemahaman mengenai kedua jenis peubah acak ini sangat penting untuk analisis data dan pengambilan keputusan yang berbasis probabilitas.
+              </p>
+            </section>
+
+            <footer>
+              <p>&copy; 2024 Math Alpha. Semua Hak Dilindungi.</p>
+            </footer>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
