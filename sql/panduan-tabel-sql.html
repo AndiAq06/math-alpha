@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Panduan Tabel di MySQL</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles.css" />
+    <meta name="google-site-verification" content="wSwaOWra1NglT7WH5RGbaNJ2Jrsv1nRoWawtwszrBws" />
+    <link rel="icon" href="/img/logo.png" sizes="32x32" type="image/png" />
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1624084859744468" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <div class="logo">
+          <img src="/img/logo.png" alt="Chirpy Logo" />
+          <h2>MathAlpha</h2>
+        </div>
+        <nav class="menu">
+          <a href="/index.html" class="menu-item"> <i class="fas fa-home"></i> Home </a>
+          <a href="/statistika/index.html" class="menu-item"> <i class="fas fa-chart-bar"></i> Statistika </a>
+          <a href="/matematika/index.html" class="menu-item"> <i class="fas fa-square-root-alt"></i> Matematika </a>
+          <a href="/sql/index.html" class="menu-item"> <i class="fas fa-database"></i> SQL </a>
+          <a href="/pemprograman/index.html" class="menu-item"> <i class="fas fa-code"></i> Pemrograman </a>
+          <a href="#" class="menu-item"> <i class="fas fa-info-circle"></i> About </a>
+        </nav>
+
+        <!-- Social Media Icons -->
+        <div class="social-media">
+          <a href="https://www.instagram.com/andiaso06/" target="_blank" class="social-icon">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/andi-ardiansyah-7b25072a9/" target="_blank" class="social-icon">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="https://github.com/AndiAq06" target="_blank" class="social-icon">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="https://www.youtube.com/@andimath06" target="_blank" class="social-icon">
+            <i class="fab fa-youtube"></i>
+          </a>
+          <a href="https://www.twitter.com" target="_blank" class="social-icon">
+            <i class="fab fa-x-twitter"></i>
+          </a>
+        </div>
+      </aside>
+
+      <!-- Main Content -->
+      <main class="content">
+        <h3>Panduan Tabel di MySQL</h3>
+        <div class="article">
+          <div class="image-container">
+            <img src="/img/tabel.png" alt="Statistika" class="article-image" />
+          </div>
+          <div class="content-statistik">
+            <header>
+              <h1>Panduan Tabel di MySQL</h1>
+            </header>
+            <section id="intro">
+              <h2>Pengenalan</h2>
+              <p>Data dalam MySQL disimpan di dalam tabel. Tiap tabel biasanya menyimpan satu jenis data. Contohnya, dalam aplikasi toko online, kita dapat membuat tabel seperti:</p>
+              <ul>
+                <li><strong>Tabel Barang</strong>: Menyimpan informasi tentang produk yang dijual.</li>
+                <li><strong>Tabel Pelanggan</strong>: Menyimpan informasi tentang pelanggan.</li>
+                <li><strong>Tabel Penjual</strong>: Menyimpan informasi tentang penjual.</li>
+              </ul>
+              <p>Sebelum menyimpan data, kita harus membuat tabel dan menentukan struktur tabel, seperti nama kolom dan tipe datanya.</p>
+            </section>
+
+            <section id="create-table">
+              <h2>Membuat Tabel</h2>
+              <p>Untuk membuat tabel di MySQL, gunakan perintah <code>CREATE TABLE</code>. Berikut adalah contohnya:</p>
+              <pre><code>CREATE TABLE barang (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nama VARCHAR(100) NOT NULL,
+    harga DECIMAL(10, 2) NOT NULL,
+    stok INT DEFAULT 0
+);
+                </code></pre>
+              <p>Penjelasan:</p>
+              <ul>
+                <li><code>id</code>: Kolom dengan tipe <code>INT</code>, otomatis bertambah, dan digunakan sebagai primary key.</li>
+                <li><code>nama</code>: Kolom teks dengan panjang maksimum 100 karakter, tidak boleh bernilai <code>NULL</code>.</li>
+                <li><code>harga</code>: Kolom angka desimal dengan 2 angka desimal.</li>
+                <li><code>stok</code>: Kolom integer dengan nilai default 0.</li>
+              </ul>
+            </section>
+
+            <section id="view-table">
+              <h2>Melihat Tabel</h2>
+              <p>Untuk melihat daftar tabel dalam database, gunakan perintah:</p>
+              <pre><code>SHOW TABLES;</code></pre>
+            </section>
+
+            <section id="table-structure">
+              <h2>Melihat Struktur Tabel</h2>
+              <p>Untuk melihat struktur tabel, gunakan perintah:</p>
+              <pre><code>DESCRIBE nama_tabel;</code></pre>
+              <p>Contoh:</p>
+              <pre><code>DESCRIBE barang;</code></pre>
+            </section>
+
+            <section id="modify-table">
+              <h2>Mengubah Tabel</h2>
+              <p>Kita bisa mengubah tabel dengan perintah <code>ALTER TABLE</code>. Contohnya:</p>
+              <ul>
+                <li><strong>Menambah Kolom:</strong></li>
+                <pre><code>ALTER TABLE barang ADD kategori VARCHAR(50);</code></pre>
+                <li><strong>Mengubah Kolom:</strong></li>
+                <pre><code>ALTER TABLE barang MODIFY harga DECIMAL(12, 2);</code></pre>
+                <li><strong>Menghapus Kolom:</strong></li>
+                <pre><code>ALTER TABLE barang DROP COLUMN stok;</code></pre>
+              </ul>
+            </section>
+
+            <section id="null-default">
+              <h2>NULL dan Default Value</h2>
+              <p><strong>NULL</strong>: Nilai default jika kolom tidak diisi. Untuk mencegah <code>NULL</code>, tambahkan <code>NOT NULL</code> saat membuat kolom.</p>
+              <p><strong>Default Value:</strong> Kita bisa menetapkan nilai default menggunakan <code>DEFAULT</code>. Contoh:</p>
+              <pre><code>CREATE TABLE pelanggan (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nama VARCHAR(100) NOT NULL,
+    email VARCHAR(100) DEFAULT 'tidakada@contoh.com'
+);
+                </code></pre>
+              <p>Khusus untuk kolom <code>DATETIME</code> atau <code>TIMESTAMP</code>, gunakan <code>CURRENT_TIMESTAMP</code> sebagai nilai default:</p>
+              <pre><code>CREATE TABLE log (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    waktu TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+                </code></pre>
+            </section>
+
+            <section id="delete-truncate">
+              <h2>Menghapus Data atau Tabel</h2>
+              <p><strong>Truncate:</strong> Menghapus semua data dalam tabel tanpa menghapus strukturnya:</p>
+              <pre><code>TRUNCATE TABLE nama_tabel;</code></pre>
+              <p><strong>Drop:</strong> Menghapus tabel beserta strukturnya:</p>
+              <pre><code>DROP TABLE nama_tabel;</code></pre>
+            </section>
+
+            <section id="storage-engines">
+              <h2>Storage Engines</h2>
+              <p>MySQL mendukung berbagai <em>storage engine</em> untuk pengolahan data. <strong>InnoDB</strong> adalah yang paling populer.</p>
+              <p>Untuk melihat daftar <em>storage engine</em> yang tersedia, gunakan perintah:</p>
+              <pre><code>SHOW ENGINES;</code></pre>
+              <img src="/img/engine.jpeg" alt="sql" class="article-image" />
+            </section>
+            <footer>
+              <p>&copy; 2024 Math Alpha. Semua Hak Dilindungi.</p>
+            </footer>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
