@@ -9,67 +9,92 @@
 
 <url>
   <loc>https://math-alpha-iota.vercel.app/</loc>
-  <lastmod>2025-01-10T01:05:52+00:00</lastmod>
+  <lastmod>2025-01-14T23:15:28+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
   <loc>https://math-alpha-iota.vercel.app/index.html</loc>
-  <lastmod>2025-01-10T01:05:52+00:00</lastmod>
+  <lastmod>2025-01-14T23:15:29+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://math-alpha-iota.vercel.app/statistika/index.html</loc>
-  <lastmod>2025-01-10T01:05:53+00:00</lastmod>
+  <lastmod>2025-01-14T23:15:29+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://math-alpha-iota.vercel.app/matematika/index.html</loc>
+  <lastmod>2025-01-14T23:15:29+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://math-alpha-iota.vercel.app/sql/index.html</loc>
-  <lastmod>2025-01-10T01:05:53+00:00</lastmod>
+  <lastmod>2025-01-14T23:15:30+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://math-alpha-iota.vercel.app/pemprograman/index.html</loc>
-  <lastmod>2025-01-10T01:05:53+00:00</lastmod>
+  <lastmod>2025-01-14T23:15:30+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://math-alpha-iota.vercel.app/statistika/pengantar-statistika.html</loc>
-  <lastmod>2025-01-10T01:05:53+00:00</lastmod>
+  <lastmod>2025-01-14T23:15:30+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://math-alpha-iota.vercel.app/pemprograman/pengantar-javascript.html</loc>
-  <lastmod>2025-01-10T01:05:54+00:00</lastmod>
+  <lastmod>2025-01-14T23:15:30+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://math-alpha-iota.vercel.app/statistika/diskrit-kontinu.html</loc>
+  <lastmod>2025-01-14T23:15:30+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://math-alpha-iota.vercel.app/statistika/knn.html</loc>
-  <lastmod>2025-01-10T01:05:54+00:00</lastmod>
+  <lastmod>2025-01-14T23:15:31+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://math-alpha-iota.vercel.app/statistika/k-means.html</loc>
-  <lastmod>2025-01-10T01:05:54+00:00</lastmod>
+  <lastmod>2025-01-14T23:15:31+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://math-alpha-iota.vercel.app/statistika/k-medoids.html</loc>
-  <lastmod>2025-01-10T01:05:54+00:00</lastmod>
+  <lastmod>2025-01-14T23:15:31+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://math-alpha-iota.vercel.app/matematika/barisan-deret.html</loc>
+  <lastmod>2025-01-14T23:15:31+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://math-alpha-iota.vercel.app/sql/pengantar-sql.html</loc>
-  <lastmod>2025-01-10T01:05:54+00:00</lastmod>
+  <lastmod>2025-01-14T23:15:31+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://math-alpha-iota.vercel.app/sql/tipe-data.html</loc>
-  <lastmod>2025-01-10T01:05:54+00:00</lastmod>
+  <lastmod>2025-01-14T23:15:31+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://math-alpha-iota.vercel.app/sql/panduan-tabel-sql.html</loc>
+  <lastmod>2025-01-14T23:15:32+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://math-alpha-iota.vercel.app/pemprograman/git-amend.html</loc>
-  <lastmod>2025-01-10T13:25:16+00:00</lastmod>
+  <lastmod>2025-01-14T23:15:32+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://math-alpha-iota.vercel.app/pemprograman/login-design.html</loc>
+  <lastmod>2025-01-14T23:15:32+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 
