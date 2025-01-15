@@ -205,3 +205,8 @@ footer {
 footer p {
   text-align: center;
 }
+
+/* bagian soal matematika */
+.soal {
+  font-size: 20px;
+}
