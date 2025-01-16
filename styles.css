@@ -24,12 +24,13 @@ h1 {
 
 .container {
   display: flex;
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
 }
 
 .container-math {
   display: flex;
+  min-height: 100vh;
   height: 100vh;
   width: 90%;
 }
