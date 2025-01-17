@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Perintah Git</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles.css" />
+    <meta name="google-site-verification" content="wSwaOWra1NglT7WH5RGbaNJ2Jrsv1nRoWawtwszrBws" />
+    <link rel="icon" href="/img/logo.png" sizes="32x32" type="image/png" />
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1624084859744468" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Hamburger Menu -->
+      <button class="hamburger-menu">
+        <i class="fas fa-bars"></i>
+      </button>
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <button class="close-btn">&times;</button>
+        <div class="logo">
+          <img src="/img/logo.png" alt="Chirpy Logo" />
+          <h2>MathAlpha</h2>
+        </div>
+        <nav class="menu">
+          <a href="/index.html" class="menu-item"> <i class="fas fa-home"></i> Home </a>
+          <a href="/statistika/index.html" class="menu-item"> <i class="fas fa-chart-bar"></i> Statistika </a>
+          <a href="/matematika/index.html" class="menu-item"> <i class="fas fa-square-root-alt"></i> Matematika </a>
+          <a href="/sql/index.html" class="menu-item"> <i class="fas fa-database"></i> SQL </a>
+          <a href="/pemprograman/index.html" class="menu-item"> <i class="fas fa-code"></i> Pemrograman </a>
+          <a href="#" class="menu-item"> <i class="fas fa-info-circle"></i> About </a>
+        </nav>
+
+        <!-- Social Media Icons -->
+        <div class="social-media">
+          <a href="https://www.instagram.com/andiaso06/" target="_blank" class="social-icon">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/andi-ardiansyah-7b25072a9/" target="_blank" class="social-icon">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="https://github.com/AndiAq06" target="_blank" class="social-icon">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="https://www.youtube.com/@andimath06" target="_blank" class="social-icon">
+            <i class="fab fa-youtube"></i>
+          </a>
+          <a href="https://www.twitter.com" target="_blank" class="social-icon">
+            <i class="fab fa-x-twitter"></i>
+          </a>
+        </div>
+      </aside>
+
+      <!-- Main Content -->
+      <main class="content">
+        <h3>Perintah Git</h3>
+        <div class="article">
+          <div class="image-container">
+            <img src="/img/git_github.png" alt="Statistika" class="article-image" />
+          </div>
+          <div class="content-statistik">
+            <header>
+              <h1>Perintah Git dan GitHub</h1>
+            </header>
+
+            <section class="git-intro">
+              <h2>Apa itu Git?</h2>
+              <p>Git adalah sistem kontrol versi terdistribusi untuk melacak perubahan pada kode sumber. Git memungkinkan banyak pengembang bekerja pada proyek yang sama tanpa menghapus pekerjaan orang lain.</p>
+            </section>
+
+            <section class="git-concept">
+              <h2>Konsep Dasar Git</h2>
+              <h3>1. Direktori Kerja (Working Directory)</h3>
+              <p>Direktori Kerja adalah tempat Anda melakukan perubahan pada file proyek. Perubahan di sini tidak tercatat di Git hingga Anda menambahkannya ke <strong>Staging Area</strong> menggunakan perintah <code>git add</code>.</p>
+
+              <h3>2. Staging Area</h3>
+              <p>Staging Area adalah area sementara di Git di mana perubahan yang akan dimasukkan ke dalam <strong>commit</strong> disiapkan. Anda dapat menambahkan perubahan menggunakan perintah <code>git add</code>.</p>
+
+              <h3>3. Repositori</h3>
+              <p>Repositori adalah tempat penyimpanan permanen untuk seluruh riwayat perubahan dalam proyek Git. Setiap kali Anda melakukan <strong>commit</strong>, perubahan akan disimpan di repositori.</p>
+            </section>
+
+            <section class="git-commands">
+              <h2>Perintah Git Dasar</h2>
+              <div class="command">
+                <h3>1. git init</h3>
+                <p>Perintah ini digunakan untuk menginisialisasi repositori Git baru di direktori saat ini.</p>
+                <code>git init</code>
+              </div>
+
+              <div class="command">
+                <h3>2. git status</h3>
+                <p>Perintah ini menampilkan status dari direktori kerja dan staging area, termasuk perubahan yang akan dikomit.</p>
+                <code>git status</code>
+              </div>
+
+              <div class="command">
+                <h3>3. git add</h3>
+                <p>Perintah ini menambahkan perubahan pada file untuk disiapkan dalam staging area.</p>
+                <code>git add <i>nama_file</i></code>
+              </div>
+
+              <div class="command">
+                <h3>4. git commit</h3>
+                <p>Perintah ini mengonfirmasi perubahan yang ada di staging area dan menambahkannya ke riwayat commit.</p>
+                <code>git commit -m "Pesan commit Anda"</code>
+              </div>
+
+              <div class="command">
+                <h3>5. git log</h3>
+                <p>Perintah ini menampilkan riwayat commit dari repositori.</p>
+                <code>git log</code>
+              </div>
+
+              <div class="command">
+                <h3>6. git diff</h3>
+                <p>Perintah ini menampilkan perbedaan antara perubahan yang ada di direktori kerja dan yang ada di staging area.</p>
+                <code>git diff</code>
+              </div>
+
+              <div class="command">
+                <h3>7. git push</h3>
+                <p>Perintah ini digunakan untuk mengirim perubahan yang sudah dikomit ke repositori remote (misalnya GitHub).</p>
+                <code>git push origin main</code>
+              </div>
+
+              <div class="command">
+                <h3>8. git pull</h3>
+                <p>Perintah ini digunakan untuk mengambil dan menggabungkan perubahan dari repositori remote ke repositori lokal Anda.</p>
+                <code>git pull origin main</code>
+              </div>
+            </section>
+
+            <section class="github-guide">
+              <h2>Panduan GitHub</h2>
+              <p>
+                <strong>GitHub</strong> adalah layanan hosting untuk proyek Git berbasis web yang memungkinkan kolaborasi antara pengembang. Di GitHub, Anda dapat membuat repositori untuk proyek Anda, berkolaborasi dengan orang lain, serta
+                melakukan versi kontrol dengan cara yang mudah.
+              </p>
+
+              <h3>1. Membuat Repositori di GitHub</h3>
+              <p>Untuk memulai proyek di GitHub, Anda harus membuat repositori terlebih dahulu.</p>
+              <p>Langkah-langkah:</p>
+              <ol>
+                <li>Login ke GitHub dan klik tombol "New" di halaman repositori.</li>
+                <li>Isi nama repositori dan pilih opsi lainnya sesuai kebutuhan.</li>
+                <li>Klik "Create repository".</li>
+              </ol>
+
+              <h3>2. Menghubungkan Repositori Lokal dengan GitHub</h3>
+              <p>Setelah membuat repositori di GitHub, Anda perlu menghubungkan repositori lokal Anda dengan repositori di GitHub menggunakan perintah <code>git remote</code>.</p>
+              <p>Langkah-langkah:</p>
+              <ol>
+                <li>Salin URL repositori GitHub.</li>
+                <li>Gunakan perintah berikut untuk menghubungkan repositori lokal ke repositori GitHub:</li>
+                <code>git remote add origin <i>URL_GITHUB</i></code>
+              </ol>
+
+              <h3>3. Push dan Pull dari GitHub</h3>
+              <p>Setelah repositori terhubung, Anda bisa menggunakan perintah <code>git push</code> untuk mengirim perubahan lokal ke GitHub, dan <code>git pull</code> untuk menarik perubahan terbaru dari GitHub.</p>
+              <p>Contoh perintah:</p>
+              <code>git push -u origin main</code>
+              <p>Perintah di atas digunakan untuk mengirim commit lokal ke repositori GitHub di cabang <code>main</code>.</p>
+            </section>
+
+            <footer>
+              <p>&copy; 2024 Math Alpha. Semua Hak Dilindungi.</p>
+            </footer>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <script src="/script.js"></script>
+  </body>
+</html>
