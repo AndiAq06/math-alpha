@@ -95,13 +95,19 @@
               <div class="command">
                 <h3>1. git init</h3>
                 <p>Perintah ini digunakan untuk menginisialisasi repositori Git baru di direktori saat ini. Tujuannya adalah agar project kita dapat menjalankan versioning control system.</p>
-                <code>git init</code>
+                  <ul>
+                    <li>
+                      <code>git init</code>
+                    </li>
+                  </ul>
               </div>
 
               <div class="command">
                 <h3>2. git status</h3>
                 <p>Perintah ini menampilkan status dari direktori kerja dan staging area, termasuk perubahan yang akan dikomit.</p>
-                <code>git status</code>
+                <ul>
+                  <li><code>git status</code></li>
+                </ul>
               </div>
 
               <div class="command">
@@ -111,8 +117,11 @@
                   di staging area. Kita bisa menjalankan perintah <strong>git add nama_file</strong> namafiles atau <strong>git add .</strong>, biasanya jika kita tidak ingin memindahkan satu-satu file ke staging area kita menggunakan
                   <strong>git add .</strong>
                 </p>
-                <code>git add <i>nama_file</i></code> atau<br>
-                <code>git add <i>.</i></code>
+                <ul>
+                  <li><code>git add <i>nama_file</i></code> </li>
+                  <li><code>git add <i>.</i></code></li>
+                </ul>
+
                 
               </div>
 
@@ -126,7 +135,9 @@
                   Anda dapat menggunakan perintah <code>git commit</code> atau <code>git commit -m "pesan commit"</code>. Apa perbedaannya? Dengan <code>git commit</code>, Anda dapat menambahkan deskripsi yang lebih rinci, sedangkan
                   <code>git commit -m "pesan commit"</code> adalah cara cepat (shortcut) untuk menambahkan pesan singkat saat melakukan commit.
                 </p>
-                <code>git commit -m "Pesan commit Anda"</code>
+                <ul>
+                  <li><code>git commit -m "Pesan commit Anda"</code></li>
+                </ul>
               </div>
 
               <div>
@@ -154,7 +165,9 @@
                   <li><strong>main</strong>: Nama cabang (branch) di repositori remote yang menjadi tujuan untuk mengunggah commit.</li>
                 </ul>
                 <p>Pastikan Anda memiliki hak akses ke repositori remote sebelum menjalankan perintah ini.</p>
-                <code>git push origin main</code>
+                <ul>
+                  <li><code>git push origin main</code></li>
+                </ul>
               </div>
 
               <div class="command">
@@ -167,7 +180,9 @@
                   <li><code>git branch -d nama_cabang</code>: Menghapus cabang <strong>nama_cabang</strong> (hanya jika sudah digabungkan ke cabang lain).</li>
                 </ul>
                 <p>Cabang sering digunakan bersamaan dengan perintah <code>git checkout</code> atau <code>git switch</code> untuk berpindah antar cabang.</p>
-                <code>git branch nama_fitur</code>
+                <ul>
+                  <li><code>git branch nama_fitur</code></li>
+                </ul>
               </div>
 
               <div class="command">
@@ -180,20 +195,26 @@
                   <li><code>git merge --abort</code>: Membatalkan proses merge jika terjadi konflik dan Anda ingin kembali ke keadaan semula sebelum merge.</li>
                 </ul>
                 <p>Perintah <strong>git merge</strong> sering digunakan setelah bekerja di cabang fitur untuk menggabungkan perubahan kembali ke cabang utama, seperti <code>master</code> atau <code>main</code>.</p>
-                <code>git merge fitur_baru</code>
+                <ul>
+                  <li><code>git merge fitur_baru</code></li>
+                </ul>
               </div>             
               
 
               <div class="command">
                 <h3>9. git log</h3>
                 <p>Perintah ini menampilkan riwayat commit dari repositori.</p>
-                <code>git log</code>
+                <ul>
+                  <li><code>git log</code></li>
+                </ul>
               </div>
 
               <div class="command">
                 <h3>10. git diff</h3>
                 <p>Perintah ini menampilkan perbedaan antara perubahan yang ada di direktori kerja dan yang ada di staging area.</p>
-                <code>git diff</code>
+                <ul>
+                  <li><code>git diff</code></li>
+                </ul>
               </div>
 
 
@@ -201,7 +222,7 @@
               <div class="command">
                 <h3>11. git pull</h3>
                 <p>Perintah ini digunakan untuk mengambil dan menggabungkan perubahan dari repositori remote ke repositori lokal Anda.</p>
-                <code>git pull origin main</code>
+                <ul><li><code>git pull origin main</code></li></ul>
               </div>
             </section>
 
