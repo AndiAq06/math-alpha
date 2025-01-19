@@ -270,10 +270,14 @@ footer p {
     display: block;
   }
 
+  .container-math {
+    width: 100%;
+  }
+
   .content {
     flex: 1;
-    padding: 10px;
-    margin-left: 4rem;
+    padding: 5px;
+    margin-left: 1rem;
   }
 
   iframe {

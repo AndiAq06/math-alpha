@@ -109,91 +109,155 @@
               </ul>
             </section>
 
-            <h2>Sifat-sifat Logaritma dan Pembuktian</h2>
+            <h2>Sifat-sifat Logaritma</h2>
+            <ol>
+              <li>\(\log_a a = 1\)</li>
+              <li>\(\log_a 1 = 0\)</li>
+              <li>\(\log_a x + \log_a y = \log_a (x \cdot y)\)</li>
+              <li>\(\log_a x - \log_a y = \log_a \left(\frac{x}{y}\right)\)</li>
+              <li>\(\log_a x^n = n \cdot \log_a x\)</li>
+              <li>\( \log_{a^n} x^m = \frac{m}{n} \log_a x \)</li>
+              <li>\(\log_a x = \frac{\log_p x}{\log_p a}\)</li>
+              <li>\(\log_a x = \frac{1}{\log_x a}\)</li>
+              <li>\(\log_a x \cdot \log_b x = \log_b a\)</li>
+            </ol>
+
+            <h2>Pembuktian Sifat-sifat Logaritma</h2>
 
             <section id="sifat1">
               <h3>1. <span class="math">\(\log_a a = 1\)</span></h3>
-              <p><strong>Pembuktian:</strong></p>
-              <p>Definisi logaritma menyatakan bahwa <span class="math">\(\log_a a = 1\)</span> karena <span class="math">\(a^1 = a\)</span>. Jadi, terbukti bahwa <span class="math">\(\log_a a = 1\)</span>.</p>
-              <p><strong>Contoh:</strong></p>
-              <p>1. <span class="math">\(\log_2 2 = 1\)</span></p>
-              <p>2. <span class="math">\(\log_{10} 10 = 1\)</span></p>
+              <p><strong>Pembuktian 1:</strong></p>
+              <span>Dengan menggunakan definisi logaritma yang menyatakan bahwa <span class="math">\(\log_a a = 1\)</span> karena <span class="math">\(a^1 = a\)</span>. Jadi, terbukti bahwa <span class="math">\(\log_a a = 1\)</span>.</span>
+              <br />
+              <p><strong>Pembuktian 2:</strong></p>
+              <span>Misalkan \( \log_a a = y \) maka dengan menggunakan definisi logaritma didapatkan:</span> <br />
+              <span>\( a^y = a => a^y = a^1\)</span> <br />
+              <span>agar persamaan \(a^y = a^1\) itu benar maka haruslah \(y = 1\) dan sebelumnya kita memisalkan \(y = \log_a a\) sehingga di peroleh:</span> <br />
+              <span>\( \log_a a= 1\)</span>
             </section>
 
             <section id="sifat2">
               <h3>2. <span class="math">\(\log_a 1 = 0\)</span></h3>
-              <p><strong>Pembuktian:</strong></p>
+              <p><strong>Pembuktian 1:</strong></p>
               <p>Berdasarkan definisi logaritma, <span class="math">\(\log_a 1 = 0\)</span> karena <span class="math">\(a^0 = 1\)</span>. Ini membuktikan bahwa <span class="math">\(\log_a 1 = 0\)</span>.</p>
-              <p><strong>Contoh:</strong></p>
-              <p>1. <span class="math">\(\log_2 1 = 0\)</span></p>
-              <p>2. <span class="math">\(\log_{10} 1 = 0\)</span></p>
+              <p><strong>Pembuktian 2:</strong></p>
+              <span>Misalkan \( \log_a 1 = y \) maka dengan menggunakan definisi logaritma didapatkan:</span> <br />
+              <span>\( a^y = 1 => a^y = a^0\)</span> <br />
+              <span>agar persamaan \(a^y = a^0\) itu benar maka haruslah \(y = 0\) dan sebelumnya kita memisalkan \(y = \log_a 1\) sehingga di peroleh:</span> <br />
+              <span>\( \log_a 1= 0\)</span>
             </section>
 
             <section id="sifat3">
               <h3>3. <span class="math">\(\log_a x + \log_a y = \log_a (x \cdot y)\)</span></h3>
               <p><strong>Pembuktian:</strong></p>
-              <p>
-                Misalkan <span class="math">\(\log_a x = m\)</span> dan <span class="math">\(\log_a y = n\)</span>. Maka <span class="math">\(a^m = x\)</span> dan <span class="math">\(a^n = y\)</span>. Dengan sifat eksponen,
-                <span class="math">\(a^{m+n} = x \cdot y\)</span>. Oleh karena itu, <span class="math">\(\log_a (x \cdot y) = \log_a x + \log_a y\)</span>.
-              </p>
-              <p><strong>Contoh:</strong></p>
-              <p>1. <span class="math">\(\log_2 8 + \log_2 4 = \log_2 (8 \cdot 4) = \log_2 32\)</span></p>
-              <p>2. <span class="math">\(\log_{10} 100 + \log_{10} 10 = \log_{10} (100 \cdot 10) = \log_{10} 1000\)</span></p>
+              <span> Misalkan \(\log_a x = m\) dan \(\log_a y = n\) sehingga diperoleh: </span> <br />
+              <span>\(\log_a x = m => a^m = x\) </span> <br />
+              <span>\(\log_a y = n => a^n = y\)</span> <br />
+              <span>Dengan menggunakan sifat berpangkat diperoleh:</span> <br />
+              <span>\( x . y = a^m . a^n \)</span> <br />
+              <span>\( x . y = a^{m+n} \)</span> <br />
+              <span>Lalu dengan menggunakan definisi logaritma:</span> <br />
+              <span>\( \log_a (x. y) = m + n \)</span> <br />
+              <span>Karena sebelumnya kita telah memisalkan \( \log_a x = m\) dan \(\log_a y = n\) sehingga persamaannya menjadi</span> <br />
+              <span>\( \log_a (x. y) = m + n \)</span> <br />
+              <span>\( \log_a (x. y) = \log_a x + \log_a y \)</span>
             </section>
 
             <section id="sifat4">
               <h3>4. <span class="math">\(\log_a x - \log_a y = \log_a \left(\frac{x}{y}\right)\)</span></h3>
               <p><strong>Pembuktian:</strong></p>
-              <p>
-                Misalkan <span class="math">\(\log_a x = m\)</span> dan <span class="math">\(\log_a y = n\)</span>. Maka <span class="math">\(a^m = x\)</span> dan <span class="math">\(a^n = y\)</span>. Dengan sifat eksponen,
-                <span class="math">\(a^{m-n} = \frac{x}{y}\)</span>. Oleh karena itu, <span class="math">\(\log_a \left(\frac{x}{y}\right) = \log_a x - \log_a y\)</span>.
-              </p>
-              <p><strong>Contoh:</strong></p>
-              <p>1. <span class="math">\(\log_2 8 - \log_2 4 = \log_2 \left(\frac{8}{4}\right) = \log_2 2\)</span></p>
-              <p>2. <span class="math">\(\log_{10} 1000 - \log_{10} 100 = \log_{10} \left(\frac{1000}{100}\right) = \log_{10} 10\)</span></p>
+              <span> Misalkan \(\log_a x = m\) dan \(\log_a y = n\) sehingga diperoleh: </span> <br />
+              <span>\(\log_a x = m => a^m = x\) </span> <br />
+              <span>\(\log_a y = n => a^n = y\)</span> <br />
+              <span>Dengan menggunakan sifat berpangkat diperoleh:</span> <br />
+              <span>\( \frac{x}{y} = a^m / a^n \)</span> <br />
+              <span>\( \frac{x}{y} = a^{m-n} \)</span> <br />
+              <span>Lalu dengan menggunakan definisi logaritma:</span> <br />
+              <span>\( \log_a (\frac{x}{y}) = m - n \)</span> <br />
+              <span>Karena sebelumnya kita telah memisalkan \( \log_a x = m\) dan \(\log_a y = n\) sehingga persamaannya menjadi</span> <br />
+              <span>\( \log_a (\frac{x}{y}) = m - n \)</span> <br />
+              <span>\( \log_a (\frac{x}{y}) = \log_a x - \log_a y \)</span>
             </section>
 
             <section id="sifat5">
               <h3>5. <span class="math">\(\log_a x^n = n \cdot \log_a x\)</span></h3>
               <p><strong>Pembuktian:</strong></p>
-              <p>
-                Dengan sifat eksponen, <span class="math">\(x^n\)</span> dapat ditulis sebagai perkalian <span class="math">\(x\)</span> sebanyak <span class="math">\(n\)</span>. Maka,
-                <span class="math">\(\log_a x^n = \log_a (x \cdot x \cdot ... \cdot x)\)</span>. Berdasarkan sifat 3, ini menjadi <span class="math">\(n \cdot \log_a x\)</span>.
-              </p>
-              <p><strong>Contoh:</strong></p>
-              <p>1. <span class="math">\(\log_2 8^2 = 2 \cdot \log_2 8 = 6\)</span></p>
-              <p>2. <span class="math">\(\log_{10} 100^3 = 3 \cdot \log_{10} 100 = 6\)</span></p>
+              <span> Untuk membuktikan sifat ke-5 ini kita menggunakan konsep bilangan berpangkat untuk \(x^n \) yang nantinya kita akan peroleh \(x \) sebanyak \(n \) </span> <br />
+              <span> \(\log_a x^n = \log_a(x.x.x...x) \) </span> <br />
+              <span>Dengan menggunakan sifat ke-3 diperoleh:</span> <br />
+              <span>\(\log_a x^n = \log_a(x.x.x...x) \)</span> <br />
+              <span> \(\log x^n = \log_a x + \log_a x + \log_a x + .... + \log_a x \) </span> <br />
+              <span>Karena \( \log_a x\) sebanyak \(n \) maka diperoleh: </span> <br />
+              <span>\(\log x^n = \log_a x + \log_a x + \log_a x + .... + \log_a x \)</span>
+              <span> \( \log_a x^n = n \times \log_a x\) </span>
+            </section>
+
+            <section>
+              <h3>6. \( \log_{a^n} x^m = \frac{m}{n} \log_a x \)</h3>
+              <p><strong>Pembuktian:</strong></p>
+              <span> Misalkan \( \log_{a^n} x^m = y \) sehingga dengan definisi logaritma diperoleh:</span> <br />
+              <span> \( (a^n)^y = x^m \) </span> <br />
+              <span> \( a^yn = x^m => a^{\frac{yn}{m}} = x \) </span> <br />
+              <span>Kita kembalikan ke bentuk logaritma</span> <br />
+              <span> \( \frac{y . n}{m} = \log_a x \) </span> <br />
+              <span> \( y . \frac{n}{m} = \log_a x \) </span> <br />
+              <span> \( y = \frac{m}{n} \log_a x \) </span> <br />
+              <span>Karena sebelumnya kita memisalkan \(y =\log_{a^n} x^m \) maka diperoleh</span> <br />
+              <span> \( \log_{a^n} x^m = \frac{m}{n} \log_a x \) </span>
             </section>
 
             <section id="sifat7">
               <h3>7. <span class="math">\(\log_a x = \frac{\log_p x}{\log_p a}\)</span></h3>
-              <p>Dengan menggunakan perubahan basis logaritma, kita dapat menulis <span class="math">\(\log_a x = \frac{\log_p x}{\log_p a}\)</span>, di mana <span class="math">p</span> adalah basis baru.</p>
-              <p><strong>Contoh:</strong></p>
-              <p>1. <span class="math">\(\log_2 8 = \frac{\log_{10} 8}{\log_{10} 2}\)</span></p>
-              <p>2. <span class="math">\(\log_5 25 = \frac{\log_{10} 25}{\log_{10} 5}\)</span></p>
+              <p><strong>Pembuktian:</strong></p>
+              <span>Misalkan \( \log_a x = y \) maka:</span> <br />
+              <span> \( a^y = x \) </span> <br />
+              <span>Kemudian kita berikan \(\log_p \) di kedua ruas sehingga diperoleh:</span> <br />
+              <span> \( \log_p a^y = \log_p x \) </span> <br />
+              <span>Dengan menggunakan sifat-5 diperoleh:</span> <br />
+              <span>\( \log_p a^y = \log_p x \)</span> <br />
+              <span> \( y . \log_p a = \log_p x \) </span> <br />
+              <span> \( y = \frac{\log_p x}{\log_p a} \) </span> <br />
+              <span>\(\log_a x = \frac{\log_p x}{\log_p a}\)</span>
             </section>
 
             <section id="sifat8">
               <h3>8. <span class="math">\(\log_a x = \frac{1}{\log_x a}\)</span></h3>
-              <p>
-                Dengan definisi logaritma, <span class="math">\(\log_a x = m\)</span> berarti <span class="math">\(a^m = x\)</span>. Maka, <span class="math">\(\log_x a = \frac{1}{m}\)</span>, sehingga
-                <span class="math">\(\log_a x = \frac{1}{\log_x a}\)</span>.
-              </p>
-              <p><strong>Contoh:</strong></p>
-              <p>1. <span class="math">\(\log_2 8 = \frac{1}{\log_8 2}\)</span></p>
-              <p>2. <span class="math">\(\log_5 25 = \frac{1}{\log_{25} 5}\)</span></p>
+              <p><strong>Pembuktian:</strong></p>
+              <span>Untuk membuktikan sifat ini kita akan menggunakan sifat sebelumnya yaitu sifat-7.</span>
+              <span>Sifat-7 untuk bilangan pokok \( p \) pemilihannya bebas, sehingga untuk membuktikan sifat 8 ini kita mengganti \(p\) menjadi \(x\) diperoleh: </span> <br />
+              <span>\(\log_a x = \frac{\log_p x}{\log_p a}\)</span> <br />
+              <span>\(\log_a x = \frac{\log_x x}{\log_x a}\)</span>
+              <br />
+              <span>\(\log_a x = \frac{1}{\log_x a}\)</span>
             </section>
 
             <section id="sifat9">
               <h3>9. <span class="math">\(\log_a x \cdot \log_b x = \log_b a\)</span></h3>
+              <p><strong>Pembuktian:</strong></p>
+              <span>Untuk membuktikan sifat ini kita akan menggunakan sifat sebelumnya yaitu sifat-7.</span>
+              <span>Sifat-7 untuk bilangan pokok \( p \) pemilihannya bebas, sehingga untuk membuktikan sifat 9 ini kita mengganti \(p\) menjadi \(10 \) diperoleh: </span> <br />
+              <span>
+                <span>\(\log_a x = \frac{\log x}{\log a}\)</span> <br />
+                <span>Berdasarkan sifat di atas kita peroleh:</span> <br />
+                <span> \( \log_a x \cdot \log_b x = \frac{\log x}{\log a} . \frac{\log b}{\log x} \) </span> <br />
+                <span> \( \log_a x \cdot \log_b x = \frac{\log b}{\log a} \) </span> <br />
+                <span>Kita kembalikan menjadi:</span> <br />
+                <span>\(\log_a x \cdot \log_b x = \log_b a\)</span>
+              </span>
+            </section>
 
-              <p>
-                Dengan menggunakan sifat 7 dan 8, kita dapat menulis <span class="math">\(\log_a x = \frac{\log_b x}{\log_b a}\)</span>. Mengalikan kedua sisi dengan <span class="math">\( \frac{1}{\log_b x} \)</span>, kita mendapatkan
-                <span class="math">\(\log_a x \cdot \log_b x = \log_b a\)</span>.
-              </p>
-              <p><strong>Contoh:</strong></p>
-              <p>1. <span class="math">\(\log_2 8 \cdot \log_3 8 = \log_3 2\)</span></p>
-              <p>2. <span class="math">\(\log_5 25 \cdot \log_2 25 = \log_2 5\)</span></p>
+            <h2>Contoh Penggunaan Sifat-sifat Logaritma</h2>
+            <section>
+              <ol>
+                <li>\(\log_2 2 = 1\)</li>
+                <li>\(\log_2 1 = 0\)</li>
+                <li>\(\log_2 8 + \log_2 4 = \log_2 (8 \cdot 4) = \log_2 32\)</li>
+                <li>\(\log_2 8 - \log_2 4 = \log_2 \left(\frac{8}{4}\right) = \log_2 2\)</li>
+                <li>\(\log_2 8^2 = 2 \cdot \log_2 8 = 6\)</li>
+                <li>\(\log_2 8 = \frac{\log_{10} 8}{\log_{10} 2}\)</li>
+                <li>\(\log_2 8 = \frac{1}{\log_8 2}\)</li>
+                <li>\(\log_2 8 \cdot \log_3 8 = \log_3 2\)</li>
+              </ol>
             </section>
 
             <footer>
