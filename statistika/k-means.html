@@ -223,22 +223,23 @@ Data:
               <h3>1. Persiapan Data</h3>
 
               <pre><code>
+# Import library yang diperlukan
 import numpy as np
 import pandas as pd
+import matplotlib.pyplot as plt
+from sklearn.cluster import KMeans
+from sklearn.metrics import silhouette_score, homogeneity_score, completeness_score, v_measure_score
+from sklearn.datasets import load_iris
 
-# Dataset contoh
-data = np.array([
-[1.0, 1.0],
-[1.5, 2.0],
-[3.0, 4.0],
-[5.0, 7.0],
-[3.5, 5.0],
-[4.5, 5.0],
-[3.5, 4.5]
-])
+# Memuat dataset Iris
+iris = load_iris()
+data = iris.data  # Fitur dataset
+true_labels = iris.target  # Label asli untuk evaluasi
+feature_names = iris.feature_names
 
-# Jika ingin menggunakan DataFrame untuk manipulasi lebih lanjut
-df = pd.DataFrame(data, columns=['X', 'Y'])          
+# Mengubah dataset menjadi DataFrame
+df = pd.DataFrame(data, columns=feature_names)
+print(df.head)                     
 </code></pre>
 
               <h3>2. Menentukan Jumlah Cluster (K)</h3>
@@ -251,71 +252,70 @@ df = pd.DataFrame(data, columns=['X', 'Y'])
               <p>Metode ini melibatkan plotting dari jumlah cluster (K) yang berbeda dengan nilai "inertia" atau SSE (Sum of Squared Errors) untuk setiap nilai K, dan mencari titik elbow (titik yang mulai melandai).</p>
 
               <pre><code>
-import matplotlib.pyplot as plt
-from sklearn.cluster import KMeans
+# Menentukan range K yang akan diuji
+n_samples = len(df)
+k_range = range(1, min(11, n_samples + 1)) 
 
-# Menentukan range K yang akan dicoba
-k_range = range(1, 11)
+# Menghitung inertia untuk setiap nilai K
 inertia = []
-
 for k in k_range:
-  kmeans = KMeans(n_clusters=k, random_state=42)
-  kmeans.fit(df)
-  inertia.append(kmeans.inertia_)
-
-# Plot hasil
-plt.plot(k_range, inertia, marker='o')
-plt.title('Elbow Method for Optimal K')
-plt.xlabel('Jumlah Cluster (K)')
-plt.ylabel('Inertia')
-plt.show()    
-</code></pre>
-
-              <h4>Silhouette Score</h4>
-              <p>Silhouette Score memberikan informasi tentang seberapa baik setiap titik data terklaster. Nilai skor berkisar antara -1 dan 1, dimana nilai yang lebih tinggi menunjukkan pemisahan yang lebih baik antar cluster.</p>
-
-              <pre><code>
-from sklearn.metrics import silhouette_score
-
-silhouette_scores = []
-
-for k in k_range[1:]:  # K=1 tidak memiliki silhouette score
     kmeans = KMeans(n_clusters=k, random_state=42)
     kmeans.fit(df)
-    score = silhouette_score(df, kmeans.labels_)
-    silhouette_scores.append(score)
+    inertia.append(kmeans.inertia_)
 
-# Plot hasil
-plt.plot(k_range[1:], silhouette_scores, marker='o')
-plt.title('Silhouette Scores for Optimal K')
+# Plot Metode Elbow
+plt.figure(figsize=(8, 5))
+plt.plot(k_range, inertia, marker='o', linestyle='--')
+plt.title('Metode Elbow untuk Menentukan Jumlah Cluster Optimal')
 plt.xlabel('Jumlah Cluster (K)')
-plt.ylabel('Silhouette Score')
-plt.show()
+plt.ylabel('Inertia')
+plt.show() 
 </code></pre>
+
+              <img src="/img/k-mean-out.png" alt="k-means" class="article-image img" />
 
               <h3>3. Melakukan K-Means dengan K Optimal</h3>
               <p>Setelah menentukan K yang optimal menggunakan Elbow Method atau Silhouette Score, kita dapat melanjutkan untuk melakukan clustering.</p>
 
               <pre><code>
-# Menentukan jumlah cluster berdasarkan metode sebelumnya (misalnya, K=3)
-kmeans = KMeans(n_clusters=3, random_state=42)
+# Menentukan jumlah cluster optimal berdasarkan analisis Elbow
+optimal_k = 3  # Sesuai grafik elbow
+
+kmeans = KMeans(n_clusters=optimal_k, random_state=42)
 kmeans.fit(df)
 
-# Output hasil clustering
-print("Centroid:", kmeans.cluster_centers_)
-print("Label:", kmeans.labels_)                
+# Menambahkan hasil cluster ke DataFrame
+df['Cluster'] = kmeans.labels_                
 </code></pre>
 
               <h3>4. Visualisasi</h3>
 
               <pre><code>
-plt.scatter(df['X'], df['Y'], c=kmeans.labels_, cmap='viridis')
-plt.scatter(kmeans.cluster_centers_[:, 0], kmeans.cluster_centers_[:, 1], s=200, c='red', marker='X')
-plt.title('Hasil Clustering dengan K-Means')
-plt.xlabel('X')
-plt.ylabel('Y')
+# Visualisasi hasil clustering (menggunakan dua fitur pertama untuk scatter plot)
+plt.figure(figsize=(8, 5))
+plt.scatter(
+    df[feature_names[0]],  # Sepal length (cm)
+    df[feature_names[1]],  # Sepal width (cm)
+    c=df['Cluster'],
+    cmap='viridis',
+    alpha=0.6,
+    edgecolor='k'
+)
+plt.scatter(
+    kmeans.cluster_centers_[:, 0],  # Centroid untuk fitur pertama
+    kmeans.cluster_centers_[:, 1],  # Centroid untuk fitur kedua
+    s=200,
+    c='red',
+    marker='X',
+    label='Cluster Centers'
+)
+plt.title('Hasil Clustering dengan K-Means (Dataset Iris)')
+plt.xlabel(feature_names[0])
+plt.ylabel(feature_names[1])
+plt.legend()
 plt.show()
 </code></pre>
+              <img src="/img/k-mean-out-2.png" alt="k-means" class="article-image img" />
 
               <h3>5. Evaluasi Model</h3>
               <p>
@@ -324,14 +324,21 @@ plt.show()
               </p>
 
               <pre><code>
-from sklearn.metrics import homogeneity_score, completeness_score, v_measure_score
+# Evaluasi model menggunakan Homogeneity, Completeness, dan V-Measure
+print(f"Homogeneity: {homogeneity_score(true_labels, kmeans.labels_):.2f}")
+print(f"Completeness: {completeness_score(true_labels, kmeans.labels_):.2f}")
+print(f"V-Measure: {v_measure_score(true_labels, kmeans.labels_):.2f}")
 
-# Misalnya, kita memiliki label sebenarnya (misalnya, label yang diketahui)
-true_labels = np.array([0, 0, 1, 1, 2, 2, 2])  # Ganti dengan label yang sesuai
-print("Homogeneity:", homogeneity_score(true_labels, kmeans.labels_))
-print("Completeness:", completeness_score(true_labels, kmeans.labels_))
-print("V-Measure:", v_measure_score(true_labels, kmeans.labels_))
+# Evaluasi Silhouette Score untuk K optimal
+silhouette_avg = silhouette_score(df.iloc[:, :-1], kmeans.labels_)
+print(f"Silhouette Score untuk K={optimal_k}: {silhouette_avg:.2f}")
 </code></pre>
+              <ul>
+                <li><strong>Homogeneity:</strong> 0.75</li>
+                <li><strong>Completeness:</strong> 0.76</li>
+                <li><strong>V-Measure:</strong> 0.76</li>
+                <li><strong>Silhouette Score untuk K=3:</strong> 0.55</li>
+              </ul>
             </section>
             <footer>
               <p>&copy; 2024 Math Alpha. Semua Hak Dilindungi.</p>
