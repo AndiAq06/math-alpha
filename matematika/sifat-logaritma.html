@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sifat-sifat dan Pembuktian Sifat-sifat Logaritma</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles.css" />
+    <meta name="google-site-verification" content="wSwaOWra1NglT7WH5RGbaNJ2Jrsv1nRoWawtwszrBws" />
+    <!-- math.js -->
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="icon" href="/img/logo.png" sizes="32x32" type="image/png" />
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1624084859744468" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Hamburger Menu -->
+      <button class="hamburger-menu">
+        <i class="fas fa-bars"></i>
+      </button>
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <button class="close-btn">&times;</button>
+        <div class="logo">
+          <img src="/img/logo.png" alt="Chirpy Logo" />
+          <h2>MathAlpha</h2>
+        </div>
+        <nav class="menu">
+          <a href="/index.html" class="menu-item"> <i class="fas fa-home"></i> Home </a>
+          <a href="/statistika/index.html" class="menu-item"> <i class="fas fa-chart-bar"></i> Statistika </a>
+          <a href="/matematika/index.html" class="menu-item"> <i class="fas fa-square-root-alt"></i> Matematika </a>
+          <a href="/sql/index.html" class="menu-item"> <i class="fas fa-database"></i> SQL </a>
+          <a href="/pemprograman/index.html" class="menu-item"> <i class="fas fa-code"></i> Pemrograman </a>
+          <a href="#" class="menu-item"> <i class="fas fa-info-circle"></i> About </a>
+        </nav>
+
+        <!-- Social Media Icons -->
+        <div class="social-media">
+          <a href="https://www.instagram.com/andiaso06/" target="_blank" class="social-icon">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/andi-ardiansyah-7b25072a9/" target="_blank" class="social-icon">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="https://github.com/AndiAq06" target="_blank" class="social-icon">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="https://www.youtube.com/@andimath06" target="_blank" class="social-icon">
+            <i class="fab fa-youtube"></i>
+          </a>
+          <a href="https://www.twitter.com" target="_blank" class="social-icon">
+            <i class="fab fa-x-twitter"></i>
+          </a>
+        </div>
+      </aside>
+
+      <!-- Main Content -->
+      <main class="content">
+        <h3>Pembuktian Sifat Logaritma</h3>
+        <div class="article">
+          <div class="image-container">
+            <img src="/img/sifat-log.png" alt="Statistika" class="article-image" />
+          </div>
+          <div class="content-statistik">
+            <header>
+              <h1>Sifat dan Pembuktian Logaritma</h1>
+            </header>
+            <p>
+              Haloo teman-teman semua, pecinta matematika, Pada artikel kali ini kita akan membahas sifat-sifat dari logaritma dan bagaimana pembuktiannya itu !!!. Ketika kita membahas logaritma kita tidak akan jauh-jauh dari topik eksponen
+              dan bentuk akar. Ekosponen, bentuk akar , dan logaritama kita dapat istilahkan dengan "tiga serangkai" karena ketiganya saling terkait satu sama lain.
+            </p>
+
+            <section>
+              <h2>Hubungan Antara Bilangan Berpangkat, Bentuk Akar, dan Logaritma</h2>
+              <p>
+                Mempelajari aturan-aturan logaritma menjadi lebih mudah jika kita mengikuti langkah-langkah yang telah dibahas sebelumnya. Dengan demikian, kita dapat memahami soal-soal logaritma dengan lebih baik dan meningkatkan kemampuan
+                berpikir kita dalam menyelesaikan masalah sehari-hari.
+              </p>
+
+              <p>Hubungan antara bilangan berpangkat, akar, dan logaritma dapat dijelaskan secara sederhana seperti berikut:</p>
+
+              <p>
+                Dari bentuk bilangan berpangkat \( a^b = c \), untuk menemukan bilangan \( a \) menggunakan \( b \) dan \( c \), kita menggunakan operasi akar, yang ditulis sebagai \( \sqrt[b]{c} = a \). Sedangkan untuk mencari bilangan \(
+                b \) menggunakan \( a \) dan \( c \), kita menggunakan operasi logaritma, yang ditulis sebagai \( \log_a c = b \).
+              </p>
+
+              <p>Beberapa contoh atau kesimpulan sederhana adalah sebagai berikut:</p>
+
+              <ul>
+                <li>\( 2^3 = 8 \iff \log_2 8 = 3 \)</li>
+                <li>\( \sqrt[3]{8} = 2 \iff 2^3 = 8 \)</li>
+                <li>\( \sqrt[3]{8} = 2 \iff \log_2 8 = 3 \)</li>
+              </ul>
+
+              <p>
+                Penulisan logaritma dalam bentuk \( a \log b = c \) banyak kita temui pada buku-buku yang berbahasa Indonesia. Sementara itu, buku-buku internasional yang umumnya menggunakan bahasa Inggris akan menuliskannya sebagai \(
+                \log_a b = c \).
+              </p>
+
+              <h3>Istilah-istilah pada Logaritma</h3>
+              <p>Dalam penulisan logaritma \( \log_a b = c \), terdapat beberapa istilah yang perlu dipahami:</p>
+
+              <ul>
+                <li>
+                  <strong>a</strong> disebut Basis (Bilangan Pokok), dengan ketentuan \( a > 0 \) dan \( a \neq 1 \). Basis ini dapat berada pada rentang \( 0 < a < 1 \) atau \( a > 1 \). Untuk logaritma dengan basis 10, sering kali simbol
+                  basisnya tidak dituliskan.
+                </li>
+                <li><strong>b</strong> disebut Numerus atau bilangan yang dicari logaritmanya. Nilai \( b \) harus lebih besar dari nol, yaitu \( b > 0 \).</li>
+              </ul>
+            </section>
+
+            <h2>Sifat-sifat Logaritma dan Pembuktian</h2>
+
+            <section id="sifat1">
+              <h3>1. <span class="math">\(\log_a a = 1\)</span></h3>
+              <p><strong>Pembuktian:</strong></p>
+              <p>Definisi logaritma menyatakan bahwa <span class="math">\(\log_a a = 1\)</span> karena <span class="math">\(a^1 = a\)</span>. Jadi, terbukti bahwa <span class="math">\(\log_a a = 1\)</span>.</p>
+              <p><strong>Contoh:</strong></p>
+              <p>1. <span class="math">\(\log_2 2 = 1\)</span></p>
+              <p>2. <span class="math">\(\log_{10} 10 = 1\)</span></p>
+            </section>
+
+            <section id="sifat2">
+              <h3>2. <span class="math">\(\log_a 1 = 0\)</span></h3>
+              <p><strong>Pembuktian:</strong></p>
+              <p>Berdasarkan definisi logaritma, <span class="math">\(\log_a 1 = 0\)</span> karena <span class="math">\(a^0 = 1\)</span>. Ini membuktikan bahwa <span class="math">\(\log_a 1 = 0\)</span>.</p>
+              <p><strong>Contoh:</strong></p>
+              <p>1. <span class="math">\(\log_2 1 = 0\)</span></p>
+              <p>2. <span class="math">\(\log_{10} 1 = 0\)</span></p>
+            </section>
+
+            <section id="sifat3">
+              <h3>3. <span class="math">\(\log_a x + \log_a y = \log_a (x \cdot y)\)</span></h3>
+              <p><strong>Pembuktian:</strong></p>
+              <p>
+                Misalkan <span class="math">\(\log_a x = m\)</span> dan <span class="math">\(\log_a y = n\)</span>. Maka <span class="math">\(a^m = x\)</span> dan <span class="math">\(a^n = y\)</span>. Dengan sifat eksponen,
+                <span class="math">\(a^{m+n} = x \cdot y\)</span>. Oleh karena itu, <span class="math">\(\log_a (x \cdot y) = \log_a x + \log_a y\)</span>.
+              </p>
+              <p><strong>Contoh:</strong></p>
+              <p>1. <span class="math">\(\log_2 8 + \log_2 4 = \log_2 (8 \cdot 4) = \log_2 32\)</span></p>
+              <p>2. <span class="math">\(\log_{10} 100 + \log_{10} 10 = \log_{10} (100 \cdot 10) = \log_{10} 1000\)</span></p>
+            </section>
+
+            <section id="sifat4">
+              <h3>4. <span class="math">\(\log_a x - \log_a y = \log_a \left(\frac{x}{y}\right)\)</span></h3>
+              <p><strong>Pembuktian:</strong></p>
+              <p>
+                Misalkan <span class="math">\(\log_a x = m\)</span> dan <span class="math">\(\log_a y = n\)</span>. Maka <span class="math">\(a^m = x\)</span> dan <span class="math">\(a^n = y\)</span>. Dengan sifat eksponen,
+                <span class="math">\(a^{m-n} = \frac{x}{y}\)</span>. Oleh karena itu, <span class="math">\(\log_a \left(\frac{x}{y}\right) = \log_a x - \log_a y\)</span>.
+              </p>
+              <p><strong>Contoh:</strong></p>
+              <p>1. <span class="math">\(\log_2 8 - \log_2 4 = \log_2 \left(\frac{8}{4}\right) = \log_2 2\)</span></p>
+              <p>2. <span class="math">\(\log_{10} 1000 - \log_{10} 100 = \log_{10} \left(\frac{1000}{100}\right) = \log_{10} 10\)</span></p>
+            </section>
+
+            <section id="sifat5">
+              <h3>5. <span class="math">\(\log_a x^n = n \cdot \log_a x\)</span></h3>
+              <p><strong>Pembuktian:</strong></p>
+              <p>
+                Dengan sifat eksponen, <span class="math">\(x^n\)</span> dapat ditulis sebagai perkalian <span class="math">\(x\)</span> sebanyak <span class="math">\(n\)</span>. Maka,
+                <span class="math">\(\log_a x^n = \log_a (x \cdot x \cdot ... \cdot x)\)</span>. Berdasarkan sifat 3, ini menjadi <span class="math">\(n \cdot \log_a x\)</span>.
+              </p>
+              <p><strong>Contoh:</strong></p>
+              <p>1. <span class="math">\(\log_2 8^2 = 2 \cdot \log_2 8 = 6\)</span></p>
+              <p>2. <span class="math">\(\log_{10} 100^3 = 3 \cdot \log_{10} 100 = 6\)</span></p>
+            </section>
+
+            <section id="sifat7">
+              <h3>7. <span class="math">\(\log_a x = \frac{\log_p x}{\log_p a}\)</span></h3>
+              <p>Dengan menggunakan perubahan basis logaritma, kita dapat menulis <span class="math">\(\log_a x = \frac{\log_p x}{\log_p a}\)</span>, di mana <span class="math">p</span> adalah basis baru.</p>
+              <p><strong>Contoh:</strong></p>
+              <p>1. <span class="math">\(\log_2 8 = \frac{\log_{10} 8}{\log_{10} 2}\)</span></p>
+              <p>2. <span class="math">\(\log_5 25 = \frac{\log_{10} 25}{\log_{10} 5}\)</span></p>
+            </section>
+
+            <section id="sifat8">
+              <h3>8. <span class="math">\(\log_a x = \frac{1}{\log_x a}\)</span></h3>
+              <p>
+                Dengan definisi logaritma, <span class="math">\(\log_a x = m\)</span> berarti <span class="math">\(a^m = x\)</span>. Maka, <span class="math">\(\log_x a = \frac{1}{m}\)</span>, sehingga
+                <span class="math">\(\log_a x = \frac{1}{\log_x a}\)</span>.
+              </p>
+              <p><strong>Contoh:</strong></p>
+              <p>1. <span class="math">\(\log_2 8 = \frac{1}{\log_8 2}\)</span></p>
+              <p>2. <span class="math">\(\log_5 25 = \frac{1}{\log_{25} 5}\)</span></p>
+            </section>
+
+            <section id="sifat9">
+              <h3>9. <span class="math">\(\log_a x \cdot \log_b x = \log_b a\)</span></h3>
+
+              <p>
+                Dengan menggunakan sifat 7 dan 8, kita dapat menulis <span class="math">\(\log_a x = \frac{\log_b x}{\log_b a}\)</span>. Mengalikan kedua sisi dengan <span class="math">\( \frac{1}{\log_b x} \)</span>, kita mendapatkan
+                <span class="math">\(\log_a x \cdot \log_b x = \log_b a\)</span>.
+              </p>
+              <p><strong>Contoh:</strong></p>
+              <p>1. <span class="math">\(\log_2 8 \cdot \log_3 8 = \log_3 2\)</span></p>
+              <p>2. <span class="math">\(\log_5 25 \cdot \log_2 25 = \log_2 5\)</span></p>
+            </section>
+
+            <footer>
+              <p>&copy; 2024 Math Alpha. Semua Hak Dilindungi.</p>
+            </footer>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <script src="/script.js"></script>
+  </body>
+</html>

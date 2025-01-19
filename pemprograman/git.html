@@ -71,21 +71,30 @@
 
             <section class="git-concept">
               <h2>Konsep Dasar Git</h2>
-              <h3>1. Direktori Kerja (Working Directory)</h3>
-              <p>Direktori Kerja adalah tempat Anda melakukan perubahan pada file proyek. Perubahan di sini tidak tercatat di Git hingga Anda menambahkannya ke <strong>Staging Area</strong> menggunakan perintah <code>git add</code>.</p>
+              <h3>1. Modified</h3>
+              <p>
+                Modified adalah kondisi di mana file dalam direktori kerja telah diubah, tetapi perubahan tersebut belum ditambahkan ke <strong>Staging Area</strong>. File yang telah dimodifikasi hanya terlihat di direktori kerja hingga
+                Anda menjalankan perintah <code>git add</code>.
+              </p>
 
-              <h3>2. Staging Area</h3>
-              <p>Staging Area adalah area sementara di Git di mana perubahan yang akan dimasukkan ke dalam <strong>commit</strong> disiapkan. Anda dapat menambahkan perubahan menggunakan perintah <code>git add</code>.</p>
+              <h3>2. Staging</h3>
+              <p>
+                Staging adalah proses di mana perubahan yang telah dilakukan pada file ditambahkan ke <strong>Staging Area</strong> menggunakan perintah <code>git add</code>. Staging memastikan bahwa hanya perubahan yang telah dipilih yang
+                akan disertakan dalam <strong>commit</strong>.
+              </p>
 
-              <h3>3. Repositori</h3>
-              <p>Repositori adalah tempat penyimpanan permanen untuk seluruh riwayat perubahan dalam proyek Git. Setiap kali Anda melakukan <strong>commit</strong>, perubahan akan disimpan di repositori.</p>
+              <h3>3. Committed</h3>
+              <p>
+                Committed adalah keadaan di mana perubahan yang telah ditambahkan ke <strong>Staging Area</strong> disimpan secara permanen di <strong>repositori Git</strong> menggunakan perintah <code>git commit</code>. Setiap commit akan
+                memiliki riwayat yang dapat dilacak.
+              </p>
             </section>
 
             <section class="git-commands">
               <h2>Perintah Git Dasar</h2>
               <div class="command">
                 <h3>1. git init</h3>
-                <p>Perintah ini digunakan untuk menginisialisasi repositori Git baru di direktori saat ini.</p>
+                <p>Perintah ini digunakan untuk menginisialisasi repositori Git baru di direktori saat ini. Tujuannya adalah agar project kita dapat menjalankan versioning control system.</p>
                 <code>git init</code>
               </div>
 
@@ -97,36 +106,100 @@
 
               <div class="command">
                 <h3>3. git add</h3>
-                <p>Perintah ini menambahkan perubahan pada file untuk disiapkan dalam staging area.</p>
-                <code>git add <i>nama_file</i></code>
+                <p>
+                  Ketika kita membuat sebuah perubahan di dalam project file kita maka perubahan itu akan masuk ke modified terlebih dahulu. Kita perlu memindahkan perubahan tersebut ke staging area. Tujuannya agar perubahan sudah tersimpan
+                  di staging area. Kita bisa menjalankan perintah <strong>git add nama_file</strong> namafiles atau <strong>git add .</strong>, biasanya jika kita tidak ingin memindahkan satu-satu file ke staging area kita menggunakan
+                  <strong>git add .</strong>
+                </p>
+                <code>git add <i>nama_file</i></code> atau<br>
+                <code>git add <i>.</i></code>
+                
               </div>
 
               <div class="command">
                 <h3>4. git commit</h3>
-                <p>Perintah ini mengonfirmasi perubahan yang ada di staging area dan menambahkannya ke riwayat commit.</p>
+                <p>
+                  Perintah <code>git commit</code> digunakan untuk menyimpan semua perubahan yang telah ditambahkan ke dalam repositori lokal. Ini memastikan file yang telah dimodifikasi tetap aman, sehingga Anda tidak perlu khawatir
+                  kehilangan perubahan saat berpindah branch, melakukan <strong>pull</strong>, atau <strong>merge</strong> repositori.
+                </p>
+                <p>
+                  Anda dapat menggunakan perintah <code>git commit</code> atau <code>git commit -m "pesan commit"</code>. Apa perbedaannya? Dengan <code>git commit</code>, Anda dapat menambahkan deskripsi yang lebih rinci, sedangkan
+                  <code>git commit -m "pesan commit"</code> adalah cara cepat (shortcut) untuk menambahkan pesan singkat saat melakukan commit.
+                </p>
                 <code>git commit -m "Pesan commit Anda"</code>
               </div>
 
+              <div>
+                <h3>5. git remote</h3>
+                <p>
+                  <code>git remote</code> berfungsi untuk menghubungkan repositori lokal dengan repositori jarak jauh (remote repository). Dengan menggunakan <code>git remote</code>, Anda dapat mengelola hubungan antara repositori lokal dan platform seperti GitHub, GitLab, atau Bitbucket. Perintah ini memungkinkan Anda untuk melakukan sinkronisasi perubahan, seperti <strong>push</strong> untuk mengunggah perubahan dari lokal ke remote atau <strong>pull</strong> untuk mengambil pembaruan dari remote ke lokal.
+                </p>
+                <p>
+                  Contoh perintah dasar:
+                  <ul>
+                    <li><code>git remote add origin [URL]</code>: Menambahkan repositori remote dengan nama <code>origin</code>.</li>
+                    <li><code>git remote -v</code>: Melihat daftar repositori remote yang terhubung.</li>
+                    <li><code>git remote remove [name]</code>: Menghapus repositori remote tertentu.</li>
+                  </ul>
+                </p>
+              </div>
+
               <div class="command">
-                <h3>5. git log</h3>
+                <h3>6. git push</h3>
+                <p>Perintah <strong>git push</strong> digunakan untuk mengunggah atau mengirim perubahan dari repositori lokal ke repositori remote (contohnya GitHub, GitLab, atau Bitbucket). 
+                   Setelah Anda membuat perubahan pada kode di lokal dan melakukan commit, perintah ini akan menyinkronkan repositori remote dengan semua commit terbaru Anda.</p>
+                <p>Dalam contoh <code>git push origin main</code>:</p>
+                <ul>
+                  <li><strong>origin</strong>: Nama default dari repositori remote.</li>
+                  <li><strong>main</strong>: Nama cabang (branch) di repositori remote yang menjadi tujuan untuk mengunggah commit.</li>
+                </ul>
+                <p>Pastikan Anda memiliki hak akses ke repositori remote sebelum menjalankan perintah ini.</p>
+                <code>git push origin main</code>
+              </div>
+
+              <div class="command">
+                <h3>7. git branch</h3>
+                <p>Perintah <strong>git branch</strong> digunakan untuk mengelola cabang (branch) di repositori Git. Cabang memungkinkan Anda bekerja pada fitur atau perubahan baru tanpa memengaruhi kode utama.</p>
+                <p>Beberapa penggunaan umum perintah ini:</p>
+                <ul>
+                  <li><code>git branch</code>: Menampilkan daftar semua cabang di repositori, dengan tanda bintang (<strong>*</strong>) menunjukkan cabang aktif.</li>
+                  <li><code>git branch nama_cabang</code>: Membuat cabang baru dengan nama <strong>nama_cabang</strong>.</li>
+                  <li><code>git branch -d nama_cabang</code>: Menghapus cabang <strong>nama_cabang</strong> (hanya jika sudah digabungkan ke cabang lain).</li>
+                </ul>
+                <p>Cabang sering digunakan bersamaan dengan perintah <code>git checkout</code> atau <code>git switch</code> untuk berpindah antar cabang.</p>
+                <code>git branch nama_fitur</code>
+              </div>
+
+              <div class="command">
+                <h3>8. git merge</h3>
+                <p>Perintah <strong>git merge</strong> digunakan untuk menggabungkan perubahan yang ada di cabang lain ke cabang aktif saat ini. Ini memungkinkan Anda untuk mengintegrasikan fitur atau perbaikan yang telah dibuat di cabang lain ke dalam cabang utama atau cabang yang sedang Anda kerjakan.</p>
+                <p>Beberapa penggunaan umum perintah ini:</p>
+                <ul>
+                  <li><code>git merge nama_cabang</code>: Menggabungkan cabang <strong>nama_cabang</strong> ke cabang aktif saat ini.</li>
+                  <li><code>git merge --no-ff nama_cabang</code>: Melakukan penggabungan dengan membuat commit merge meskipun penggabungan dapat dilakukan dengan fast-forward.</li>
+                  <li><code>git merge --abort</code>: Membatalkan proses merge jika terjadi konflik dan Anda ingin kembali ke keadaan semula sebelum merge.</li>
+                </ul>
+                <p>Perintah <strong>git merge</strong> sering digunakan setelah bekerja di cabang fitur untuk menggabungkan perubahan kembali ke cabang utama, seperti <code>master</code> atau <code>main</code>.</p>
+                <code>git merge fitur_baru</code>
+              </div>             
+              
+
+              <div class="command">
+                <h3>9. git log</h3>
                 <p>Perintah ini menampilkan riwayat commit dari repositori.</p>
                 <code>git log</code>
               </div>
 
               <div class="command">
-                <h3>6. git diff</h3>
+                <h3>10. git diff</h3>
                 <p>Perintah ini menampilkan perbedaan antara perubahan yang ada di direktori kerja dan yang ada di staging area.</p>
                 <code>git diff</code>
               </div>
 
-              <div class="command">
-                <h3>7. git push</h3>
-                <p>Perintah ini digunakan untuk mengirim perubahan yang sudah dikomit ke repositori remote (misalnya GitHub).</p>
-                <code>git push origin main</code>
-              </div>
+
 
               <div class="command">
-                <h3>8. git pull</h3>
+                <h3>11. git pull</h3>
                 <p>Perintah ini digunakan untuk mengambil dan menggabungkan perubahan dari repositori remote ke repositori lokal Anda.</p>
                 <code>git pull origin main</code>
               </div>
