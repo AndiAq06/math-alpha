@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sifat-Sifat Eksponen, Pengertian, Fungsi, dan Contohnya</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles.css" />
+    <meta name="google-site-verification" content="wSwaOWra1NglT7WH5RGbaNJ2Jrsv1nRoWawtwszrBws" />
+    <!-- math.js -->
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="icon" href="/img/logo.png" sizes="32x32" type="image/png" />
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1624084859744468" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Hamburger Menu -->
+      <button class="hamburger-menu">
+        <i class="fas fa-bars"></i>
+      </button>
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <button class="close-btn">&times;</button>
+        <div class="logo">
+          <img src="/img/logo.png" alt="Chirpy Logo" />
+          <h2>MathAlpha</h2>
+        </div>
+        <nav class="menu">
+          <a href="/index.html" class="menu-item"> <i class="fas fa-home"></i> Home </a>
+          <a href="/statistika/index.html" class="menu-item"> <i class="fas fa-chart-bar"></i> Statistika </a>
+          <a href="/matematika/index.html" class="menu-item"> <i class="fas fa-square-root-alt"></i> Matematika </a>
+          <a href="/sql/index.html" class="menu-item"> <i class="fas fa-database"></i> SQL </a>
+          <a href="/pemprograman/index.html" class="menu-item"> <i class="fas fa-code"></i> Pemrograman </a>
+          <a href="#" class="menu-item"> <i class="fas fa-info-circle"></i> About </a>
+        </nav>
+
+        <!-- Social Media Icons -->
+        <div class="social-media">
+          <a href="https://www.instagram.com/andiaso06/" target="_blank" class="social-icon">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/andi-ardiansyah-7b25072a9/" target="_blank" class="social-icon">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="https://github.com/AndiAq06" target="_blank" class="social-icon">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="https://www.youtube.com/@andimath06" target="_blank" class="social-icon">
+            <i class="fab fa-youtube"></i>
+          </a>
+          <a href="https://www.twitter.com" target="_blank" class="social-icon">
+            <i class="fab fa-x-twitter"></i>
+          </a>
+        </div>
+      </aside>
+
+      <!-- Main Content -->
+      <main class="content">
+        <div class="article">
+          <div class="image-container">
+            <img src="/img/eksponen.png" alt="Statistika" class="article-image" />
+          </div>
+          <div class="content-statistik">
+            <header>
+              <h1>Sifat-Sifat Eksponen, Pengertian, Fungsi, dan Contohnya</h1>
+            </header>
+            <p>
+              Haloo teman-teman semua, para <strong>Pecinta Matematika</strong>, Pada artikel kali ini kita akan membahas sifat-sifat dari eksponen dan bagaimana pembuktiannya. Eksponen ini merupakan langkah awal ketika kita ingin belajar
+              materi akar dan <strong><a href="/matematika/sifat-logaritma.html">logaritma</a></strong
+              >.
+            </p>
+            <p>Sebelum kita membahas sifat-sifat dari eksponen dan pembuktian sifatnya kita pahami terlebih dahulu definisi dari eksponen itu sendiri. Definisi ini memiliki peran penting dalam pembuktian sifat-sifat eksponen.</p>
+
+            <section id="exponent-definition" class="math-container">
+              <h2>Definisi Bilangan Berpangkat (Eksponen)</h2>
+              <p>Secara simbol, definisi bilangan berpangkat (eksponen) dapat kita tuliskan seperti berikut ini:</p>
+              <p>\[ a^n = \underbrace{a \times a \times \cdots \times a \times a}_{\text{perkalian sebanyak } n} \]</p>
+              <p>
+                <strong>n</strong>: Bilangan pangkat (<em>eksponen</em>), dimana <strong>n</strong> adalah bilangan bulat positif <br />
+                <strong>a</strong>: Bilangan Pokok (<em>basis</em>)
+              </p>
+              <p>Dari definisi matematis diatas kita bisa mengatakan bahwa eksponen adalah perkalian yang berulang sebanyak pangkatnya.</p>
+
+              <p><strong>Contoh:</strong></p>
+              <ul>
+                <li>\( 2^3 = 2 \times 2 \times 2 = 8 \)</li>
+                <li>\( 5^4 = 5 \times 5 \times 5 \times 5 = 625 \)</li>
+                <li>\( (-10)^2 = (-10) \times (-10 )= 100 \)</li>
+                <li>\( (\pi)^5 = \pi \times \pi \times \pi \times \pi \times \pi \)</li>
+              </ul>
+            </section>
+
+            <section id="property1">
+              <h2>Sifat 1: Perkalian Pangkat</h2>
+              <span> \( a^m . a^n = a^{m+n} \) </span>
+              <p><strong>Pembuktian:</strong></p>
+              <span>Berdasarkan definisi eksponen kita peroleh:</span> <br />
+              <ul>
+                <li>\( a^m = a \times a \times a \times \dots \times a \), sebanyak \(m\) kali.</li>
+                <li>\( a^n = a \times a \times a \times \dots \times a \), sebanyak \(n\) kali.</li>
+              </ul>
+              <span>Sehingga ketika kita mengalikan \( a^m . a^n \) maka banyaknya \(a\) adalah \(m+n \) buah. Sehingga diperoleh: </span> <br />
+              <span> \( a^m . a^n = a^{m+n} \)</span>
+            </section>
+
+            <section id="property2">
+              <h2>Sifat 2: Pembagian Pangkat</h2>
+              <p>\( \frac{a^m}{a^n} = a^{m-n} \)</p>
+              <p><strong>Pembuktian:</strong></p>
+              <p>Berdasarkan definisi eksponen, kita tahu bahwa:</p>
+              <ul>
+                <li>\( a^m = a \times a \times a \times \dots \times a \), sebanyak \(m\) kali.</li>
+                <li>\( a^n = a \times a \times a \times \dots \times a \), sebanyak \(n\) kali.</li>
+              </ul>
+              <p>Ketika \( \frac{a^m}{a^n} \), elemen \(a\) pada pembilang dan penyebut saling menghilangkan satu per satu.</p>
+              <p>Setelah penghilangan, tersisa \(a\) sebanyak \(m - n\) di pembilang (jika \(m > n\)), sehingga:</p>
+              <p>\( \frac{a^m}{a^n} = a^{m-n} \)</p>
+              <p>Jika \(m = n\), maka semua elemen \(a\) saling menghilangkan, menghasilkan \(1\), sesuai definisi eksponen:</p>
+              <p>\( a^0 = 1 \)</p>
+            </section>
+
+            <section id="property3">
+              <h2>Sifat 3: Pangkat di Pangkat</h2>
+              <p>\( (a^m)^n = a^{m \times n} \)</p>
+              <p><strong>Pembuktian:</strong></p>
+              <p>Berdasarkan definisi eksponen, kita tahu bahwa:</p>
+              <p>\( a^m = a \times a \times a \times \dots \times a \), sebanyak \(m\) kali.</p>
+              <p>Ketika \(a^m\) dipangkatkan dengan \(n\), kita melipatgandakan \(a^m\) sebanyak \(n\) kali, yaitu:</p>
+              <p>\( (a^m)^n = (a \times a \times a \times \dots \times a) \times (a \times a \times a \times \dots \times a) \times \dots \) sebanyak \(n\) kali.</p>
+              <p>Hasilnya adalah \(a\) yang dikalikan sebanyak \(m \times n\), sehingga:</p>
+              <p>\( (a^m)^n = a^{m \times n} \)</p>
+            </section>
+
+            <section id="property4">
+              <h2>Sifat 4: Perkalian Basis dengan Pangkat yang Sama</h2>
+              <p>\( a^m \cdot b^m = (a \cdot b)^m \)</p>
+              <p><strong>Pembuktian:</strong></p>
+              <p>Berdasarkan definisi eksponen, kita tahu bahwa:</p>
+              <ul>
+                <li>\( a^m = a \times a \times a \times \dots \times a \), sebanyak \(m\) kali.</li>
+                <li>\( b^m = b \times b \times b \times \dots \times b \), sebanyak \(m\) kali.</li>
+              </ul>
+              <p>Ketika \(a^m \cdot b^m\), kita mengalikan semua elemen \(a\) dan \(b\), sehingga menjadi:</p>
+              <p>\( a^m \cdot b^m = (a \cdot b) \times (a \cdot b) \times (a \cdot b) \times \dots \), sebanyak \(m\) kali.</p>
+              <p>Hasilnya adalah \((a \cdot b)\) yang dikalikan sebanyak \(m\) kali, sehingga:</p>
+              <p>\( a^m \cdot b^m = (a \cdot b)^m \)</p>
+              <p><strong>Contoh:</strong></p>
+              <p>\( 2^3 \cdot 3^3 = (2 \cdot 3)^3 = 6^3 = 216 \)</p>
+            </section>
+
+            <section id="property5">
+              <h2>Sifat 5: Pembagian Basis dengan Pangkat yang Sama</h2>
+              <p>\( \frac{a^m}{b^m} = \left(\frac{a}{b}\right)^m \), dengan \( b \neq 0 \)</p>
+              <p><strong>Pembuktian:</strong></p>
+              <p>Berdasarkan definisi eksponen, kita tahu bahwa:</p>
+              <ul>
+                <li>\( a^m = a \times a \times a \times \dots \times a \), sebanyak \(m\) kali.</li>
+                <li>\( b^m = b \times b \times b \times \dots \times b \), sebanyak \(m\) kali.</li>
+              </ul>
+              <p>Ketika \( \frac{a^m}{b^m} \), kita membagi setiap elemen \(a\) dengan elemen \(b\), sehingga menjadi:</p>
+              <p>\( \frac{a^m}{b^m} = \left(\frac{a}{b}\right) \times \left(\frac{a}{b}\right) \times \dots \), sebanyak \(m\) kali.</p>
+              <p>Hasilnya adalah \(\left(\frac{a}{b}\right)\) yang dikalikan sebanyak \(m\) kali, sehingga:</p>
+              <p>\( \frac{a^m}{b^m} = \left(\frac{a}{b}\right)^m \)</p>
+            </section>
+
+            <section id="property6">
+              <h2>Sifat 6: Pangkat Negatif</h2>
+              <p>\( a^{-m} = \frac{1}{a^m} \), dengan \( a \neq 0 \)</p>
+              <p><strong>Pembuktian:</strong></p>
+              <p>Berdasarkan definisi pangkat negatif, pangkat negatif menyatakan kebalikan dari pangkat positif:</p>
+              <p>\( a^{-m} = \frac{1}{a^m} \)</p>
+              <p>Hal ini sesuai dengan sifat eksponen yang menjaga hasil operasi konsisten untuk setiap nilai \(m\).</p>
+            </section>
+
+            <section id="property7">
+              <h2>Sifat 7: Kebalikan Pangkat</h2>
+              <p>\( \frac{1}{a^m} = a^{-m} \), dengan \( a \neq 0 \)</p>
+              <p><strong>Pembuktian:</strong></p>
+              <p>Kebalikan dari pangkat positif dapat ditulis sebagai pangkat negatif. Berdasarkan sifat eksponen:</p>
+              <p>\( a^{-m} = \frac{1}{a^m} \), maka berlaku sebaliknya:</p>
+              <p>\( \frac{1}{a^m} = a^{-m} \)</p>
+            </section>
+
+            <section id="property8">
+              <h2>Sifat 8: Pangkat Nol</h2>
+              <p>\( a^0 = 1 \), dengan \( a \neq 0 \)</p>
+              <p><strong>Pembuktian:</strong></p>
+              <p>Berdasarkan sifat eksponen pembagian, kita tahu bahwa:</p>
+              <p>\( \frac{a^m}{a^m} = a^{m-m} = a^0 \)</p>
+              <p>Namun, \( \frac{a^m}{a^m} = 1 \), sehingga \( a^0 = 1 \).</p>
+            </section>
+
+            <section id="property9">
+              <h2>Sifat 9: Akar sebagai Pangkat Pecahan</h2>
+              <p>\( \sqrt[n]{a^m} = a^{\frac{m}{n}} \)</p>
+              <p><strong>Pembuktian:</strong></p>
+              <p>Berdasarkan definisi akar, akar ke-\(n\) dari suatu bilangan adalah bilangan yang jika dipangkatkan dengan \(n\) menghasilkan bilangan asal. Maka:</p>
+              <p>\( \sqrt[n]{a^m} = (a^m)^{\frac{1}{n}} = a^{m \cdot \frac{1}{n}} = a^{\frac{m}{n}} \)</p>
+            </section>
+
+            <section id="property10">
+              <h2>Sifat 10: Pangkat Fungsi</h2>
+              <p>Jika \( a^{f(x)} = a^{g(x)} \), maka \( f(x) = g(x) \)</p>
+            </section>
+
+            <section>
+              Jadi, itulah pembahasan singkat mengenai definisi eksponen dan pembuktian beberapa sifat-sifat eksponen yang sering digunakan jika mengerjakan soal. Jika anda ingin mahir mengerjakan soal eksponen maka banyak-banyaklah
+              berlatih soal-soal dari yang mudah terlebih dahulu sampai tingkat olimpiade. Nantikan pembahasan soal-soal yang menarik hanya di <strong><a href="/index.html">MathAlpha.</a></strong>
+            </section>
+
+            <footer>
+              <p>&copy; 2024 Math Alpha. Semua Hak Dilindungi.</p>
+            </footer>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <script src="/script.js"></script>
+  </body>
+</html>

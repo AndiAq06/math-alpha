@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Margin of Error, Standard Error, dan Confidence-Interval</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles.css" />
+    <meta name="google-site-verification" content="wSwaOWra1NglT7WH5RGbaNJ2Jrsv1nRoWawtwszrBws" />
+    <link rel="icon" href="/img/logo.png" sizes="32x32" type="image/png" />
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1624084859744468" crossorigin="anonymous"></script>
+    <!-- math.js -->
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="icon" href="/img/logo.png" sizes="32x32" type="image/png" />
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1624084859744468" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Hamburger Menu -->
+      <button class="hamburger-menu">
+        <i class="fas fa-bars"></i>
+      </button>
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <button class="close-btn">&times;</button>
+        <div class="logo">
+          <img src="/img/logo.png" alt="Chirpy Logo" />
+          <h2>MathAlpha</h2>
+        </div>
+        <nav class="menu">
+          <a href="/index.html" class="menu-item"> <i class="fas fa-home"></i> Home </a>
+          <a href="/statistika/index.html" class="menu-item"> <i class="fas fa-chart-bar"></i> Statistika </a>
+          <a href="/matematika/index.html" class="menu-item"> <i class="fas fa-square-root-alt"></i> Matematika </a>
+          <a href="/sql/index.html" class="menu-item"> <i class="fas fa-database"></i> SQL </a>
+          <a href="/pemprograman/index.html" class="menu-item"> <i class="fas fa-code"></i> Pemprograman </a>
+          <a href="#" class="menu-item"> <i class="fas fa-info-circle"></i> About </a>
+        </nav>
+
+        <!-- Social Media Icons -->
+        <div class="social-media">
+          <a href="https://www.instagram.com/andiaso06/" target="_blank" class="social-icon">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/andi-ardiansyah-7b25072a9/" target="_blank" class="social-icon">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="https://github.com/AndiAq06" target="_blank" class="social-icon">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="https://www.youtube.com/@andimath06" target="_blank" class="social-icon">
+            <i class="fab fa-youtube"></i>
+          </a>
+          <a href="https://www.twitter.com" target="_blank" class="social-icon">
+            <i class="fab fa-x-twitter"></i>
+          </a>
+        </div>
+      </aside>
+
+      <!-- Main Content -->
+      <main class="content">
+        <div class="article">
+          <div class="image-container">
+            <img src="/img/margin-error.png" alt="Statistika" class="article-image" />
+            <p class="image-source">Sumber: wikipedia</p>
+          </div>
+          <div class="content-statistik">
+            <header>
+              <h1>Memahami Margin of Error, Standard Error, dan Confidence-Interval</h1>
+            </header>
+
+            <section id="margin-of-error">
+              <h2>Apa itu Margin of Error?</h2>
+              <p>
+                <strong>Margin of Error</strong> (MoE) adalah ukuran yang menunjukkan seberapa besar kemungkinan hasil survei berbeda dari kenyataan sebenarnya di seluruh populasi. Jika margin of error besar, artinya hasil survei kurang
+                dapat dipercaya untuk menggambarkan kondisi sebenarnya. Margin of error muncul ketika hanya sebagian populasi yang disurvei dan ada variasi dalam hasilnya.
+              </p>
+              <p>Secara matematis, margin of error dapat dihitung sebagai:</p>
+              <p>\(MoE = Z \times SE \)</p>
+              <p>Dengan:</p>
+              <ul>
+                <li><strong>\(Z\)</strong>: Z-score yang sesuai dengan tingkat kepercayaan (misalnya, 1.96 untuk tingkat kepercayaan 95%).</li>
+                <li><strong>\(SE\)</strong>: Standard Error.</li>
+              </ul>
+              <p>Misalkan:</p>
+              <ul>
+                <li>Standard error (SE) = 2</li>
+                <li>Z-score untuk tingkat kepercayaan 95% = 1.96</li>
+              </ul>
+              <p>Maka margin of error adalah:</p>
+              <p>\(MoE = 1.96 \times 2 = 3.92\)</p>
+              <p><strong>Interpretasi:</strong> Parameter populasi diperkirakan berada dalam rentang nilai sampel ±3.92 dengan tingkat keyakinan 95%.</p>
+            </section>
+
+            <section id="standard-error">
+              <h2>Apa itu Standard Error?</h2>
+              <p>
+                <strong>Standard Error</strong> (SE) mengukur seberapa besar perubahan atau perbedaan dalam suatu statistik sampel, seperti rata-rata atau proporsi sampel. Standard error membantu memperkirakan seberapa jauh statistik sampel
+                mungkin berbeda dari parameter populasi yang sebenarnya.
+              </p>
+              <p>Untuk rata-rata sampel, standard error dihitung sebagai:</p>
+              <p>\( SE = \sigma / \sqrt{n} \)</p>
+              <p>Dengan:</p>
+              <ul>
+                <li><strong>\(\sigma\)</strong>: Simpangan baku populasi.</li>
+                <li><strong>\(n\)</strong>: Ukuran sampel.</li>
+              </ul>
+              <h3>Contoh:</h3>
+              <p>Misalkan simpangan baku populasi adalah 10 dan ukuran sampel adalah 25:</p>
+              <p>\( SE = 10 / \sqrt{25} = 2\)</p>
+              <p><strong>Interpretasi:</strong> Variabilitas rata-rata sampel diperkirakan ±2 unit dari rata-rata populasi. Artinya, jika rata-rata populasi adalah 50, rata-rata sampel dapat bervariasi antara 48 hingga 52.</p>
+            </section>
+
+            <section id="confidence-interval">
+              <h2>Apa itu Confidence Interval?</h2>
+              <p>
+                <strong>Confidence Interval</strong> (CI) adalah rentang nilai yang digunakan untuk memperkirakan parameter populasi dengan tingkat keyakinan tertentu. Confidence interval menunjukkan sejauh mana kita dapat yakin bahwa
+                estimasi parameter populasi berada dalam rentang tersebut.
+              </p>
+              <p>Secara matematis, confidence interval dihitung sebagai:</p>
+              <p>\(CI = \bar{x} \pm MoE \)</p>
+              <p>Dengan:</p>
+              <ul>
+                <li><strong>\(\bar{x}\)</strong>: Nilai rata-rata sampel.</li>
+                <li><strong>MoE</strong>: Margin of Error.</li>
+              </ul>
+              <h3>Contoh:</h3>
+              <p>Misalkan rata-rata sampel adalah 50, dan margin of error adalah 3.92:</p>
+              <p>\(CI = 50 \pm 3.92 = (46.08, 53.92)\)</p>
+              <p>
+                <strong>Interpretasi:</strong> Dengan tingkat keyakinan 95%, parameter populasi diperkirakan berada dalam rentang 46.08 hingga 53.92. Artinya, ada kemungkinan sebesar 95% bahwa rata-rata populasi benar-benar berada di antara
+                nilai tersebut.
+              </p>
+            </section>
+
+            <section id="relationship">
+              <h2>Hubungan Antara Margin of Error, Standard Error, dan Confidence Interval</h2>
+              <p>Margin of error secara langsung bergantung pada standard error. Seperti yang ditunjukkan dalam rumus:</p>
+              <p>\(MoE = Z \times SE \)</p>
+              <p>
+                Jika standard error menurun (misalnya, karena ukuran sampel yang lebih besar), margin of error juga akan menurun, menghasilkan estimasi yang lebih presisi. Margin of error digunakan untuk membangun confidence interval,
+                sehingga hubungan antara ketiganya saling berkaitan erat.
+              </p>
+            </section>
+
+            <footer>
+              <p>&copy; 2024 Math Alpha. Semua Hak Dilindungi.</p>
+            </footer>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <script src="/script.js"></script>
+  </body>
+</html>
