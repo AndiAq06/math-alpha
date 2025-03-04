@@ -18,7 +18,7 @@ h2 {
 }
 
 h1 {
-  color: #222;
+  color: #333;
 }
 
 .container {
@@ -132,10 +132,13 @@ h1 {
 }
 
 /* Content Styling */
+
 .content {
   flex: 1;
   padding: 20px;
-  margin-left: 19rem;
+  margin-left: 22rem;
+  text-align: justify;
+  margin-right: 3rem;
 }
 
 .content .home {

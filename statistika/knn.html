@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Apa itu KNN?</title>
+    <title>K-Nearest Neighbors (KNN): Pengertian, Cara Kerja, dan Implementasi dalam Python</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="/styles.css" />
     <meta name="google-site-verification" content="wSwaOWra1NglT7WH5RGbaNJ2Jrsv1nRoWawtwszrBws" />
@@ -56,48 +56,69 @@
 
       <!-- Main Content -->
       <main class="content">
-        <h3>Algoritma K-Nearest Neighbors (KNN)</h3>
         <div class="article">
-          <div class="image-container">
-            <img src="/img/knn.png" alt="Statistika" class="article-image" />
-          </div>
           <div class="content-statistik">
             <header>
-              <h1>K-Nearest Neighbors (KNN)</h1>
+              <h1>K-Nearest Neighbors (KNN): Pengertian, Cara Kerja, dan Implementasi dalam Python</h1>
             </header>
 
+            <div class="image-container">
+              <img src="/img/knn.png" alt="Ilustrasi Algoritma K-Nearest Neighbors (KNN)" class="article-image" />
+              <p class="image-source">Sumber: [Sumber Gambar]</p>
+            </div>
+
             <section id="definisi">
-              <h2>Definisi KNN</h2>
+              <h2>Definisi K-Nearest Neighbors (KNN)</h2>
               <p>
-                K-Nearest Neighbors (KNN) adalah algoritma supervised learning yang digunakan untuk klasifikasi dan regresi. Algoritma ini bekerja dengan mencari data tetangga terdekat dari suatu data baru berdasarkan metrik jarak tertentu,
-                seperti jarak Euclidean, Manhattan, atau lainnya. Data baru kemudian diklasifikasikan berdasarkan mayoritas label dari tetangganya atau diestimasi nilai rata-ratanya (untuk regresi).
+                <strong>K-Nearest Neighbors (KNN)</strong> adalah salah satu algoritma <em>supervised learning</em> yang digunakan untuk tugas klasifikasi dan regresi. Algoritma ini termasuk dalam kategori <em>lazy learning</em>, karena
+                tidak membuat model selama fase pelatihan. Sebaliknya, KNN menyimpan seluruh dataset dan melakukan prediksi dengan mencari data tetangga terdekat dari suatu data baru berdasarkan metrik jarak tertentu, seperti jarak
+                Euclidean, Manhattan, atau lainnya.
+              </p>
+              <p>
+                Dalam klasifikasi, KNN menentukan label data baru berdasarkan mayoritas label dari tetangga terdekatnya. Sedangkan dalam regresi, KNN menghitung rata-rata nilai target dari tetangga terdekat untuk memprediksi nilai data
+                baru.
               </p>
             </section>
 
             <section id="cara-kerja">
-              <h2>Cara Menghitung KNN</h2>
+              <h2>Cara Kerja KNN</h2>
+              <p>Algoritma KNN bekerja dengan langkah-langkah berikut:</p>
               <ol>
-                <li>Tentukan parameter <code>K</code>, yaitu jumlah tetangga terdekat.</li>
-                <li>Hitung jarak antara data baru dengan semua data dalam dataset menggunakan metrik jarak tertentu.</li>
-                <li>Urutkan data berdasarkan jarak terdekat.</li>
-                <li>Pilih <code>K</code> tetangga terdekat.</li>
                 <li>
-                  Klasifikasi: Tentukan kelas mayoritas dari tetangga terdekat.<br />
-                  Regresi: Hitung rata-rata nilai target dari tetangga terdekat.
+                  <strong>Tentukan parameter <code>K</code>:</strong> Pilih jumlah tetangga terdekat (<code>K</code>) yang akan digunakan untuk prediksi. Nilai <code>K</code> biasanya dipilih secara eksperimen atau menggunakan teknik
+                  validasi silang.
+                </li>
+                <li><strong>Hitung jarak:</strong> Hitung jarak antara data baru dengan semua data dalam dataset menggunakan metrik jarak tertentu, seperti jarak Euclidean atau Manhattan.</li>
+                <li><strong>Urutkan data:</strong> Urutkan data berdasarkan jarak terdekat ke data baru.</li>
+                <li><strong>Pilih tetangga terdekat:</strong> Pilih <code>K</code> tetangga terdekat dari data baru.</li>
+                <li>
+                  <strong>Prediksi:</strong>
+                  <ul>
+                    <li>Untuk klasifikasi: Tentukan label mayoritas dari tetangga terdekat.</li>
+                    <li>Untuk regresi: Hitung rata-rata nilai target dari tetangga terdekat.</li>
+                  </ul>
                 </li>
               </ol>
             </section>
 
             <section id="metrik-jarak">
               <h2>Metrik Jarak yang Umum Digunakan</h2>
+              <p>Metrik jarak digunakan untuk mengukur seberapa dekat dua titik data dalam ruang multidimensi. Beberapa metrik jarak yang umum digunakan dalam KNN adalah:</p>
               <ul>
-                <li><strong>Jarak Euclidean:</strong> \( \sqrt{\sum_{i=1}^n (x_i - y_i)^2} \)</li>
-                <li><strong>Jarak Manhattan:</strong> \( \sum_{i=1}^n |x_i - y_i| \)</li>
+                <li>
+                  <strong>Jarak Euclidean:</strong>
+                  \[ \sqrt{\sum_{i=1}^n (x_i - y_i)^2} \] Jarak Euclidean adalah metrik jarak paling umum yang digunakan untuk mengukur jarak lurus antara dua titik dalam ruang Euclidean.
+                </li>
+                <li>
+                  <strong>Jarak Manhattan:</strong>
+                  \[ \sum_{i=1}^n |x_i - y_i| \] Jarak Manhattan mengukur jarak antara dua titik dengan menjumlahkan selisih absolut dari koordinat mereka. Metrik ini sering digunakan dalam dataset dengan fitur yang memiliki skala berbeda.
+                </li>
               </ul>
             </section>
 
             <section id="contoh-soal">
               <h2>Contoh Soal KNN</h2>
+              <p>Berikut adalah contoh sederhana penggunaan KNN untuk klasifikasi:</p>
               <p><strong>Soal:</strong></p>
               <p>Diberikan dataset berikut dengan dua fitur (X1 dan X2) dan label:</p>
               <pre><code>
@@ -133,73 +154,79 @@ Data:
 
             <section id="penerapan">
               <h2>Penerapan KNN dalam Machine Learning</h2>
-              <p>KNN sering digunakan dalam berbagai aplikasi, seperti:</p>
+              <p>KNN adalah algoritma yang serbaguna dan dapat diterapkan dalam berbagai bidang, seperti:</p>
               <ul>
                 <li>
-                  <strong>Klasifikasi gambar:</strong> KNN digunakan untuk mengelompokkan gambar berdasarkan kemiripan fitur, seperti warna, tekstur, atau bentuk. Fitur-fitur ini diekstraksi dari gambar menggunakan algoritma tertentu, dan
+                  <strong>Klasifikasi Gambar:</strong> KNN digunakan untuk mengelompokkan gambar berdasarkan kemiripan fitur, seperti warna, tekstur, atau bentuk. Fitur-fitur ini diekstraksi dari gambar menggunakan algoritma tertentu, dan
                   kemudian setiap gambar direpresentasikan sebagai vektor dalam ruang multidimensi. Jarak antara vektor menentukan kelompok gambar tersebut.
                 </li>
                 <li>
-                  <strong>Pengenalan wajah:</strong> KNN digunakan dengan membandingkan vektor fitur wajah yang diekstraksi menggunakan algoritma seperti PCA atau deep learning. Setiap wajah direpresentasikan sebagai titik dalam ruang
+                  <strong>Pengenalan Wajah:</strong> KNN digunakan dengan membandingkan vektor fitur wajah yang diekstraksi menggunakan algoritma seperti PCA atau deep learning. Setiap wajah direpresentasikan sebagai titik dalam ruang
                   multidimensi, dan jarak antara vektor wajah menentukan seberapa mirip wajah tersebut dengan wajah dalam dataset pelatihan.
                 </li>
                 <li>
-                  <strong>Sistem rekomendasi:</strong> Dalam sistem rekomendasi, KNN digunakan untuk menemukan pengguna atau item yang mirip berdasarkan preferensi, ulasan, atau karakteristik lainnya. Misalnya, untuk merekomendasikan film,
+                  <strong>Sistem Rekomendasi:</strong> Dalam sistem rekomendasi, KNN digunakan untuk menemukan pengguna atau item yang mirip berdasarkan preferensi, ulasan, atau karakteristik lainnya. Misalnya, untuk merekomendasikan film,
                   algoritma ini mencari pengguna dengan preferensi serupa dan menyarankan film yang mereka sukai.
                 </li>
                 <li>
-                  <strong>Analisis data medis:</strong> Dalam analisis data medis, KNN digunakan untuk mengelompokkan pasien berdasarkan kesamaan gejala atau hasil tes. Hal ini membantu dalam diagnosis penyakit atau rekomendasi pengobatan
+                  <strong>Analisis Data Medis:</strong> Dalam analisis data medis, KNN digunakan untuk mengelompokkan pasien berdasarkan kesamaan gejala atau hasil tes. Hal ini membantu dalam diagnosis penyakit atau rekomendasi pengobatan
                   berdasarkan riwayat pasien lain yang serupa.
                 </li>
               </ul>
-              <p>Kelebihan KNN adalah kesederhanaannya, namun karena membutuhkan perhitungan jarak untuk setiap data dalam dataset, algoritma ini cenderung lambat untuk dataset besar.</p>
             </section>
 
             <section id="keuntungan-kerugian">
               <h2>Keuntungan dan Kerugian KNN</h2>
               <h3>Keuntungan</h3>
               <ul>
-                <li>Mudah diimplementasikan.</li>
-                <li>Tidak memerlukan asumsi khusus tentang data.</li>
-                <li>Fleksibel untuk klasifikasi dan regresi.</li>
+                <li><strong>Mudah diimplementasikan:</strong> Algoritma KNN sangat sederhana dan mudah dipahami, sehingga implementasinya cukup mudah bahkan untuk pemula.</li>
+                <li><strong>Tidak memerlukan asumsi khusus tentang data:</strong> KNN tidak membuat asumsi apa pun tentang distribusi data yang mendasarinya, sehingga dapat digunakan dalam berbagai jenis dataset.</li>
+                <li><strong>Fleksibel untuk klasifikasi dan regresi:</strong> KNN dapat digunakan untuk kedua tugas ini, sehingga sangat serbaguna dan dapat diterapkan pada berbagai masalah.</li>
               </ul>
               <h3>Kerugian</h3>
               <ul>
-                <li>Kompleksitas komputasi tinggi untuk dataset besar.</li>
-                <li>Sensitif terhadap skala fitur.</li>
-                <li>Memerlukan penyimpanan seluruh dataset selama inferensi.</li>
+                <li><strong>Kompleksitas komputasi tinggi untuk dataset besar:</strong> Ketika dataset menjadi sangat besar, perhitungan jarak antara titik data menjadi sangat memakan waktu dan membutuhkan banyak daya komputasi.</li>
+                <li>
+                  <strong>Sensitif terhadap skala fitur:</strong> Fitur dengan skala yang lebih besar dapat mendominasi perhitungan jarak, sehingga normalisasi data diperlukan untuk memastikan bahwa semua fitur berkontribusi secara
+                  seimbang.
+                </li>
+                <li>
+                  <strong>Memerlukan penyimpanan seluruh dataset selama inferensi:</strong> KNN harus menyimpan seluruh dataset untuk melakukan prediksi, yang berarti memori yang dibutuhkan bisa sangat besar, terutama untuk dataset yang
+                  besar.
+                </li>
               </ul>
             </section>
 
             <section id="kode-python">
               <h2>Implementasi KNN dalam Python</h2>
-              <p>Berikut adalah contoh implementasi sederhana KNN untuk klasifikasi menggunakan library <code>scikit-learn</code>:</p>
+              <p>Berikut adalah contoh implementasi KNN untuk klasifikasi menggunakan library <code>scikit-learn</code>:</p>
               <pre>
-        <code>
-from sklearn.datasets import load_iris
-from sklearn.model_selection import train_test_split
-from sklearn.neighbors import KNeighborsClassifier
-from sklearn.metrics import accuracy_score
-
-# Load dataset
-iris = load_iris()
-X, y = iris.data, iris.target
-
-# Bagi data menjadi training dan testing
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
-
-# Buat model KNN dengan K=3
-knn = KNeighborsClassifier(n_neighbors=3)
-knn.fit(X_train, y_train)
-
-# Prediksi data testing
-y_pred = knn.predict(X_test)
-
-# Hitung akurasi
-accuracy = accuracy_score(y_test, y_pred)
-print(f"Akurasi model: {accuracy * 100:.2f}%")
-        </code>
-                </pre>
+                <code>
+    from sklearn.datasets import load_iris
+    from sklearn.model_selection import train_test_split
+    from sklearn.neighbors import KNeighborsClassifier
+    from sklearn.metrics import accuracy_score
+    
+    Load dataset
+    iris = load_iris()
+    X, y = iris.data, iris.target
+    
+    Bagi data menjadi training dan testing
+    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+    
+    Buat model KNN dengan K=3
+    knn = KNeighborsClassifier(n_neighbors=3)
+    knn.fit(X_train, y_train)
+    
+    Prediksi data testing
+    y_pred = knn.predict(X_test)
+    
+    Hitung akurasi
+    accuracy = accuracy_score(y_test, y_pred)
+    print(f"Akurasi model: {accuracy * 100:.2f}%")
+                  </code>
+                  </pre>
+              <p>Dalam contoh di atas, dataset Iris digunakan untuk melatih model KNN dengan <code>K=3</code>. Model kemudian diuji pada data testing, dan akurasi dihitung untuk mengevaluasi performa model.</p>
             </section>
             <footer>
               <p>&copy; 2024 Math Alpha. Semua Hak Dilindungi.</p>

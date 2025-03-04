@@ -220,7 +220,7 @@ Data:
               <h2>Implementasi K-Means dalam Python</h2>
               <p>Berikut adalah contoh implementasi sederhana K-Means menggunakan library <code>scikit-learn</code>:</p>
               <h3>1. Persiapan Data</h3>
-
+              <p>Tutorial kali ini kita menggunaka dataset iris untuk melakukan klasifikasi.</p>
               <pre><code>
 # Import library yang diperlukan
 import numpy as np
@@ -271,8 +271,8 @@ plt.ylabel('Inertia')
 plt.show() 
 </code></pre>
 
-              <img src="/img/k-mean-out.png" alt="k-means" class="article-image img" />
-
+              <img src="/img/k-mean-out.png" alt="k-means" class="article-image" />
+              <p>Berdasarkan grafik Elbow, kita mendapatkan nilai 𝐾=3 karena pada titik tersebut grafik mulai melandai, atau SSE (Sum of Squared Errors) mulai tidak menunjukkan penurunan yang terlalu ekstrim.</p>
               <h3>3. Melakukan K-Means dengan K Optimal</h3>
               <p>Setelah menentukan K yang optimal menggunakan Elbow Method atau Silhouette Score, kita dapat melanjutkan untuk melakukan clustering.</p>
 
@@ -333,10 +333,18 @@ silhouette_avg = silhouette_score(df.iloc[:, :-1], kmeans.labels_)
 print(f"Silhouette Score untuk K={optimal_k}: {silhouette_avg:.2f}")
 </code></pre>
               <ul>
-                <li><strong>Homogeneity:</strong> 0.75</li>
-                <li><strong>Completeness:</strong> 0.76</li>
-                <li><strong>V-Measure:</strong> 0.76</li>
-                <li><strong>Silhouette Score untuk K=3:</strong> 0.55</li>
+                <li>
+                  <strong>Homogeneity: 0.75</strong>; mengukur seberapa seragam klaster-klaster dalam hal label mereka. Nilai 0.75 menunjukkan bahwa kebanyakan titik data dalam setiap klaster memiliki label yang sama. Meskipun bukan nilai
+                  sempurna, ini menunjukkan bahwa klaster yang dihasilkan cukup baik dalam mengelompokkan data berdasarkan label yang seragam.
+                </li>
+                <li>
+                  <strong>Completeness:0.76</strong>; mengukur seberapa baik anggota dengan label yang sama ditempatkan dalam klaster yang sama. Nilai 0.76 menunjukkan bahwa kebanyakan titik data dengan label yang sama ditemukan dalam
+                  klaster yang sama. Ini menunjukkan kemampuan klaster untuk menyatukan data dengan label yang sama ke dalam satu grup.
+                </li>
+                <li>
+                  <strong>V-Measure:0.76</strong>; adalah rata-rata harmonis dari homogeneity dan completeness. Nilai 0.76 menunjukkan keseimbangan yang baik antara keduanya. Dengan kata lain, klaster yang dihasilkan cukup konsisten dalam
+                  hal keseragaman dan kelengkapan label.
+                </li>
               </ul>
             </section>
             <footer>

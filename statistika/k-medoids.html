@@ -128,13 +128,25 @@ Data:
               <h2>Keunggulan dan Kelemahan</h2>
               <h3>Keunggulan</h3>
               <ul>
-                <li>Lebih tahan terhadap outlier dibandingkan K-Means.</li>
-                <li>Menggunakan data aktual sebagai medoid, sehingga hasil clustering lebih representatif.</li>
+                <li>
+                  <strong>Lebih tahan terhadap outlier dibandingkan K-Means:</strong> Algoritma ini lebih robust terhadap outlier karena menggunakan medoid (titik data yang sebenarnya) sebagai pusat kluster. Medoid adalah titik yang
+                  memiliki nilai median jarak terendek ke semua titik lain dalam kluster, sehingga tidak mudah dipengaruhi oleh outlier seperti centroid dalam K-Means.
+                </li>
+                <li>
+                  <strong>Menggunakan data aktual sebagai medoid, sehingga hasil clustering lebih representatif:</strong> Dalam algoritma ini, medoid yang dipilih adalah titik data yang sebenarnya, bukan titik tengah yang dihitung secara
+                  matematis seperti pada K-Means. Hal ini membuat hasil clustering lebih representatif karena medoid benar-benar ada dalam dataset.
+                </li>
               </ul>
               <h3>Kelemahan</h3>
               <ul>
-                <li>Kompleksitas komputasi lebih tinggi dibandingkan K-Means.</li>
-                <li>Sulit digunakan untuk dataset berukuran besar tanpa optimasi tambahan.</li>
+                <li>
+                  <strong>Kompleksitas komputasi lebih tinggi dibandingkan K-Means</strong> Karena algoritma ini harus menghitung dan membandingkan jarak antara semua pasangan titik data untuk menentukan medoid, kompleksitas komputasi
+                  menjadi lebih tinggi, terutama untuk dataset yang besar.
+                </li>
+                <li>
+                  <strong>Sulit digunakan untuk dataset berukuran besar tanpa optimasi tambahan:</strong>Tanpa teknik optimasi atau pendekatan heuristik, algoritma ini bisa menjadi sangat lambat dan membutuhkan banyak memori untuk dataset
+                  yang sangat besar. Oleh karena itu, implementasi yang efisien dan optimasi tambahan seringkali diperlukan untuk mengatasinya.
+                </li>
               </ul>
             </section>
 
@@ -143,23 +155,22 @@ Data:
               <p>Berikut adalah contoh implementasi sederhana K-Medoid menggunakan library <code>scikit-learn</code>:</p>
               <h3>1. Persiapan Data</h3>
 
-              <pre><code>
-  import numpy as np
+              <pre><code>  import numpy as np
   import pandas as pd
   
   # Dataset contoh
   data = np.array([
-  [1.0, 1.0],
-  [1.5, 2.0],
-  [3.0, 4.0],
-  [5.0, 7.0],
-  [3.5, 5.0],
-  [4.5, 5.0],
-  [3.5, 4.5]
+      [1.0, 1.0],
+      [1.5, 2.0],
+      [3.0, 4.0],
+      [5.0, 7.0],
+      [3.5, 5.0],
+      [4.5, 5.0],
+      [3.5, 4.5]
   ])
   
   # Jika ingin menggunakan DataFrame untuk manipulasi lebih lanjut
-  df = pd.DataFrame(data, columns=['X', 'Y'])          
+  df = pd.DataFrame(data, columns=['X', 'Y'])       
   </code></pre>
 
               <h3>2. Menentukan Jumlah Cluster (K)</h3>
@@ -189,7 +200,7 @@ plt.plot(k_range, inertia, marker='o')
 plt.title('Elbow Method for Optimal K (K-Medoids)')
 plt.xlabel('Jumlah Cluster (K)')
 plt.ylabel('Inertia')
-plt.show()   
+plt.show()
 </code></pre>
 
               <h4>Silhouette Score</h4>
@@ -211,7 +222,7 @@ plt.plot(k_range[1:], silhouette_scores, marker='o')
 plt.title('Silhouette Scores for Optimal K (K-Medoids)')
 plt.xlabel('Jumlah Cluster (K)')
 plt.ylabel('Silhouette Score')
-plt.show()                
+plt.show()               
 </code></pre>
 
               <h3>3. Melakukan K-Medoid dengan K Optimal</h3>
@@ -224,7 +235,7 @@ kmedoids.fit(df)
 
 # Output hasil clustering
 print("Medoid:", kmedoids.cluster_centers_)
-print("Label:", kmedoids.labels_)                            
+print("Label:", kmedoids.labels_)                          
 </code></pre>
 
               <h3>4. Visualisasi</h3>
@@ -235,7 +246,7 @@ plt.scatter(kmedoids.cluster_centers_[:, 0], kmedoids.cluster_centers_[:, 1], s=
 plt.title('Hasil Clustering dengan K-Medoids')
 plt.xlabel('X')
 plt.ylabel('Y')
-plt.show()                
+plt.show()               
 </code></pre>
 
               <h3>5. Evaluasi Model</h3>
@@ -251,7 +262,7 @@ from sklearn.metrics import homogeneity_score, completeness_score, v_measure_sco
 true_labels = np.array([0, 0, 1, 1, 2, 2, 2])  # Ganti dengan label yang sesuai
 print("Homogeneity:", homogeneity_score(true_labels, kmedoids.labels_))
 print("Completeness:", completeness_score(true_labels, kmedoids.labels_))
-print("V-Measure:", v_measure_score(true_labels, kmedoids.labels_))                
+print("V-Measure:", v_measure_score(true_labels, kmedoids.labels_))              
 </code></pre>
             </section>
             <footer>

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Skewness dan Kurtosis dalam Statistika: Pengertian, Rumus, dan Contoh</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles.css" />
+    <meta name="google-site-verification" content="wSwaOWra1NglT7WH5RGbaNJ2Jrsv1nRoWawtwszrBws" />
+    <!-- math.js -->
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="icon" href="/img/logo.png" sizes="32x32" type="image/png" />
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1624084859744468" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Hamburger Menu -->
+      <button class="hamburger-menu">
+        <i class="fas fa-bars"></i>
+      </button>
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <button class="close-btn">&times;</button>
+        <div class="logo">
+          <img src="/img/logo.png" alt="Chirpy Logo" />
+          <h2>MathAlpha</h2>
+        </div>
+        <nav class="menu">
+          <a href="/index.html" class="menu-item"> <i class="fas fa-home"></i> Home </a>
+          <a href="/statistika/index.html" class="menu-item"> <i class="fas fa-chart-bar"></i> Statistika </a>
+          <a href="/matematika/index.html" class="menu-item"> <i class="fas fa-square-root-alt"></i> Matematika </a>
+          <a href="/sql/index.html" class="menu-item"> <i class="fas fa-database"></i> SQL </a>
+          <a href="/pemprograman/index.html" class="menu-item"> <i class="fas fa-code"></i> Pemrograman </a>
+          <a href="#" class="menu-item"> <i class="fas fa-info-circle"></i> About </a>
+        </nav>
+
+        <!-- Social Media Icons -->
+        <div class="social-media">
+          <a href="https://www.instagram.com/andiaso06/" target="_blank" class="social-icon">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/andi-ardiansyah-7b25072a9/" target="_blank" class="social-icon">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="https://github.com/AndiAq06" target="_blank" class="social-icon">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="https://www.youtube.com/@andimath06" target="_blank" class="social-icon">
+            <i class="fab fa-youtube"></i>
+          </a>
+          <a href="https://www.twitter.com" target="_blank" class="social-icon">
+            <i class="fab fa-x-twitter"></i>
+          </a>
+        </div>
+      </aside>
+
+      <!-- Main Content -->
+      <main class="content">
+        <div class="article">
+          <div class="content-statistik">
+            <header>
+              <h1>Skewness dan Kurtosis dalam Statistika: Pengertian, Rumus, dan Contoh</h1>
+            </header>
+
+            <div class="image-container">
+              <img src="/img/diskrit.png" alt="Ilustrasi Peubah Acak Diskrit dan Kontinu" class="article-image" />
+            </div>
+
+            <section id="pengantar">
+              <h2>Pengantar Skewness dan Kurtosis</h2>
+              <p>
+                Dalam statistika, <strong>skewness</strong> dan <strong>kurtosis</strong> adalah dua ukuran yang digunakan untuk menggambarkan bentuk distribusi data. Skewness mengukur ketidaksimetrian distribusi, sedangkan kurtosis
+                mengukur keruncingan atau ketajaman puncak distribusi. Kedua ukuran ini membantu kita memahami karakteristik data lebih mendalam, terutama dalam analisis statistik dan pemodelan data.
+              </p>
+              <p>Pada artikel ini, kita akan membahas pengertian skewness dan kurtosis, rumus-rumus yang digunakan untuk menghitungnya, serta contoh penerapannya dalam analisis data.</p>
+            </section>
+
+            <section id="skewness">
+              <h2>Skewness (Kemiringan)</h2>
+
+              <strong>Skewness</strong> adalah ukuran yang menggambarkan ketidaksimetrian distribusi data. Distribusi data dapat bersifat:
+              <ul>
+                <li><strong>Simetris</strong>: Skewness = 0. Data terdistribusi merata di sekitar mean.</li>
+                <li><strong>Miring ke Kanan (Positif)</strong>: Skewness > 0. Ekor distribusi lebih panjang di sebelah kanan.</li>
+                <li><strong>Miring ke Kiri (Negatif)</strong>: Skewness < 0. Ekor distribusi lebih panjang di sebelah kiri.</li>
+              </ul>
+
+              <h3>Rumus Skewness</h3>
+              Skewness dapat dihitung menggunakan rumus berikut: \[ \text{Skewness} = \frac{n}{(n-1)(n-2)} \sum \left( \frac{x_i - \bar{x}}{s} \right)^3 \] Di mana:
+              <ul>
+                <li><strong>\(n\)</strong>: Jumlah data.</li>
+                <li><strong>\(x_i\)</strong>: Nilai data ke-\(i\).</li>
+                <li><strong>\(\bar{x}\)</strong>: Rata-rata (mean) data.</li>
+                <li><strong>\(s\)</strong>: Simpangan baku (standard deviation) data.</li>
+              </ul>
+
+              <h3>Interpretasi Skewness</h3>
+
+              <ul>
+                <li><strong>Skewness = 0</strong>: Distribusi simetris.</li>
+                <li><strong>Skewness > 0</strong>: Distribusi miring ke kanan (positif).</li>
+                <li><strong>Skewness < 0</strong>: Distribusi miring ke kiri (negatif).</li>
+              </ul>
+
+              <h3>Contoh Perhitungan Skewness</h3>
+
+              Misalkan kita memiliki data: \([3, 5, 7, 9, 11]\).
+              <ol>
+                <li>Hitung rata-rata (\(\bar{x}\)): \(\bar{x} = \frac{3 + 5 + 7 + 9 + 11}{5} = 7\).</li>
+                <li>Hitung simpangan baku (\(s\)): \(s = 3.16\).</li>
+                <li>Hitung skewness: \[ \text{Skewness} = \frac{5}{(5-1)(5-2)} \sum \left( \frac{x_i - 7}{3.16} \right)^3 = 0 \]</li>
+              </ol>
+              Karena skewness = 0, distribusi data simetris.
+            </section>
+
+            <section id="kurtosis">
+              <h2>Kurtosis (Keruncingan)</h2>
+
+              <strong>Kurtosis</strong> adalah ukuran yang menggambarkan keruncingan atau ketajaman puncak distribusi data. Kurtosis juga mengukur ketebalan ekor distribusi. Berdasarkan nilai kurtosis, distribusi data dapat dikategorikan
+              sebagai:
+              <ul>
+                <li><strong>Mesokurtik</strong>: Kurtosis = 3. Distribusi normal.</li>
+                <li><strong>Leptokurtik</strong>: Kurtosis > 3. Distribusi lebih runcing dengan ekor yang lebih tebal.</li>
+                <li><strong>Platikurtik</strong>: Kurtosis < 3. Distribusi lebih datar dengan ekor yang lebih tipis.</li>
+              </ul>
+
+              <h3>Rumus Kurtosis</h3>
+
+              Kurtosis dapat dihitung menggunakan rumus berikut: \[ \text{Kurtosis} = \frac{n(n+1)}{(n-1)(n-2)(n-3)} \sum \left( \frac{x_i - \bar{x}}{s} \right)^4 - \frac{3(n-1)^2}{(n-2)(n-3)} \] Di mana:
+              <ul>
+                <li><strong>\(n\)</strong>: Jumlah data.</li>
+                <li><strong>\(x_i\)</strong>: Nilai data ke-\(i\).</li>
+                <li><strong>\(\bar{x}\)</strong>: Rata-rata (mean) data.</li>
+                <li><strong>\(s\)</strong>: Simpangan baku (standard deviation) data.</li>
+              </ul>
+
+              <h3>Interpretasi Kurtosis</h3>
+
+              <ul>
+                <li><strong>Kurtosis = 3</strong>: Distribusi normal (mesokurtik).</li>
+                <li><strong>Kurtosis > 3</strong>: Distribusi lebih runcing (leptokurtik).</li>
+                <li><strong>Kurtosis < 3</strong>: Distribusi lebih datar (platikurtik).</li>
+              </ul>
+
+              <h3>Contoh Perhitungan Kurtosis</h3>
+
+              Misalkan kita memiliki data: \([3, 5, 7, 9, 11]\).
+              <ol>
+                <li>Hitung rata-rata (\(\bar{x}\)): \(\bar{x} = 7\).</li>
+                <li>Hitung simpangan baku (\(s\)): \(s = 3.16\).</li>
+                <li>Hitung kurtosis: \[ \text{Kurtosis} = \frac{5(5+1)}{(5-1)(5-2)(5-3)} \sum \left( \frac{x_i - 7}{3.16} \right)^4 - \frac{3(5-1)^2}{(5-2)(5-3)} = 1.7 \]</li>
+              </ol>
+              Karena kurtosis < 3, distribusi data lebih datar (platikurtik).
+            </section>
+
+            <section id="aplikasi">
+              <h2>Aplikasi Skewness dan Kurtosis</h2>
+
+              Skewness dan kurtosis digunakan dalam berbagai bidang, seperti:
+              <ul>
+                <li><strong>Analisis Data</strong>: Untuk memahami distribusi data dan memilih metode analisis yang tepat.</li>
+                <li><strong>Pemodelan Statistik</strong>: Untuk memeriksa asumsi distribusi normal dalam model statistik.</li>
+                <li><strong>Keuangan</strong>: Untuk mengukur risiko dan volatilitas dalam analisis investasi.</li>
+                <li><strong>Kualitas Produk</strong>: Untuk memantau distribusi karakteristik produk dalam kontrol kualitas.</li>
+              </ul>
+            </section>
+
+            <section id="kesimpulan">
+              <h2>Kesimpulan</h2>
+              <p>
+                Skewness dan kurtosis adalah dua ukuran penting dalam statistika yang membantu kita memahami bentuk distribusi data. Skewness mengukur ketidaksimetrian, sedangkan kurtosis mengukur keruncingan distribusi. Dengan memahami
+                konsep ini, kita dapat melakukan analisis data yang lebih mendalam dan memilih metode statistik yang sesuai.
+              </p>
+              <p>
+                Mulailah dengan mempelajari dasar-dasar skewness dan kurtosis, lalu lanjutkan dengan berlatih menghitung dan menginterpretasikan nilai-nilai ini pada dataset yang berbeda. Nantikan pembahasan soal-soal menarik lainnya hanya
+                di <strong><a href="/index.html">MathAlpha</a></strong
+                >.
+              </p>
+            </section>
+
+            <footer>
+              <p>&copy; 2024 Math Alpha. Semua Hak Dilindungi.</p>
+            </footer>
+          </div>
+        </div>
+      </main>
+    </div>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1624084859744468" crossorigin="anonymous"></script>
+    <ins class="adsbygoogle" style="display: block" data-ad-format="autorelaxed" data-ad-client="ca-pub-1624084859744468" data-ad-slot="9604667516"></ins>
+    <script>
+      (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+    <script src="/script.js"></script>
+  </body>
+</html>
