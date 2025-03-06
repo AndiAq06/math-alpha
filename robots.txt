@@ -1,15 +1,23 @@
-# Mengizinkan semua bot untuk mengakses seluruh situs
 User-agent: *
 Allow: /
 
-# Memastikan Googlebot dapat mengakses semua file penting
-User-agent: Googlebot
-Allow: /
-
-# Mengizinkan akses ke file CSS dan JavaScript agar Google bisa merender halaman dengan baik
+# Pastikan Googlebot bisa mengakses file CSS, JS, dan gambar
 Allow: /*.css
 Allow: /*.js
+Allow: /*.png
+Allow: /*.jpg
+Allow: /*.jpeg
+Allow: /*.gif
+Allow: /*.svg
+Allow: /*.webp
 
-# Menyertakan Sitemap agar Google dapat mengindeks situs dengan lebih baik
+# Memastikan Google AdSense bisa diakses
+Allow: /pagead/*
+Allow: /gstatic/*
+Allow: /googlesyndication/*
+Allow: /doubleclick/*
+Allow: /ads/*
+Allow: /img/*
+
+# Sitemap untuk mempermudah indeks Google
 Sitemap: https://math-alpha-iota.vercel.app/sitemap.xml
-
