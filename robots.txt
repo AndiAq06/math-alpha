@@ -1,7 +1,6 @@
 User-agent: *
 Allow: /
 
-# Pastikan Googlebot bisa mengakses file CSS, JS, dan gambar
 Allow: /*.css
 Allow: /*.js
 Allow: /*.png
@@ -11,7 +10,7 @@ Allow: /*.gif
 Allow: /*.svg
 Allow: /*.webp
 
-# Memastikan Google AdSense bisa diakses
+# Memastikan Google AdSense 
 Allow: /pagead/*
 Allow: /gstatic/*
 Allow: /googlesyndication/*
@@ -19,5 +18,4 @@ Allow: /doubleclick/*
 Allow: /ads/*
 Allow: /img/*
 
-# Sitemap untuk mempermudah indeks Google
 Sitemap: https://math-alpha-iota.vercel.app/sitemap.xml
