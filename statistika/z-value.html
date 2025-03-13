@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cara Menghitung Z-Value Menggunakan Distribusi Normal</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles.css" />
+    <meta name="google-site-verification" content="wSwaOWra1NglT7WH5RGbaNJ2Jrsv1nRoWawtwszrBws" />
+    <!-- math.js -->
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="icon" href="/img/logo.png" sizes="32x32" type="image/png" />
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1624084859744468" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Hamburger Menu -->
+      <button class="hamburger-menu">
+        <i class="fas fa-bars"></i>
+      </button>
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <button class="close-btn">&times;</button>
+        <div class="logo">
+          <img src="/img/logo.png" alt="Chirpy Logo" />
+          <h2>MathAlpha</h2>
+        </div>
+        <nav class="menu">
+          <a href="/index.html" class="menu-item"> <i class="fas fa-home"></i> Home </a>
+          <a href="/statistika/index.html" class="menu-item"> <i class="fas fa-chart-bar"></i> Statistika </a>
+          <a href="/matematika/index.html" class="menu-item"> <i class="fas fa-square-root-alt"></i> Matematika </a>
+          <a href="/sql/index.html" class="menu-item"> <i class="fas fa-database"></i> SQL </a>
+          <a href="/pemprograman/index.html" class="menu-item"> <i class="fas fa-code"></i> Pemrograman </a>
+          <a href="#" class="menu-item"> <i class="fas fa-info-circle"></i> About </a>
+        </nav>
+
+        <!-- Social Media Icons -->
+        <div class="social-media">
+          <a href="https://www.instagram.com/andiaso06/" target="_blank" class="social-icon">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/andi-ardiansyah-7b25072a9/" target="_blank" class="social-icon">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="https://github.com/AndiAq06" target="_blank" class="social-icon">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="https://www.youtube.com/@andimath06" target="_blank" class="social-icon">
+            <i class="fab fa-youtube"></i>
+          </a>
+          <a href="https://www.twitter.com" target="_blank" class="social-icon">
+            <i class="fab fa-x-twitter"></i>
+          </a>
+        </div>
+      </aside>
+
+      <!-- Main Content -->
+      <main class="content">
+        <div class="article">
+          <div class="content-statistik">
+            <header>
+              <h1>BCara Menghitung Z-Value Menggunakan Distribusi Normal: Contoh Soal Bervariasi</h1>
+            </header>
+
+            <section id="pengantar">
+              <h2>Pengantar Z-Value dan Distribusi Normal</h2>
+              <p>
+                <strong>Z-value</strong> (atau skor-z) adalah ukuran yang menunjukkan seberapa jauh suatu nilai dari mean (rata-rata) dalam satuan simpangan baku (standard deviation) pada distribusi normal. Distribusi normal adalah
+                distribusi probabilitas yang simetris dan berbentuk lonceng, dengan mean di tengah dan simpangan baku yang menentukan sebaran data.
+              </p>
+              <p>
+                Dalam artikel ini, kita akan membahas cara menghitung Z-value dan probabilitas terkait menggunakan distribusi normal. Kami akan memberikan contoh soal bervariasi, termasuk perhitungan satu arah (misalnya \( P(X < 1,2) \))
+                dan dua arah (misalnya \( P(-1,96 < Z < 1,96) \)), serta contoh tambahan untuk memperdalam pemahaman Anda.
+              </p>
+            </section>
+
+            <section id="rumus-z-value">
+              <h2>Rumus Z-Value</h2>
+
+              Z-value dihitung menggunakan rumus berikut: \[ Z = \frac{X - \mu}{\sigma} \] Di mana:
+              <ul>
+                <li><strong>\(X\)</strong>: Nilai yang ingin dihitung Z-value-nya.</li>
+                <li><strong>\(\mu\)</strong>: Mean (rata-rata) dari distribusi.</li>
+                <li><strong>\(\sigma\)</strong>: Simpangan baku (standard deviation) dari distribusi.</li>
+              </ul>
+
+              <p>Setelah Z-value dihitung, kita dapat menggunakan tabel distribusi normal standar (Z-table) untuk mencari probabilitas terkait.</p>
+            </section>
+
+            <section id="contoh-satu-arah">
+              <h2>Contoh Soal Satu Arah: \( P(X < 1,2) \)</h2>
+              <p>Misalkan kita memiliki distribusi normal dengan mean (\(\mu\)) = 0 dan simpangan baku (\(\sigma\)) = 1. Kita ingin mencari probabilitas \( P(X < 1,2) \).</p>
+
+              <strong>Langkah-langkah:</strong>
+              <ol>
+                <li>Hitung Z-value: \[ Z = \frac{1,2 - 0}{1} = 1,2 \]</li>
+                <li>Gunakan tabel distribusi normal standar (Z-table) untuk mencari probabilitas \( P(Z < 1,2) \).</li>
+                <li>Dari tabel Z, nilai \( P(Z < 1,2) \) adalah sekitar <strong>0,8849</strong>.</li>
+              </ol>
+              Jadi, \( P(X < 1,2) = 0,8849 \).
+            </section>
+
+            <section id="contoh-dua-arah">
+              <h2>Contoh Soal Dua Arah: \( P(-1,96 < Z < 1,96) \)</h2>
+              <p>Misalkan kita ingin mencari probabilitas \( P(-1,96 < Z < 1,96) \) pada distribusi normal standar.</p>
+
+              <strong>Langkah-langkah:</strong>
+              <ol>
+                <li>Gunakan tabel distribusi normal standar (Z-table) untuk mencari probabilitas \( P(Z < 1,96) \). Nilainya adalah sekitar <strong>0,9750</strong>.</li>
+                <li>Gunakan tabel Z untuk mencari probabilitas \( P(Z < -1,96) \). Nilainya adalah sekitar <strong>0,0250</strong>.</li>
+                <li>Hitung probabilitas \( P(-1,96 < Z < 1,96) \): \[ P(-1,96 < Z < 1,96) = P(Z < 1,96) - P(Z < -1,96) = 0,9750 - 0,0250 = 0,9500 \]</li>
+              </ol>
+              Jadi, \( P(-1,96 < Z < 1,96) = 0,9500 \).
+            </section>
+
+            <section id="contoh-lain">
+              <h2>Contoh Soal Lain: \( P(Z > 2,5) \)</h2>
+              <p>Misalkan kita ingin mencari probabilitas \( P(Z > 2,5) \) pada distribusi normal standar.</p>
+
+              <strong>Langkah-langkah:</strong>
+              <ol>
+                <li>Gunakan tabel distribusi normal standar (Z-table) untuk mencari probabilitas \( P(Z < 2,5) \). Nilainya adalah sekitar <strong>0,9938</strong>.</li>
+                <li>Hitung probabilitas \( P(Z > 2,5) \): \[ P(Z > 2,5) = 1 - P(Z < 2,5) = 1 - 0,9938 = 0,0062 \]</li>
+              </ol>
+              Jadi, \( P(Z > 2,5) = 0,0062 \).
+            </section>
+
+            <section id="contoh-distribusi-non-standar">
+              <h2>Contoh Soal Distribusi Non-Standar</h2>
+              <p>Misalkan kita memiliki distribusi normal dengan mean (\(\mu\)) = 50 dan simpangan baku (\(\sigma\)) = 10. Kita ingin mencari probabilitas \( P(X < 60) \).</p>
+
+              <strong>Langkah-langkah:</strong>
+              <ol>
+                <li>Hitung Z-value: \[ Z = \frac{60 - 50}{10} = 1 \]</li>
+                <li>Gunakan tabel distribusi normal standar (Z-table) untuk mencari probabilitas \( P(Z < 1) \). Nilainya adalah sekitar <strong>0,8413</strong>.</li>
+              </ol>
+              Jadi, \( P(X < 60) = 0,8413 \).
+            </section>
+
+            <section id="contoh-tambahan-1">
+              <h2>Contoh Tambahan 1: \( P(X > 70) \) pada Distribusi Non-Standar</h2>
+              <p>Misalkan kita memiliki distribusi normal dengan mean (\(\mu\)) = 50 dan simpangan baku (\(\sigma\)) = 10. Kita ingin mencari probabilitas \( P(X > 70) \).</p>
+
+              <strong>Langkah-langkah:</strong>
+              <ol>
+                <li>Hitung Z-value: \[ Z = \frac{70 - 50}{10} = 2 \]</li>
+                <li>Gunakan tabel distribusi normal standar (Z-table) untuk mencari probabilitas \( P(Z < 2) \). Nilainya adalah sekitar <strong>0,9772</strong>.</li>
+                <li>Hitung probabilitas \( P(X > 70) \): \[ P(X > 70) = 1 - P(Z < 2) = 1 - 0,9772 = 0,0228 \]</li>
+              </ol>
+              Jadi, \( P(X > 70) = 0,0228 \).
+            </section>
+
+            <section id="contoh-tambahan-2">
+              <h2>Contoh Tambahan 2: \( P(40 < X < 60) \) pada Distribusi Non-Standar</h2>
+              <p>Misalkan kita memiliki distribusi normal dengan mean (\(\mu\)) = 50 dan simpangan baku (\(\sigma\)) = 10. Kita ingin mencari probabilitas \( P(40 < X < 60) \).</p>
+
+              <strong>Langkah-langkah:</strong>
+              <ol>
+                <li>Hitung Z-value untuk \( X = 40 \): \[ Z_1 = \frac{40 - 50}{10} = -1 \]</li>
+                <li>Hitung Z-value untuk \( X = 60 \): \[ Z_2 = \frac{60 - 50}{10} = 1 \]</li>
+                <li>Gunakan tabel distribusi normal standar (Z-table) untuk mencari probabilitas \( P(Z < 1) \). Nilainya adalah sekitar <strong>0,8413</strong>.</li>
+                <li>Gunakan tabel Z untuk mencari probabilitas \( P(Z < -1) \). Nilainya adalah sekitar <strong>0,1587</strong>.</li>
+                <li>Hitung probabilitas \( P(40 < X < 60) \): \[ P(40 < X < 60) = P(Z < 1) - P(Z < -1) = 0,8413 - 0,1587 = 0,6826 \]</li>
+              </ol>
+              Jadi, \( P(40 < X < 60) = 0,6826 \).
+            </section>
+
+            <section id="kesimpulan">
+              <h2>Kesimpulan</h2>
+              <p>
+                Menghitung Z-value dan probabilitas terkait menggunakan distribusi normal adalah keterampilan penting dalam statistika. Dengan memahami rumus Z-value dan cara menggunakan tabel distribusi normal standar, Anda dapat
+                menyelesaikan berbagai masalah probabilitas, baik satu arah maupun dua arah.
+              </p>
+              <p>
+                Mulailah dengan mempelajari dasar-dasar distribusi normal dan Z-value, lalu lanjutkan dengan berlatih soal-soal bervariasi untuk meningkatkan pemahaman Anda. Nantikan pembahasan soal-soal menarik lainnya hanya di
+                <strong><a href="/index.html">MathAlpha</a></strong
+                >.
+              </p>
+            </section>
+
+            <footer>
+              <p>&copy; 2024 Math Alpha. Semua Hak Dilindungi.</p>
+            </footer>
+          </div>
+        </div>
+      </main>
+    </div>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1624084859744468" crossorigin="anonymous"></script>
+    <ins class="adsbygoogle" style="display: block" data-ad-format="autorelaxed" data-ad-client="ca-pub-1624084859744468" data-ad-slot="9604667516"></ins>
+    <script>
+      (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+    <script src="/script.js"></script>
+  </body>
+</html>
