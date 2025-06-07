@@ -13,8 +13,13 @@
   <body>
     <div class="container">
       <!-- Hamburger Menu -->
+      <!-- Add this to your HTML (before the sidebar) -->
       <button class="hamburger-menu">
-        <i class="fas fa-bars"></i>
+        <div class="hamburger-icon">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
       </button>
       <!-- Sidebar -->
       <aside class="sidebar">
@@ -26,6 +31,8 @@
         <nav class="menu">
           <a href="/index.html" class="menu-item"> <i class="fas fa-home"></i> Home </a>
           <a href="/statistika/index.html" class="menu-item"> <i class="fas fa-chart-bar"></i> Statistika </a>
+          <a href="/machine-learning/index.html" class="menu-item"> <i class="fas fa-robot"></i> Machine Learning </a>
+          <a href="/deep-learning/index.html" class="menu-item"> <i class="fas fa-brain"></i> Deep Learning </a>
           <a href="/matematika/index.html" class="menu-item"> <i class="fas fa-square-root-alt"></i> Matematika </a>
           <a href="/sql/index.html" class="menu-item"> <i class="fas fa-database"></i> SQL </a>
           <a href="/pemprograman/index.html" class="menu-item"> <i class="fas fa-code"></i> Pemrograman </a>
@@ -113,22 +120,20 @@
             <section id="contoh-dasar">
               <h2>Contoh Dasar JavaScript</h2>
               <p>Berikut adalah beberapa contoh dasar penggunaan JavaScript untuk memahami sintaks dan fungsinya:</p>
-              <pre><code>   
-    // Menampilkan pesan di konsol
-    console.log("Hello, JavaScript!");
+              <pre><code>// Menampilkan pesan di konsol
+console.log("Hello, JavaScript!");
 
-    // Menambahkan dua angka
-    let a = 5;
-    let b = 3;
-    let sum = a + b;
-    console.log("Hasil penjumlahan: " + sum);
+// Menambahkan dua angka
+let a = 5;
+let b = 3;
+let sum = a + b;
+console.log("Hasil penjumlahan: " + sum);
 
-    // Membuat fungsi sederhana
-    function greet(name) {
-    return "Halo, " + name + "!";
-    }
-    console.log(greet("Dunia"));
-                </code></pre>
+// Membuat fungsi sederhana
+function greet(name) {
+return "Halo, " + name + "!";
+}
+console.log(greet("Dunia"));</code></pre>
               <p>Dalam contoh di atas:</p>
               <ul>
                 <li><code>console.log()</code> digunakan untuk menampilkan pesan di konsol browser.</li>

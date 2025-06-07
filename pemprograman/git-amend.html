@@ -26,6 +26,8 @@
         <nav class="menu">
           <a href="/index.html" class="menu-item"> <i class="fas fa-home"></i> Home </a>
           <a href="/statistika/index.html" class="menu-item"> <i class="fas fa-chart-bar"></i> Statistika </a>
+          <a href="/machine-learning/index.html" class="menu-item"> <i class="fas fa-robot"></i> Machine Learning </a>
+          <a href="/deep-learning/index.html" class="menu-item"> <i class="fas fa-brain"></i> Deep Learning </a>
           <a href="/matematika/index.html" class="menu-item"> <i class="fas fa-square-root-alt"></i> Matematika </a>
           <a href="/sql/index.html" class="menu-item"> <i class="fas fa-database"></i> SQL </a>
           <a href="/pemprograman/index.html" class="menu-item"> <i class="fas fa-code"></i> Pemrograman </a>
@@ -54,16 +56,14 @@
 
       <!-- Main Content -->
       <main class="content">
-        <h3>Git commit --amend</h3>
+        <header>
+          <h1>Git commit --amend dan Cara Menggunakannya</h1>
+        </header>
         <div class="article">
           <div class="image-container">
             <img src="/img/git.webp" alt="Statistika" class="article-image" />
           </div>
           <div class="content-statistik">
-            <header>
-              <h1>Git commit --amend dan Cara Menggunakannya</h1>
-            </header>
-
             <section>
               Perintah <code>git --amend</code> adalah alat yang kuat dalam Git yang memungkinkan Anda untuk memodifikasi commit terbaru. Jika Anda lupa menambahkan file, melakukan kesalahan dalam pesan commit, atau perlu melakukan
               perubahan menit terakhir, <code>git --amend</code> memungkinkan Anda memperbaiki kesalahan tanpa membuat commit baru.
@@ -89,10 +89,8 @@
                 <li>
                   <strong>Menambahkan Perubahan ke Commit Sebelumnya:</strong>
                   <p>Misalkan Anda lupa menambahkan file atau membuat perubahan kecil pada file setelah melakukan commit. Daripada membuat commit baru, Anda bisa menambahkan perubahan tersebut ke commit sebelumnya:</p>
-                  <pre><code>
-git add &lt;file&gt;
-git commit --amend --no-edit
-                    </code></pre>
+                  <pre><code>git add &lt;file&gt;
+git commit --amend --no-edit</code></pre>
                   <p><code>--no-edit</code> menjaga pesan commit asli tetap sama sambil menambahkan perubahan baru. Jika Anda ingin mengubah pesan, cukup hilangkan flag <code>--no-edit</code>.</p>
                 </li>
                 <li>

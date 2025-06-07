@@ -3,11 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>MathAlpha</title>
+    <title>MathAlpha - Belajar Matematika, Statistika & Pemrograman</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
+    <meta name="description" content="Tempat belajar matematika, statistika, machine learning, dan pemrograman dengan penjelasan sederhana dan contoh praktis" />
     <meta name="google-site-verification" content="wSwaOWra1NglT7WH5RGbaNJ2Jrsv1nRoWawtwszrBws" />
-    <link rel="icon" href="/img/logo.png" sizes="32x32" type="image/png" />
+    <link rel="icon" href="img/logo.png" sizes="32x32" type="image/png" />
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1624084859744468" crossorigin="anonymous"></script>
   </head>
   <body>
@@ -16,20 +17,25 @@
       <button class="hamburger-menu">
         <i class="fas fa-bars"></i>
       </button>
+
+      <!-- Sidebar Overlay -->
+      <div class="sidebar-overlay"></div>
       <!-- Sidebar -->
       <aside class="sidebar">
         <button class="close-btn">&times;</button>
         <div class="logo">
-          <img src="img/logo.png" alt="Chirpy Logo" />
+          <img src="img/logo.png" alt="MathAlpha Logo" />
           <h2>MathAlpha</h2>
         </div>
         <nav class="menu">
-          <a href="/index.html" class="menu-item"> <i class="fas fa-home"></i> Home </a>
+          <a href="/index.html" class="menu-item active"> <i class="fas fa-home"></i> Home </a>
           <a href="/statistika/index.html" class="menu-item"> <i class="fas fa-chart-bar"></i> Statistika </a>
-          <a href="/matematika/index.html" class="menu-item"> <i class="fas fa-square-root-alt"></i> Matematika </a>
-          <a href="/sql/index.html" class="menu-item"> <i class="fas fa-database"></i> SQL </a>
+          <a href="/pemberitahuan.html" class="menu-item"> <i class="fas fa-robot"></i> Machine Learning </a>
+          <a href="/pemberitahuan.html" class="menu-item"> <i class="fas fa-brain"></i> Deep Learning </a>
+          <a href="/pemberitahuan.html" class="menu-item"> <i class="fas fa-square-root-alt"></i> Matematika </a>
+          <a href="/pemberitahuan.html" class="menu-item"> <i class="fas fa-database"></i> SQL </a>
           <a href="/pemprograman/index.html" class="menu-item"> <i class="fas fa-code"></i> Pemrograman </a>
-          <a href="#" class="menu-item"> <i class="fas fa-info-circle"></i> About </a>
+          <a href="/about.html" class="menu-item"> <i class="fas fa-info-circle"></i> About </a>
         </nav>
 
         <!-- Social Media Icons -->
@@ -54,75 +60,162 @@
 
       <!-- Main Content -->
       <main class="content">
-        <h3><a href="/index.html" class="home">Home</a></h3>
-        <article class="post">
-          <h2>Getting Started</h2>
-          <p>Get started with MathAlpha basics in this comprehensive...</p>
-          <p class="meta">📅 Aug 9, 2019 | 📌 Blogging, Tutorial</p>
-        </article>
-        <article class="post">
-          <a href="/pengantar-statistika.html">
-            <img src="/img/stat1.jpg" alt="Article" class="post-image" />
-          </a>
-          <div class="post-details">
-            <h2><a href="/statistika/pengantar-statistika.html">Pengantar Statistika</a></h2>
-            <p>Artikel ini menjelaskan apa itu statistika, tujuan utamanya, dan bagaimana perannya dalam pengambilan keputusan. Cocok untuk yang baru mengenal konsep dasar statistika...</p>
-            <p class="meta">📅 Dec 27, 2024 | 📌 Blogging, Statistika</p>
+        <!-- Hero Section -->
+        <section class="hero">
+          <div class="hero-content">
+            <h1>Belajar Matematika, Statistika & Pemrograman dengan Mudah</h1>
+            <p class="hero-text">Temukan ratusan tutorial, contoh soal, dan penjelasan praktis untuk membantu Anda menguasai konsep penting dalam dunia matematika,sains data dan pemrograman.</p>
+            <div class="search-box">
+              <input type="text" placeholder="Cari artikel atau tutorial..." />
+              <button><i class="fas fa-search"></i></button>
+            </div>
           </div>
-        </article>
-        <article class="post">
-          <a href="/pengantar-statistika.html">
-            <img src="/img/javascript.png" alt="Article" class="post-image" />
-          </a>
-          <div class="post-details">
-            <h2><a href="/pemprograman/pengantar-javascript.html">Pengantar JavaScript Dasar</a></h2>
-            <p>Artikel ini menjelaskan dasar-dasar JavaScript, tujuan penggunaannya, dan bagaimana bahasa ini dapat digunakan untuk membuat aplikasi web interaktif. Cocok untuk pemula yang ingin memahami konsep JavaScript.</p>
-            <p class="meta">📅 Dec 31, 2024 | 📌 Blogging, JavaScript</p>
+          <div class="hero-image">
+            <img src="/img/math.jpg" alt="Ilustrasi Belajar Matematika" />
           </div>
-        </article>
-        <article class="post">
-          <a href="/matematika/logaritma.html">
-            <img src="/img/log_stis.png" alt="Article" class="post-image" />
-          </a>
-          <div class="post-details">
-            <h2><a href="/matematika/logaritma.html">Soal Persiapan Masuk SPMB STIS 2025 | Logaritma</a></h2>
-            <p>Artikel ini membahas Soal-soal Persiapan Masuk SPMB STIS 2025.</p>
-            <p class="meta">📅 Jan 10, 2025 | 📌 Blogging</p>
+        </section>
+
+        <!-- Featured Categories -->
+        <section class="categories">
+          <h2 class="section-title">Jelajahi Kategori</h2>
+          <div class="category-grid">
+            <a href="/statistika/index.html" class="category-card">
+              <div class="category-icon">
+                <i class="fas fa-chart-bar"></i>
+              </div>
+              <h3>Statistika</h3>
+              <p>Pelajari konsep dasar hingga lanjutan analisis data</p>
+            </a>
+            <a href="/pemberitahuan.html" class="category-card">
+              <div class="category-icon">
+                <i class="fas fa-square-root-alt"></i>
+              </div>
+              <h3>Matematika</h3>
+              <p>Kumpulan materi dan soal matematika berbagai level</p>
+            </a>
+            <a href="/pemberitahuan.html" class="category-card">
+              <div class="category-icon">
+                <i class="fas fa-robot"></i>
+              </div>
+              <h3>Machine Learning</h3>
+              <p>Teknik prediksi data dan kecerdasan buatan</p>
+            </a>
+            <a href="/pemprograman/index.html" class="category-card">
+              <div class="category-icon">
+                <i class="fas fa-code"></i>
+              </div>
+              <h3>Pemrograman</h3>
+              <p>Dasar-dasar coding untuk analisis data</p>
+            </a>
+            <a href="/pemberitahuan.html" class="category-card">
+              <div class="category-icon">
+                <i class="fas fa-code"></i>
+              </div>
+              <h3>Structured Query Language(SQL)</h3>
+              <p>Dasar-dasar materi SQL</p>
+            </a>
+            <a href="/pemberitahuan.html" class="category-card">
+              <div class="category-icon">
+                <i class="fas fa-robot"></i>
+              </div>
+              <h3>Deep Learning</h3>
+              <p>Teknik prediksi data dan kecerdasan buatan</p>
+            </a>
           </div>
-        </article>
-        <article class="post">
-          <a href="/matematika/math.html">
-            <img src="/img/math.png" alt="Article" class="post-image" />
-          </a>
-          <div class="post-details">
-            <h2><a href="/matematika/math.html">Soal Persiapan Ujian Luar Negeri</a></h2>
-            <p>Artikel ini membahas Soal Persiapan Ujian Luar Negeri Matematika.</p>
-            <p class="meta">📅 Jan 15, 2025 | 📌 Blogging</p>
+        </section>
+
+        <!-- Popular Articles -->
+        <section class="popular-articles">
+          <div class="section-header">
+            <h2 class="section-title">Artikel Populer</h2>
+            <a href="/articles.html" class="view-all">Lihat Semua <i class="fas fa-arrow-right"></i></a>
           </div>
-        </article>
-        <article class="post">
-          <a href="/sql/pengantar-sql.html">
-            <img src="/img/sql.png" alt="Article" class="post-image" />
-          </a>
-          <div class="post-details">
-            <h2><a href="/sql/pengantar-sql.html">Pengantar Database SQL: Dasar-Dasar yang Perlu Anda Ketahui</a></h2>
-            <p>
-              Artikel ini membahas dasar-dasar SQL, termasuk pengenalan konsep database relasional, perintah dasar seperti SELECT, INSERT, UPDATE, dan DELETE, serta bagaimana SQL digunakan untuk mengelola dan memanipulasi data secara
-              efektif.
-            </p>
-            <p class="meta">📅 Dec 27, 2024 | 📌 Blogging, SQL</p>
+          <div class="article-grid">
+            <article class="article-card featured">
+              <div class="article-image">
+                <img src="img/stat1.jpg" alt="Pengantar Statistika" />
+              </div>
+              <div class="article-content">
+                <div class="article-meta">
+                  <span class="category">Statistika</span>
+                  <span class="date"><i class="far fa-calendar"></i> Dec 27, 2024</span>
+                </div>
+                <h3><a href="/statistika/pengantar-statistika.html">Pengantar Statistika untuk Pemula</a></h3>
+                <p>Panduan lengkap memahami konsep dasar statistika dengan contoh aplikasi nyata dalam penelitian dan bisnis.</p>
+                <div class="article-footer">
+                  <span class="read-time"><i class="far fa-clock"></i> 8 min read</span>
+                  <a href="/statistika/pengantar-statistika.html" class="read-more">Baca Selengkapnya <i class="fas fa-arrow-right"></i></a>
+                </div>
+              </div>
+            </article>
+
+            <article class="article-card">
+              <div class="article-content">
+                <div class="article-meta">
+                  <span class="category">Pemrograman</span>
+                  <span class="date"><i class="far fa-calendar"></i> Dec 31, 2024</span>
+                </div>
+                <h3><a href="/pemprograman/pengantar-javascript.html">Dasar-Dasar JavaScript Modern</a></h3>
+                <p>Pelajari fundamental JavaScript ES6+ untuk pengembangan web interaktif.</p>
+                <div class="article-footer">
+                  <span class="read-time"><i class="far fa-clock"></i> 12 min read</span>
+                  <a href="/pemprograman/pengantar-javascript.html" class="read-more">Baca Selengkapnya</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="article-card">
+              <div class="article-content">
+                <div class="article-meta">
+                  <span class="category">Pemrograman</span>
+                  <span class="date"><i class="far fa-calendar"></i> Dec 27, 2024</span>
+                </div>
+                <h3><a href="/sql/pengantar-sql.html">Git commit --amend dan Cara Menggunakannya</a></h3>
+                <p>Pelajari perintah git --amend yang memungkinkan Anda untuk memodifikasi commit terbaru.</p>
+                <div class="article-footer">
+                  <span class="read-time"><i class="far fa-clock"></i> 10 min read</span>
+                  <a href="/pemprograman/git-amend.html" class="read-more">Baca Selengkapnya</a>
+                </div>
+              </div>
+            </article>
           </div>
-        </article>
-        <article class="post">
-          <a href="/sql/tipe-data.html">
-            <img src="/img/tipe-data.png" alt="Article" class="post-image" />
-          </a>
-          <div class="post-details">
-            <h2><a href="/sql/tipe-data.html">Tipe Data di Database SQL</a></h2>
-            <p>Artikel ini membahas tipe data yang ada di SQL, seperti Numeric, Character, Boolean dll.</p>
-            <p class="meta">📅 Jan 5, 2025 | 📌 Blogging, SQL</p>
+        </section>
+
+        <!-- Call to Action -->
+        <section class="cta">
+          <div class="cta-content">
+            <h2>Siap Memulai Perjalanan Belajar Anda?</h2>
+            <p>Daftar sekarang untuk mendapatkan akses ke konten eksklusif, latihan soal, dan panduan belajar terstruktur.</p>
+            <div class="cta-buttons">
+              <a href="/" class="btn-primary">Mulai Gratis</a>
+            </div>
           </div>
-        </article>
+        </section>
+
+        <!-- Latest Updates -->
+        <section class="latest-updates">
+          <h2 class="section-title">Update Terbaru</h2>
+          <div class="update-grid">
+            <div class="update-card">
+              <div class="update-badge">BARU</div>
+              <h3><a href="/matematika/logaritma.html">Soal Logaritma SPMB STIS 2025</a></h3>
+              <p>Kumpulan soal dan pembahasan lengkap persiapan ujian masuk STIS.</p>
+              <span class="update-date">10 Jan 2025</span>
+            </div>
+            <div class="update-card">
+              <div class="update-badge">BARU</div>
+              <h3><a href="/matematika/math.html">Soal Matematika Ujian Luar Negeri</a></h3>
+              <p>Latihan soal untuk persiapan ujian SAT, GRE, dan lainnya.</p>
+              <span class="update-date">15 Jan 2025</span>
+            </div>
+            <div class="update-card">
+              <div class="update-badge">BARU</div>
+              <h3><a href="/sql/tipe-data.html">Tipe Data SQL Lengkap</a></h3>
+              <p>Panduan komprehensif tentang semua tipe data dalam database SQL.</p>
+              <span class="update-date">5 Jan 2025</span>
+            </div>
+          </div>
+        </section>
       </main>
     </div>
 

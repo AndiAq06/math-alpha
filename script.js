@@ -1,19 +1,15 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const hamburgerMenu = document.querySelector(".hamburger-menu");
-  const closeBtn = document.querySelector(".close-btn");
+document.addEventListener("DOMContentLoaded", function () {
+  const hamburger = document.querySelector(".hamburger-menu");
   const sidebar = document.querySelector(".sidebar");
+  const closeBtn = document.querySelector(".close-btn");
+  const overlay = document.querySelector(".sidebar-overlay");
 
-  if (hamburgerMenu && closeBtn && sidebar) {
-    // Open Sidebar
-    hamburgerMenu.addEventListener("click", () => {
-      sidebar.classList.add("show");
-    });
-
-    // Close Sidebar
-    closeBtn.addEventListener("click", () => {
-      sidebar.classList.remove("show");
-    });
-  } else {
-    console.error("One or more elements (.hamburger-menu, .close-btn, .sidebar) are missing in the DOM.");
+  function toggleSidebar() {
+    sidebar.classList.toggle("active");
+    overlay.classList.toggle("active");
   }
+
+  hamburger.addEventListener("click", toggleSidebar);
+  closeBtn.addEventListener("click", toggleSidebar);
+  overlay.addEventListener("click", toggleSidebar);
 });
