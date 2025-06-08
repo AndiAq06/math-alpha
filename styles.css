@@ -1098,9 +1098,6 @@ pre::before {
 }
 
 /* Article List Styles */
-.content ul {
-  text-decoration: underline;
-}
 
 .post-details h3 {
   margin-top: 0;
