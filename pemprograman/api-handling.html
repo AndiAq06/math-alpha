@@ -83,16 +83,15 @@
               <h2>Praktik Terbaik Penanganan Error API di Sisi Server</h2>
               <h3>1. Struktur Respon Error yang Konsisten</h3>
               <p>Pastikan API Anda memberikan struktur respon error yang konsisten. Ini memudahkan konsumen API untuk memahami dan menangani error. Berikut contoh struktur respon error yang baik:</p>
-              <pre><code>
-  {
-    "error": "InvalidInput",
-    "message": "Email tidak valid. Harap masukkan email yang benar.",
-    "code": 400,
-    "details": {
-      "field": "email",
-      "reason": "Format email tidak sesuai"
+              <pre><code>{
+  "error": "InvalidInput",
+  "message": "Email tidak valid. Harap masukkan email yang benar.",
+  "code": 400,
+  "details": {
+    "field": "email",
+    "reason": "Format email tidak sesuai"
     }
-  }</code></pre>
+}</code></pre>
               <p>Dalam contoh di atas, struktur respon mencakup:</p>
               <ul>
                 <li><strong>error</strong>: Jenis error yang terjadi.</li>
@@ -103,53 +102,47 @@
 
               <h3>2. Pesan Error yang Deskriptif</h3>
               <p>Pesan error harus jelas dan membantu konsumen API memahami masalah serta cara memperbaikinya. Contoh pesan error yang baik:</p>
-              <pre><code>
-  {
-    "error": "ResourceNotFound",
-    "message": "Pengguna dengan ID 12345 tidak ditemukan.",
-    "code": 404
-  }</code></pre>
+              <pre><code>{
+  "error": "ResourceNotFound",
+  "message": "Pengguna dengan ID 12345 tidak ditemukan.",
+  "code": 404
+}</code></pre>
 
               <h3>3. Hindari Kebocoran Data Sensitif</h3>
               <p>Jangan pernah mengekspos informasi sensitif seperti <code>stack trace</code> atau detail konfigurasi server dalam respon error. Contoh yang buruk:</p>
-              <pre><code>
-  {
-    "error": "InternalServerError",
-    "message": "Error: Connection to database failed at line 123.",
-    "code": 500
-  }</code></pre>
+              <pre><code>{
+  "error": "InternalServerError",
+  "message": "Error: Connection to database failed at line 123.",
+  "code": 500
+}</code></pre>
               <p>Sebaiknya, batasi informasi yang diberikan:</p>
-              <pre><code>
-  {
-    "error": "InternalServerError",
-    "message": "Terjadi kesalahan internal. Silakan coba lagi nanti.",
-    "code": 500
-  }</code></pre>
+              <pre><code>{
+  "error": "InternalServerError",
+  "message": "Terjadi kesalahan internal. Silakan coba lagi nanti.",
+  "code": 500
+}</code></pre>
 
               <h3>4. Dokumentasikan Error Umum</h3>
               <p>Dokumentasikan semua error umum yang mungkin terjadi dalam API Anda. Contoh dokumentasi:</p>
-              <pre><code>
-  Error 400 - Bad Request
-  Kode: 400
-  Pesan: "Input tidak valid. Harap periksa data yang dikirim."
-  Solusi: Pastikan semua field yang diperlukan diisi dengan format yang benar.
-  
-  Error 404 - Not Found
-  Kode: 404
-  Pesan: "Sumber daya tidak ditemukan."
-  Solusi: Periksa ID atau parameter yang digunakan.
-  </code></pre>
+              <pre><code>Error 400 - Bad Request
+Kode: 400
+Pesan: "Input tidak valid. Harap periksa data yang dikirim."
+Solusi: Pastikan semua field yang diperlukan diisi dengan format yang benar.
+
+Error 404 - Not Found
+Kode: 404
+Pesan: "Sumber daya tidak ditemukan."
+Solusi: Periksa ID atau parameter yang digunakan.</code></pre>
 
               <h3>5. Logging dan Monitoring</h3>
               <p>Gunakan logging dan monitoring untuk melacak error. Sertakan identifier seperti <code>requestId</code> dan <code>timestamp</code> dalam respon error. Contoh:</p>
-              <pre><code>
-  {
-    "error": "RateLimitExceeded",
-    "message": "Anda telah melebihi batas permintaan.",
-    "code": 429,
-    "requestId": "abc123",
-    "timestamp": "2024-01-01T12:00:00Z"
-  }</code></pre>
+              <pre><code>{
+  "error": "RateLimitExceeded",
+  "message": "Anda telah melebihi batas permintaan.",
+  "code": 429,
+  "requestId": "abc123",
+  "timestamp": "2024-01-01T12:00:00Z"
+}</code></pre>
             </section>
 
             <section id="praktik-klien">
@@ -157,44 +150,37 @@
 
               <h3>1. Validasi Input Pengguna</h3>
               <p>Validasi input di sisi klien sebelum mengirim permintaan ke server. Contoh validasi email menggunakan JavaScript:</p>
-              <pre><code>
-  function validateEmail(email) {
+              <pre><code>function validateEmail(email) {
   const regex = /^[^\s@]+@[^\s@]+.[^\s@]+$/;
   return regex.test(email);
-  }
-  
-  if (!validateEmail(userInput)) {
+}
+
+if (!validateEmail(userInput)) {
   alert("Email tidak valid. Harap masukkan email yang benar.");
-  }
+}
           </code></pre>
 
-              Copy
               <h3>2. Pesan Error Ramah Pengguna</h3>
               <p>Terjemahkan pesan error teknis dari server menjadi pesan yang ramah pengguna. Contoh:</p>
-              <pre><code>
-  if (error.code === 404) {
+              <pre><code>if (error.code === 404) {
   alert("Maaf, data yang Anda cari tidak ditemukan.");
-  } else if (error.code === 500) {
+} else if (error.code === 500) {
   alert("Terjadi kesalahan pada server. Silakan coba lagi nanti.");
-  }
-          </code></pre>
+}</code></pre>
 
-              Copy
               <h3>3. Tangani Kasus Tepi</h3>
               <p>Pastikan semua skenario error ditangani dengan baik. Contoh penanganan error jaringan:</p>
-              <pre><code>
-  fetch('https://api.example.com/data')
-  .then(response => {
+              <pre><code>fetch('https://api.example.com/data')
+.then(response => {
   if (!response.ok) {
-  throw new Error(Error: ${response.status});
+    throw new Error(Error: ${response.status});
   }
   return response.json();
-  })
-  .catch(error => {
+})
+.catch(error => {
   console.error("Terjadi kesalahan:", error.message);
   alert("Terjadi kesalahan saat mengambil data. Silakan coba lagi.");
-  });
-          </code></pre>
+});</code></pre>
             </section>
 
             <section>
