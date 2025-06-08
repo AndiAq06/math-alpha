@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pengantar JavaScript: Sejarah, Fitur, dan Contoh Dasar</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles.css" />
+    <meta name="google-site-verification" content="wSwaOWra1NglT7WH5RGbaNJ2Jrsv1nRoWawtwszrBws" />
+    <link rel="icon" href="/img/logo.png" sizes="32x32" type="image/png" />
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1624084859744468" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Hamburger Menu -->
+      <!-- Add this to your HTML (before the sidebar) -->
+      <button class="hamburger-menu">
+        <div class="hamburger-icon">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </button>
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <button class="close-btn">&times;</button>
+        <div class="logo">
+          <img src="/img/logo.png" alt="Chirpy Logo" />
+          <h2>MathAlpha</h2>
+        </div>
+        <nav class="menu">
+          <a href="/index.html" class="menu-item"> <i class="fas fa-home"></i> Home </a>
+          <a href="/statistika/index.html" class="menu-item"> <i class="fas fa-chart-bar"></i> Statistika </a>
+          <a href="/machine-learning/index.html" class="menu-item"> <i class="fas fa-robot"></i> Machine Learning </a>
+          <a href="/deep-learning/index.html" class="menu-item"> <i class="fas fa-brain"></i> Deep Learning </a>
+          <a href="/matematika/index.html" class="menu-item"> <i class="fas fa-square-root-alt"></i> Matematika </a>
+          <a href="/sql/index.html" class="menu-item"> <i class="fas fa-database"></i> SQL </a>
+          <a href="/pemprograman/index.html" class="menu-item"> <i class="fas fa-code"></i> Pemrograman </a>
+          <a href="#" class="menu-item"> <i class="fas fa-info-circle"></i> About </a>
+        </nav>
+
+        <!-- Social Media Icons -->
+        <div class="social-media">
+          <a href="https://www.instagram.com/andiaso06/" target="_blank" class="social-icon">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/andi-ardiansyah-7b25072a9/" target="_blank" class="social-icon">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="https://github.com/AndiAq06" target="_blank" class="social-icon">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="https://www.youtube.com/@andimath06" target="_blank" class="social-icon">
+            <i class="fab fa-youtube"></i>
+          </a>
+          <a href="https://www.twitter.com" target="_blank" class="social-icon">
+            <i class="fab fa-x-twitter"></i>
+          </a>
+        </div>
+      </aside>
+
+      <!-- Main Content -->
+      <main class="content">
+        <div class="article">
+          <div class="content-statistik">
+            <section id="javascript-module">
+              <h2>JavaScript Module: Konsep, Alasan, dan Implementasi</h2>
+              <p>
+                Dalam pengembangan aplikasi JavaScript modern, pengorganisasian kode menjadi sangat penting. Di sinilah konsep <strong>JavaScript Module</strong> berperan. Module memungkinkan Anda untuk membagi kode menjadi bagian-bagian
+                terpisah yang dapat digunakan kembali dan dikelola dengan lebih baik.
+              </p>
+
+              <h3>Apa Itu JavaScript Module?</h3>
+              <p>
+                <strong>JavaScript Module</strong> adalah berkas JavaScript yang mengekspor dan/atau mengimpor nilai atau fungsionalitas dari/ke modul lain menggunakan sintaks <code>export</code> dan <code>import</code>. Ini membantu
+                memisahkan logika program ke dalam file yang berbeda sehingga kode menjadi lebih terstruktur, mudah diuji, dan dipelihara.
+              </p>
+
+              <h3>Kenapa Menggunakan Module?</h3>
+              <ul>
+                <li><strong>Organisasi Kode:</strong> Memisahkan kode menjadi modul membuat struktur proyek lebih rapi dan mudah dipahami.</li>
+                <li><strong>Reusabilitas:</strong> Fungsi atau class dapat digunakan di berbagai tempat tanpa menduplikasi kode.</li>
+                <li><strong>Namespace Terpisah:</strong> Variabel dalam modul tidak bocor ke global scope, sehingga menghindari konflik nama.</li>
+                <li><strong>Pemeliharaan Lebih Mudah:</strong> Mengisolasi fitur dalam modul membuat debugging dan pengembangan lebih efisien.</li>
+              </ul>
+
+              <ins class="adsbygoogle" style="display: block; text-align: center" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-1624084859744468" data-ad-slot="6855576326"></ins>
+              <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+              </script>
+
+              <h2>Implementasi Dasar JavaScript Module</h2>
+              <p>
+                Berikut contoh implementasi modul di JavaScript menggunakan <code>export</code> dan <code>import</code>. Dalam JavaScript, Anda dapat mengekspor berbagai jenis data seperti <strong>fungsi</strong>, <strong>variabel</strong>,
+                <strong>class</strong>, dan <strong>object</strong> dari satu file modul agar bisa digunakan di file lain.
+              </p>
+
+              <h4>📁 File: mathUtils.js</h4>
+              <pre><code>// Export fungsi dari modul
+export function tambah(a, b) {
+  return a + b;
+}
+
+export function kali(a, b) {
+  return a * b;
+}</code></pre>
+
+              <h4>📁 File: main.js</h4>
+              <pre><code>// Import fungsi dari modul lain
+import { tambah, kali } from './mathUtils.js';
+
+console.log("Penjumlahan: ", tambah(2, 3));  // Output: 5
+console.log("Perkalian: ", kali(4, 5));      // Output: 20</code></pre>
+
+              <p>Catatan penting: untuk menggunakan <code>import</code>/<code>export</code>, Anda harus menjalankan file JavaScript sebagai <strong>module</strong>.</p>
+
+              <h3>Menjalankan JavaScript Module di Browser</h3>
+              <p>Saat menggunakan module di HTML, Anda harus menambahkan atribut <code>type="module"</code> pada elemen <code>&lt;script&gt;</code>:</p>
+
+              <pre><code>&lt;script type="module" src="main.js"&gt;&lt;/script&gt;</code></pre>
+
+              <h3>Fitur Tambahan Module</h3>
+              <ul>
+                <li><code>export default</code>: digunakan untuk mengekspor satu nilai utama dari sebuah modul.</li>
+                <li>Module dieksekusi hanya sekali, lalu cache hasilnya untuk digunakan kembali.</li>
+                <li>Path file module harus relatif dan berakhiran <code>.js</code>.</li>
+              </ul>
+
+              <h4>Contoh Export Default</h4>
+              <pre><code>// utils.js
+export default function halo(nama) {
+  return `Halo, ${nama}`;
+}
+
+// main.js
+import halo from './utils.js';
+console.log(halo("Andi"));</code></pre>
+
+              <p>Dengan memanfaatkan module, Anda bisa membangun aplikasi JavaScript yang lebih besar, lebih aman, dan lebih terstruktur dengan baik.</p>
+            </section>
+
+            <ins class="adsbygoogle" style="display: block; text-align: center" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-1624084859744468" data-ad-slot="6855576326"></ins>
+            <script>
+              (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+
+            <section id="export-multiple">
+              <h2>Export Multiple</h2>
+              <p>Anda bisa mengekspor beberapa fungsi, variabel, atau class sekaligus dari satu file modul menggunakan <code>export</code> secara individual atau bersamaan.</p>
+
+              <h4>Contoh: export individual</h4>
+              <pre><code>// file: operasi.js
+export function tambah(a, b) {
+  return a + b;
+}
+
+export function kurang(a, b) {
+  return a - b;
+}</code></pre>
+
+              <h4>Contoh: export bersamaan</h4>
+              <pre><code>// file: operasi.js
+function tambah(a, b) {
+  return a + b;
+}
+
+function kurang(a, b) {
+  return a - b;
+}
+
+export { tambah, kurang };</code></pre>
+
+              <h4>Import-nya:</h4>
+              <pre><code>import { tambah, kurang } from './operasi.js';
+console.log(tambah(4, 2));</code></pre>
+            </section>
+
+            <ins class="adsbygoogle" style="display: block; text-align: center" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-1624084859744468" data-ad-slot="6855576326"></ins>
+            <script>
+              (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+
+            <section id="module-alias">
+              <h2>Alias pada Import/Export</h2>
+              <p>Kadang nama fungsi/variabel dalam modul terlalu panjang atau bentrok. Dengan <code>as</code>, kita bisa memberi <strong>alias</strong> baik saat <strong>export</strong> maupun <strong>import</strong>.</p>
+
+              <h4>Contoh: export dengan alias</h4>
+              <pre><code>// file: util.js
+function hitungLuas(p, l) {
+  return p * l;
+}
+
+export { hitungLuas as luasPersegiPanjang };</code></pre>
+
+              <h4>Contoh: import dengan alias</h4>
+              <pre><code>// file: app.js
+import { luasPersegiPanjang as hitung } from './util.js';
+
+console.log(hitung(5, 4)); // Output: 20</code></pre>
+            </section>
+
+            <ins class="adsbygoogle" style="display: block; text-align: center" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-1624084859744468" data-ad-slot="6855576326"></ins>
+            <script>
+              (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+
+            <section id="aggregating-module">
+              <h2>Aggregating Module</h2>
+              <p>Kadang kita ingin membuat satu modul utama yang menggabungkan dan mengekspor ulang isi dari modul-modul lain. Ini disebut <strong>module aggregation</strong>.</p>
+
+              <h4>📁 File: math.js</h4>
+              <pre><code>export function tambah(a, b) {
+  return a + b;
+}</code></pre>
+
+              <h4>📁 File: string.js</h4>
+              <pre><code>export function kapital(teks) {
+  return teks.toUpperCase();
+}</code></pre>
+
+              <h4>📁 File: index.js (modul aggregator)</h4>
+              <pre><code>export * from './math.js';
+export * from './string.js';</code></pre>
+
+              <h4>📁 File: app.js</h4>
+              <pre><code>import { tambah, kapital } from './index.js';
+
+console.log(tambah(2, 3));      // 5
+console.log(kapital("halo"));  // HALO</code></pre>
+
+              <p>Aggregating module sangat berguna untuk membuat <strong>public API</strong> dari pustaka JavaScript yang besar.</p>
+            </section>
+
+            <section id="kesimpulan">
+              <h2>Kesimpulan</h2>
+              <p>
+                JavaScript Module adalah cara yang efektif untuk mengorganisasi kode dalam aplikasi web dengan memisahkan fungsi, variabel, class, dan objek ke dalam file terpisah yang dapat digunakan kembali.Dengan modul, pengembang dapat
+                menulis kode yang lebih terstruktur, mudah dipelihara, dan dapat diatur dengan baik, serta menghindari konflik penamaan di ruang lingkup global.Fitur seperti <em>export multiple</em>, penggunaan <em>alias</em>, dan
+                <em>aggregating module</em> memberikan fleksibilitas dalam mengelola dan menggabungkan modul-modul sesuai kebutuhan proyek. Memahami dan menerapkan JavaScript Module merupakan langkah penting untuk membangun aplikasi modern
+                yang scalable dan modular.
+              </p>
+            </section>
+
+            <footer>
+              <p>&copy; 2024 Math Alpha. Semua Hak Dilindungi.</p>
+            </footer>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <script src="/script.js"></script>
+  </body>
+</html>
