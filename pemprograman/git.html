@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Perintah Git</title>
+    <title>Pengantar Git dan GitHub - Perintah Dasar Git</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="/styles.css" />
     <meta name="google-site-verification" content="wSwaOWra1NglT7WH5RGbaNJ2Jrsv1nRoWawtwszrBws" />
@@ -59,48 +59,45 @@
         <div class="article">
           <div class="content-statistik">
             <header>
-              <h1>Panduan Lengkap Git dan GitHub: Perintah Dasar dan Konsep Utama</h1>
+              <h1>Pengantar Statistika: Pengertian Statistika</h1>
+              <div class="meta-info">
+                <span class="author">Oleh: Andi Ardiansyah Nasir</span>
+                <span class="last-update">Terakhir diperbarui: 10 Juni 2025</span>
+              </div>
             </header>
-            <div class="image-container">
-              <img src="/img/git_github.png" alt="Statistika" class="article-image" />
-            </div>
 
             <section id="pengantar">
-              <h2>Pengantar Git dan GitHub</h2>
               <p>
-                <strong>Git</strong> adalah sistem kontrol versi terdistribusi yang digunakan untuk melacak perubahan pada kode sumber. Git memungkinkan banyak pengembang bekerja pada proyek yang sama tanpa mengganggu pekerjaan satu sama
-                lain. Dengan Git, Anda dapat menyimpan riwayat perubahan, membuat cabang (branch) untuk fitur baru, dan menggabungkan perubahan dengan mudah.
+                Pernahkah Anda mengalami situasi dimana kode program tiba-tiba error setelah diubah, tapi tidak ingat perubahan apa saja yang sudah dibuat? Atau kesulitan berkolaborasi dengan tim karena banyak versi file yang berbeda-beda?
+                Disinilah Git dan GitHub hadir sebagai solusi. Seperti mesin waktu untuk developer, tools ini akan mengubah cara Anda bekerja dengan kode menjadi lebih teratur, aman, dan kolaboratif.
+              </p>
+
+              <p>
+                Dalam dunia pemrograman yang dinamis, kemampuan mengelola versi kode sama pentingnya dengan kemampuan menulis kode itu sendiri. Artikel ini akan memandu Anda memahami Git dan GitHub dari dasar dengan bahasa yang sederhana,
+                analogi yang mudah dicerna, dan contoh praktis yang bisa langsung Anda terapkan.
+              </p>
+              <h2>Apa Itu Git dan GitHub?</h2>
+              <p>
+                Bayangkan <strong>Git</strong> seperti buku catatan yang sangat canggih. Setiap kali Anda membuat perubahan pada kode, Anda bisa menambahkan catatan baru (commit) yang menandai versi tertentu. Jika suatu hari Anda membuat
+                kesalahan, Anda bisa kembali ke halaman sebelumnya yang masih benar. <strong>Github</strong> ibarat perpustakaan online tempat Anda bisa menyimpan buku catatan ini dan berbagi dengan teman-teman developer lainnya.
               </p>
               <p>
-                <strong>GitHub</strong> adalah platform berbasis web yang menyediakan layanan hosting untuk proyek Git. GitHub memudahkan kolaborasi antara pengembang dengan menyediakan alat untuk manajemen proyek, pelacakan masalah, dan
-                integrasi dengan alat pengembangan lainnya. Bersama-sama, Git dan GitHub menjadi fondasi penting dalam pengembangan perangkat lunak modern.
+                <strong>Git</strong> adalah sistem kontrol versi yang membantu melacak perubahan kode seiring waktu. <strong>GitHub</strong> adalah platform berbasis web yang menggunakan Git sebagai dasarnya, menambahkan fitur kolaborasi
+                seperti issue tracking, code review, dan manajemen proyek.
               </p>
             </section>
 
             <section id="konsep-dasar-git">
               <h2>Konsep Dasar Git</h2>
-              <p>Untuk memahami Git, Anda perlu menguasai beberapa konsep dasar yang menjadi inti dari sistem kontrol versi ini. Berikut adalah tiga konsep utama dalam Git:</p>
-
-              <h3>1. Modified (Dimodifikasi)</h3>
               <p>
-                <strong>Modified</strong> adalah keadaan di mana file dalam direktori kerja telah diubah, tetapi perubahan tersebut belum ditambahkan ke <strong>Staging Area</strong>. File yang dimodifikasi hanya terlihat di direktori kerja
-                hingga Anda menjalankan perintah <code>git add</code> untuk memindahkannya ke Staging Area.
+                Git bekerja dengan tiga area utama: working directory (tempat Anda mengedit file), staging area (daftar perubahan yang akan disimpan), dan repository (database yang menyimpan semua versi). Ketika Anda mengedit file,
+                perubahan awalnya hanya ada di working directory. Anda kemudian memilih perubahan mana yang akan "disiapkan" ke staging area dengan <code>git add</code>. Terakhir, <code>git commit</code> menyimpan perubahan tersebut secara
+                permanen ke repository dengan catatan tentang apa yang diubah.
               </p>
-              <p>Contoh: Jika Anda mengedit file <code>index.html</code>, file tersebut akan berada dalam keadaan <strong>Modified</strong> sampai Anda menambahkannya ke Staging Area.</p>
 
-              <h3>2. Staging (Ditambahkan ke Staging Area)</h3>
               <p>
-                <strong>Staging</strong> adalah proses di mana perubahan yang telah dilakukan pada file ditambahkan ke <strong>Staging Area</strong> menggunakan perintah <code>git add</code>. Staging Area adalah area persiapan sebelum
-                perubahan disimpan secara permanen dalam <strong>commit</strong>.
+                File dalam Git memiliki beberapa status: untracked (baru dibuat), modified (sudah diubah), staged (siap disimpan), dan committed (sudah tersimpan di repository). Memahami alur ini penting untuk bekerja efektif dengan Git.
               </p>
-              <p>Contoh: Setelah mengedit file, Anda dapat menjalankan <code>git add index.html</code> untuk memindahkan perubahan ke Staging Area.</p>
-
-              <h3>3. Committed (Disimpan dalam Commit)</h3>
-              <p>
-                <strong>Committed</strong> adalah keadaan di mana perubahan yang telah ditambahkan ke Staging Area disimpan secara permanen di <strong>repositori Git</strong> menggunakan perintah <code>git commit</code>. Setiap commit
-                memiliki riwayat yang dapat dilacak, termasuk pesan commit yang menjelaskan perubahan yang dilakukan.
-              </p>
-              <p>Contoh: Setelah menambahkan perubahan ke Staging Area, Anda dapat menjalankan <code>git commit -m "Menambahkan fitur login"</code> untuk menyimpan perubahan tersebut.</p>
             </section>
 
             <section id="perintah-git-dasar">
@@ -117,10 +114,8 @@
 
               <h3>3. git add</h3>
               <p>Perintah ini digunakan untuk menambahkan perubahan ke Staging Area. Anda dapat menambahkan file tertentu atau semua file yang telah dimodifikasi.</p>
-              <pre><code>
-  git add nama_file  # Menambahkan file tertentu
-  git add . # Menambahkan semua file yang dimodifikasi
-        </code></pre>
+              <pre><code>git add nama_file  # Menambahkan file tertentu
+git add . # Menambahkan semua file yang dimodifikasi</code></pre>
 
               <h3>4. git commit</h3>
               <p>Perintah ini digunakan untuk menyimpan perubahan yang telah ditambahkan ke Staging Area ke dalam repositori Git. Setiap commit memerlukan pesan yang menjelaskan perubahan yang dilakukan.</p>
@@ -128,11 +123,9 @@
 
               <h3>5. git remote</h3>
               <p>Perintah ini digunakan untuk mengelola koneksi antara repositori lokal dan repositori remote (seperti GitHub). Anda dapat menambahkan, menghapus, atau melihat daftar repositori remote.</p>
-              <pre><code>
-  git remote add origin [URL]  # Menambahkan repositori remote
-  git remote -v # Melihat daftar repositori remote
-  git remote remove origin # Menghapus repositori remote
-        </code></pre>
+              <pre><code>git remote add origin [URL]  # Menambahkan repositori remote
+git remote -v # Melihat daftar repositori remote
+git remote remove origin # Menghapus repositori remote</code></pre>
 
               <h3>6. git push</h3>
               <p>Perintah ini digunakan untuk mengunggah perubahan dari repositori lokal ke repositori remote. Ini memungkinkan Anda berbagi perubahan dengan pengembang lain.</p>
@@ -140,10 +133,8 @@
 
               <h3>7. git branch</h3>
               <p>Perintah ini digunakan untuk membuat, menghapus, atau melihat daftar cabang (branch) di repositori Git. Cabang memungkinkan Anda bekerja pada fitur baru tanpa mengganggu cabang utama.</p>
-              <pre><code>
-  git branch nama_cabang  # Membuat cabang baru
-  git branch -d nama_cabang # Menghapus cabang
-        </code></pre>
+              <pre><code>git branch nama_cabang  # Membuat cabang baru
+git branch -d nama_cabang # Menghapus cabang</code></pre>
 
               <h3>8. git merge</h3>
               <p>Perintah ini digunakan untuk menggabungkan perubahan dari satu cabang ke cabang lainnya. Ini sering digunakan untuk menggabungkan fitur baru ke cabang utama.</p>
@@ -180,21 +171,34 @@
 
               <h3>3. Push dan Pull dari GitHub</h3>
               <p>Setelah repositori terhubung, Anda dapat menggunakan perintah <code>git push</code> untuk mengirim perubahan lokal ke GitHub, dan <code>git pull</code> untuk menarik perubahan terbaru dari GitHub.</p>
-              <pre><code>
-  git push -u origin main  # Mengirim perubahan ke GitHub
-  git pull origin main # Menarik perubahan dari GitHub
-        </code></pre>
+              <pre><code>git push -u origin main  # Mengirim perubahan ke GitHub
+git pull origin main # Menarik perubahan dari GitHub</code></pre>
             </section>
 
             <section id="kesimpulan">
-              <h2>Kesimpulan</h2>
-              <p>
-                Git dan GitHub adalah alat penting dalam pengembangan perangkat lunak modern. Dengan memahami konsep dasar Git dan perintah-perintah utamanya, Anda dapat mengelola perubahan kode dengan lebih efektif dan berkolaborasi dengan
-                tim dengan lebih baik. GitHub memudahkan Anda untuk berbagi proyek, melacak masalah, dan mengintegrasikan alat pengembangan lainnya.
-              </p>
-              <p>Mulailah dengan mempraktikkan perintah-perintah dasar Git dan eksplorasi fitur-fitur GitHub untuk meningkatkan produktivitas Anda dalam pengembangan perangkat lunak. Selamat belajar!</p>
-            </section>
+              <div class="conclusion-box">
+                <h2>Git & GitHub - Senjata Wajib Developer</h2>
 
+                <p>
+                  Seperti buku catatan ajaib untuk programmer, Git telah membuktikan diri sebagai alat esensial dalam pengembangan software modern. Dari melacak perubahan kecil hingga mengelola proyek besar dengan tim, Git memberikan Anda
+                  kendali penuh atas evolusi kode Anda.
+                </p>
+
+                <p>
+                  GitHub melengkapi Git dengan ekosistem kolaborasi yang powerful. Bayangkan memiliki laboratorium coding virtual tempat Anda bisa bereksperimen (dengan branch), mundur ke versi stabil kapan saja (revert), dan bekerja sama
+                  dengan developer lain tanpa takut konflik.
+                </p>
+
+                <div class="key-points">
+                  <p><strong>3 Hal Penting yang Sudah Anda Pelajari:</strong></p>
+                  <p>1. Git adalah "mesin waktu" untuk kode Anda</p>
+                  <p>2. GitHub adalah platform sosial untuk kolaborasi coding</p>
+                  <p>3. Workflow dasar: add → commit → push</p>
+                </div>
+
+                <p class="closing">Mulailah dengan mempraktikkan perintah dasar Git dalam proyek kecil Anda. Seiring waktu, Anda akan menemukan betapa tools ini akan mengubah cara Anda memandang pengembangan software selamanya!</p>
+              </div>
+            </section>
             <footer>
               <p>&copy; 2024 Math Alpha. Semua Hak Dilindungi.</p>
             </footer>
