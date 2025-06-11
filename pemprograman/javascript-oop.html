@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript OOP</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles.css" />
+    <meta name="google-site-verification" content="wSwaOWra1NglT7WH5RGbaNJ2Jrsv1nRoWawtwszrBws" />
+    <link rel="icon" href="/img/logo.png" sizes="32x32" type="image/png" />
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1624084859744468" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Hamburger Menu -->
+      <button class="hamburger-menu">
+        <i class="fas fa-bars"></i>
+      </button>
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <button class="close-btn">&times;</button>
+        <div class="logo">
+          <img src="/img/logo.png" alt="Chirpy Logo" />
+          <h2>MathAlpha</h2>
+        </div>
+        <nav class="menu">
+          <a href="/index.html" class="menu-item"> <i class="fas fa-home"></i> Home </a>
+          <a href="/statistika/index.html" class="menu-item"> <i class="fas fa-chart-bar"></i> Statistika </a>
+          <a href="/machine-learning/index.html" class="menu-item"> <i class="fas fa-robot"></i> Machine Learning </a>
+          <a href="/deep-learning/index.html" class="menu-item"> <i class="fas fa-brain"></i> Deep Learning </a>
+          <a href="/matematika/index.html" class="menu-item"> <i class="fas fa-square-root-alt"></i> Matematika </a>
+          <a href="/sql/index.html" class="menu-item"> <i class="fas fa-database"></i> SQL </a>
+          <a href="/pemprograman/index.html" class="menu-item"> <i class="fas fa-code"></i> Pemrograman </a>
+          <a href="#" class="menu-item"> <i class="fas fa-info-circle"></i> About </a>
+        </nav>
+
+        <!-- Social Media Icons -->
+        <div class="social-media">
+          <a href="https://www.instagram.com/andiaso06/" target="_blank" class="social-icon">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/andi-ardiansyah-7b25072a9/" target="_blank" class="social-icon">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="https://github.com/AndiAq06" target="_blank" class="social-icon">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="https://www.youtube.com/@andimath06" target="_blank" class="social-icon">
+            <i class="fab fa-youtube"></i>
+          </a>
+          <a href="https://www.twitter.com" target="_blank" class="social-icon">
+            <i class="fab fa-x-twitter"></i>
+          </a>
+        </div>
+      </aside>
+
+      <!-- Main Content -->
+      <main class="content">
+        <header>
+          <h1>JavaScript OOP: Pemrograman Berorientasi Objek</h1>
+          <div class="meta-info">
+            <span class="author">Oleh: Andi Ardiansyah Nasir</span>
+            <span class="last-update">Terakhir diperbarui: 10 Juni 2025</span>
+          </div>
+        </header>
+        <div class="article">
+          <div class="content-statistik">
+            <section id="introduction">
+              <h2>Pengantar OOP dalam JavaScript</h2>
+              <p>
+                Pemrograman Berorientasi Objek (OOP) adalah paradigma pemrograman yang menggunakan "objek" untuk mendesain aplikasi dan program. JavaScript, meskipun awalnya bukan bahasa OOP murni, telah mengadopsi banyak konsep OOP melalui
+                fitur-fitur seperti class, inheritance, encapsulation, dan polymorphism.
+              </p>
+              <p>
+                Dalam artikel ini, kita akan menjelajahi berbagai aspek OOP di JavaScript modern, mulai dari class dasar hingga fitur-fitur canggih seperti private field dan static method. Dengan memahami OOP, Anda dapat menulis kode yang
+                lebih terstruktur, mudah dipelihara, dan dapat digunakan kembali.
+              </p>
+            </section>
+
+            <ins class="adsbygoogle" style="display: block; text-align: center" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-1624084859744468" data-ad-slot="6855576326"></ins>
+            <script>
+              (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+
+            <section id="class">
+              <h2>Class dalam JavaScript</h2>
+              <p>Class adalah blueprint untuk membuat objek. Di JavaScript, class diperkenalkan di ES6 sebagai sintaks yang lebih jelas untuk membuat objek dan menangani inheritance.</p>
+
+              <h4>Contoh Class Dasar</h4>
+              <pre><code>class Person {
+  // Constructor, properties, dan methods akan ditambahkan di sini
+}</code></pre>
+
+              <p>Class sendiri tidak melakukan apa-apa sampai Anda membuat instance (objek) dari class tersebut:</p>
+              <pre><code>const person1 = new Person();
+console.log(person1); // Person {}</code></pre>
+            </section>
+
+            <section id="constructor">
+              <h2>Constructor di Class</h2>
+              <p>Constructor adalah method khusus yang dipanggil otomatis ketika instance class dibuat. Biasanya digunakan untuk inisialisasi properti.</p>
+
+              <h4>Contoh Constructor</h4>
+              <pre><code>class Person {
+  constructor(name, age) {
+    this.name = name;
+    this.age = age;
+  }
+}
+
+const person1 = new Person('Andi', 25);
+console.log(person1); // Person { name: 'Andi', age: 25 }</code></pre>
+            </section>
+
+            <section id="property">
+              <h2>Property di Class</h2>
+              <p>Property adalah data yang dimiliki oleh instance class. Di JavaScript, property biasanya didefinisikan di constructor.</p>
+
+              <h4>Contoh Property</h4>
+              <pre><code>class Car {
+  constructor(brand, year) {
+    this.brand = brand;  // Property
+    this.year = year;    // Property
+  }
+}
+
+const myCar = new Car('Toyota', 2020);
+console.log(myCar.brand); // Toyota</code></pre>
+            </section>
+
+            <section id="method">
+              <h2>Method di Class</h2>
+              <p>Method adalah fungsi yang dimiliki oleh class dan dapat dipanggil pada instance class tersebut.</p>
+
+              <h4>Contoh Method</h4>
+              <pre><code>class Person {
+  constructor(name) {
+    this.name = name;
+  }
+
+  // Method
+  greet() {
+    return `Halo, nama saya ${this.name}`;
+  }
+}
+
+const person1 = new Person('Budi');
+console.log(person1.greet()); // Halo, nama saya Budi</code></pre>
+            </section>
+
+            <ins class="adsbygoogle" style="display: block; text-align: center" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-1624084859744468" data-ad-slot="6855576326"></ins>
+            <script>
+              (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+
+            <section id="inheritance">
+              <h2>Class Inheritance</h2>
+              <p>Inheritance memungkinkan class untuk mewarisi property dan method dari class lain menggunakan kata kunci <code>extends</code>.</p>
+
+              <h4>Contoh Inheritance</h4>
+              <pre><code>class Animal {
+  constructor(name) {
+    this.name = name;
+  }
+
+  speak() {
+    return `${this.name} bersuara`;
+  }
+}
+
+class Dog extends Animal {
+  // Dog mewarisi dari Animal
+}
+
+const dog1 = new Dog('Rex');
+console.log(dog1.speak()); // Rex bersuara</code></pre>
+            </section>
+
+            <section id="super-constructor">
+              <h2>Super Constructor</h2>
+              <p><code>super()</code> digunakan untuk memanggil constructor dari parent class. Harus dipanggil sebelum menggunakan <code>this</code>.</p>
+
+              <h4>Contoh Super Constructor</h4>
+              <pre><code>class Animal {
+  constructor(name) {
+    this.name = name;
+  }
+}
+
+class Dog extends Animal {
+  constructor(name, breed) {
+    super(name); // Memanggil constructor Animal
+    this.breed = breed;
+  }
+}
+
+const dog1 = new Dog('Rex', 'Golden Retriever');
+console.log(dog1); // Dog { name: 'Rex', breed: 'Golden Retriever' }</code></pre>
+            </section>
+
+            <section id="super-method">
+              <h2>Super Method</h2>
+              <p><code>super</code> juga bisa digunakan untuk memanggil method dari parent class.</p>
+
+              <h4>Contoh Super Method</h4>
+              <pre><code>class Animal {
+  speak() {
+    return 'Bunyi hewan';
+  }
+}
+
+class Dog extends Animal {
+  speak() {
+    return super.speak() + ', Guk Guk!';
+  }
+}
+
+const dog1 = new Dog();
+console.log(dog1.speak()); // Bunyi hewan, Guk Guk!</code></pre>
+            </section>
+
+            <ins class="adsbygoogle" style="display: block; text-align: center" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-1624084859744468" data-ad-slot="6855576326"></ins>
+            <script>
+              (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+
+            <section id="getter-setter">
+              <h2>Getter dan Setter di Class</h2>
+              <p>Getter dan setter memungkinkan Anda mendefinisikan akses ke property dengan kontrol lebih.</p>
+
+              <h4>Contoh Getter dan Setter</h4>
+              <pre><code>class Person {
+  constructor(firstName, lastName) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+  }
+
+  // Getter
+  get fullName() {
+    return `${this.firstName} ${this.lastName}`;
+  }
+
+  // Setter
+  set fullName(name) {
+    const [first, last] = name.split(' ');
+    this.firstName = first;
+    this.lastName = last;
+  }
+}
+
+const person1 = new Person('Andi', 'Ardiansyah');
+console.log(person1.fullName); // Andi Ardiansyah
+
+person1.fullName = 'Budi Nugroho';
+console.log(person1.firstName); // Budi</code></pre>
+            </section>
+
+            <section id="public-field">
+              <h2>Public Class Field</h2>
+              <p>Public class field memungkinkan mendeklarasikan property langsung dalam class tanpa constructor.</p>
+
+              <h4>Contoh Public Class Field</h4>
+              <pre><code>class Counter {
+  count = 0; // Public class field
+
+  increment() {
+    this.count++;
+  }
+}
+
+const counter = new Counter();
+counter.increment();
+console.log(counter.count); // 1</code></pre>
+            </section>
+
+            <section id="private-field">
+              <h2>Private Class Field</h2>
+              <p>Private field (diawali dengan #) hanya bisa diakses dari dalam class itu sendiri.</p>
+
+              <h4>Contoh Private Class Field</h4>
+              <pre><code>class Counter {
+  #count = 0; // Private field
+
+  increment() {
+    this.#count++;
+  }
+
+  getCount() {
+    return this.#count;
+  }
+}
+
+const counter = new Counter();
+counter.increment();
+console.log(counter.getCount()); // 1
+console.log(counter.#count); // Error: Private field</code></pre>
+            </section>
+
+            <section id="private-method">
+              <h2>Private Method</h2>
+              <p>Seperti private field, private method juga hanya bisa diakses dari dalam class.</p>
+
+              <h4>Contoh Private Method</h4>
+              <pre><code>class Auth {
+  #checkPassword(password) { // Private method
+    return password.length >= 8;
+  }
+
+  login(username, password) {
+    if (this.#checkPassword(password)) {
+      return `Welcome ${username}`;
+    }
+    return 'Password too short';
+  }
+}
+
+const auth = new Auth();
+console.log(auth.login('user1', '12345678')); // Welcome user1
+console.log(auth.#checkPassword('123')); // Error: Private method</code></pre>
+            </section>
+
+            <ins class="adsbygoogle" style="display: block; text-align: center" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-1624084859744468" data-ad-slot="6855576326"></ins>
+            <script>
+              (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+
+            <section id="instanceof">
+              <h2>Operator instanceof</h2>
+              <p>Operator <code>instanceof</code> memeriksa apakah suatu objek adalah instance dari class tertentu.</p>
+
+              <h4>Contoh instanceof</h4>
+              <pre><code>class Animal {}
+class Dog extends Animal {}
+
+const dog = new Dog();
+
+console.log(dog instanceof Dog); // true
+console.log(dog instanceof Animal); // true
+console.log(dog instanceof Object); // true</code></pre>
+            </section>
+
+            <section id="static-field">
+              <h2>Static Field</h2>
+              <p>Static field adalah property yang dimiliki oleh class itu sendiri, bukan instance-nya.</p>
+
+              <h4>Contoh Static Field</h4>
+              <pre><code>class Config {
+  static API_URL = 'https://api.example.com';
+}
+
+console.log(Config.API_URL); // https://api.example.com
+
+const config = new Config();
+console.log(config.API_URL); // undefined</code></pre>
+            </section>
+
+            <section id="static-method">
+              <h2>Static Method</h2>
+              <p>Static method adalah method yang dipanggil pada class itu sendiri, bukan pada instance.</p>
+
+              <h4>Contoh Static Method</h4>
+              <pre><code>class MathUtils {
+  static square(x) {
+    return x * x;
+  }
+}
+
+console.log(MathUtils.square(5)); // 25
+
+const utils = new MathUtils();
+console.log(utils.square(5)); // Error: utils.square is not a function</code></pre>
+            </section>
+
+            <section id="error">
+              <h2>Error Handling dalam OOP</h2>
+              <p>Kita bisa membuat custom error class dengan mewarisi dari class Error.</p>
+
+              <h4>Contoh Custom Error</h4>
+              <pre><code>class ValidationError extends Error {
+  constructor(message) {
+    super(message);
+    this.name = 'ValidationError';
+  }
+}
+
+function validateInput(input) {
+  if (!input) {
+    throw new ValidationError('Input tidak boleh kosong');
+  }
+}
+
+try {
+  validateInput('');
+} catch (err) {
+  if (err instanceof ValidationError) {
+    console.error(err.message); // Input tidak boleh kosong
+  }
+}</code></pre>
+            </section>
+
+            <section id="kesimpulan">
+              <h2>Kesimpulan</h2>
+              <p>
+                OOP dalam JavaScript modern menyediakan banyak fitur canggih untuk membangun aplikasi yang terstruktur. Dengan class, inheritance, encapsulation (melalui private field/method), dan static member, kita dapat mengorganisasi
+                kode dengan lebih baik. Fitur-fitur seperti getter/setter memberikan kontrol lebih terhadap akses property, sementara custom error memungkinkan penanganan error yang lebih spesifik.
+              </p>
+              <p>
+                Memahami konsep-konsep OOP ini penting untuk pengembangan aplikasi JavaScript yang scalable dan maintainable. Meskipun JavaScript menggunakan prototypal inheritance di balik layar, sintaks class membuat OOP lebih mudah
+                dipahami bagi developer yang berasal dari bahasa OOP tradisional.
+              </p>
+            </section>
+
+            <footer>
+              <p>&copy; 2025 Math Alpha. Semua Hak Dilindungi.</p>
+            </footer>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <script src="/script.js"></script>
+  </body>
+</html>

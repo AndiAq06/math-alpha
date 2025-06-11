@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"); */
 /* Base Styles */
 :root {
   --primary-color: #2e7d32; /* Dark green */
@@ -1143,4 +1143,74 @@ section ul li a:hover {
   margin-left: 10px;
   padding-left: 10px;
   border-left: 1px solid #ccc;
+}
+
+/* Additional Styles for this article */
+.math-definition {
+  background-color: #f8f9fa;
+  border-left: 4px solid #4285f4;
+  padding: 15px;
+  margin: 20px 0;
+  border-radius: 0 4px 4px 0;
+}
+
+.math-equation {
+  margin: 15px 0;
+  padding: 10px;
+  overflow-x: auto;
+}
+
+.example-box {
+  background-color: #e8f4f8;
+  border: 1px solid #b6e0f7;
+  border-radius: 5px;
+  padding: 15px;
+  margin: 15px 0;
+}
+
+.property-box {
+  margin-bottom: 30px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #eee;
+}
+
+.application-box {
+  background-color: #f0f7f0;
+  border: 1px solid #c1e5c1;
+  border-radius: 5px;
+  padding: 15px;
+  margin: 15px 0;
+}
+
+.exercise-box {
+  background-color: #fff8e6;
+  border: 1px solid #ffecb3;
+  border-radius: 5px;
+  padding: 15px;
+  margin: 15px 0;
+}
+
+.solution-btn {
+  background-color: #4285f4;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin: 10px 0;
+}
+
+.solution {
+  display: none;
+  padding: 10px;
+  background-color: #f5f5f5;
+  border-radius: 4px;
+  margin-top: 10px;
+}
+
+.image-caption {
+  text-align: center;
+  font-style: italic;
+  color: #666;
+  margin-top: 5px;
 }

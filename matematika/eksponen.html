@@ -7,7 +7,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="/styles.css" />
     <meta name="google-site-verification" content="wSwaOWra1NglT7WH5RGbaNJ2Jrsv1nRoWawtwszrBws" />
-    <!-- math.js -->
+    <!-- MathJax for mathematical notation -->
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="icon" href="/img/logo.png" sizes="32x32" type="image/png" />
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1624084859744468" crossorigin="anonymous"></script>
@@ -22,7 +22,7 @@
       <aside class="sidebar">
         <button class="close-btn">&times;</button>
         <div class="logo">
-          <img src="/img/logo.png" alt="Chirpy Logo" />
+          <img src="/img/logo.png" alt="MathAlpha Logo" />
           <h2>MathAlpha</h2>
         </div>
         <nav class="menu">
@@ -58,198 +58,209 @@
 
       <!-- Main Content -->
       <main class="content">
+        <header>
+          <h1>Konsep Dasar Eksponen dan Sifat-Sifatnya: Panduan Lengkap</h1>
+          <div class="meta-info">
+            <span class="author">Oleh: Andi Ardiansyah Nasir</span>
+            <span class="last-update">Terakhir diperbarui: 10 Juni 2025</span>
+          </div>
+        </header>
         <div class="article">
           <div class="content-statistik">
-            <header>
-              <h1><a href="/matematika/eksponen.html">Konsep Dasar Eksponen dan Sifat-Sifatnya: Panduan Lengkap</a></h1>
-            </header>
-            <div class="image-container">
-              <img src="/img/eksponen.png" alt="eksponen" class="article-image" />
-            </div>
-
             <section id="pengantar">
-              <h2>Pengantar Eksponen</h2>
+              <h2>Pengantar Konsep Eksponen</h2>
+              <div class="image-container">
+                <img src="/img/eksponen-header.jpg" alt="Ilustrasi Eksponen" class="article-image" />
+                <p class="image-caption">Gambar 1: Visualisasi pertumbuhan eksponensial</p>
+              </div>
               <p>
-                Halo, teman-teman pecinta matematika! Pada artikel kali ini, kita akan membahas konsep dasar <strong>eksponen</strong> dan sifat-sifatnya. Eksponen adalah salah satu konsep matematika yang sangat penting, terutama ketika kita mempelajari materi seperti akar dan <strong><a href="/matematika/sifat-logaritma.html">logaritma</a></strong>. Memahami eksponen dengan baik akan memudahkan kita dalam menyelesaikan berbagai masalah matematika, mulai dari yang sederhana hingga yang kompleks.
+                Eksponen adalah salah satu konsep matematika paling fundamental yang memiliki aplikasi luas dalam berbagai bidang, mulai dari ilmu komputer, fisika, ekonomi, hingga biologi. Konsep ini menggambarkan pertumbuhan atau
+                peluruhan yang sangat cepat, seperti pertumbuhan populasi bakteri, bunga majemuk dalam keuangan, atau peluruhan radioaktif.
               </p>
               <p>
-                Sebelum kita membahas sifat-sifat eksponen, mari kita pahami terlebih dahulu definisi dasar dari eksponen. Definisi ini akan menjadi pondasi untuk memahami dan membuktikan sifat-sifat eksponen yang akan kita bahas.
+                Dalam matematika sekolah menengah, pemahaman kuat tentang eksponen menjadi dasar untuk mempelajari logaritma, fungsi eksponensial, dan berbagai topik aljabar lanjutan. Artikel ini akan membawa Anda melalui pemahaman mendalam
+                tentang eksponen, mulai dari konsep dasar hingga penerapan sifat-sifatnya dalam menyelesaikan masalah matematika.
               </p>
             </section>
-          
-            <section id="definisi-eksponen">
-              <h2>Definisi Bilangan Berpangkat (Eksponen)</h2>
-              <p>
-                Secara matematis, eksponen didefinisikan sebagai perkalian berulang dari suatu bilangan. Jika kita memiliki bilangan \(a\) yang dipangkatkan dengan bilangan bulat positif \(n\), maka eksponen dapat dituliskan sebagai:
-              </p>
-              <p>
-                \[
-                a^n = \underbrace{a \times a \times \cdots \times a \times a}_{\text{perkalian sebanyak } n}
-                \]
-              </p>
-              <p>
-                Di sini:
+
+            <section id="konsep-dasar">
+              <h2>Konsep Dasar Eksponen</h2>
+              <h3>Apa Itu Eksponen?</h3>
+              <p>Eksponen (atau bilangan berpangkat) adalah cara penulisan singkat untuk perkalian berulang dari bilangan yang sama. Notasi eksponen terdiri dari dua bagian:</p>
+
+              <div class="math-definition">
+                \[ a^n \]
+                <p>Dimana:</p>
                 <ul>
-                  <li><strong>\(a\)</strong> adalah bilangan pokok (basis).</li>
-                  <li><strong>\(n\)</strong> adalah bilangan pangkat (eksponen).</li>
+                  <li><strong>\(a\)</strong> disebut <em>basis</em> (bilangan pokok)</li>
+                  <li><strong>\(n\)</strong> disebut <em>eksponen</em> atau <em>pangkat</em></li>
                 </ul>
-              </p>
-              <p>
-                Dengan definisi ini, kita dapat mengatakan bahwa eksponen adalah perkalian yang berulang sebanyak pangkatnya. Misalnya, \(2^3\) berarti \(2 \times 2 \times 2 = 8\).
-              </p>
-          
-              <div class="image-container">
-                <img src="/img/eksponen-1.png" alt="Ilustrasi Eksponen" class="article-image" />
               </div>
-          
-              <p><strong>Contoh:</strong></p>
+
+              <p>Secara matematis, ini berarti:</p>
+              <div class="math-equation">\[ a^n = \underbrace{a \times a \times \cdots \times a}_{n \text{ kali}} \]</div>
+
+              <div class="example-box">
+                <h4>Contoh 1: Eksponen Sederhana</h4>
+                <p>\(2^5 = 2 \times 2 \times 2 \times 2 \times 2 = 32\)</p>
+                <p>Di sini, angka 2 dikalikan dengan dirinya sendiri sebanyak 5 kali.</p>
+              </div>
+
+              <div class="image-container">
+                <img src="/img/eksponen-visual.png" alt="Visualisasi 2 pangkat 5" class="article-image" />
+                <p class="image-caption">Gambar 2: Visualisasi 2<sup>5</sup> sebagai perkalian berulang</p>
+              </div>
+
+              <h3>Mengapa Eksponen Penting?</h3>
+              <p>Eksponen membantu kita dalam:</p>
               <ul>
-                <li>\( 2^3 = 2 \times 2 \times 2 = 8 \)</li>
-                <li>\( 5^4 = 5 \times 5 \times 5 \times 5 = 625 \)</li>
-                <li>\( (-10)^2 = (-10) \times (-10) = 100 \)</li>
-                <li>\( (\pi)^5 = \pi \times \pi \times \pi \times \pi \times \pi \)</li>
+                <li>Menyederhanakan penulisan bilangan sangat besar atau sangat kecil</li>
+                <li>Memodelkan pertumbuhan eksponensial (seperti populasi atau virus)</li>
+                <li>Menghitung bunga majemuk dalam keuangan</li>
+                <li>Memahami skala logaritmik (seperti skala Richter untuk gempa bumi)</li>
               </ul>
             </section>
-          
+
             <section id="sifat-eksponen">
               <h2>Sifat-Sifat Eksponen</h2>
-              <p>
-                Eksponen memiliki beberapa sifat penting yang memudahkan kita dalam melakukan operasi matematika. Berikut adalah beberapa sifat eksponen beserta pembuktiannya:
-              </p>
-          
-              <h3>1. Sifat Perkalian Pangkat</h3>
-              <p>
-                \[
-                a^m \cdot a^n = a^{m+n}
-                \]
-              </p>
-              <p><strong>Pembuktian:</strong></p>
-              <p>
-                Berdasarkan definisi eksponen:
-                <ul>
-                  <li>\( a^m = a \times a \times \dots \times a \) (sebanyak \(m\) kali).</li>
-                  <li>\( a^n = a \times a \times \dots \times a \) (sebanyak \(n\) kali).</li>
-                </ul>
-                Ketika kita mengalikan \( a^m \) dan \( a^n \), jumlah total perkalian \(a\) adalah \(m + n\). Sehingga:
-                \[
-                a^m \cdot a^n = a^{m+n}
-                \]
-              </p>
-          
-              <h3>2. Sifat Pembagian Pangkat</h3>
-              <p>
-                \[
-                \frac{a^m}{a^n} = a^{m-n}
-                \]
-              </p>
-              <p><strong>Pembuktian:</strong></p>
-              <p>
-                Berdasarkan definisi eksponen:
-                <ul>
-                  <li>\( a^m = a \times a \times \dots \times a \) (sebanyak \(m\) kali).</li>
-                  <li>\( a^n = a \times a \times \dots \times a \) (sebanyak \(n\) kali).</li>
-                </ul>
-                Ketika kita membagi \( a^m \) dengan \( a^n \), elemen \(a\) pada pembilang dan penyebut saling menghilangkan satu per satu. Jika \(m > n\), tersisa \(a\) sebanyak \(m - n\), sehingga:
-                \[
-                \frac{a^m}{a^n} = a^{m-n}
-                \]
-              </p>
-          
-              <h3>3. Sifat Pangkat di Pangkat</h3>
-              <p>
-                \[
-                (a^m)^n = a^{m \times n}
-                \]
-              </p>
-              <p><strong>Pembuktian:</strong></p>
-              <p>
-                Berdasarkan definisi eksponen:
-                \[
-                (a^m)^n = \underbrace{a^m \times a^m \times \dots \times a^m}_{\text{sebanyak } n}
-                \]
-                Karena \(a^m\) adalah perkalian \(a\) sebanyak \(m\) kali, maka:
-                \[
-                (a^m)^n = a^{m \times n}
-                \]
-              </p>
-          
-              <h3>4. Sifat Perkalian Basis dengan Pangkat yang Sama</h3>
-              <p>
-                \[
-                a^m \cdot b^m = (a \cdot b)^m
-                \]
-              </p>
-              <p><strong>Pembuktian:</strong></p>
-              <p>
-                Berdasarkan definisi eksponen:
-                \[
-                a^m \cdot b^m = (a \times a \times \dots \times a) \times (b \times b \times \dots \times b)
-                \]
-                Jika kita gabungkan, hasilnya adalah:
-                \[
-                a^m \cdot b^m = (a \cdot b)^m
-                \]
-              </p>
-          
-              <h3>5. Sifat Pangkat Negatif</h3>
-              <p>
-                \[
-                a^{-m} = \frac{1}{a^m}
-                \]
-              </p>
-              <p><strong>Pembuktian:</strong></p>
-              <p>
-                Pangkat negatif didefinisikan sebagai kebalikan dari pangkat positif. Sehingga:
-                \[
-                a^{-m} = \frac{1}{a^m}
-                \]
-              </p>
-          
-              <h3>6. Sifat Pangkat Nol</h3>
-              <p>
-                \[
-                a^0 = 1
-                \]
-              </p>
-              <p><strong>Pembuktian:</strong></p>
-              <p>
-                Berdasarkan sifat pembagian pangkat:
-                \[
-                \frac{a^m}{a^m} = a^{m-m} = a^0
-                \]
-                Karena \(\frac{a^m}{a^m} = 1\), maka:
-                \[
-                a^0 = 1
-                \]
-              </p>
-          
-              <h3>7. Sifat Akar sebagai Pangkat Pecahan</h3>
-              <p>
-                \[
-                \sqrt[n]{a^m} = a^{\frac{m}{n}}
-                \]
-              </p>
-              <p><strong>Pembuktian:</strong></p>
-              <p>
-                Berdasarkan definisi akar:
-                \[
-                \sqrt[n]{a^m} = (a^m)^{\frac{1}{n}} = a^{\frac{m}{n}}
-                \]
-              </p>
+              <p>Eksponen memiliki beberapa sifat penting yang membuat perhitungan menjadi lebih efisien. Mari kita bahas satu per satu dengan contoh konkret.</p>
+
+              <div class="property-box">
+                <h3>1. Perkalian dengan Basis Sama</h3>
+                <div class="math-equation">\[ a^m \times a^n = a^{m+n} \]</div>
+                <p><strong>Penjelasan:</strong> Ketika mengalikan dua bilangan dengan basis sama, kita cukup menjumlahkan pangkatnya.</p>
+                <div class="example-box">
+                  <h4>Contoh 2:</h4>
+                  <p>\(3^4 \times 3^2 = 3^{4+2} = 3^6 = 729\)</p>
+                  <p>Verifikasi: \(81 \times 9 = 729\)</p>
+                </div>
+              </div>
+
+              <div class="property-box">
+                <h3>2. Pembagian dengan Basis Sama</h3>
+                <div class="math-equation">\[ \frac{a^m}{a^n} = a^{m-n} \]</div>
+                <p><strong>Penjelasan:</strong> Ketika membagi dua bilangan dengan basis sama, kita kurangkan pangkatnya.</p>
+                <div class="example-box">
+                  <h4>Contoh 3:</h4>
+                  <p>\(\frac{5^7}{5^4} = 5^{7-4} = 5^3 = 125\)</p>
+                  <p>Verifikasi: \(\frac{78125}{625} = 125\)</p>
+                </div>
+              </div>
+
+              <div class="property-box">
+                <h3>3. Pangkat dari Pangkat</h3>
+                <div class="math-equation">\[ (a^m)^n = a^{m \times n} \]</div>
+                <p><strong>Penjelasan:</strong> Ketika memiliki pangkat dari pangkat, kita kalikan eksponennya.</p>
+                <div class="example-box">
+                  <h4>Contoh 4:</h4>
+                  <p>\((2^3)^4 = 2^{3 \times 4} = 2^{12} = 4096\)</p>
+                  <p>Verifikasi: \(8^4 = 4096\)</p>
+                </div>
+              </div>
+
+              <div class="property-box">
+                <h3>4. Pangkat dari Perkalian</h3>
+                <div class="math-equation">\[ (a \times b)^n = a^n \times b^n \]</div>
+                <p><strong>Penjelasan:</strong> Pangkat didistribusikan ke masing-masing faktor dalam perkalian.</p>
+                <div class="example-box">
+                  <h4>Contoh 5:</h4>
+                  <p>\((3 \times 5)^2 = 3^2 \times 5^2 = 9 \times 25 = 225\)</p>
+                  <p>Verifikasi: \(15^2 = 225\)</p>
+                </div>
+              </div>
+
+              <div class="property-box">
+                <h3>5. Eksponen Negatif</h3>
+                <div class="math-equation">\[ a^{-n} = \frac{1}{a^n} \]</div>
+                <p><strong>Penjelasan:</strong> Eksponen negatif menunjukkan kebalikan dari pangkat positif.</p>
+                <div class="example-box">
+                  <h4>Contoh 6:</h4>
+                  <p>\(2^{-3} = \frac{1}{2^3} = \frac{1}{8} = 0.125\)</p>
+                  <p>\(10^{-2} = \frac{1}{100} = 0.01\)</p>
+                </div>
+              </div>
+
+              <div class="property-box">
+                <h3>6. Eksponen Nol</h3>
+                <div class="math-equation">\[ a^0 = 1 \quad \text{(untuk } a \neq 0\text{)} \]</div>
+                <p><strong>Penjelasan:</strong> Setiap bilangan (kecuali nol) dipangkatkan nol hasilnya 1.</p>
+                <div class="example-box">
+                  <h4>Contoh 7:</h4>
+                  <p>\(5^0 = 1\)</p>
+                  <p>\((-100)^0 = 1\)</p>
+                  <p>\(\pi^0 = 1\)</p>
+                </div>
+              </div>
+
+              <div class="property-box">
+                <h3>7. Eksponen Pecahan (Akar)</h3>
+                <div class="math-equation">\[ a^{\frac{m}{n}} = \sqrt[n]{a^m} = (\sqrt[n]{a})^m \]</div>
+                <p><strong>Penjelasan:</strong> Eksponen pecahan setara dengan operasi akar.</p>
+                <div class="example-box">
+                  <h4>Contoh 8:</h4>
+                  <p>\(8^{\frac{2}{3}} = \sqrt[3]{8^2} = \sqrt[3]{64} = 4\)</p>
+                  <p>Atau: \(8^{\frac{2}{3}} = (\sqrt[3]{8})^2 = 2^2 = 4\)</p>
+                </div>
+              </div>
             </section>
-          
+
+            <section id="aplikasi">
+              <h2>Aplikasi Eksponen dalam Kehidupan Nyata</h2>
+              <div class="application-box">
+                <h3>1. Bunga Majemuk</h3>
+                <p>Rumus bunga majemuk menggunakan eksponen:</p>
+                <div class="math-equation">\[ A = P \left(1 + \frac{r}{n}\right)^{nt} \]</div>
+                <p>Dimana \(A\) adalah jumlah akhir, \(P\) pokok awal, \(r\) suku bunga, \(n\) frekuensi penggandaan per tahun, dan \(t\) waktu dalam tahun.</p>
+              </div>
+
+              <div class="application-box">
+                <h3>2. Pertumbuhan Populasi</h3>
+                <p>Model pertumbuhan eksponensial:</p>
+                <div class="math-equation">\[ P(t) = P_0 \times e^{rt} \]</div>
+                <p>Digunakan untuk memprediksi pertumbuhan bakteri, populasi, dll.</p>
+              </div>
+            </section>
+
+            <section id="latihan">
+              <h2>Latihan Soal</h2>
+              <div class="exercise-box">
+                <h3>Soal 1</h3>
+                <p>Sederhanakan: \( \frac{3^5 \times 3^2}{3^4} \)</p>
+                <button class="solution-btn">Tampilkan Solusi</button>
+                <div class="solution">
+                  <p>Menggunakan sifat eksponen:</p>
+                  <p>\( \frac{3^5 \times 3^2}{3^4} = \frac{3^{5+2}}{3^4} = \frac{3^7}{3^4} = 3^{7-4} = 3^3 = 27 \)</p>
+                </div>
+              </div>
+
+              <div class="exercise-box">
+                <h3>Soal 2</h3>
+                <p>Hitung nilai dari: \( 16^{\frac{3}{4}} \)</p>
+                <button class="solution-btn">Tampilkan Solusi</button>
+                <div class="solution">
+                  <p>Ubah ke bentuk akar:</p>
+                  <p>\( 16^{\frac{3}{4}} = (\sqrt[4]{16})^3 = 2^3 = 8 \)</p>
+                </div>
+              </div>
+            </section>
+
             <section id="kesimpulan">
               <h2>Kesimpulan</h2>
               <p>
-                Eksponen adalah konsep matematika yang sangat penting dan memiliki banyak aplikasi dalam berbagai bidang. Dengan memahami definisi dan sifat-sifat eksponen, kita dapat menyelesaikan berbagai masalah matematika dengan lebih mudah dan efisien. Mulailah dengan mempelajari dasar-dasar eksponen, lalu lanjutkan dengan berlatih soal-soal untuk meningkatkan pemahaman Anda.
+                Eksponen adalah alat matematika yang sangat kuat dengan aplikasi luas di berbagai bidang. Memahami sifat-sifat dasar eksponen memungkinkan kita untuk menyederhanakan dan menyelesaikan masalah kompleks dengan lebih efisien.
+                Kunci untuk menguasai eksponen adalah:
               </p>
-              <p>
-                Jika Anda ingin menguasai eksponen, jangan ragu untuk terus berlatih dan mengeksplorasi lebih banyak contoh soal. Nantikan pembahasan soal-soal menarik lainnya hanya di <strong><a href="/index.html">MathAlpha</a></strong>.
-              </p>
+              <ul>
+                <li>Memahami definisi dasar eksponen sebagai perkalian berulang</li>
+                <li>Menguasai tujuh sifat utama eksponen</li>
+                <li>Berlatih menerapkan sifat-sifat tersebut dalam berbagai konteks</li>
+                <li>Mengenali pola eksponensial dalam masalah dunia nyata</li>
+              </ul>
+              <p>Dengan dasar yang kuat dalam eksponen, Anda akan lebih siap untuk mempelajari topik matematika lanjutan seperti logaritma, fungsi eksponensial, dan kalkulus.</p>
             </section>
-          
+
             <footer>
-              <p>&copy; 2024 Math Alpha. Semua Hak Dilindungi.</p>
+              <p>&copy; 2025 Math Alpha. Semua Hak Dilindungi.</p>
             </footer>
           </div>
         </div>
@@ -257,5 +268,15 @@
     </div>
 
     <script src="/script.js"></script>
+    <script>
+      // Toggle solution visibility
+      document.querySelectorAll(".solution-btn").forEach((button) => {
+        button.addEventListener("click", function () {
+          const solution = this.nextElementSibling;
+          solution.style.display = solution.style.display === "block" ? "none" : "block";
+          this.textContent = solution.style.display === "block" ? "Sembunyikan Solusi" : "Tampilkan Solusi";
+        });
+      });
+    </script>
   </body>
 </html>
