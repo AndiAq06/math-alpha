@@ -29,7 +29,7 @@
           <a href="/matematika/index.html" class="menu-item"> <i class="fas fa-square-root-alt"></i> Matematika </a>
           <a href="/sql/index.html" class="menu-item"> <i class="fas fa-database"></i> SQL </a>
           <a href="/pemprograman/index.html" class="menu-item"> <i class="fas fa-code"></i> Pemrograman </a>
-          <a href="#" class="menu-item"> <i class="fas fa-info-circle"></i> About </a>
+          <a href="/about.html" class="menu-item"> <i class="fas fa-info-circle"></i> About </a>
         </nav>
 
         <!-- Social Media Icons -->
@@ -54,16 +54,31 @@
 
       <!-- Main Content -->
       <main class="content">
-        <h3>Pengantar Statistika</h3>
         <div class="article">
-          <div class="image-container">
-            <img src="/img/tipe-data.png" alt="Statistika" class="article-image" />
-          </div>
           <div class="content-statistik">
             <header>
               <h1>Tipe Data di Database SQL</h1>
+              <div class="meta-info">
+                <span class="author">Oleh: Andi Ardiansyah Nasir</span>
+                <span class="last-update">Terakhir diperbarui: 15 Juni 2025</span>
+              </div>
             </header>
+            <section>
+              <p>
+                Pemahaman tentang tipe data dalam database SQL merupakan fondasi penting dalam desain database yang efisien. Tipe data menentukan jenis nilai yang dapat disimpan dalam kolom tabel dan memengaruhi bagaimana data disimpan,
+                diambil, dan diproses.
+              </p>
 
+              <p>
+                Dalam SQL, setiap kolom dalam tabel harus memiliki tipe data tertentu. Pemilihan tipe data yang tepat akan membantu mengoptimalkan penyimpanan, meningkatkan kecepatan query, dan memastikan integritas data. Tipe data yang
+                terlalu besar untuk kebutuhan sebenarnya akan membuang ruang penyimpanan, sementara tipe data yang terlalu kecil dapat menyebabkan data terpotong atau error.
+              </p>
+
+              <p>
+                Artikel ini akan membahas berbagai tipe data yang tersedia dalam SQL, termasuk tipe data numerik, string, tanggal dan waktu, boolean, serta biner. Setiap tipe data memiliki karakteristik, ukuran penyimpanan, dan rentang
+                nilai yang berbeda-beda.
+              </p>
+            </section>
             <section id="integer">
               <h2>Tipe Data Integer</h2>
               <p>Tipe data integer digunakan untuk menyimpan bilangan bulat. Berikut adalah rincian tipe data integer yang tersedia:</p>
@@ -258,9 +273,7 @@
     tanggal_lahir DATE,
     skor FLOAT,
     aktif BOOLEAN
-);
-        </code>
-                </pre>
+);</code></pre>
             </section>
 
             <section id="keuntungan">
