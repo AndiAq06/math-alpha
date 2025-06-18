@@ -54,14 +54,14 @@
 
       <!-- Main Content -->
       <main class="content">
-        <h3>Panduan Tabel di MySQL</h3>
         <div class="article">
-          <div class="image-container">
-            <img src="/img/tabel.png" alt="Statistika" class="article-image" />
-          </div>
           <div class="content-statistik">
             <header>
-              <h1>Cara membuat tabel di database MySQL</h1>
+              <h1>Panduan Membuat Tabel di Database MySQL</h1>
+              <div class="meta-info">
+                <span class="author">Oleh: Andi Ardiansyah Nasir</span>
+                <span class="last-update">Terakhir diperbarui: 19 Juni 2025</span>
+              </div>
             </header>
             <section id="intro">
               <h2>Pengenalan</h2>
@@ -82,8 +82,7 @@
     nama VARCHAR(100) NOT NULL,
     harga DECIMAL(10, 2) NOT NULL,
     stok INT DEFAULT 0
-);
-                </code></pre>
+);</code></pre>
               <p>Penjelasan:</p>
               <ul>
                 <li><code>id</code>: Kolom dengan tipe <code>INT</code>, otomatis bertambah, dan digunakan sebagai primary key.</li>
@@ -128,14 +127,12 @@
     id INT AUTO_INCREMENT PRIMARY KEY,
     nama VARCHAR(100) NOT NULL,
     email VARCHAR(100) DEFAULT 'tidakada@contoh.com'
-);
-                </code></pre>
+);</code></pre>
               <p>Khusus untuk kolom <code>DATETIME</code> atau <code>TIMESTAMP</code>, gunakan <code>CURRENT_TIMESTAMP</code> sebagai nilai default:</p>
               <pre><code>CREATE TABLE log (
     id INT AUTO_INCREMENT PRIMARY KEY,
     waktu TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-);
-                </code></pre>
+);</code></pre>
             </section>
 
             <section id="delete-truncate">
@@ -151,7 +148,6 @@
               <p>MySQL mendukung berbagai <em>storage engine</em> untuk pengolahan data. <strong>InnoDB</strong> adalah yang paling populer.</p>
               <p>Untuk melihat daftar <em>storage engine</em> yang tersedia, gunakan perintah:</p>
               <pre><code>SHOW ENGINES;</code></pre>
-              <img src="/img/engine.jpeg" alt="sql" class="article-image" />
             </section>
             <footer>
               <p>&copy; 2024 Math Alpha. Semua Hak Dilindungi.</p>
