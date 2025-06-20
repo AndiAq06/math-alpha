@@ -1060,7 +1060,7 @@ pre code {
   font-family: "Fira Code", "Courier New", monospace;
   font-size: 0.95rem;
   line-height: 1.5;
-  color: #abb2bf; /* Light gray text */
+  color: #fff; /* Light gray text */
   display: block;
 }
 

@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript DOM Manipulation</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles.css" />
+    <meta name="google-site-verification" content="wSwaOWra1NglT7WH5RGbaNJ2Jrsv1nRoWawtwszrBws" />
+    <link rel="icon" href="/img/logo.png" sizes="32x32" type="image/png" />
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1624084859744468" crossorigin="anonymous"></script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1624084859744468" crossorigin="anonymous"></script>
+    <style>
+      .demo-button {
+        background-color: #4dabf7;
+        color: white;
+        border: none;
+        padding: 8px 16px;
+        border-radius: 4px;
+        cursor: pointer;
+        margin: 5px;
+      }
+      .demo-button:hover {
+        background-color: #339af0;
+      }
+      #demo-output {
+        margin-top: 15px;
+        padding: 10px;
+        background-color: white;
+        border-radius: 4px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Hamburger Menu -->
+      <button class="hamburger-menu">
+        <i class="fas fa-bars"></i>
+      </button>
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <button class="close-btn">&times;</button>
+        <div class="logo">
+          <img src="/img/logo.png" alt="Chirpy Logo" />
+          <h2>MathAlpha</h2>
+        </div>
+        <nav class="menu">
+          <a href="/index.html" class="menu-item"> <i class="fas fa-home"></i> Home </a>
+          <a href="/statistika/index.html" class="menu-item"> <i class="fas fa-chart-bar"></i> Statistika </a>
+          <a href="/machine-learning/index.html" class="menu-item"> <i class="fas fa-robot"></i> Machine Learning </a>
+          <a href="/deep-learning/index.html" class="menu-item"> <i class="fas fa-brain"></i> Deep Learning </a>
+          <a href="/matematika/index.html" class="menu-item"> <i class="fas fa-square-root-alt"></i> Matematika </a>
+          <a href="/sql/index.html" class="menu-item"> <i class="fas fa-database"></i> SQL </a>
+          <a href="/pemprograman/index.html" class="menu-item"> <i class="fas fa-code"></i> Pemrograman </a>
+          <a href="#" class="menu-item"> <i class="fas fa-info-circle"></i> About </a>
+        </nav>
+
+        <!-- Social Media Icons -->
+        <div class="social-media">
+          <a href="https://www.instagram.com/andiaso06/" target="_blank" class="social-icon">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/andi-ardiansyah-7b25072a9/" target="_blank" class="social-icon">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="https://github.com/AndiAq06" target="_blank" class="social-icon">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="https://www.youtube.com/@andimath06" target="_blank" class="social-icon">
+            <i class="fab fa-youtube"></i>
+          </a>
+          <a href="https://www.twitter.com" target="_blank" class="social-icon">
+            <i class="fab fa-x-twitter"></i>
+          </a>
+        </div>
+      </aside>
+
+      <!-- Main Content -->
+      <main class="content">
+        <header>
+          <h1>Manipulasi DOM dengan JavaScript</h1>
+          <div class="meta-info">
+            <span class="author">Oleh: Andi Ardiansyah Nasir</span>
+            <span class="last-update">Terakhir diperbarui: 10 Juni 2025</span>
+          </div>
+        </header>
+        <div class="article">
+          <div class="content-statistik">
+            <section id="introduction">
+              <h2>Pengantar DOM (Document Object Model)</h2>
+              <p>
+                DOM adalah representasi struktur dokumen HTML sebagai pohon objek yang dapat dimanipulasi dengan JavaScript. Setiap elemen HTML menjadi "node" dalam pohon ini, dan kita dapat mengakses, mengubah, menambah, atau menghapus
+                node tersebut secara dinamis.
+              </p>
+              <p>
+                Dengan DOM, kita bisa membuat halaman web yang interaktif dan responsif. Mulai dari mengubah teks, menambahkan elemen baru, merespons event klik, hingga membuat animasi - semua bisa dilakukan dengan memanipulasi DOM
+                menggunakan JavaScript.
+              </p>
+            </section>
+
+            <ins class="adsbygoogle" style="display: block; text-align: center" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-1624084859744468" data-ad-slot="6855576326"></ins>
+            <script>
+              (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+
+            <section id="selecting-elements">
+              <h2>Memilih Elemen DOM</h2>
+              <p>Ada beberapa cara untuk memilih elemen dalam DOM:</p>
+
+              <div>
+                <h4>1. getElementById</h4>
+                <div class="code-example">
+                  <pre><code>const header = document.getElementById('header');</code></pre>
+                </div>
+                <p>Memilih elemen berdasarkan ID-nya (unik dalam satu dokumen).</p>
+              </div>
+
+              <div>
+                <h4>2. getElementsByClassName</h4>
+                <div class="code-example">
+                  <pre><code>const items = document.getElementsByClassName('item'); // HTMLCollection</code></pre>
+                </div>
+                <p>Memilih semua elemen dengan class tertentu (mengembalikan HTMLCollection).</p>
+              </div>
+
+              <div>
+                <h4>3. getElementsByTagName</h4>
+                <div class="code-example">
+                  <pre><code>const paragraphs = document.getElementsByTagName('p'); // HTMLCollection</code></pre>
+                </div>
+                <p>Memilih semua elemen dengan tag tertentu.</p>
+              </div>
+
+              <div>
+                <h4>4. querySelector</h4>
+                <div class="code-example">
+                  <pre><code>const firstItem = document.querySelector('.item'); // Elemen pertama</code></pre>
+                </div>
+                <p>Memilih elemen pertama yang cocok dengan selector CSS.</p>
+              </div>
+
+              <div>
+                <h4>5. querySelectorAll</h4>
+                <div class="code-example">
+                  <pre><code>const allItems = document.querySelectorAll('.item'); // NodeList</code></pre>
+                </div>
+                <p>Memilih semua elemen yang cocok dengan selector CSS (mengembalikan NodeList).</p>
+              </div>
+            </section>
+
+            <section id="modifying-elements">
+              <h2>Mengubah Elemen DOM</h2>
+              <p>Setelah memilih elemen, kita bisa memodifikasi propertinya:</p>
+
+              <div>
+                <h4>1. Mengubah Konten</h4>
+                <div class="code-example">
+                  <pre><code>// Mengubah teks
+element.textContent = 'Teks baru';
+
+// Mengubah HTML
+element.innerHTML = '&lt;strong&gt;Tebal&lt;/strong&gt; teks';</code></pre>
+                </div>
+              </div>
+
+              <div>
+                <h4>2. Mengubah Atribut</h4>
+                <div class="code-example">
+                  <pre><code>// Mengubah atribut
+element.setAttribute('href', 'https://example.com');
+
+// Mengambil atribut
+const href = element.getAttribute('href');
+
+// Menghapus atribut
+element.removeAttribute('title');</code></pre>
+                </div>
+              </div>
+
+              <div>
+                <h4>3. Mengubah Style</h4>
+                <div class="code-example">
+                  <pre><code>// Mengubah style langsung
+element.style.color = 'red';
+element.style.backgroundColor = '#f0f0f0';
+
+// Menambahkan/menghapus class
+element.classList.add('active');
+element.classList.remove('inactive');
+element.classList.toggle('hidden');</code></pre>
+                </div>
+              </div>
+
+              <div class="interactive-demo">
+                <h4>Demo Interaktif: Mengubah Style</h4>
+                <p id="demo-text">Coba ubah style teks ini!</p>
+                <button class="demo-button" onclick="changeColor()">Ubah Warna</button>
+                <button class="demo-button" onclick="toggleBold()">Toggle Tebal</button>
+                <button class="demo-button" onclick="resetStyle()">Reset</button>
+
+                <script>
+                  const demoText = document.getElementById("demo-text");
+
+                  function changeColor() {
+                    const colors = ["red", "blue", "green", "purple", "orange"];
+                    const randomColor = colors[Math.floor(Math.random() * colors.length)];
+                    demoText.style.color = randomColor;
+                  }
+
+                  function toggleBold() {
+                    demoText.style.fontWeight = demoText.style.fontWeight === "bold" ? "normal" : "bold";
+                  }
+
+                  function resetStyle() {
+                    demoText.style = "";
+                  }
+                </script>
+              </div>
+            </section>
+
+            <ins class="adsbygoogle" style="display: block; text-align: center" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-1624084859744468" data-ad-slot="6855576326"></ins>
+            <script>
+              (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+
+            <section id="creating-elements">
+              <h2>Membuat dan Menambahkan Elemen</h2>
+              <p>Kita bisa membuat elemen baru dan menambahkannya ke DOM:</p>
+
+              <div>
+                <h4>1. Membuat Elemen Baru</h4>
+                <div class="code-example">
+                  <pre><code>const newDiv = document.createElement('div');
+newDiv.textContent = 'Ini div baru';
+newDiv.className = 'box';</code></pre>
+                </div>
+              </div>
+
+              <div>
+                <h4>2. Menambahkan ke DOM</h4>
+                <div class="code-example">
+                  <pre><code>// Menambahkan sebagai anak terakhir
+parentElement.appendChild(newDiv);
+
+// Menambahkan sebelum elemen tertentu
+parentElement.insertBefore(newDiv, referenceElement);
+
+// Menambahkan HTML string
+container.innerHTML += '&lt;div class="box"&gt;Box baru&lt;/div&gt;';</code></pre>
+                </div>
+              </div>
+
+              <div>
+                <h4>3. Clone Node</h4>
+                <div class="code-example">
+                  <pre><code>const original = document.querySelector('.template');
+const clone = original.cloneNode(true); // true untuk deep clone
+document.body.appendChild(clone);</code></pre>
+                </div>
+              </div>
+
+              <div class="interactive-demo">
+                <h4>Demo Interaktif: Menambahkan Item</h4>
+                <ul id="item-list">
+                  <li>Item 1</li>
+                  <li>Item 2</li>
+                </ul>
+                <button class="demo-button" onclick="addItem()">Tambah Item</button>
+                <button class="demo-button" onclick="clearList()">Hapus Semua</button>
+
+                <script>
+                  const itemList = document.getElementById("item-list");
+                  let itemCount = 2;
+
+                  function addItem() {
+                    itemCount++;
+                    const newItem = document.createElement("li");
+                    newItem.textContent = `Item ${itemCount}`;
+                    itemList.appendChild(newItem);
+                  }
+
+                  function clearList() {
+                    itemList.innerHTML = "";
+                    itemCount = 0;
+                  }
+                </script>
+              </div>
+            </section>
+
+            <section id="removing-elements">
+              <h2>Menghapus Elemen</h2>
+              <p>Ada beberapa cara untuk menghapus elemen dari DOM:</p>
+
+              <div>
+                <h4>1. removeChild</h4>
+                <div class="code-example">
+                  <pre><code>const parent = document.getElementById('parent');
+const child = document.getElementById('child');
+parent.removeChild(child);</code></pre>
+                </div>
+              </div>
+
+              <div>
+                <h4>2. remove()</h4>
+                <div class="code-example">
+                  <pre><code>const element = document.getElementById('element-to-remove');
+element.remove();</code></pre>
+                </div>
+              </div>
+
+              <div>
+                <h4>3. Mengosongkan Elemen</h4>
+                <div class="code-example">
+                  <pre><code>document.getElementById('container').innerHTML = '';</code></pre>
+                </div>
+              </div>
+            </section>
+
+            <ins class="adsbygoogle" style="display: block; text-align: center" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-1624084859744468" data-ad-slot="6855576326"></ins>
+            <script>
+              (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+
+            <section id="events">
+              <h2>Event Handling</h2>
+              <p>Event adalah tindakan yang terjadi di halaman web (klik, input, hover, dll). Kita bisa merespons event dengan event listener.</p>
+
+              <div>
+                <h4>1. Menambahkan Event Listener</h4>
+                <div class="code-example">
+                  <pre><code>const button = document.getElementById('myButton');
+
+// Cara 1: Menggunakan properti
+button.onclick = function() {
+  console.log('Button diklik!');
+};
+
+// Cara 2: addEventListener (lebih fleksibel)
+button.addEventListener('click', function(event) {
+  console.log('Button diklik!', event);
+});</code></pre>
+                </div>
+              </div>
+
+              <div>
+                <h4>2. Jenis-Jenis Event</h4>
+                <div class="code-example">
+                  <pre><code>// Klik
+element.addEventListener('click', handleClick);
+
+// Input/change
+inputElement.addEventListener('input', handleInput);
+inputElement.addEventListener('change', handleChange);
+
+// Keyboard
+document.addEventListener('keydown', handleKeyDown);
+
+// Mouse
+element.addEventListener('mouseover', handleMouseOver);
+element.addEventListener('mouseout', handleMouseOut);
+
+// Form
+formElement.addEventListener('submit', handleSubmit);</code></pre>
+                </div>
+              </div>
+
+              <div>
+                <h4>3. Event Delegation</h4>
+                <div class="code-example">
+                  <pre><code>// Daripada menambahkan listener ke setiap item
+document.getElementById('list').addEventListener('click', function(event) {
+  if (event.target.tagName === 'LI') {
+    console.log('Item diklik:', event.target.textContent);
+  }
+});</code></pre>
+                </div>
+                <p>Berguna untuk elemen dinamis atau banyak elemen sejenis.</p>
+              </div>
+
+              <div class="interactive-demo">
+                <h4>Demo Interaktif: Event Handling</h4>
+                <div id="event-box" style="width: 200px; height: 100px; background-color: #4dabf7; display: flex; justify-content: center; align-items: center; color: white; cursor: pointer">Klik atau hover saya</div>
+                <div id="demo-output"></div>
+
+                <script>
+                  const eventBox = document.getElementById("event-box");
+                  const demoOutput = document.getElementById("demo-output");
+
+                  eventBox.addEventListener("click", function () {
+                    demoOutput.textContent = "Anda mengklik kotak!";
+                  });
+
+                  eventBox.addEventListener("mouseover", function () {
+                    eventBox.style.backgroundColor = "#339af0";
+                  });
+
+                  eventBox.addEventListener("mouseout", function () {
+                    eventBox.style.backgroundColor = "#4dabf7";
+                    demoOutput.textContent = "";
+                  });
+                </script>
+              </div>
+            </section>
+
+            <section id="traversing">
+              <h2>Traversing DOM</h2>
+              <p>Traversing berarti berpindah dari satu elemen ke elemen lain dalam hierarki DOM.</p>
+
+              <div>
+                <h4>1. Navigasi ke Parent</h4>
+                <div class="code-example">
+                  <pre><code>const child = document.getElementById('child');
+const parent = child.parentNode; // atau parentElement</code></pre>
+                </div>
+              </div>
+
+              <div>
+                <h4>2. Navigasi ke Children</h4>
+                <div class="code-example">
+                  <pre><code>const parent = document.getElementById('parent');
+const firstChild = parent.firstChild; // atau firstElementChild
+const lastChild = parent.lastChild; // atau lastElementChild
+const children = parent.children; // HTMLCollection</code></pre>
+                </div>
+              </div>
+
+              <div>
+                <h4>3. Navigasi ke Sibling</h4>
+                <div class="code-example">
+                  <pre><code>const middle = document.getElementById('middle');
+const prev = middle.previousSibling; // atau previousElementSibling
+const next = middle.nextSibling; // atau nextElementSibling</code></pre>
+                </div>
+              </div>
+            </section>
+
+            <section id="forms">
+              <h2>Manipulasi Form</h2>
+              <p>Form adalah elemen penting yang sering dimanipulasi dengan JavaScript.</p>
+
+              <div>
+                <h4>1. Mengakses Nilai Form</h4>
+                <div class="code-example">
+                  <pre><code>const input = document.getElementById('username');
+console.log(input.value); // Mendapatkan nilai input
+
+const select = document.getElementById('country');
+console.log(select.value); // Mendapatkan nilai yang dipilih
+
+const checkbox = document.getElementById('subscribe');
+console.log(checkbox.checked); // true/false</code></pre>
+                </div>
+              </div>
+
+              <div>
+                <h4>2. Validasi Form</h4>
+                <div class="code-example">
+                  <pre><code>formElement.addEventListener('submit', function(event) {
+  const username = document.getElementById('username').value;
+  
+  if (username.length < 5) {
+    event.preventDefault(); // Mencegah pengiriman form
+    alert('Username minimal 5 karakter');
+  }
+});</code></pre>
+                </div>
+              </div>
+
+              <ins class="adsbygoogle" style="display: block; text-align: center" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-1624084859744468" data-ad-slot="6855576326"></ins>
+              <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+              </script>
+
+              <div class="interactive-demo">
+                <h4>Demo Interaktif: Validasi Form</h4>
+                <form id="demo-form" onsubmit="return validateForm()">
+                  <div style="margin-bottom: 10px">
+                    <label for="demo-email">Email:</label>
+                    <input type="email" id="demo-email" required style="padding: 5px; width: 200px" />
+                  </div>
+                  <div style="margin-bottom: 10px">
+                    <label for="demo-password">Password (min 6 karakter):</label>
+                    <input type="password" id="demo-password" style="padding: 5px; width: 200px" />
+                  </div>
+                  <button type="submit" class="demo-button">Submit</button>
+                </form>
+                <div id="form-message" style="margin-top: 10px"></div>
+
+                <script>
+                  function validateForm() {
+                    const email = document.getElementById("demo-email").value;
+                    const password = document.getElementById("demo-password").value;
+                    const message = document.getElementById("form-message");
+
+                    if (password.length < 6) {
+                      message.textContent = "Password harus minimal 6 karakter!";
+                      message.style.color = "red";
+                      return false;
+                    }
+
+                    message.textContent = "Form valid! (Form tidak benar-benar dikirim)";
+                    message.style.color = "green";
+                    return false; // Hanya untuk demo, tidak mengirim form
+                  }
+                </script>
+              </div>
+            </section>
+
+            <section id="kesimpulan">
+              <h2>Kesimpulan</h2>
+              <p>
+                Manipulasi DOM adalah inti dari pengembangan web interaktif dengan JavaScript. Dengan memahami cara memilih, mengubah, menambah, dan menghapus elemen DOM, serta menangani event, Anda bisa membuat halaman web yang dinamis dan
+                responsif.
+              </p>
+              <p>
+                Beberapa praktik terbaik dalam manipulasi DOM termasuk menggunakan event delegation untuk elemen dinamis, meminimalkan manipulasi DOM langsung (karena mahal secara performa), dan memanfaatkan metode modern seperti
+                querySelector dan classList untuk kode yang lebih bersih dan mudah dibaca.
+              </p>
+              <p>Dengan menguasai konsep-konsep dasar yang telah dibahas di artikel ini, Anda sudah memiliki fondasi yang kuat untuk membangun aplikasi web yang lebih interaktif dan kompleks menggunakan JavaScript.</p>
+            </section>
+
+            <footer>
+              <p>&copy; 2025 Math Alpha. Semua Hak Dilindungi.</p>
+            </footer>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <script src="/script.js"></script>
+  </body>
+</html>

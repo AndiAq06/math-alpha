@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cara Insert Data di Database MySQL</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles.css" />
+    <meta name="google-site-verification" content="wSwaOWra1NglT7WH5RGbaNJ2Jrsv1nRoWawtwszrBws" />
+    <link rel="icon" href="/img/logo.png" sizes="32x32" type="image/png" />
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1624084859744468" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Hamburger Menu -->
+      <button class="hamburger-menu">
+        <i class="fas fa-bars"></i>
+      </button>
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <button class="close-btn">&times;</button>
+        <div class="logo">
+          <img src="/img/logo.png" alt="Chirpy Logo" />
+          <h2>MathAlpha</h2>
+        </div>
+        <nav class="menu">
+          <a href="/index.html" class="menu-item"> <i class="fas fa-home"></i> Home </a>
+          <a href="/statistika/index.html" class="menu-item"> <i class="fas fa-chart-bar"></i> Statistika </a>
+          <a href="/matematika/index.html" class="menu-item"> <i class="fas fa-square-root-alt"></i> Matematika </a>
+          <a href="/sql/index.html" class="menu-item"> <i class="fas fa-database"></i> SQL </a>
+          <a href="/pemprograman/index.html" class="menu-item"> <i class="fas fa-code"></i> Pemrograman </a>
+          <a href="#" class="menu-item"> <i class="fas fa-info-circle"></i> About </a>
+        </nav>
+
+        <!-- Social Media Icons -->
+        <div class="social-media">
+          <a href="https://www.instagram.com/andiaso06/" target="_blank" class="social-icon">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/andi-ardiansyah-7b25072a9/" target="_blank" class="social-icon">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="https://github.com/AndiAq06" target="_blank" class="social-icon">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="https://www.youtube.com/@andimath06" target="_blank" class="social-icon">
+            <i class="fab fa-youtube"></i>
+          </a>
+          <a href="https://www.twitter.com" target="_blank" class="social-icon">
+            <i class="fab fa-x-twitter"></i>
+          </a>
+        </div>
+      </aside>
+
+      <!-- Main Content -->
+      <main class="content">
+        <div class="article">
+          <div class="content-statistik">
+            <header>
+              <h1>Panduan INSERT DATA di Database MySQL</h1>
+              <div class="meta-info">
+                <span class="author">Oleh: Andi Ardiansyah Nasir</span>
+                <span class="last-update">Terakhir diperbarui: 20 Juni 2025</span>
+              </div>
+            </header>
+            <section id="intro">
+              <h2>Apa Itu INSERT dalam SQL?</h2>
+              <p>
+                Perintah <code>INSERT</code> dalam SQL digunakan untuk menambahkan data baru ke dalam tabel database. Ini adalah salah satu operasi dasar dalam manipulasi data (DML - Data Manipulation Language) yang memungkinkan kita
+                menyimpan informasi ke dalam database.
+              </p>
+
+              <p>Ada beberapa cara untuk melakukan INSERT data:</p>
+              <ul>
+                <li>Insert satu baris data</li>
+                <li>Insert beberapa baris data sekaligus</li>
+                <li>Insert data dari tabel lain</li>
+                <li>Insert data dengan nilai default</li>
+              </ul>
+            </section>
+
+            <section id="create-table-example">
+              <h2>Membuat Tabel Contoh</h2>
+              <p>Sebelum kita bisa menginsert data, kita perlu membuat tabel terlebih dahulu. Berikut contoh pembuatan tabel yang akan kita gunakan:</p>
+
+              <pre><code>CREATE TABLE mahasiswa (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nim VARCHAR(10) NOT NULL UNIQUE,
+    nama VARCHAR(100) NOT NULL,
+    jurusan VARCHAR(50) NOT NULL,
+    semester INT DEFAULT 1,
+    ipk DECIMAL(3,2) DEFAULT 0.00,
+    tanggal_masuk DATE NOT NULL
+);</code></pre>
+
+              <p>Penjelasan struktur tabel:</p>
+              <ul>
+                <li><code>id</code>: Primary key yang otomatis bertambah</li>
+                <li><code>nim</code>: Nomor Induk Mahasiswa (unik, tidak boleh NULL)</li>
+                <li><code>nama</code>: Nama lengkap mahasiswa</li>
+                <li><code>jurusan</code>: Jurusan yang diambil</li>
+                <li><code>semester</code>: Semester saat ini (default 1)</li>
+                <li><code>ipk</code>: Indeks Prestasi Kumulatif (default 0.00)</li>
+                <li><code>tanggal_masuk</code>: Tanggal pertama masuk kuliah</li>
+              </ul>
+            </section>
+
+            <ins class="adsbygoogle" style="display: block; text-align: center" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-1624084859744468" data-ad-slot="6855576326"></ins>
+            <script>
+              (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+
+            <section id="basic-insert">
+              <h2>Insert Data Dasar</h2>
+              <p>Format dasar perintah INSERT:</p>
+              <pre><code>INSERT INTO nama_tabel (kolom1, kolom2, ...)
+VALUES (nilai1, nilai2, ...);</code></pre>
+
+              <p>Contoh insert data ke tabel mahasiswa:</p>
+              <pre><code>INSERT INTO mahasiswa (nim, nama, jurusan, semester, ipk, tanggal_masuk)
+VALUES ('20250001', 'Andi Ardiansyah', 'Teknik Informatika', 3, 3.75, '2023-08-15');</code></pre>
+
+              <p>Kita juga bisa menyederhanakan penulisan jika mengisi semua kolom (kecuali yang auto-increment):</p>
+              <pre><code>INSERT INTO mahasiswa
+VALUES (NULL, '20250002', 'Budi Santoso', 'Sistem Informasi', 5, 3.25, '2022-08-20');</code></pre>
+
+              <p>Catatan: NULL untuk kolom id karena auto-increment.</p>
+            </section>
+
+            <section id="insert-multiple">
+              <h2>Insert Beberapa Data Sekaligus</h2>
+              <p>MySQL memungkinkan insert beberapa baris dalam satu perintah:</p>
+
+              <pre><code>INSERT INTO mahasiswa (nim, nama, jurusan, semester, ipk, tanggal_masuk)
+VALUES 
+    ('20250003', 'Citra Dewi', 'Teknik Elektro', 2, 3.50, '2024-08-10'),
+    ('20250004', 'Dian Pratama', 'Manajemen', 4, 3.20, '2023-08-15'),
+    ('20250005', 'Eka Wijaya', 'Akuntansi', 6, 3.80, '2022-08-20');</code></pre>
+
+              <p>Teknik ini lebih efisien karena:</p>
+              <ul>
+                <li>Hanya satu koneksi ke database</li>
+                <li>Lebih cepat daripada multiple INSERT terpisah</li>
+                <li>Atomic operation (semua berhasil atau semua gagal)</li>
+              </ul>
+            </section>
+
+            <ins class="adsbygoogle" style="display: block; text-align: center" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-1624084859744468" data-ad-slot="6855576326"></ins>
+            <script>
+              (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+
+            <section id="insert-partial">
+              <h2>Insert Data Parsial (Sebagian Kolom)</h2>
+              <p>Kita bisa menginsert data hanya ke kolom tertentu, asalkan kolom lain memiliki nilai default atau boleh NULL:</p>
+
+              <pre><code>INSERT INTO mahasiswa (nim, nama, jurusan, tanggal_masuk)
+VALUES ('20250006', 'Fajar Nugraha', 'Teknik Sipil', '2024-08-10');</code></pre>
+
+              <p>Pada contoh di atas, kolom semester dan ipk akan diisi dengan nilai default (1 dan 0.00).</p>
+            </section>
+
+            <section id="insert-from-select">
+              <h2>Insert Data dari Tabel Lain</h2>
+              <p>Kita bisa menginsert data dari hasil query tabel lain:</p>
+
+              <pre><code>-- Buat tabel alumni terlebih dahulu
+CREATE TABLE alumni (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nim VARCHAR(10) NOT NULL UNIQUE,
+    nama VARCHAR(100) NOT NULL,
+    jurusan VARCHAR(50) NOT NULL,
+    ipk DECIMAL(3,2),
+    tahun_lulus YEAR NOT NULL
+);
+
+-- Insert data dari tabel mahasiswa ke alumni
+INSERT INTO alumni (nim, nama, jurusan, ipk, tahun_lulus)
+SELECT nim, nama, jurusan, ipk, YEAR(CURDATE())
+FROM mahasiswa
+WHERE semester >= 8;</code></pre>
+            </section>
+
+            <section id="insert-ignore">
+              <h2>INSERT IGNORE</h2>
+              <p>
+                INSERT IGNORE adalah perintah di MySQL (juga MariaDB) yang digunakan untuk memasukkan data ke dalam tabel, tetapi akan mengabaikan (tidak error) jika terjadi pelanggaran aturan seperti:
+                <strong>Duplikat kunci (PRIMARY KEY atau UNIQUE)</strong> atau <strong>Pelanggaran constraint (misalnya NOT NULL)</strong> :
+              </p>
+
+              <pre><code>INSERT IGNORE INTO mahasiswa (nim, nama, jurusan, tanggal_masuk)
+VALUES ('20250001', 'Nama Baru', 'Jurusan Baru', '2024-08-10');</code></pre>
+
+              <p>Pada contoh di atas, karena NIM '20250001' sudah ada, data tidak akan dimasukkan tetapi tidak menyebabkan error.</p>
+            </section>
+
+            <ins class="adsbygoogle" style="display: block; text-align: center" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-1624084859744468" data-ad-slot="6855576326"></ins>
+            <script>
+              (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+
+            <section id="on-duplicate-key">
+              <h2>ON DUPLICATE KEY UPDATE</h2>
+              <p>ON DUPLICATE KEY UPDATE adalah fitur di MySQL (dan MariaDB) yang digunakan saat melakukan INSERT, tapi ingin meng-update baris yang sudah ada jika terjadi konflik pada kunci unik (misalnya PRIMARY KEY atau UNIQUE).:</p>
+
+              <pre><code>INSERT INTO mahasiswa (nim, nama, jurusan, semester, ipk, tanggal_masuk)
+VALUES ('20250001', 'Andi Ardiansyah', 'Teknik Informatika', 3, 3.85, '2023-08-15')
+ON DUPLICATE KEY UPDATE 
+    nama = VALUES(nama),
+    jurusan = VALUES(jurusan),
+    semester = VALUES(semester),
+    ipk = VALUES(ipk);</code></pre>
+
+              <p>Jika NIM sudah ada, data akan diupdate dengan nilai baru.</p>
+            </section>
+
+            <section id="best-practices">
+              <h2>Best Practices INSERT Data</h2>
+              <ol>
+                <li>
+                  Gunakan transaksi untuk multiple INSERT penting:
+                  <pre><code>START TRANSACTION;
+INSERT INTO tabel1 VALUES (...);
+INSERT INTO tabel2 VALUES (...);
+COMMIT;</code></pre>
+                </li>
+                <li>
+                  Untuk bulk insert, gunakan LOAD DATA INFILE (lebih cepat):
+                  <pre><code>LOAD DATA INFILE '/path/data.csv' 
+INTO TABLE mahasiswa
+FIELDS TERMINATED BY ',' 
+ENCLOSED BY '"'
+LINES TERMINATED BY '\n'
+IGNORE 1 ROWS;</code></pre>
+                </li>
+                <li>Validasi data sebelum insert</li>
+                <li>Gunakan prepared statement untuk aplikasi</li>
+                <li>Backup database sebelum operasi massal</li>
+              </ol>
+            </section>
+
+            <footer>
+              <p>&copy; 2025 Math Alpha. Semua Hak Dilindungi.</p>
+            </footer>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <script src="/script.js"></script>
+  </body>
+</html>
