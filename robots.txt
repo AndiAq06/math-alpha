@@ -19,3 +19,4 @@ Allow: /ads/*
 Allow: /img/*
 
 Sitemap: https://math-alpha-iota.vercel.app/sitemap.xml
+Sitemap: https://math-alpha-iota.vercel.app/sitemap-1.xml
