@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Histogram Itu Apa, Sih?</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles.css" />
+    <meta name="google-site-verification" content="wSwaOWra1NglT7WH5RGbaNJ2Jrsv1nRoWawtwszrBws" />
+    <link rel="icon" href="/img/logo.png" sizes="32x32" type="image/png" />
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1624084859744468" crossorigin="anonymous"></script>
+    <!-- math.js -->
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="icon" href="/img/logo.png" sizes="32x32" type="image/png" />
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1624084859744468" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Hamburger Menu -->
+      <button class="hamburger-menu">
+        <i class="fas fa-bars"></i>
+      </button>
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <button class="close-btn">&times;</button>
+        <div class="logo">
+          <img src="/img/logo.png" alt="Chirpy Logo" />
+          <h2>MathAlpha</h2>
+        </div>
+        <nav class="menu">
+          <a href="/index.html" class="menu-item"> <i class="fas fa-home"></i> Home </a>
+          <a href="/statistika/index.html" class="menu-item"> <i class="fas fa-chart-bar"></i> Statistika </a>
+          <a href="/machine-learning/index.html" class="menu-item"> <i class="fas fa-robot"></i> Machine Learning </a>
+          <a href="/deep-learning/index.html" class="menu-item"> <i class="fas fa-brain"></i> Deep Learning </a>
+          <a href="/matematika.html" class="menu-item"> <i class="fas fa-square-root-alt"></i> Matematika </a>
+          <a href="/tiu.html" class="menu-item"> <i class="fas fa-file-alt"></i> TIU SKD </a>
+          <a href="/sql/index.html" class="menu-item"> <i class="fas fa-database"></i> SQL </a>
+          <a href="/pemprograman/index.html" class="menu-item"> <i class="fas fa-code"></i> Pemrograman </a>
+          <a href="/about.html" class="menu-item"> <i class="fas fa-info-circle"></i> About </a>
+        </nav>
+
+        <!-- Social Media Icons -->
+        <div class="social-media">
+          <a href="https://www.instagram.com/andiaso06/" target="_blank" class="social-icon">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/andi-ardiansyah-7b25072a9/" target="_blank" class="social-icon">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="https://github.com/AndiAq06" target="_blank" class="social-icon">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="https://www.youtube.com/@andimath06" target="_blank" class="social-icon">
+            <i class="fab fa-youtube"></i>
+          </a>
+          <a href="https://www.twitter.com" target="_blank" class="social-icon">
+            <i class="fab fa-x-twitter"></i>
+          </a>
+        </div>
+      </aside>
+
+      <!-- Main Content -->
+      <main class="content">
+        <div class="article">
+          <div class="content-statistik">
+            <header>
+              <h1>Histogram Itu Apa, Sih? Belajar Visualisasi Data Bareng Mimin!</h1>
+            </header>
+
+            <div class="image-container">
+              <img src="/img/histogram.png" alt="Histogram" class="article-image" />
+            </div>
+
+            <section id="introduction">
+              <h2>Pendahuluan</h2>
+              <p>
+                Hai teman-teman MathAlpha! 👋 Pernah nggak sih kalian ngeliat grafik batang yang menempel satu sama lain dan menunjukkan sebaran data angka? Nah, itu namanya <strong>Histogram</strong>. Grafik ini bukan sekadar tampilan
+                kece, tapi penting banget dalam statistik buat memahami <em>distribusi data</em>.
+              </p>
+              <p>Yuk kita bahas histogram dari A sampai Z. Dijamin setelah ini kamu bakal ngerti cara baca dan bikin histogram kayak pro! 📊🔥</p>
+            </section>
+
+            <section id="definition">
+              <h2>Apa Itu Histogram?</h2>
+              <p>
+                <strong>Histogram</strong> adalah grafik batang yang digunakan untuk menunjukkan <em>frekuensi</em> data numerik dalam interval tertentu. Jadi bukan untuk data kategori ya, tapi untuk data angka yang kontinu (seperti tinggi
+                badan, berat, skor ujian, dll).
+              </p>
+              <p>Setiap batang dalam histogram mewakili kelompok nilai (disebut <strong>bin</strong>), dan tinggi batang menunjukkan berapa banyak data yang masuk ke kelompok tersebut.</p>
+            </section>
+
+            <section id="why-histogram">
+              <h2>Kenapa Kita Perlu Membuat Histogram?</h2>
+              <p>
+                Oke, pertanyaannya: <em>“Kenapa sih kita repot-repot bikin histogram? Kan bisa lihat tabel aja...”</em> Nah justru histogram itu dibikin supaya kita bisa <strong>melihat pola dalam data secara visual</strong>, yang kadang
+                nggak kelihatan kalau cuma lihat angka di tabel.
+              </p>
+              <ul>
+                <li>📊 <strong>Mempermudah melihat distribusi data</strong>: Normal, miring (skewed), atau rata?</li>
+                <li>🔎 <strong>Deteksi outlier</strong>: Ada data yang jauh dari yang lain?</li>
+                <li>🧠 <strong>Membantu pengambilan keputusan</strong>: Apakah data siap dipakai untuk analisis statistik?</li>
+                <li>📈 <strong>Dasar untuk analisis lanjut</strong>: Misalnya sebelum uji normalitas, uji hipotesis, atau pemodelan statistik/machine learning.</li>
+              </ul>
+              <p>Jadi, dengan histogram, kamu bisa dapat insight secara cepat tanpa harus jadi ahli statistik. Visualisasi yang simpel tapi powerful 💥</p>
+            </section>
+
+            <!-- Google AdSense -->
+            <ins class="adsbygoogle" style="display: block" data-ad-format="fluid" data-ad-layout-key="-gw-3+1f-3d+2z" data-ad-client="ca-pub-1624084859744468" data-ad-slot="2653926339"></ins>
+            <script>
+              (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+
+            <section id="components">
+              <h2>Komponen Histogram</h2>
+              <ul>
+                <li><strong>Sumbu X</strong>: Menunjukkan rentang nilai data (dibagi jadi bin/interval).</li>
+                <li><strong>Sumbu Y</strong>: Menunjukkan frekuensi (jumlah data) di tiap bin.</li>
+                <li><strong>Batang</strong>: Lebarnya sesuai rentang bin, dan tingginya sesuai banyaknya data.</li>
+              </ul>
+              <p>Catatan: Berbeda dari diagram batang biasa, di histogram <strong>batang-batangnya saling menempel</strong> karena data yang direpresentasikan bersifat kontinu.</p>
+            </section>
+
+            <section id="difference">
+              <h2>Histogram vs Diagram Batang</h2>
+              <p>Banyak yang bingung bedain histogram dan diagram batang. Nih mimin bantu jelasin:</p>
+              <ul>
+                <li><strong>Histogram</strong>: Untuk data numerik kontinu, batangnya menempel.</li>
+                <li><strong>Diagram Batang</strong>: Untuk data kategori, batangnya terpisah.</li>
+              </ul>
+              <p>Contoh: Histogram untuk tinggi badan siswa. Diagram batang untuk jumlah siswa per jurusan.</p>
+            </section>
+
+            <section id="steps">
+              <h2>Cara Membuat Histogram</h2>
+              <ol>
+                <li><strong>Kumpulkan data numerik</strong>. Misalnya: skor ujian 40 siswa.</li>
+                <li><strong>Tentukan jumlah bin (interval)</strong>. Misalnya bin 50–60, 61–70, dst.</li>
+                <li><strong>Hitung jumlah data di tiap bin</strong>.</li>
+                <li><strong>Gambar batang sesuai jumlah data dalam tiap bin</strong>.</li>
+              </ol>
+              <p>Contoh data: [55, 67, 72, 60, 90, 88, 73, 64]</p>
+              <p>Bin: 50–60, 61–70, 71–80, 81–90, dst.</p>
+            </section>
+
+            <section id="example">
+              <h2>Contoh Histogram</h2>
+              <p>Misal kamu punya data tinggi badan 20 siswa. Setelah dihitung, distribusinya seperti ini:</p>
+              <ul>
+                <li>150–159 cm: 2 orang</li>
+                <li>160–169 cm: 5 orang</li>
+                <li>170–179 cm: 9 orang</li>
+                <li>180–189 cm: 3 orang</li>
+                <li>190–199 cm: 1 orang</li>
+              </ul>
+              <p>Dari data itu kamu bisa bikin histogram dengan sumbu X menunjukkan kelompok tinggi badan dan sumbu Y menunjukkan banyak siswa.</p>
+              <div class="image-container">
+                <img src="/img/histogram-2.png" alt="Histogram" class="article-image" />
+              </div>
+            </section>
+
+            <section id="shapes">
+              <h2>Bentuk-bentuk Histogram</h2>
+              <ul>
+                <li><strong>Simetris/Normal</strong>: Bentuknya kayak lonceng, seimbang kiri-kanan.</li>
+                <li><strong>Right Skewed</strong>: Puncak di kiri, ekor memanjang ke kanan.</li>
+                <li><strong>Left Skewed</strong>: Puncak di kanan, ekor memanjang ke kiri.</li>
+                <li><strong>Uniform</strong>: Semua batang tingginya hampir sama.</li>
+                <li><strong>Multimodal</strong>: Ada lebih dari satu puncak (mode ganda).</li>
+              </ul>
+            </section>
+
+            <!-- Google AdSense -->
+            <ins class="adsbygoogle" style="display: block" data-ad-format="fluid" data-ad-layout-key="-gw-3+1f-3d+2z" data-ad-client="ca-pub-1624084859744468" data-ad-slot="2653926339"></ins>
+            <script>
+              (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+
+            <section id="function">
+              <h2>Fungsi dan Manfaat Histogram</h2>
+              <ul>
+                <li>🔍 Mengetahui bentuk distribusi data (normal, skewed, dll).</li>
+                <li>📈 Melihat kepadatan data di suatu rentang nilai.</li>
+                <li>📊 Menemukan outlier atau nilai ekstrem.</li>
+                <li>🧪 Digunakan dalam analisis awal (EDA) sebelum modeling.</li>
+              </ul>
+              <p>Intinya, histogram bikin kamu lebih kenal karakteristik datamu!</p>
+            </section>
+
+            <section id="python">
+              <h2>Contoh Kode Python (Matplotlib)</h2>
+              <pre><code>import matplotlib.pyplot as plt
+
+data = [12, 15, 17, 18, 18, 19, 21, 22, 24, 25, 25, 26]
+plt.hist(data, bins=5, edgecolor='black')
+plt.title('Histogram Skor Ujian')
+plt.xlabel('Rentang Skor')
+plt.ylabel('Frekuensi')
+plt.show()</code></pre>
+              <p>Kamu bisa sesuaikan <code>bins</code> untuk jumlah kelompok yang kamu mau.</p>
+
+              <div class="image-container">
+                <img src="/img/histogram.png" alt="Histogram" class="article-image" />
+              </div>
+            </section>
+
+            <section id="conclusion">
+              <h2>Kesimpulan</h2>
+              <p><strong>Histogram</strong> adalah alat visualisasi yang powerful untuk melihat distribusi data numerik. Dengan histogram, kamu bisa cepat melihat pola, outlier, dan bentuk distribusi hanya dalam satu gambar.</p>
+              <p>Mulai sekarang, jangan cuma lihat angka—gambar histogramnya juga! 📉🎯</p>
+            </section>
+            <footer>
+              <p>&copy; 2024 Math Alpha. Semua Hak Dilindungi.</p>
+            </footer>
+          </div>
+        </div>
+      </main>
+    </div>
+    <script src="/script.js"></script>
+  </body>
+</html>

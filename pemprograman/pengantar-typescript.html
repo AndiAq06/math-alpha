@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pengantar JavaScript: Sejarah, Fitur, dan Contoh Dasar</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles.css" />
+    <meta name="google-site-verification" content="wSwaOWra1NglT7WH5RGbaNJ2Jrsv1nRoWawtwszrBws" />
+    <link rel="icon" href="/img/logo.png" sizes="32x32" type="image/png" />
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1624084859744468" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Hamburger Menu -->
+      <!-- Add this to your HTML (before the sidebar) -->
+      <button class="hamburger-menu">
+        <div class="hamburger-icon">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </button>
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <button class="close-btn">&times;</button>
+        <div class="logo">
+          <img src="/img/logo.png" alt="Chirpy Logo" />
+          <h2>MathAlpha</h2>
+        </div>
+        <nav class="menu">
+          <a href="/index.html" class="menu-item"> <i class="fas fa-home"></i> Home </a>
+          <a href="/statistika/index.html" class="menu-item"> <i class="fas fa-chart-bar"></i> Statistika </a>
+          <a href="/machine-learning/index.html" class="menu-item"> <i class="fas fa-robot"></i> Machine Learning </a>
+          <a href="/deep-learning/index.html" class="menu-item"> <i class="fas fa-brain"></i> Deep Learning </a>
+          <a href="/matematika.html" class="menu-item"> <i class="fas fa-square-root-alt"></i> Matematika </a>
+          <a href="/tiu.html" class="menu-item"> <i class="fas fa-file-alt"></i> TIU SKD </a>
+          <a href="/sql/index.html" class="menu-item"> <i class="fas fa-database"></i> SQL </a>
+          <a href="/pemprograman/index.html" class="menu-item"> <i class="fas fa-code"></i> Pemrograman </a>
+          <a href="/about.html" class="menu-item"> <i class="fas fa-info-circle"></i> About </a>
+        </nav>
+
+        <!-- Social Media Icons -->
+        <div class="social-media">
+          <a href="https://www.instagram.com/andiaso06/" target="_blank" class="social-icon">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/andi-ardiansyah-7b25072a9/" target="_blank" class="social-icon">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="https://github.com/AndiAq06" target="_blank" class="social-icon">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="https://www.youtube.com/@andimath06" target="_blank" class="social-icon">
+            <i class="fab fa-youtube"></i>
+          </a>
+          <a href="https://www.twitter.com" target="_blank" class="social-icon">
+            <i class="fab fa-x-twitter"></i>
+          </a>
+        </div>
+      </aside>
+
+      <!-- Main Content -->
+      <main class="content">
+        <div class="article">
+          <div class="content-statistik">
+            <header>
+              <h1>Pengantar JavaScript: Sejarah, Fitur, dan Contoh Dasar</h1>
+              <div class="meta-info">
+                <span class="author">Oleh: Andi Ardiansyah Nasir</span>
+                <span class="last-update">Terakhir diperbarui: 23 Juni 2025</span>
+              </div>
+            </header>
+
+            <section id="pengenalan">
+              <h2>Pengenalan TypeScript</h2>
+              <p>
+                TypeScript adalah bahasa pemrograman yang dikembangkan oleh Microsoft sebagai superset dari JavaScript. Artinya semua kode JavaScript yang valid juga valid di TypeScript, tetapi TypeScript menambahkan fitur tambahan seperti
+                static typing (pengetikan statis) untuk mendefinisikan tipe data variabel, yang membantu mengurangi kesalahan yang mungkin terdeteksi saat runtime di JavaScript. TypeScript juga mendukung fitur-fitur modern seperti
+                async/await, decorators, dan integrasi dengan berbagai framework JavaScript populer seperti React, Angular, dan Vue.js.
+              </p>
+            </section>
+
+            <!-- Tipe Data Primitif -->
+            <section id="tipe-primitif">
+              <h2>Tipe Data Primitif</h2>
+
+              <div class="type-card">
+                <h3>String</h3>
+                <p>
+                  String adalah tipe data yang digunakan untuk merepresentasikan teks atau urutan karakter. String didefinisikan dengan mengapit teks dengan tanda kutip tunggal (') atau tanda kutip ganda (") atau bisa juga menggunakan
+                  string literal (`)
+                </p>
+                <pre><code>let nama: string = "Budi";
+const salam: string = `Halo ${nama}`;</code></pre>
+              </div>
+
+              <div class="type-card">
+                <h3>Number</h3>
+                <p>Number adalah tipe data primitif yang digunakan untuk merepresentasikan angka. Ini mencakup bilangan bulat (integer) dan bilangan desimal (floating-point).</p>
+                <pre><code>let umur: number = 25;
+const harga: number = 99.99;</code></pre>
+              </div>
+
+              <div class="type-card">
+                <h3>Boolean</h3>
+                <p>Hanya bernilai true atau false</p>
+                <pre><code>let aktif: boolean = true;
+const selesai: boolean = false;</code></pre>
+              </div>
+            </section>
+
+            <!-- Tipe Data Array -->
+            <section id="tipe-array">
+              <h2>Tipe Data Array</h2>
+
+              <div class="type-card">
+                <h3>Array Sederhana</h3>
+                <pre><code>let angka: number[] = [1, 2, 3];
+const nama: Array&lt;string&gt; = ["Andi", "Budi"];</code></pre>
+              </div>
+
+              <div class="type-card">
+                <h3>Readonly Array</h3>
+                <p>Array yang tidak bisa diubah setelah dibuat</p>
+                <pre><code>const warna: ReadonlyArray&lt;string&gt; = ["merah", "hijau"];
+// warna.push("biru"); // Error</code></pre>
+              </div>
+
+              <div class="type-card">
+                <h3>Tuple</h3>
+                <p>Array dengan panjang dan tipe data tetap</p>
+                <pre><code>let user: [string, number] = ["Andi", 25];
+const statusHTTP: [number, string] = [200, "OK"];</code></pre>
+              </div>
+            </section>
+
+            <!-- Tipe Data Any -->
+            <section id="tipe-any">
+              <h2>Tipe Data Any</h2>
+              <p>Digunakan ketika tipe data tidak diketahui atau dinamis</p>
+              <pre><code>let dataDinamis: any = "Bisa diisi apa saja";
+dataDinamis = 100; // Valid
+dataDinamis = true; // Valid</code></pre>
+              <div class="warning-box">
+                <p>⚠️ Hindari penggunaan any kecuali benar-benar diperlukan karena menghilangkan type checking</p>
+              </div>
+            </section>
+
+            <!-- Union Type -->
+            <section id="union-type">
+              <h2>Union Type</h2>
+              <p>Memungkinkan variabel memiliki beberapa tipe data</p>
+              <pre><code>let id: string | number;
+id = "ABC123"; // Valid
+id = 123; // Valid
+
+// Dengan type checking
+function printId(id: string | number) {
+  if (typeof id === "string") {
+    console.log(id.toUpperCase());
+  } else {
+    console.log(id.toFixed(2));
+  }
+}</code></pre>
+            </section>
+
+            <!-- Type Alias -->
+            <section id="type-alias">
+              <h2>Type Alias</h2>
+              <p>Membuat nama baru untuk tipe data yang sudah ada</p>
+
+              <div class="type-card">
+                <h3>Untuk Object</h3>
+                <pre><code>type User = {
+  id: string;
+  name: string;
+  age?: number; // Properti opsional
+};
+
+const user1: User = {
+  id: "1",
+  name: "Andi"
+};</code></pre>
+              </div>
+
+              <div class="type-card">
+                <h3>Untuk Union</h3>
+                <pre><code>type Status = "active" | "inactive" | "pending";
+
+function setStatus(status: Status) {
+  // ...
+}</code></pre>
+              </div>
+            </section>
+
+            <!-- Object Type -->
+            <section id="object-type">
+              <h2>Object Type</h2>
+              <p>Lebih disarankan daripada type alias untuk mendefinisikan bentuk object</p>
+              <pre><code>interface Product {
+  id: string;
+  name: string;
+  price: number;
+}
+
+const laptop: Product = {
+  id: "P001",
+  name: "Laptop Gaming",
+  price: 15000000
+};</code></pre>
+            </section>
+
+            <!-- Optional Properties -->
+            <section id="optional-properties">
+              <h2>Optional Properties</h2>
+              <p>Properti yang boleh tidak diisi (undefined)</p>
+              <pre><code>interface Config {
+  apiUrl: string;
+  timeout?: number; // Opsional
+  retry?: boolean;  // Opsional
+}
+
+const config1: Config = {
+  apiUrl: "https://api.contoh.com"
+  // timeout dan retry tidak diisi
+};</code></pre>
+            </section>
+
+            <!-- Enum -->
+            <section id="enum">
+              <h2>Enum</h2>
+              <p>Kumpulan nilai konstan yang sudah pasti</p>
+              <pre><code>enum Arah {
+  Atas = "ATAS",
+  Bawah = "BAWAH",
+  Kiri = "KIRI",
+  Kanan = "KANAN"
+}
+
+function gerakan(arah: Arah) {
+  // ...
+}
+
+gerakan(Arah.Atas);</code></pre>
+            </section>
+
+            <!-- Null dan Undefined -->
+            <section id="null-undefined">
+              <h2>Null dan Undefined</h2>
+              <pre><code>let nama: string | null = null;
+nama = "Andi"; // Valid
+
+function cariUser(id: string): User | undefined {
+  // ...
+}</code></pre>
+            </section>
+
+            <!-- Interface -->
+            <section id="interface">
+              <h2>Interface</h2>
+              <p>Untuk mendefinisikan bentuk object</p>
+              <pre><code>interface Mahasiswa {
+  nim: string;
+  nama: string;
+  ipk: number;
+}</code></pre>
+            </section>
+
+            <!-- Function Interface -->
+            <section id="function-interface">
+              <h2>Function Interface</h2>
+              <p>Mendefinisikan bentuk function</p>
+              <pre><code>interface SearchFunction {
+  (source: string, keyword: string): boolean;
+}
+
+const cari: SearchFunction = (src, kw) => {
+  return src.includes(kw);
+};</code></pre>
+            </section>
+
+            <!-- Indexable Interface -->
+            <section id="indexable-interface">
+              <h2>Indexable Interface</h2>
+              <p>Untuk object atau array yang bisa diakses dengan index</p>
+              <pre><code>interface StringArray {
+  [index: number]: string;
+}
+
+const array: StringArray = ["a", "b", "c"];
+console.log(array[0]); // "a"</code></pre>
+            </section>
+
+            <!-- Extending Interface -->
+            <section id="extending-interface">
+              <h2>Extending Interface</h2>
+              <p>Mewarisi properti dari interface lain</p>
+              <pre><code>interface Orang {
+  nama: string;
+  umur: number;
+}
+
+interface Pekerja extends Orang {
+  jabatan: string;
+  gaji: number;
+}</code></pre>
+            </section>
+
+            <!-- Function dalam Interface -->
+            <section id="function-in-interface">
+              <h2>Function dalam Interface</h2>
+              <pre><code>interface Jam {
+  waktuSekarang: Date;
+  setWaktu(d: Date): void;
+}</code></pre>
+            </section>
+
+            <!-- Intersection Type -->
+            <section id="intersection-type">
+              <h2>Intersection Type</h2>
+              <p>Menggabungkan beberapa tipe menjadi satu</p>
+              <pre><code>type Admin = {
+  nama: string;
+  hakAkses: string[];
+};
+
+type Karyawan = {
+  nama: string;
+  mulaiKerja: Date;
+};
+
+type AdminKaryawan = Admin & Karyawan;
+
+const admin1: AdminKaryawan = {
+  nama: "Budi",
+  hakAkses: ["create", "delete"],
+  mulaiKerja: new Date()
+};</code></pre>
+            </section>
+
+            <!-- Type Assertion -->
+            <section id="type-assertion">
+              <h2>Type Assertion</h2>
+              <p>Memberitahu TypeScript tentang tipe data yang kita ketahui</p>
+              <pre><code>let nilai: any = "ini string";
+let panjang: number = (nilai as string).length;
+
+// Alternatif syntax
+let panjang2: number = (&lt;string&gt;nilai).length;</code></pre>
+              <div class="warning-box">
+                <p>⚠️ Gunakan dengan hati-hati karena bisa menyebabkan runtime error jika salah</p>
+              </div>
+            </section>
+
+            <footer>
+              <p>&copy; 2024 Math Alpha. Semua Hak Dilindungi.</p>
+            </footer>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <script src="/script.js"></script>
+  </body>
+</html>

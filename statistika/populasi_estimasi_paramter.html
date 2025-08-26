@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Populasi & Estimasi Parameter</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles.css" />
+    <meta name="google-site-verification" content="wSwaOWra1NglT7WH5RGbaNJ2Jrsv1nRoWawtwszrBws" />
+    <link rel="icon" href="/img/logo.png" sizes="32x32" type="image/png" />
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1624084859744468" crossorigin="anonymous"></script>
+    <!-- math.js -->
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="icon" href="/img/logo.png" sizes="32x32" type="image/png" />
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1624084859744468" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Hamburger Menu -->
+      <button class="hamburger-menu">
+        <i class="fas fa-bars"></i>
+      </button>
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <button class="close-btn">&times;</button>
+        <div class="logo">
+          <img src="/img/logo.png" alt="Chirpy Logo" />
+          <h2>MathAlpha</h2>
+        </div>
+        <nav class="menu">
+          <a href="/index.html" class="menu-item"> <i class="fas fa-home"></i> Home </a>
+          <a href="/statistika/index.html" class="menu-item"> <i class="fas fa-chart-bar"></i> Statistika </a>
+          <a href="/machine-learning/index.html" class="menu-item"> <i class="fas fa-robot"></i> Machine Learning </a>
+          <a href="/deep-learning/index.html" class="menu-item"> <i class="fas fa-brain"></i> Deep Learning </a>
+          <a href="/matematika.html" class="menu-item"> <i class="fas fa-square-root-alt"></i> Matematika </a>
+          <a href="/tiu.html" class="menu-item"> <i class="fas fa-file-alt"></i> TIU SKD </a>
+          <a href="/sql/index.html" class="menu-item"> <i class="fas fa-database"></i> SQL </a>
+          <a href="/pemprograman/index.html" class="menu-item"> <i class="fas fa-code"></i> Pemrograman </a>
+          <a href="/about.html" class="menu-item"> <i class="fas fa-info-circle"></i> About </a>
+        </nav>
+
+        <!-- Social Media Icons -->
+        <div class="social-media">
+          <a href="https://www.instagram.com/andiaso06/" target="_blank" class="social-icon">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/andi-ardiansyah-7b25072a9/" target="_blank" class="social-icon">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="https://github.com/AndiAq06" target="_blank" class="social-icon">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="https://www.youtube.com/@andimath06" target="_blank" class="social-icon">
+            <i class="fab fa-youtube"></i>
+          </a>
+          <a href="https://www.twitter.com" target="_blank" class="social-icon">
+            <i class="fab fa-x-twitter"></i>
+          </a>
+        </div>
+      </aside>
+
+      <!-- Main Content -->
+      <main class="content">
+        <div class="article">
+          <div class="content-statistik">
+            <header>
+              <h1>Populasi & Estimasi Parameter</h1>
+            </header>
+
+            <section id="intro">
+              <h2>Pendahuluan</h2>
+              <p>
+                Hai, teman-teman MathAlpha! 👋 Dalam dunia statistik, dua istilah yang sering banget muncul adalah <strong>populasi</strong> dan <strong>estimasi parameter</strong>. Tapi, jangan buru-buru pusing ya! Kita bakal bahas topik
+                ini dengan gaya santai tapi tetap jelas dan lengkap.
+              </p>
+              <p>
+                Kalau kamu pernah ikut survei atau baca hasil polling, kamu sebenarnya sudah melihat penerapan konsep ini. Tapi apa sih maksudnya "populasi", dan kenapa kita harus "mengestimasi parameter"? Yuk, kita mulai dari dasar dulu!
+              </p>
+            </section>
+
+            <section id="apa-itu-populasi">
+              <h2>Apa Itu Populasi?</h2>
+              <p>Dalam statistika, <strong>populasi</strong> itu bukan cuma sekumpulan orang. Secara umum, populasi adalah <em>seluruh kumpulan individu, objek, atau data</em> yang menjadi fokus dari suatu penelitian.</p>
+              <p>Populasi bisa berupa:</p>
+              <ul>
+                <li>Seluruh mahasiswa di Indonesia</li>
+                <li>Semua produk di pabrik A</li>
+                <li>Setiap transaksi di sebuah aplikasi selama 1 tahun</li>
+              </ul>
+              <p>Nah, karena jumlah populasi biasanya sangat besar, kita nggak mungkin mengumpulkan data dari semuanya. Bayangin harus nanya IPK semua mahasiswa se-Indonesia, bisa gempor dong! 😅</p>
+            </section>
+
+            <section id="sampel">
+              <h2>Kenalan Sama Sampel</h2>
+              <p>Karena nggak bisa meneliti seluruh populasi, kita ambil sebagian kecilnya saja yang disebut <strong>sampel</strong>. Sampel ini harus dipilih secara hati-hati supaya bisa mewakili populasi dengan baik.</p>
+              <p>Contoh:</p>
+              <ul>
+                <li>Dari populasi 10.000 mahasiswa, kita ambil 200 mahasiswa sebagai sampel.</li>
+                <li>Dari semua pelanggan aplikasi, kita ambil 500 orang yang aktif dalam 3 bulan terakhir.</li>
+              </ul>
+              <p>Kualitas kesimpulan statistik kita sangat tergantung dari <em>representativitas</em> sampelnya. Jadi, jangan asal pilih ya!</p>
+            </section>
+
+            <section id="parameter">
+              <h2>Apa Itu Parameter?</h2>
+              <p><strong>Parameter</strong> adalah nilai yang menjelaskan karakteristik suatu populasi. Misalnya:</p>
+              <ul>
+                <li>Rata-rata usia seluruh warga kota = parameter</li>
+                <li>Persentase orang yang suka kopi di seluruh Indonesia = parameter</li>
+              </ul>
+              <p>Masalahnya, karena kita nggak tahu seluruh data populasi, nilai parameter ini biasanya <strong>tidak diketahui</strong>. Nah, inilah kenapa kita perlu melakukan <strong>estimasi parameter</strong>.</p>
+            </section>
+
+            <section id="estimasi">
+              <h2>Estimasi Parameter: Gimana Caranya?</h2>
+              <p>
+                <strong>Estimasi parameter</strong> adalah proses memperkirakan nilai parameter populasi berdasarkan data sampel. Misalnya, kita ingin tahu rata-rata tinggi badan semua siswa SMA, tapi kita cuma ambil data dari 100 siswa.
+                Maka kita gunakan rata-rata tinggi dari sampel itu sebagai penduga (estimasi) dari rata-rata populasi.
+              </p>
+              <p>Ada dua jenis estimasi yang sering digunakan:</p>
+              <ul>
+                <li><strong>Estimasi Titik</strong>: Satu nilai perkiraan (misal: rata-rata = 165 cm)</li>
+                <li><strong>Estimasi Interval</strong>: Rentang nilai yang dipercaya memuat parameter, biasanya disebut <em>confidence interval</em></li>
+              </ul>
+            </section>
+
+            <section id="confidence-interval">
+              <h2>Apa Itu Confidence Interval?</h2>
+              <p>Nah, <strong>confidence interval</strong> atau interval kepercayaan itu kayak kita ngomong: "Aku cukup yakin nilai aslinya ada di antara sini dan situ." Misalnya:</p>
+              <ul>
+                <li>Rata-rata IPK dari sampel = 3.20</li>
+                <li>Dengan interval 95%, maka kita katakan IPK populasi diperkirakan antara 3.10 sampai 3.30</li>
+              </ul>
+              <p>Jadi, kita kasih ruang atau toleransi untuk ketidakpastian. Makin tinggi confidence level (misal 99%), makin lebar intervalnya.</p>
+            </section>
+
+            <section id="contoh">
+              <h2>Contoh Nyata: Estimasi Rata-rata</h2>
+              <p>Misal kamu sedang meneliti rata-rata lama mahasiswa menyelesaikan skripsi. Populasi: seluruh mahasiswa di kampusmu. Tapi kamu hanya bisa ambil sampel 50 orang. Hasilnya:</p>
+              <ul>
+                <li>Rata-rata = 6,5 bulan</li>
+                <li>Standar deviasi sampel = 1 bulan</li>
+                <li>Confidence interval 95% = 6,5 ± (1,96 × 0,14) → (6,23 – 6,77)</li>
+              </ul>
+              <p>Jadi, kamu bisa bilang: "Dengan keyakinan 95%, rata-rata mahasiswa menyelesaikan skripsi antara 6,23 sampai 6,77 bulan."</p>
+            </section>
+
+            <section id="kenapa-penting">
+              <h2>Kenapa Ini Penting Banget?</h2>
+              <ul>
+                <li>📌 Bisa bikin keputusan berdasarkan data tanpa harus ngumpulin semuanya.</li>
+                <li>💰 Hemat waktu, tenaga, dan biaya.</li>
+                <li>🎯 Jadi dasar untuk uji hipotesis, regresi, dan banyak teknik statistik lainnya.</li>
+              </ul>
+              <p>Tanpa pemahaman tentang populasi dan estimasi parameter, analisis datamu bisa menyesatkan lho! Jadi penting banget buat ngerti dasar-dasarnya.</p>
+            </section>
+
+            <section id="penutup">
+              <h2>Kesimpulan</h2>
+              <p>Oke, teman-teman, kita udah belajar bahwa dalam statistika:</p>
+              <ul>
+                <li><strong>Populasi</strong> = seluruh elemen yang ingin kita pelajari.</li>
+                <li><strong>Sampel</strong> = sebagian kecil yang mewakili populasi.</li>
+                <li><strong>Parameter</strong> = nilai sebenarnya dari karakteristik populasi.</li>
+                <li><strong>Estimasi Parameter</strong> = usaha kita buat menebak parameter dari sampel.</li>
+              </ul>
+              <p>Semoga dengan penjelasan ini kamu jadi makin paham dan bisa lebih pede pas belajar statistik! Jangan lupa latihan soal dan eksplor data juga yaa~ 📈😄</p>
+            </section>
+
+            <footer>
+              <p>&copy; 2024 Math Alpha. Semua Hak Dilindungi.</p>
+            </footer>
+          </div>
+        </div>
+      </main>
+    </div>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1624084859744468" crossorigin="anonymous"></script>
+    <ins class="adsbygoogle" style="display: block" data-ad-format="autorelaxed" data-ad-client="ca-pub-1624084859744468" data-ad-slot="9604667516"></ins>
+    <script>
+      (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+    <script src="/script.js"></script>
+  </body>
+</html>

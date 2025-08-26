@@ -30,10 +30,11 @@
           <a href="/statistika/index.html" class="menu-item"> <i class="fas fa-chart-bar"></i> Statistika </a>
           <a href="/machine-learning/index.html" class="menu-item"> <i class="fas fa-robot"></i> Machine Learning </a>
           <a href="/deep-learning/index.html" class="menu-item"> <i class="fas fa-brain"></i> Deep Learning </a>
-          <a href="/matematika/index.html" class="menu-item"> <i class="fas fa-square-root-alt"></i> Matematika </a>
+          <a href="/matematika.html" class="menu-item"> <i class="fas fa-square-root-alt"></i> Matematika </a>
+          <a href="/tiu.html" class="menu-item"> <i class="fas fa-file-alt"></i> TIU SKD </a>
           <a href="/sql/index.html" class="menu-item"> <i class="fas fa-database"></i> SQL </a>
           <a href="/pemprograman/index.html" class="menu-item"> <i class="fas fa-code"></i> Pemrograman </a>
-          <a href="#" class="menu-item"> <i class="fas fa-info-circle"></i> About </a>
+          <a href="/about.html" class="menu-item"> <i class="fas fa-info-circle"></i> About </a>
         </nav>
 
         <!-- Social Media Icons -->
@@ -70,105 +71,97 @@
             </div>
 
             <section id="pengertian">
-              <h2>Pengertian Peubah Acak</h2>
+              <h2>Apa Sih Peubah Acak Itu?</h2>
               <p>
-                Dalam statistika dan probabilitas, <strong>peubah acak</strong> (random variable) adalah suatu variabel yang nilainya merupakan hasil dari suatu proses acak. Secara formal, peubah acak adalah fungsi yang memetakan setiap
-                anggota ruang sampel ke bilangan riil. Peubah acak biasanya dinotasikan dengan huruf kapital, seperti \(X, Y, Z\), sedangkan nilai yang mungkin dari peubah acak dinotasikan dengan huruf kecil \(x, y, z\).
+                Nah, kalau kamu lagi belajar statistika atau probabilitas, pasti bakal ketemu sama istilah <strong>peubah acak</strong> atau dalam bahasa Inggrisnya <em>random variable</em>. Peubah acak itu gampangnya adalah sesuatu yang
+                hasilnya ditentukan oleh proses yang acak. Jadi, nilainya bisa berubah-ubah tergantung "nasib" alias peluang.
               </p>
-              <p>Peubah acak memainkan peran penting dalam statistika karena memungkinkan kita untuk mengkuantifikasi hasil dari eksperimen acak. Berdasarkan sifat nilai yang dihasilkan, peubah acak dapat dibagi menjadi dua jenis utama:</p>
+              <p>Biasanya kita pakai huruf kapital kayak \(X, Y, Z\) buat nunjukin peubah acak, dan huruf kecil \(x, y, z\) buat nilai yang mungkin muncul dari peubah acak itu.</p>
+              <p>Nah, berdasarkan jenis nilainya, peubah acak itu dibagi dua:</p>
               <ul>
-                <li><strong>Peubah Acak Diskrit:</strong> Variabel yang hanya dapat mengambil nilai tertentu, biasanya berupa bilangan bulat atau himpunan nilai yang terhitung. Contoh: jumlah kepala dalam pelemparan koin.</li>
-                <li><strong>Peubah Acak Kontinu:</strong> Variabel yang dapat mengambil nilai dalam rentang kontinu (interval). Contoh: tinggi badan seseorang atau waktu tempuh suatu reaksi kimia.</li>
+                <li><strong>Diskrit:</strong> Nilainya bisa dihitung satu-satu, kayak jumlah kepala waktu lempar koin.</li>
+                <li><strong>Kontinu:</strong> Nilainya bisa di mana aja dalam suatu rentang, misalnya tinggi badan orang.</li>
               </ul>
             </section>
+
+            <!-- Google AdSense -->
+            <ins class="adsbygoogle" style="display: block" data-ad-format="fluid" data-ad-layout-key="-gw-3+1f-3d+2z" data-ad-client="ca-pub-1624084859744468" data-ad-slot="2653926339"></ins>
+            <script>
+              (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
 
             <section id="diskrit">
               <h2>Distribusi Peubah Acak Diskrit</h2>
               <p>
-                <strong>Distribusi Peubah Acak Diskrit</strong> adalah suatu fungsi yang menggambarkan peluang setiap nilai yang mungkin dari sebuah peubah acak diskrit. Peubah acak diskrit hanya dapat mengambil nilai tertentu dalam suatu
-                himpunan yang terhitung, seperti bilangan bulat atau himpunan nilai tertentu lainnya. Fungsi distribusi ini disebut <strong>fungsi massa probabilitas</strong> (Probability Mass Function, PMF).
+                Di bagian ini kita bahas tentang peubah acak diskrit. Jadi, kalau kamu punya variabel yang cuma bisa punya nilai tertentu (kayak 0, 1, 2, ...), itu namanya diskrit. Distribusinya digambarkan lewat yang namanya
+                <strong>PMF</strong> (Probability Mass Function).
               </p>
-              <p>Untuk memenuhi syarat sebagai distribusi probabilitas, fungsi massa probabilitas harus memenuhi dua kondisi:</p>
+              <p>Supaya bisa disebut distribusi peluang, PMF harus memenuhi dua hal ini:</p>
               <ul>
-                <li>Setiap probabilitas individu bernilai antara 0 dan 1, yaitu \( 0 \leq P(X = x) \leq 1 \).</li>
-                <li>Total dari semua probabilitas adalah 1, yaitu \( \sum_{x} P(X = x) = 1 \).</li>
+                <li>Probabilitas tiap nilai antara 0 dan 1.</li>
+                <li>Total semua probabilitasnya = 1.</li>
               </ul>
 
-              <h3>Contoh Distribusi Diskrit</h3>
+              <h3>Contoh Populer</h3>
               <ul>
-                <li>
-                  <strong>Distribusi Binomial:</strong> Digunakan untuk menghitung jumlah keberhasilan dalam sejumlah percobaan tertentu yang independen, dengan probabilitas keberhasilan yang sama pada setiap percobaan. Contoh: Probabilitas
-                  mendapatkan 3 kepala dalam 5 pelemparan koin.
-                </li>
-                <li>
-                  <strong>Distribusi Poisson:</strong> Digunakan untuk memodelkan jumlah kejadian dalam interval waktu atau ruang tertentu, dengan asumsi kejadian terjadi secara independen dan dengan rata-rata yang konstan. Contoh: Jumlah
-                  panggilan masuk ke call center dalam satu jam.
-                </li>
+                <li><strong>Distribusi Binomial:</strong> Contoh: berapa banyak kepala muncul dari 5 kali lempar koin.</li>
+                <li><strong>Distribusi Poisson:</strong> Contoh: jumlah mobil lewat di jalan dalam 1 jam.</li>
               </ul>
 
               <h3>Rumus Distribusi Binomial</h3>
-              <p>Probabilitas distribusi binomial diberikan oleh rumus:</p>
               <p>\[ P(X = k) = \binom{n}{k} p^k (1-p)^{n-k} \]</p>
-              <p>Di mana:</p>
               <ul>
-                <li>\( n \): jumlah percobaan</li>
-                <li>\( k \): jumlah keberhasilan</li>
-                <li>\( p \): probabilitas keberhasilan pada setiap percobaan</li>
+                <li>\(n\): jumlah percobaan</li>
+                <li>\(k\): jumlah sukses</li>
+                <li>\(p\): peluang sukses tiap kali percobaan</li>
               </ul>
-              <p><strong>Contoh:</strong> Jika sebuah koin dilempar 5 kali, probabilitas mendapatkan tepat 3 kepala (\( k = 3 \)) dengan \( p = 0.5 \) adalah:</p>
-              <p>\[ P(X = 3) = \binom{5}{3} (0.5)^3 (0.5)^{2} = 10 \times 0.125 \times 0.25 = 0.3125 \]</p>
+              <p><strong>Contoh:</strong> Lempar koin 5x, mau cari peluang dapat 3 kepala:</p>
+              <p>\[ P(X = 3) = \binom{5}{3} (0.5)^3 (0.5)^2 = 0.3125 \]</p>
             </section>
 
             <section id="kontinu">
               <h2>Distribusi Peubah Acak Kontinu</h2>
               <p>
-                <strong>Distribusi Peubah Acak Kontinu</strong> adalah distribusi peluang untuk peubah acak yang dapat mengambil nilai dari suatu interval kontinu (tak terhitung), seperti semua bilangan real dalam interval tertentu. Peubah
-                acak kontinu berbeda dari peubah acak diskrit karena nilai-nilainya tidak dapat dihitung satu per satu. Sebaliknya, probabilitas suatu variabel berada dalam interval \([a, b]\) dihitung dengan integral dari fungsi kepadatan
-                probabilitas (Probability Density Function, PDF).
+                Sekarang giliran yang kontinu. Kalau variabelmu bisa punya nilai berapa aja dalam suatu rentang, kayak tinggi badan dari 150 cm sampai 200 cm, itu berarti kontinu. Distribusinya dijelaskan pakai
+                <strong>PDF</strong> (Probability Density Function).
               </p>
-              <p>Fungsi kepadatan probabilitas \( f(x) \) harus memenuhi dua syarat:</p>
+              <p>PDF harus patuh sama dua aturan:</p>
               <ul>
-                <li>\( f(x) \geq 0 \) untuk semua \( x \).</li>
-                <li>\( \int_{-\infty}^{\infty} f(x) \, dx = 1 \).</li>
+                <li>Nilai PDF (\(f(x)\)) harus selalu positif.</li>
+                <li>Luas area di bawah kurva (integral) harus = 1.</li>
               </ul>
 
               <h3>Contoh Distribusi Kontinu</h3>
               <ul>
-                <li><strong>Distribusi Normal:</strong> Digunakan untuk memodelkan banyak fenomena alam, seperti tinggi badan, nilai ujian, atau kesalahan pengukuran. Distribusi ini simetris dan berbentuk lonceng.</li>
-                <li><strong>Distribusi Eksponensial:</strong> Digunakan untuk memodelkan waktu antar kejadian dalam proses Poisson. Contoh: Waktu antara kedatangan pelanggan di restoran atau waktu kegagalan suatu komponen elektronik.</li>
+                <li><strong>Normal:</strong> Bentuknya kayak lonceng. Misalnya tinggi badan, nilai ujian, dll.</li>
+                <li><strong>Eksponensial:</strong> Misalnya waktu antar kedatangan pelanggan ke restoran.</li>
               </ul>
 
               <h3>Rumus Distribusi Normal</h3>
-              <p>Fungsi kepadatan probabilitas distribusi normal diberikan oleh:</p>
               <p>\[ f(x) = \frac{1}{\sqrt{2\pi \sigma^2}} e^{-\frac{(x-\mu)^2}{2\sigma^2}} \]</p>
-              <p>Di mana:</p>
               <ul>
-                <li>\( \mu \): rata-rata (mean)</li>
-                <li>\( \sigma \): simpangan baku (standard deviation)</li>
+                <li>\(\mu\): rata-rata</li>
+                <li>\(\sigma\): simpangan baku</li>
               </ul>
-              <p>
-                <strong>Contoh:</strong> Jika tinggi badan seseorang mengikuti distribusi normal dengan \( \mu = 170 \) cm dan \( \sigma = 10 \) cm, probabilitas tinggi badan berada antara 160 cm dan 180 cm dapat dihitung menggunakan
-                integral dari PDF.
-              </p>
             </section>
 
-            <section id="contoh">
-              <h2>Contoh Aplikasi</h2>
-              <h3>Peubah Acak Diskrit</h3>
-              <p>
-                Misalkan sebuah dadu dilempar, maka peubah acak \( X \) menyatakan jumlah mata dadu yang muncul. Nilai \( X \) adalah salah satu dari \( \{1, 2, 3, 4, 5, 6\} \). Distribusi probabilitasnya seragam, dengan setiap nilai
-                memiliki probabilitas \( \frac{1}{6} \).
-              </p>
+            <!-- Google AdSense -->
+            <ins class="adsbygoogle" style="display: block" data-ad-format="fluid" data-ad-layout-key="-gw-3+1f-3d+2z" data-ad-client="ca-pub-1624084859744468" data-ad-slot="2653926339"></ins>
+            <script>
+              (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
 
-              <h3>Peubah Acak Kontinu</h3>
-              <p>
-                Misalkan tinggi badan seseorang dipilih secara acak dari populasi tertentu, maka peubah acak \( Y \) menyatakan tinggi badan tersebut. Nilai \( Y \) berada pada interval, misalnya \( [150, 200] \) cm. Jika tinggi badan
-                mengikuti distribusi normal dengan \( \mu = 175 \) cm dan \( \sigma = 10 \) cm, kita dapat menghitung probabilitas tinggi badan berada dalam rentang tertentu menggunakan fungsi kepadatan probabilitas.
-              </p>
+            <section id="contoh">
+              <h2>Contoh Nyata</h2>
+              <h3>Diskrit</h3>
+              <p>Misalnya kamu lempar dadu. Peubah acaknya \(X\) adalah jumlah mata dadu yang muncul, yaitu 1 sampai 6. Probabilitas tiap nilai adalah \(\frac{1}{6}\).</p>
+
+              <h3>Kontinu</h3>
+              <p>Kalau kamu pilih orang secara acak dan ukur tinggi badannya, hasilnya bisa antara 150 sampai 200 cm. Ini termasuk peubah acak kontinu. Kita bisa hitung peluang seseorang punya tinggi antara 160 dan 170 cm pakai PDF.</p>
             </section>
 
             <section id="perbandingan">
-              <h2>Perbandingan Peubah Acak Diskrit dan Kontinu</h2>
+              <h2>Diskrit vs Kontinu</h2>
               <table>
                 <thead>
                   <tr>
@@ -180,23 +173,23 @@
                 <tbody>
                   <tr>
                     <td>Nilai</td>
-                    <td>Terbatas, biasanya bilangan bulat</td>
-                    <td>Tak terbatas dalam interval</td>
+                    <td>Terbatas (bisa dihitung satu-satu)</td>
+                    <td>Tak terbatas dalam rentang</td>
                   </tr>
                   <tr>
-                    <td>Representasi</td>
-                    <td>Fungsi massa probabilitas (PMF)</td>
-                    <td>Fungsi kepadatan probabilitas (PDF)</td>
+                    <td>Model</td>
+                    <td>PMF (probabilitas tiap nilai)</td>
+                    <td>PDF (probabilitas dalam interval)</td>
                   </tr>
                   <tr>
-                    <td>Probabilitas</td>
-                    <td>Dihitung langsung untuk nilai tertentu</td>
-                    <td>Dihitung menggunakan integral dalam interval</td>
+                    <td>Peluang</td>
+                    <td>Langsung dihitung untuk nilai tertentu</td>
+                    <td>Dihitung lewat integral (area)</td>
                   </tr>
                   <tr>
                     <td>Contoh</td>
-                    <td>Jumlah anak dalam keluarga</td>
-                    <td>Tinggi badan seseorang</td>
+                    <td>Jumlah anak</td>
+                    <td>Tinggi badan</td>
                   </tr>
                 </tbody>
               </table>
@@ -204,16 +197,12 @@
 
             <section id="kesimpulan">
               <h2>Kesimpulan</h2>
+              <p>Jadi intinya, peubah acak itu penting banget buat bantu kita memodelkan kejadian-kejadian acak dalam dunia nyata. Mau itu jumlah pelanggan, tinggi badan, hasil ujian, semuanya bisa dimodelkan pakai peubah acak.</p>
               <p>
-                Peubah acak diskrit dan kontinu merupakan konsep dasar dalam probabilitas dan statistik yang digunakan untuk memodelkan berbagai fenomena. Peubah acak diskrit cocok untuk data yang berupa bilangan bulat atau dapat dihitung,
-                sementara peubah acak kontinu cocok untuk data yang dapat berada dalam suatu interval. Pemahaman mengenai kedua jenis peubah acak ini sangat penting untuk analisis data, pengambilan keputusan, dan pemodelan statistik.
-              </p>
-              <p>
-                Dengan memahami distribusi peubah acak, kita dapat membuat prediksi yang lebih akurat dan mengambil keputusan yang lebih informatif berdasarkan data. Semoga artikel ini membantu Anda memahami konsep peubah acak diskrit dan
-                kontinu dengan lebih baik.
+                Pahami bedanya antara diskrit dan kontinu supaya kamu tahu kapan harus pakai distribusi binomial, kapan harus pakai distribusi normal. Dengan ngerti konsep ini, kamu bisa bikin keputusan yang lebih cerdas dan analisis data
+                yang lebih mantap!
               </p>
             </section>
-
             <footer>
               <p>&copy; 2024 Math Alpha. Semua Hak Dilindungi.</p>
             </footer>
@@ -221,11 +210,6 @@
         </div>
       </main>
     </div>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1624084859744468" crossorigin="anonymous"></script>
-    <ins class="adsbygoogle" style="display: block" data-ad-format="autorelaxed" data-ad-client="ca-pub-1624084859744468" data-ad-slot="9604667516"></ins>
-    <script>
-      (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
     <script src="/script.js"></script>
   </body>
 </html>

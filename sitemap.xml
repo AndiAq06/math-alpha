@@ -1,186 +1,351 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset
-      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
-
-
-<url>
-  <loc>https://math-alpha-iota.vercel.app/</loc>
-  <lastmod>2025-06-21T04:21:02+00:00</lastmod>
-  <priority>1.00</priority>
-</url>
-<url>
-  <loc>https://math-alpha-iota.vercel.app/index.html</loc>
-  <lastmod>2025-06-21T04:21:03+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://math-alpha-iota.vercel.app/statistika/index.html</loc>
-  <lastmod>2025-06-21T04:21:03+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://math-alpha-iota.vercel.app/pemberitahuan.html</loc>
-  <lastmod>2025-06-21T04:21:03+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://math-alpha-iota.vercel.app/matematika/index.html</loc>
-  <lastmod>2025-06-21T04:21:03+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://math-alpha-iota.vercel.app/sql/index.html</loc>
-  <lastmod>2025-06-21T04:21:04+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://math-alpha-iota.vercel.app/pemprograman/index.html</loc>
-  <lastmod>2025-06-21T04:21:04+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://math-alpha-iota.vercel.app/about.html</loc>
-  <lastmod>2025-06-21T04:21:04+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://math-alpha-iota.vercel.app/statistika/pengantar-statistika.html</loc>
-  <lastmod>2025-06-21T04:21:04+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://math-alpha-iota.vercel.app/pemprograman/pengantar-javascript.html</loc>
-  <lastmod>2025-06-21T04:21:04+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://math-alpha-iota.vercel.app/sql/pengantar-sql.html</loc>
-  <lastmod>2025-06-21T04:21:05+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://math-alpha-iota.vercel.app/pemprograman/git-amend.html</loc>
-  <lastmod>2025-06-21T04:21:05+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://math-alpha-iota.vercel.app/statistika/statistika-deskriptif.html</loc>
-  <lastmod>2025-06-21T04:21:05+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://math-alpha-iota.vercel.app/statistika/skewness_kurtosis.html</loc>
-  <lastmod>2025-06-21T04:21:05+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://math-alpha-iota.vercel.app/statistika/soal-statistika-deskriptif.html</loc>
-  <lastmod>2025-06-21T04:21:05+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://math-alpha-iota.vercel.app/statistika/margin-standar-error.html</loc>
-  <lastmod>2025-06-21T04:21:05+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://math-alpha-iota.vercel.app/statistika/z-value.html</loc>
-  <lastmod>2025-06-21T04:21:05+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://math-alpha-iota.vercel.app/matematika/pecahan.html</loc>
-  <lastmod>2025-06-21T04:21:06+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://math-alpha-iota.vercel.app/matematika/aljabar.html</loc>
-  <lastmod>2025-06-21T04:21:06+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://math-alpha-iota.vercel.app/matematika/akar.html</loc>
-  <lastmod>2025-06-21T04:21:06+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://math-alpha-iota.vercel.app/matematika/akar-rasional.html</loc>
-  <lastmod>2025-06-21T04:21:06+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://math-alpha-iota.vercel.app/machine-learning/index.html</loc>
-  <lastmod>2025-06-21T04:21:06+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://math-alpha-iota.vercel.app/sql/tipe-data.html</loc>
-  <lastmod>2025-06-21T04:21:06+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://math-alpha-iota.vercel.app/sql/panduan-tabel-sql.html</loc>
-  <lastmod>2025-06-21T04:21:07+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://math-alpha-iota.vercel.app/sql/insert.html</loc>
-  <lastmod>2025-06-21T04:21:07+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://math-alpha-iota.vercel.app/pemprograman/javascript-oop.html</loc>
-  <lastmod>2025-06-21T04:21:07+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://math-alpha-iota.vercel.app/pemprograman/javascript-module.html</loc>
-  <lastmod>2025-06-21T04:21:07+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://math-alpha-iota.vercel.app/pemprograman/dom.html</loc>
-  <lastmod>2025-06-21T04:21:07+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://math-alpha-iota.vercel.app/pemprograman/async.html</loc>
-  <lastmod>2025-06-21T04:21:07+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://math-alpha-iota.vercel.app/pemprograman/git.html</loc>
-  <lastmod>2025-06-21T04:21:07+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://math-alpha-iota.vercel.app/pemprograman/api-handling.html</loc>
-  <lastmod>2025-06-21T04:21:08+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://math-alpha-iota.vercel.app/machine-learning/SSE.html</loc>
-  <lastmod>2025-06-21T04:21:08+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://math-alpha-iota.vercel.app/statistika/knn.html</loc>
-  <lastmod>2025-06-21T04:21:08+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://math-alpha-iota.vercel.app/statistika/k-means.html</loc>
-  <lastmod>2025-06-21T04:21:08+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://math-alpha-iota.vercel.app/statistika/k-medoids.html</loc>
-  <lastmod>2025-06-21T04:21:08+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+	<url>
+		<loc>https://localhost/tiu</loc>
+		<lastmod>2025-08-25-T18:12:18+07:00</lastmod>
+		<changefreq>daily</changefreq>
+		<priority>1</priority>
+	</url>
+	<url>
+		<loc>https://localhost/TIU\sinonim-paket-9</loc>
+		<lastmod>2025-08-25-T18:12:18+07:00</lastmod>
+		<changefreq>daily</changefreq>
+		<priority>1</priority>
+	</url>
+	<url>
+		<loc>https://localhost/TIU\sinonim-paket-8</loc>
+		<lastmod>2025-08-25-T18:12:18+07:00</lastmod>
+		<changefreq>daily</changefreq>
+		<priority>1</priority>
+	</url>
+	<url>
+		<loc>https://localhost/TIU\sinonim-paket-7</loc>
+		<lastmod>2025-08-25-T18:12:18+07:00</lastmod>
+		<changefreq>daily</changefreq>
+		<priority>1</priority>
+	</url>
+	<url>
+		<loc>https://localhost/TIU\sinonim-paket-6</loc>
+		<lastmod>2025-08-25-T18:12:18+07:00</lastmod>
+		<changefreq>daily</changefreq>
+		<priority>1</priority>
+	</url>
+	<url>
+		<loc>https://localhost/TIU\sinonim-paket-5</loc>
+		<lastmod>2025-08-25-T18:12:18+07:00</lastmod>
+		<changefreq>daily</changefreq>
+		<priority>1</priority>
+	</url>
+	<url>
+		<loc>https://localhost/TIU\sinonim-paket-4</loc>
+		<lastmod>2025-08-25-T18:12:18+07:00</lastmod>
+		<changefreq>daily</changefreq>
+		<priority>1</priority>
+	</url>
+	<url>
+		<loc>https://localhost/TIU\sinonim-paket-3</loc>
+		<lastmod>2025-08-25-T18:12:18+07:00</lastmod>
+		<changefreq>daily</changefreq>
+		<priority>1</priority>
+	</url>
+	<url>
+		<loc>https://localhost/TIU\sinonim-paket-2</loc>
+		<lastmod>2025-08-25-T18:12:18+07:00</lastmod>
+		<changefreq>daily</changefreq>
+		<priority>1</priority>
+	</url>
+	<url>
+		<loc>https://localhost/TIU\sinonim-paket-10</loc>
+		<lastmod>2025-08-25-T18:12:18+07:00</lastmod>
+		<changefreq>daily</changefreq>
+		<priority>1</priority>
+	</url>
+	<url>
+		<loc>https://localhost/TIU\sinonim-paket-1</loc>
+		<lastmod>2025-08-25-T18:12:18+07:00</lastmod>
+		<changefreq>daily</changefreq>
+		<priority>1</priority>
+	</url>
+	<url>
+		<loc>https://localhost/statistika\z-value</loc>
+		<lastmod>2025-08-25-T18:12:18+07:00</lastmod>
+		<changefreq>daily</changefreq>
+		<priority>1</priority>
+	</url>
+	<url>
+		<loc>https://localhost/statistika\statistika-deskriptif</loc>
+		<lastmod>2025-08-25-T18:12:18+07:00</lastmod>
+		<changefreq>daily</changefreq>
+		<priority>1</priority>
+	</url>
+	<url>
+		<loc>https://localhost/statistika\soal-statistika-deskriptif</loc>
+		<lastmod>2025-08-25-T18:12:18+07:00</lastmod>
+		<changefreq>daily</changefreq>
+		<priority>1</priority>
+	</url>
+	<url>
+		<loc>https://localhost/statistika\skewness_kurtosis</loc>
+		<lastmod>2025-08-25-T18:12:18+07:00</lastmod>
+		<changefreq>daily</changefreq>
+		<priority>1</priority>
+	</url>
+	<url>
+		<loc>https://localhost/statistika\populasi_estimasi_paramter</loc>
+		<lastmod>2025-08-25-T18:12:18+07:00</lastmod>
+		<changefreq>daily</changefreq>
+		<priority>1</priority>
+	</url>
+	<url>
+		<loc>https://localhost/statistika\pengantar-statistika</loc>
+		<lastmod>2025-08-25-T18:12:18+07:00</lastmod>
+		<changefreq>daily</changefreq>
+		<priority>1</priority>
+	</url>
+	<url>
+		<loc>https://localhost/statistika\margin-standar-error</loc>
+		<lastmod>2025-08-25-T18:12:18+07:00</lastmod>
+		<changefreq>daily</changefreq>
+		<priority>1</priority>
+	</url>
+	<url>
+		<loc>https://localhost/statistika\knn</loc>
+		<lastmod>2025-08-25-T18:12:18+07:00</lastmod>
+		<changefreq>daily</changefreq>
+		<priority>1</priority>
+	</url>
+	<url>
+		<loc>https://localhost/statistika\k-medoids</loc>
+		<lastmod>2025-08-25-T18:12:18+07:00</lastmod>
+		<changefreq>daily</changefreq>
+		<priority>1</priority>
+	</url>
+	<url>
+		<loc>https://localhost/statistika\k-means</loc>
+		<lastmod>2025-08-25-T18:12:18+07:00</lastmod>
+		<changefreq>daily</changefreq>
+		<priority>1</priority>
+	</url>
+	<url>
+		<loc>https://localhost/statistika\</loc>
+		<lastmod>2025-08-25-T18:12:18+07:00</lastmod>
+		<changefreq>daily</changefreq>
+		<priority>1</priority>
+	</url>
+	<url>
+		<loc>https://localhost/statistika\histogram</loc>
+		<lastmod>2025-08-25-T18:12:18+07:00</lastmod>
+		<changefreq>daily</changefreq>
+		<priority>1</priority>
+	</url>
+	<url>
+		<loc>https://localhost/statistika\diskrit-kontinu</loc>
+		<lastmod>2025-08-25-T18:12:18+07:00</lastmod>
+		<changefreq>daily</changefreq>
+		<priority>1</priority>
+	</url>
+	<url>
+		<loc>https://localhost/statistika\bias-variance</loc>
+		<lastmod>2025-08-25-T18:12:18+07:00</lastmod>
+		<changefreq>daily</changefreq>
+		<priority>1</priority>
+	</url>
+	<url>
+		<loc>https://localhost/sql\tipe-data</loc>
+		<lastmod>2025-08-25-T18:12:18+07:00</lastmod>
+		<changefreq>daily</changefreq>
+		<priority>1</priority>
+	</url>
+	<url>
+		<loc>https://localhost/sql\pengantar-sql</loc>
+		<lastmod>2025-08-25-T18:12:18+07:00</lastmod>
+		<changefreq>daily</changefreq>
+		<priority>1</priority>
+	</url>
+	<url>
+		<loc>https://localhost/sql\panduan-tabel-sql</loc>
+		<lastmod>2025-08-25-T18:12:18+07:00</lastmod>
+		<changefreq>daily</changefreq>
+		<priority>1</priority>
+	</url>
+	<url>
+		<loc>https://localhost/sql\insert</loc>
+		<lastmod>2025-08-25-T18:12:18+07:00</lastmod>
+		<changefreq>daily</changefreq>
+		<priority>1</priority>
+	</url>
+	<url>
+		<loc>https://localhost/sql\</loc>
+		<lastmod>2025-08-25-T18:12:18+07:00</lastmod>
+		<changefreq>daily</changefreq>
+		<priority>1</priority>
+	</url>
+	<url>
+		<loc>https://localhost/pemprograman\pengantar-typescript</loc>
+		<lastmod>2025-08-25-T18:12:18+07:00</lastmod>
+		<changefreq>daily</changefreq>
+		<priority>1</priority>
+	</url>
+	<url>
+		<loc>https://localhost/pemprograman\pengantar-javascript</loc>
+		<lastmod>2025-08-25-T18:12:18+07:00</lastmod>
+		<changefreq>daily</changefreq>
+		<priority>1</priority>
+	</url>
+	<url>
+		<loc>https://localhost/pemprograman\login-design</loc>
+		<lastmod>2025-08-25-T18:12:18+07:00</lastmod>
+		<changefreq>daily</changefreq>
+		<priority>1</priority>
+	</url>
+	<url>
+		<loc>https://localhost/pemprograman\javascript-oop</loc>
+		<lastmod>2025-08-25-T18:12:18+07:00</lastmod>
+		<changefreq>daily</changefreq>
+		<priority>1</priority>
+	</url>
+	<url>
+		<loc>https://localhost/pemprograman\javascript-module</loc>
+		<lastmod>2025-08-25-T18:12:18+07:00</lastmod>
+		<changefreq>daily</changefreq>
+		<priority>1</priority>
+	</url>
+	<url>
+		<loc>https://localhost/pemprograman\</loc>
+		<lastmod>2025-08-25-T18:12:18+07:00</lastmod>
+		<changefreq>daily</changefreq>
+		<priority>1</priority>
+	</url>
+	<url>
+		<loc>https://localhost/pemprograman\git</loc>
+		<lastmod>2025-08-25-T18:12:18+07:00</lastmod>
+		<changefreq>daily</changefreq>
+		<priority>1</priority>
+	</url>
+	<url>
+		<loc>https://localhost/pemprograman\git-amend</loc>
+		<lastmod>2025-08-25-T18:12:18+07:00</lastmod>
+		<changefreq>daily</changefreq>
+		<priority>1</priority>
+	</url>
+	<url>
+		<loc>https://localhost/pemprograman\dom</loc>
+		<lastmod>2025-08-25-T18:12:18+07:00</lastmod>
+		<changefreq>daily</changefreq>
+		<priority>1</priority>
+	</url>
+	<url>
+		<loc>https://localhost/pemprograman\async</loc>
+		<lastmod>2025-08-25-T18:12:18+07:00</lastmod>
+		<changefreq>daily</changefreq>
+		<priority>1</priority>
+	</url>
+	<url>
+		<loc>https://localhost/pemprograman\api-handling</loc>
+		<lastmod>2025-08-25-T18:12:18+07:00</lastmod>
+		<changefreq>daily</changefreq>
+		<priority>1</priority>
+	</url>
+	<url>
+		<loc>https://localhost/pemberitahuan</loc>
+		<lastmod>2025-08-25-T18:12:18+07:00</lastmod>
+		<changefreq>daily</changefreq>
+		<priority>1</priority>
+	</url>
+	<url>
+		<loc>https://localhost/matematika</loc>
+		<lastmod>2025-08-25-T18:12:18+07:00</lastmod>
+		<changefreq>daily</changefreq>
+		<priority>1</priority>
+	</url>
+	<url>
+		<loc>https://localhost/matematika\sifat-logaritma</loc>
+		<lastmod>2025-08-25-T18:12:18+07:00</lastmod>
+		<changefreq>daily</changefreq>
+		<priority>1</priority>
+	</url>
+	<url>
+		<loc>https://localhost/matematika\persamaan_kuadrat</loc>
+		<lastmod>2025-08-25-T18:12:18+07:00</lastmod>
+		<changefreq>daily</changefreq>
+		<priority>1</priority>
+	</url>
+	<url>
+		<loc>https://localhost/matematika\pecahan</loc>
+		<lastmod>2025-08-25-T18:12:18+07:00</lastmod>
+		<changefreq>daily</changefreq>
+		<priority>1</priority>
+	</url>
+	<url>
+		<loc>https://localhost/matematika\math</loc>
+		<lastmod>2025-08-25-T18:12:18+07:00</lastmod>
+		<changefreq>daily</changefreq>
+		<priority>1</priority>
+	</url>
+	<url>
+		<loc>https://localhost/matematika\logaritma</loc>
+		<lastmod>2025-08-25-T18:12:18+07:00</lastmod>
+		<changefreq>daily</changefreq>
+		<priority>1</priority>
+	</url>
+	<url>
+		<loc>https://localhost/matematika\eksponen</loc>
+		<lastmod>2025-08-25-T18:12:18+07:00</lastmod>
+		<changefreq>daily</changefreq>
+		<priority>1</priority>
+	</url>
+	<url>
+		<loc>https://localhost/matematika\aljabar</loc>
+		<lastmod>2025-08-25-T18:12:18+07:00</lastmod>
+		<changefreq>daily</changefreq>
+		<priority>1</priority>
+	</url>
+	<url>
+		<loc>https://localhost/matematika\akar</loc>
+		<lastmod>2025-08-25-T18:12:18+07:00</lastmod>
+		<changefreq>daily</changefreq>
+		<priority>1</priority>
+	</url>
+	<url>
+		<loc>https://localhost/matematika\akar-rasional</loc>
+		<lastmod>2025-08-25-T18:12:18+07:00</lastmod>
+		<changefreq>daily</changefreq>
+		<priority>1</priority>
+	</url>
+	<url>
+		<loc>https://localhost/machine-learning\SSE</loc>
+		<lastmod>2025-08-25-T18:12:18+07:00</lastmod>
+		<changefreq>daily</changefreq>
+		<priority>1</priority>
+	</url>
+	<url>
+		<loc>https://localhost/machine-learning\</loc>
+		<lastmod>2025-08-25-T18:12:18+07:00</lastmod>
+		<changefreq>daily</changefreq>
+		<priority>1</priority>
+	</url>
+	<url>
+		<loc>https://localhost/machine-learning\cross-validation</loc>
+		<lastmod>2025-08-25-T18:12:18+07:00</lastmod>
+		<changefreq>daily</changefreq>
+		<priority>1</priority>
+	</url>
+	<url>
+		<loc>https://localhost/kelas-7</loc>
+		<lastmod>2025-08-25-T18:12:18+07:00</lastmod>
+		<changefreq>daily</changefreq>
+		<priority>1</priority>
+	</url>
+	<url>
+		<loc>https://localhost</loc>
+		<lastmod>2025-08-25-T18:12:18+07:00</lastmod>
+		<changefreq>daily</changefreq>
+		<priority>1</priority>
+	</url>
+	<url>
+		<loc>https://localhost/about</loc>
+		<lastmod>2025-08-25-T18:12:18+07:00</lastmod>
+		<changefreq>daily</changefreq>
+		<priority>1</priority>
+	</url>
 </urlset>

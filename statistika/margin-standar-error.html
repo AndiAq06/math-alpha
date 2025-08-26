@@ -32,10 +32,11 @@
           <a href="/statistika/index.html" class="menu-item"> <i class="fas fa-chart-bar"></i> Statistika </a>
           <a href="/machine-learning/index.html" class="menu-item"> <i class="fas fa-robot"></i> Machine Learning </a>
           <a href="/deep-learning/index.html" class="menu-item"> <i class="fas fa-brain"></i> Deep Learning </a>
-          <a href="/matematika/index.html" class="menu-item"> <i class="fas fa-square-root-alt"></i> Matematika </a>
+          <a href="/matematika.html" class="menu-item"> <i class="fas fa-square-root-alt"></i> Matematika </a>
+          <a href="/tiu.html" class="menu-item"> <i class="fas fa-file-alt"></i> TIU SKD </a>
           <a href="/sql/index.html" class="menu-item"> <i class="fas fa-database"></i> SQL </a>
           <a href="/pemprograman/index.html" class="menu-item"> <i class="fas fa-code"></i> Pemrograman </a>
-          <a href="#" class="menu-item"> <i class="fas fa-info-circle"></i> About </a>
+          <a href="/about.html" class="menu-item"> <i class="fas fa-info-circle"></i> About </a>
         </nav>
 
         <!-- Social Media Icons -->
@@ -63,7 +64,7 @@
         <div class="article">
           <div class="content-statistik">
             <header>
-              <h1>Belajar Margin of Error, Standard Error, dan Confidence-Interval dalam Statistika</h1>
+              <h1>Ngobrolin Margin of Error, Standard Error, & Confidence Interval: Biar Nggak Asal Nge-Analisis!</h1>
             </header>
 
             <div class="image-container">
@@ -74,22 +75,20 @@
             <section id="introduction">
               <h2>Pendahuluan</h2>
               <p>
-                Dalam dunia statistika, memahami konsep seperti <strong>Margin of Error</strong>, <strong>Standard Error</strong>, dan <strong>Confidence Interval</strong> sangat penting untuk menafsirkan hasil survei atau penelitian dengan
-                akurat. Ketiga konsep ini saling terkait dan membantu kita memahami seberapa besar kepercayaan yang dapat kita berikan pada hasil yang diperoleh dari sampel untuk menggambarkan populasi secara keseluruhan. Artikel ini akan
-                membahas secara mendalam tentang ketiga konsep tersebut, termasuk cara menghitungnya dan bagaimana mereka saling berhubungan.
+                Halo teman-teman MathAlpha! 👋 Pernah lihat hasil survei yang bilang kayak gini:
+                <em>"Tingkat kepuasan 70% dengan margin of error ±3%"</em>? Nah, angka ±3% itu bukan tempelan doang ya. Itu namanya <strong>Margin of Error</strong> (MoE), dan dia bagian dari trio statistik keren bareng
+                <strong>Standard Error</strong> dan <strong>Confidence Interval</strong>.
               </p>
+              <p>Ketiga istilah ini penting banget buat ngerti seberapa akurat hasil survei atau penelitian. Yuk mimin ajak bahas satu-satu, dengan gaya santai tapi tetap berbobot! 📊✨</p>
             </section>
 
             <section id="margin-of-error">
               <h2>Apa itu Margin of Error?</h2>
               <p>
-                <strong>Margin of Error</strong> (MoE) adalah ukuran statistik yang menunjukkan seberapa besar kemungkinan hasil survei atau penelitian berbeda dari nilai sebenarnya di seluruh populasi. MoE sering digunakan dalam survei
-                untuk memberikan gambaran tentang seberapa akurat hasil survei tersebut. Semakin kecil margin of error, semakin tinggi tingkat kepercayaan kita terhadap hasil survei.
+                <strong>Margin of Error</strong> (MoE) itu semacam “batas toleransi” dari hasil survei kamu. Jadi misalnya kamu dapet hasil survei bahwa 70% orang suka es kopi, terus MoE-nya ±3%, artinya hasil aslinya bisa aja antara 67%
+                sampai 73%.
               </p>
-              <p>
-                MoE muncul karena dalam penelitian, kita biasanya hanya mengambil sampel dari populasi, bukan seluruh populasi. Oleh karena itu, selalu ada kemungkinan adanya perbedaan antara hasil sampel dan populasi sebenarnya. MoE
-                membantu kita mengukur seberapa besar perbedaan tersebut.
-              </p>
+              <p>Kenapa bisa beda? Karena kita cuma ngambil sampel dari populasi, bukan seluruh orang di dunia. Jadi, ya pasti ada potensi meleset dikit. Nah, MoE ini yang bantu kita ukur seberapa besar kemungkinan melesetnya.</p>
               <h3>Rumus Margin of Error</h3>
               <p>Margin of error dapat dihitung menggunakan rumus berikut:</p>
               <p>\[ MoE = Z \times SE \]</p>
@@ -114,11 +113,8 @@
 
             <section id="standard-error">
               <h2>Apa itu Standard Error?</h2>
-              <p>
-                <strong>Standard Error</strong> (SE) adalah ukuran statistik yang mengukur seberapa besar variasi atau perbedaan dalam suatu statistik sampel, seperti rata-rata atau proporsi sampel. SE membantu kita memahami seberapa jauh
-                statistik sampel mungkin berbeda dari parameter populasi yang sebenarnya.
-              </p>
-              <p>Standard error sangat penting karena semakin kecil SE, semakin dekat nilai sampel dengan nilai populasi sebenarnya. SE juga dipengaruhi oleh ukuran sampel dan variabilitas data.</p>
+              <p>Oke, sekarang kita ke <strong>Standard Error</strong> (SE). Ini tuh kayak ngukur seberapa ‘goyang’ rata-rata dari sampel kita terhadap nilai asli dari populasi.</p>
+              <p>Makin kecil SE-nya, makin deket hasil kita sama populasi sebenarnya. SE juga tergantung ukuran sampel dan sebaran data. Jadi, makin banyak data, makin kecil SE-nya.</p>
               <h3>Rumus Standard Error</h3>
               <p>Untuk rata-rata sampel, standard error dihitung sebagai:</p>
               <p>\[ SE = \frac{\sigma}{\sqrt{n}} \]</p>
@@ -135,10 +131,7 @@
 
             <section id="confidence-interval">
               <h2>Apa itu Confidence Interval?</h2>
-              <p>
-                <strong>Confidence Interval</strong> (CI) adalah rentang nilai yang digunakan untuk memperkirakan parameter populasi dengan tingkat keyakinan tertentu. CI memberikan gambaran tentang sejauh mana kita dapat yakin bahwa
-                estimasi parameter populasi berada dalam rentang tersebut.
-              </p>
+              <p>Nah ini dia, si <strong>Confidence Interval</strong> (CI). Ini adalah rentang nilai yang punya kemungkinan besar (misalnya 95%) mencakup nilai asli dari populasi.</p>
               <p>
                 Confidence interval sering digunakan dalam penelitian untuk memberikan estimasi yang lebih akurat tentang parameter populasi. Semakin lebar interval, semakin besar ketidakpastian, dan semakin sempit interval, semakin tinggi
                 tingkat kepercayaan kita terhadap estimasi tersebut.
@@ -161,14 +154,19 @@
             </section>
 
             <section id="relationship">
-              <h2>Hubungan Antara Margin of Error, Standard Error, dan Confidence Interval</h2>
-              <p>Ketiga konsep ini saling terkait erat dalam statistika. <strong>Margin of Error</strong> secara langsung bergantung pada <strong>Standard Error</strong>, seperti yang ditunjukkan dalam rumus:</p>
-              <p>\[ MoE = Z \times SE \]</p>
-              <p>
-                Jika standard error menurun (misalnya, karena ukuran sampel yang lebih besar), margin of error juga akan menurun, menghasilkan estimasi yang lebih presisi. Selanjutnya, margin of error digunakan untuk membangun
-                <strong>Confidence Interval</strong>, sehingga hubungan antara ketiganya saling berkaitan erat.
-              </p>
-              <p>Dengan memahami hubungan ini, kita dapat lebih baik dalam menafsirkan hasil penelitian dan survei, serta membuat keputusan yang lebih informatif berdasarkan data.</p>
+              <h2>Hubungan Ketiganya</h2>
+              <ul>
+                <li>
+                  <p>Standard Error itu dasar dari semuanya – ngukur seberapa "acak" data kamu.</p>
+                </li>
+                <li>
+                  <p>Dari SE, kamu bisa hitung Margin of Error.</p>
+                </li>
+                <li>
+                  <p>Dari MoE, kamu bisa bikin Confidence Interval.</p>
+                </li>
+              </ul>
+              <p>Kalau ukuran sampel diperbesar ➜ SE makin kecil ➜ MoE makin kecil ➜ CI makin sempit ➜ hasil analisis makin presisi! 🎯</p>
             </section>
 
             <section id="conclusion">

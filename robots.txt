@@ -1,22 +1,15 @@
 User-agent: *
 Allow: /
 
-Allow: /*.css
-Allow: /*.js
-Allow: /*.png
-Allow: /*.jpg
-Allow: /*.jpeg
-Allow: /*.gif
-Allow: /*.svg
-Allow: /*.webp
+# Resource penting
+Allow: /*.css$
+Allow: /*.js$
+Allow: /*.png$
+Allow: /*.jpg$
+Allow: /*.jpeg$
+Allow: /*.gif$
+Allow: /*.svg$
+Allow: /*.webp$
 
-# Memastikan Google AdSense 
-Allow: /pagead/*
-Allow: /gstatic/*
-Allow: /googlesyndication/*
-Allow: /doubleclick/*
-Allow: /ads/*
-Allow: /img/*
-
+# Sitemap
 Sitemap: https://math-alpha-iota.vercel.app/sitemap.xml
-Sitemap: https://math-alpha-iota.vercel.app/sitemap-1.xml

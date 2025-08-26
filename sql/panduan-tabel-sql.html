@@ -26,10 +26,13 @@
         <nav class="menu">
           <a href="/index.html" class="menu-item"> <i class="fas fa-home"></i> Home </a>
           <a href="/statistika/index.html" class="menu-item"> <i class="fas fa-chart-bar"></i> Statistika </a>
-          <a href="/matematika/index.html" class="menu-item"> <i class="fas fa-square-root-alt"></i> Matematika </a>
+          <a href="/machine-learning/index.html" class="menu-item"> <i class="fas fa-robot"></i> Machine Learning </a>
+          <a href="/deep-learning/index.html" class="menu-item"> <i class="fas fa-brain"></i> Deep Learning </a>
+          <a href="/matematika.html" class="menu-item"> <i class="fas fa-square-root-alt"></i> Matematika </a>
+          <a href="/tiu.html" class="menu-item"> <i class="fas fa-file-alt"></i> TIU SKD </a>
           <a href="/sql/index.html" class="menu-item"> <i class="fas fa-database"></i> SQL </a>
           <a href="/pemprograman/index.html" class="menu-item"> <i class="fas fa-code"></i> Pemrograman </a>
-          <a href="#" class="menu-item"> <i class="fas fa-info-circle"></i> About </a>
+          <a href="/about.html" class="menu-item"> <i class="fas fa-info-circle"></i> About </a>
         </nav>
 
         <!-- Social Media Icons -->
@@ -64,19 +67,23 @@
               </div>
             </header>
             <section id="intro">
-              <h2>Pengenalan</h2>
-              <p>Data dalam MySQL disimpan di dalam tabel. Tiap tabel biasanya menyimpan satu jenis data. Contohnya, dalam aplikasi toko online, kita dapat membuat tabel seperti:</p>
+              <h2>Introduction</h2>
+              <p>
+                Sebelumnya kita sudah belajar mengenai <a href="/sql/tipe-data.html"><strong>tipe data dalam MySql</strong></a
+                >, seperti integer, string, boolean dan lain-lain. Selanjutnya kita akan melanjutkan dengan mempelajari cara membuat tabel di MySQL. Pembuatan tabel ini sangat penting karena setiap tabel biasanya menyimpan satu jenis data.
+                Contohnya, dalam aplikasi toko online, kita dapat membuat tabel seperti:
+              </p>
               <ul>
                 <li><strong>Tabel Barang</strong>: Menyimpan informasi tentang produk yang dijual.</li>
                 <li><strong>Tabel Pelanggan</strong>: Menyimpan informasi tentang pelanggan.</li>
                 <li><strong>Tabel Penjual</strong>: Menyimpan informasi tentang penjual.</li>
               </ul>
-              <p>Sebelum menyimpan data, kita harus membuat tabel dan menentukan struktur tabel, seperti nama kolom dan tipe datanya.</p>
+              <p>Oleh karena itu, sebelum menyimpan data, kita harus membuat tabel dan menentukan struktur tabel, seperti nama kolom dan tipe datanya.</p>
             </section>
 
             <section id="create-table">
               <h2>Membuat Tabel</h2>
-              <p>Untuk membuat tabel di MySQL, gunakan perintah <code>CREATE TABLE</code>. Berikut adalah contohnya:</p>
+              <p>Untuk membuat tabel di MySQL, kita dapat menggunakan perintah <strong>CREATE TABLE</strong>. Berikut contohnya:</p>
               <pre><code>CREATE TABLE barang (
     id INT AUTO_INCREMENT PRIMARY KEY,
     nama VARCHAR(100) NOT NULL,
@@ -85,8 +92,8 @@
 );</code></pre>
               <p>Penjelasan:</p>
               <ul>
-                <li><code>id</code>: Kolom dengan tipe <code>INT</code>, otomatis bertambah, dan digunakan sebagai primary key.</li>
-                <li><code>nama</code>: Kolom teks dengan panjang maksimum 100 karakter, tidak boleh bernilai <code>NULL</code>.</li>
+                <li><code>id</code>: Kolom dengan tipe <code>INT</code>, otomatis bertambah <strong>AUTO_INCREMENT</strong>, dan digunakan sebagai primary key.</li>
+                <li><code>nama</code>: Kolom teks dengan panjang maksimum 100 karakter, tidak boleh bernilai <strong>NULL</strong>.</li>
                 <li><code>harga</code>: Kolom angka desimal dengan 2 angka desimal.</li>
                 <li><code>stok</code>: Kolom integer dengan nilai default 0.</li>
               </ul>
@@ -99,13 +106,14 @@
 
             <section id="view-table">
               <h2>Melihat Tabel</h2>
-              <p>Untuk melihat daftar tabel dalam database, gunakan perintah:</p>
+              <p>Untuk melihat daftar tabel apa saja yang sudah kita buat dalam database, kita dapat menggunakan perintah:</p>
               <pre><code>SHOW TABLES;</code></pre>
+              <p>Perintah <strong>SHOW TABLES</strong> akan mengembalikan semua tabel yang sudah kita buat sebelumnya.</p>
             </section>
 
             <section id="table-structure">
               <h2>Melihat Struktur Tabel</h2>
-              <p>Untuk melihat struktur tabel, gunakan perintah:</p>
+              <p>Untuk melihat struktur tabel, kita gunakan perintah:</p>
               <pre><code>DESCRIBE nama_tabel;</code></pre>
               <p>Contoh:</p>
               <pre><code>DESCRIBE barang;</code></pre>
@@ -113,7 +121,7 @@
 
             <section id="modify-table">
               <h2>Mengubah Tabel</h2>
-              <p>Kita bisa mengubah tabel dengan perintah <code>ALTER TABLE</code>. Contohnya:</p>
+              <p>Kita juga bisa mengubah tabel sepeti menambah kolom, mengubah kolom atau bahkan menghapus kolom di MySQL. Kita dapat menggunakan perintah <strong>ALTER TABLE</strong> Contohnya:</p>
               <ul>
                 <li><strong>Menambah Kolom:</strong></li>
                 <pre><code>ALTER TABLE barang ADD kategori VARCHAR(50);</code></pre>
@@ -131,8 +139,8 @@
 
             <section id="null-default">
               <h2>NULL dan Default Value</h2>
-              <p><strong>NULL</strong>: Nilai default jika kolom tidak diisi. Untuk mencegah <code>NULL</code>, tambahkan <code>NOT NULL</code> saat membuat kolom.</p>
-              <p><strong>Default Value:</strong> Kita bisa menetapkan nilai default menggunakan <code>DEFAULT</code>. Contoh:</p>
+              <p><strong>NULL</strong>: merupakan nilai default jika kolom tidak diisi. Untuk mencegah <strong>NULL</strong>, tambahkan <strong>NOT NULL</strong> saat membuat kolom.</p>
+              <p><strong>Default Value:</strong> Kita bisa menetapkan nilai default menggunakan <strong>DEFAULT</strong>. Contoh:</p>
               <pre><code>CREATE TABLE pelanggan (
     id INT AUTO_INCREMENT PRIMARY KEY,
     nama VARCHAR(100) NOT NULL,
@@ -147,9 +155,9 @@
 
             <section id="delete-truncate">
               <h2>Menghapus Data atau Tabel</h2>
-              <p><strong>Truncate:</strong> Menghapus semua data dalam tabel tanpa menghapus strukturnya:</p>
+              <p><strong>TRUNCATE:</strong> merupakan perintah untuk menghapus semua data dalam tabel tanpa menghapus strukturnya:</p>
               <pre><code>TRUNCATE TABLE nama_tabel;</code></pre>
-              <p><strong>Drop:</strong> Menghapus tabel beserta strukturnya:</p>
+              <p><strong>DROP:</strong> berbeda dengan <strong>TRUNCATE</strong> yang hanya menghapus data dalam tabel tanpa menghapus strukturnya, perintah <strong>DROP</strong> menghapus tabel beserta strukturnya:</p>
               <pre><code>DROP TABLE nama_tabel;</code></pre>
             </section>
 
