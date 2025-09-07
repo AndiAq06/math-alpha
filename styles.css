@@ -476,16 +476,6 @@ p {
   }
 }
 
-@media (max-width: 480px) {
-  .soal p {
-    font-size: 0.85rem !important;
-  }
-
-  .pilihan p {
-    font-size: 0.75rem !important;
-  }
-}
-
 /* ===== Sidebar Styles ======*/
 .container {
   display: flex;
