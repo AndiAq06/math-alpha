@@ -467,8 +467,8 @@ p {
     font-size: 2rem;
   }
 
-  p {
-    font-size: 0.95rem;
+  .soal p {
+    font-size: 0.95rem !important;
   }
 
   .pilihan p {
@@ -485,8 +485,8 @@ p {
 }
 
 @media (max-width: 480px) {
-  p {
-    font-size: 0.75rem;
+  .soal p {
+    font-size: 0.85rem !important;
   }
 
   .pilihan p {
