@@ -467,14 +467,6 @@ p {
     font-size: 2rem;
   }
 
-  .soal p {
-    font-size: 0.95rem !important;
-  }
-
-  .pilihan p {
-    font-size: 0.95rem !important;
-  }
-
   .pembahasan {
     padding: 10px;
   }
@@ -1390,5 +1382,12 @@ table tbody tr:hover {
 
   .soal {
     padding: 10px;
+  }
+
+  mjx-container[jax="CHTML"][display="true"] mjx-math {
+    white-space: normal !important;
+    overflow-wrap: break-word;
+    word-break: break-word;
+    max-width: 100%;
   }
 }
