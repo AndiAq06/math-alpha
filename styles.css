@@ -28,6 +28,10 @@ body {
   line-height: 1.6;
 }
 
+p {
+  font-size: 1rem;
+}
+
 /* ===== Home Page Specific Styles ===== */
 
 /* Hero Section */
@@ -465,6 +469,28 @@ body {
 
   p {
     font-size: 0.95rem;
+  }
+
+  .pilihan p {
+    font-size: 0.95rem !important;
+  }
+
+  .pembahasan {
+    padding: 10px;
+  }
+
+  .soal {
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  p {
+    font-size: 0.75rem;
+  }
+
+  .pilihan p {
+    font-size: 0.75rem !important;
   }
 }
 
@@ -1345,4 +1371,24 @@ table tbody tr:last-of-type {
 table tbody tr:hover {
   background-color: #e8f5e9; /* Very light green */
   transform: translateX(2px);
+}
+
+@media (max-width: 768px) {
+  .pembahasan {
+    padding: 10px;
+  }
+
+  .soal {
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .pembahasan {
+    padding: 10px;
+  }
+
+  .soal {
+    padding: 10px;
+  }
 }

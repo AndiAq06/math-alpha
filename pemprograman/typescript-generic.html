@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TypeScript Generic</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles.css" />
+    <meta name="google-site-verification" content="wSwaOWra1NglT7WH5RGbaNJ2Jrsv1nRoWawtwszrBws" />
+    <link rel="icon" href="/img/logo.png" sizes="32x32" type="image/png" />
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1624084859744468" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Hamburger Menu -->
+      <button class="hamburger-menu">
+        <i class="fas fa-bars"></i>
+      </button>
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <button class="close-btn">&times;</button>
+        <div class="logo">
+          <img src="/img/logo.png" alt="Chirpy Logo" />
+          <h2>MathAlpha</h2>
+        </div>
+        <nav class="menu">
+          <a href="/index.html" class="menu-item"> <i class="fas fa-home"></i> Home </a>
+          <a href="/statistika/index.html" class="menu-item"> <i class="fas fa-chart-bar"></i> Statistika </a>
+          <a href="/machine-learning/index.html" class="menu-item"> <i class="fas fa-robot"></i> Machine Learning </a>
+          <a href="/deep-learning/index.html" class="menu-item"> <i class="fas fa-brain"></i> Deep Learning </a>
+          <a href="/matematika.html" class="menu-item"> <i class="fas fa-square-root-alt"></i> Matematika </a>
+          <a href="/tiu.html" class="menu-item"> <i class="fas fa-file-alt"></i> TIU SKD </a>
+          <a href="/sql/index.html" class="menu-item"> <i class="fas fa-database"></i> SQL </a>
+          <a href="/pemprograman/index.html" class="menu-item"> <i class="fas fa-code"></i> Pemrograman </a>
+          <a href="/about.html" class="menu-item"> <i class="fas fa-info-circle"></i> About </a>
+        </nav>
+
+        <!-- Social Media Icons -->
+        <div class="social-media">
+          <a href="https://www.instagram.com/andiaso06/" target="_blank" class="social-icon">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/andi-ardiansyah-7b25072a9/" target="_blank" class="social-icon">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="https://github.com/AndiAq06" target="_blank" class="social-icon">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="https://www.youtube.com/@andimath06" target="_blank" class="social-icon">
+            <i class="fab fa-youtube"></i>
+          </a>
+          <a href="https://www.twitter.com" target="_blank" class="social-icon">
+            <i class="fab fa-x-twitter"></i>
+          </a>
+        </div>
+      </aside>
+
+      <!-- Main Content -->
+      <main class="content">
+        <header>
+          <h1>TypeScript Generic</h1>
+          <div class="meta-info">
+            <span class="author">Oleh: Andi Ardiansyah Nasir</span>
+            <span class="last-update">Terakhir diperbarui: 3 September 2025</span>
+          </div>
+        </header>
+        <div class="article">
+          <div class="content-statistik">
+            <section id="pengenalan">
+              <h2>Pengenalan TypeScript Generic</h2>
+              <p>
+                Generic adalah fitur TypeScript yang memungkinkan kita membuat kode yang sama dan bisa digunakan berulang kali dengan menggunakan tipe data yang berbeda. Sebelumnya, saat kita ingin menggunakan tipe data yang bisa berbeda untuk variabel atau parameter, kita menggunakan tipe data <code>any</code>. Dengan menggunakan Generic, kita bisa melakukan perubahan tipe data ketika digunakan, sehingga lebih aman karena tidak perlu menggunakan tipe data seperti <code>any</code>.
+              </p>
+            </section>
+
+            <section id="tanpa-generic">
+              <h2>Tanpa Generic</h2>
+              <p>Tanpa generic, saat kita ingin membuat Class yang berisi tipe data yang bisa berbeda-beda, maka kita harus menggunakan tipe data <code>any</code>.</p>
+              
+              <h3>Kode: Data Class</h3>
+<pre>
+                <code>export class Data {
+    value: any;
+
+    constructor(value: any) {
+        this.value = value;
+    }
+}</code></pre>
+
+              <h3>Kode: Test Data Class</h3>
+              <pre><code>import {Data} from "../src/simple";
+
+describe('Data Generic', () => {
+    it('should can accept number', () => {
+        const data = new Data(123);
+        data.value = "eko";
+        data.value = true;
+
+        console.info(data);
+    });
+});</code></pre>
+            </section>
+
+            <section id="generic-class">
+              <h2>Generic Class</h2>
+              <p>
+                Generic bisa ditambahkan ketika kita membuat Class, caranya bisa menggunakan tanda &lt;&gt; (diamond) setelah nama class, lalu tentukan tipe data generic nya. Tipe data generic tersebut bisa digunakan pada class, dan bisa diubah tipenya ketika kita membuat object dari Generic Class tersebut. Saat kita membuat object dari Generic Class, kita wajib menentukan tipe data yang ingin kita gunakan untuk mengganti tipe data generic nya.
+              </p>
+              
+              <h3>Kode: Generic Class</h3>
+              <pre><code>export class GenericData<T> {
+    value: T;
+
+    constructor(value: T) {
+        this.value = value;
+    }
+}</code></pre>
+
+              <h3>Kode: Membuat Object</h3>
+              <pre><code>import {GenericData} from "../src/generic";
+
+describe('Generic Class', () => {
+    it('should can only accept one type', () => {
+        const data = new GenericData<number>(123);
+        // Error: Type 'string' is not assignable to type 'number'
+        // data.value = "eko";
+        // Error: Type 'boolean' is not assignable to type 'number'
+        // data.value = true;
+    });
+});</code></pre>
+
+              <h3>Kode: Menggunakan Data di Generic</h3>
+              <pre><code>describe('Generic Class', () => {
+    it('should can only accept one type', () => {
+        const data = new GenericData<number>(123);
+        expect(data.value).toBe(123);
+
+        const dataString = new GenericData<string>("Eko_Khannedy");
+        const firstName = dataString.value.substring(0, 3)
+        expect(firstName).toBe("Eko");
+    });
+});</code></pre>
+            </section>
+
+            <section id="generic-function">
+              <h2>Generic Function</h2>
+              <p>
+                Saat kita membuat tipe data generic di Class, tipe data tersebut bisa digunakan diseluruh bagian Class. Namun, kadang kita tidak membuat class, kita hanya membuat function misalnya. Generic juga bisa digunakan pada function, kita bisa menggunakan cara yang sama dengan menempatkan tanda &lt;&gt; setelah nama function.
+              </p>
+              
+              <h3>Kode: Generic Function</h3>
+              <pre><code>function create<T>(value: T): T {
+    return value;
+}
+
+it('should support', () => {
+    const result = create<string>('Hello');
+    expect(result).toBe('Hello');
+
+    const result2 = create<number>(42);
+    expect(result2).toBe(42);
+});</code></pre>
+            </section>
+
+            <section id="multiple-generic">
+              <h2>Multiple Generic Type</h2>
+              <p>
+                Tipe data generic bisa kita tambahkan lebih dari satu, baik itu di Class ataupun di Function. Kita bisa tambahkan pemisah , (koma) di dalam &lt;&gt; jika ingin menambahkan tipe data generic lebih dari satu.
+              </p>
+              
+              <h3>Kode: Multiple Generic Type</h3>
+              <pre><code>class Entry<K, V> {
+    constructor(public key: K, public value: V) {
+    }
+}
+
+class Triple<K, V, T> {
+    constructor(public first: K, public second: V, public third: T) {
+    }
+}</code></pre>
+
+              <h3>Kode: Menggunakan Multiple Generic Type</h3>
+              <pre><code>it('should support', () => {
+    const entry = new Entry<number, string>(1, 'Hello');
+    expect(entry.key).toBe(1);
+    expect(entry.value).toBe('Hello');
+
+    const triple = new Triple<number, string, boolean>(1, 'Hello', true);
+    expect(triple.first).toBe(1);
+    expect(triple.second).toBe('Hello');
+    expect(triple.third).toBe(true);
+});</code></pre>
+            </section>
+
+            <section id="optional-generic">
+              <h2>Optional Generic Type</h2>
+              <p>
+                Saat kita menggunakan generic type di Class, lalu kita menggunakan generic type tersebut di constructor, kita tidak wajib menyebutkan tipe generic nya. TypeScript bisa secara otomatis mendeteksi tipe yang kita gunakan pada parameter constructor. Namun jika kita tidak menggunakan tipe tersebut pada constructor, maka typescript tidak bisa menggunakan secara otomatis.
+              </p>
+              
+              <h3>Kode: Optional Generic Type</h3>
+              <pre><code>it('should optional type', () => {
+    const entry = new Entry(1, 'Hello');
+    expect(entry.key).toBe(1);
+    expect(entry.value.toUpperCase()).toBe('HELLO');
+});</code></pre>
+
+              <h3>Kode: Generic Class Tanpa Constructor Parameter</h3>
+              <pre><code>class SimpleGeneric<T> {
+    private value?: T;
+
+    setValue(value: T) {
+        this.value = value;
+    }
+
+    getValue(): T | undefined {
+        return this.value;
+    }
+}</code></pre>
+
+              <h3>Kode: Menggunakan Generic Class</h3>
+              <pre><code>it('should create simple generic', () => {
+    const simple = new SimpleGeneric<string>();
+    simple.setValue("Eko");
+    expect(simple.getValue()?.toUpperCase()).toBe("EKO");
+});</code></pre>
+            </section>
+
+            <section id="generic-default">
+              <h2>Generic Parameter Default</h2>
+              <p>
+                Saat kita menggunakan generic data type, kita bisa menentukan tipe data default jika tidak menyebutkan tipe data. Kita bisa gunakan = tipe data di dalam operator &lt;&gt;.
+              </p>
+              
+              <h3>Kode: Generic Parameter Default</h3>
+              <pre><code>class SimpleGeneric<T = string> {
+    private value?: T;
+
+    setValue(value: T) {
+        this.value = value;
+    }
+
+    getValue(): T | undefined {
+        return this.value;
+    }
+}</code></pre>
+
+              <h3>Kode: Menggunakan Generic Parameter Default</h3>
+              <pre><code>it('should create simple generic', () => {
+    const simple = new SimpleGeneric();
+    simple.setValue("Eko");
+    expect(simple.getValue()?.toUpperCase()).toBe("EKO");
+});</code></pre>
+            </section>
+
+            <section id="generic-constraint">
+              <h2>Generic Constraint</h2>
+              <p>
+                Secara default, saat menggunakan generic type, kita bisa bebas menggunakan tipe data apapun. Namun, kadang kita ingin membatasi jenis tipe data yang diperbolehkan. Kita bisa menggunakan perintah <code>extends TipeData</code> pada operator &lt;&gt;, yang artinya tipe data yang boleh digunakan hanya tipe data TipeData dan turunannya.
+              </p>
+              
+              <h3>Kode: Employee Inheritance</h3>
+              <pre><code>interface Employee {
+    id: string;
+    name: string;
+}
+
+interface Manager extends Employee {
+    totalEmployee: number;
+}
+
+interface VP extends Manager {
+    totalManager: number;
+}</code></pre>
+
+              <h3>Kode: Generic Constraint</h3>
+              <pre><code>class EmployeeData<T extends Employee> {
+    constructor(public employee: T) {
+    }
+}</code></pre>
+
+              <h3>Kode: Menggunakan Generic Constraint</h3>
+              <pre><code>it('should support constraint', () => {
+    const data1 = new EmployeeData<Employee>({
+        id: "100",
+        name: "Eko"
+    });
+    
+    const data2 = new EmployeeData<Manager>({
+        id: "100",
+        name: "Eko",
+        totalEmployee: 10,
+    });
+    
+    // Error: Type 'string' does not satisfy the constraint 'Employee'
+    // const data3 = new EmployeeData<string>("Eko");
+    
+    // Error: Type 'number' does not satisfy the constraint 'Employee'
+    // const data4 = new EmployeeData<number>(1234);
+});</code></pre>
+            </section>
+
+            <section id="generic-collection">
+              <h2>Generic Collection</h2>
+              <p>
+                Sebelumnya kita pernah menggunakan tipe data Array, dimana Array sebenarnya adalah tipe data Generic, oleh karena itu kita bisa menggunakan Array&lt;tipe&gt; ketika membuat Array. Selain Array, ada tipe data Collection (kumpulan data) yang berupa tipe data Generic, yaitu:
+              </p>
+              <ul>
+                <li><strong>Set&lt;T&gt;</strong>: tipe data collection yang berisi data unique dan tidak ada jaminan urutan data</li>
+                <li><strong>Map&lt;K, V&gt;</strong>: tipe data collection yang berisi data key-value</li>
+              </ul>
+
+              <h3>Array&lt;T&gt;</h3>
+              <p>
+                Generic type Array&lt;T&gt; sebenarnya merupakan representasi dari tipe data array di JavaScript. Oleh karena itu, cara penggunaannya sama seperti array di JavaScript.
+              </p>
+              
+              <h4>Kode: Array&lt;T&gt;</h4>
+              <pre><code>it('should support array', () => {
+    const array = new Array<string>();
+    array.push('Eko');
+    array.push('Kurniawan');
+
+    expect(array[0].toUpperCase()).toBe('EKO');
+    expect(array[1].toUpperCase()).toBe('KURNIAWAN');
+});</code></pre>
+
+              <h3>Set&lt;T&gt;</h3>
+              <p>
+                Generic type Set&lt;T&gt; sebenarnya merupakan representasi dari tipe data Set di JavaScript. Oleh karena itu, cara penggunaannya sama seperti Set di JavaScript.
+              </p>
+              
+              <h4>Kode: Set&lt;T&gt;</h4>
+              <pre><code>it('should support set', () => {
+    const set = new Set<string>();
+    set.add('Eko');
+    set.add('Kurniawan');
+    set.add('Eko');
+
+    expect(set.size).toBe(2);
+    expect(set.has('Eko')).toBe(true);
+    expect(set.has('Kurniawan')).toBe(true);
+});</code></pre>
+
+              <h3>Map&lt;K, V&gt;</h3>
+              <p>
+                Generic type Map&lt;K, V&gt; sebenarnya merupakan representasi dari tipe data Map di JavaScript. Oleh karena itu, cara penggunaannya sama seperti Map di JavaScript.
+              </p>
+              
+              <h4>Kode: Map&lt;K, V&gt;</h4>
+              <pre><code>it('should support map', () => {
+    const map = new Map<string, number>();
+    map.set('Eko', 1);
+    map.set('Kurniawan', 2);
+
+    expect(map.get('Eko')).toBe(1);
+    expect(map.get('Kurniawan')).toBe(2);
+});</code></pre>
+            </section>
+
+            <section id="generic-promise">
+              <h2>Generic Promise</h2>
+              <p>
+                Saat kita menggunakan JavaScript Async, kita akan sering bertemu dengan Promise. TypeScript menggunakan Generic sebagai representasi untuk tipe data Promise&lt;T&gt;. Oleh karena itu, ketika membuat function yang mengembalikan Promise, kita bisa menentukan tipe data apa yang akan dikembalikan oleh Promise tersebut.
+              </p>
+              
+              <h3>Kode: Promise Function</h3>
+              <pre><code>async function fetchData(value: string): Promise<string> {
+    return new Promise<string>((resolve, reject) => {
+        setTimeout(() => {
+            if (value == 'Eko') {
+                resolve('Hello ' + value);
+            } else {
+                reject('Not Found');
+            }
+        }, 1000);
+    });
+}</code></pre>
+
+              <h3>Kode: Menggunakan Promise</h3>
+              <pre><code>it('should support promise', async () => {
+    const result = await fetchData('Eko');
+    expect(result.toUpperCase()).toBe('HELLO EKO');
+
+    try {
+        await fetchData('Budi');
+    } catch (e) {
+        expect(e).toBe('Not Found');
+    }
+});</code></pre>
+            </section>
+
+            <section id="penutup">
+              <h2>Penutup</h2>
+              <p>
+                TypeScript Generic adalah fitur yang sangat powerful untuk membuat kode yang reusable dan type-safe. Dengan Generic, kita dapat membuat komponen yang dapat bekerja dengan berbagai tipe data tanpa mengorbankan keamanan tipe. Fitur ini sangat berguna dalam pembuatan library, framework, atau kode aplikasi yang kompleks.
+              </p>
+              <p>
+                Beberapa konsep penting yang telah kita pelajari meliputi Generic Class, Generic Function, Multiple Generic Type, Generic Constraint, dan penggunaan Generic dengan Collection dan Promise. Dengan memahami dan menerapkan Generic dengan baik, kita dapat menulis kode TypeScript yang lebih aman, fleksibel, dan mudah dipelihara.
+              </p>
+            </section>
+
+            <!-- Footer -->
+            <footer>
+              <p>&copy; 2024 Math Alpha. Semua Hak Dilindungi.</p>
+              <p>Dukung saya dengan donasi:</p>
+              <p>
+                DANA: <strong>081524190409</strong> <br />
+                ShopeePay: <strong>081524190409</strong>
+              </p>
+            </footer>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <script src="/script.js"></script>
+  </body>
+</html>
