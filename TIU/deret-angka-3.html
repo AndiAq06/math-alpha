@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Numerik Deret Paket 3</title>
+    <link rel="stylesheet" href="/styles.css" />
+    <!-- MathJax for mathematical notation -->
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <!-- Icon Logo -->
+    <link rel="icon" href="/img/logo.png" sizes="32x32" type="image/png" />
+    <!-- Script AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1624084859744468" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Hamburger Menu -->
+      <button class="hamburger-menu">
+        <i class="fas fa-bars"></i>
+      </button>
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <button class="close-btn">&times;</button>
+        <div class="logo">
+          <img src="/img/logo.png" alt="Chirpy Logo" />
+          <h2>MathAlpha</h2>
+        </div>
+        <nav class="menu">
+          <a href="/index.html" class="menu-item"> <i class="fas fa-home"></i> Home </a>
+          <a href="/statistika/index.html" class="menu-item"> <i class="fas fa-chart-bar"></i> Statistika </a>
+          <a href="/machine-learning/index.html" class="menu-item"> <i class="fas fa-robot"></i> Machine Learning </a>
+          <a href="/deep-learning/index.html" class="menu-item"> <i class="fas fa-brain"></i> Deep Learning </a>
+          <a href="/matematika.html" class="menu-item"> <i class="fas fa-square-root-alt"></i> Matematika </a>
+          <a href="/sql/index.html" class="menu-item"> <i class="fas fa-database"></i> SQL </a>
+          <a href="/pemprograman/index.html" class="menu-item"> <i class="fas fa-code"></i> Pemrograman </a>
+          <a href="#" class="menu-item"> <i class="fas fa-info-circle"></i> About </a>
+        </nav>
+
+        <!-- Social Media Icons -->
+        <div class="social-media">
+          <a href="https://www.instagram.com/andiaso06/" target="_blank" class="social-icon">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/andi-ardiansyah-7b25072a9/" target="_blank" class="social-icon">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="https://github.com/AndiAq06" target="_blank" class="social-icon">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="https://www.youtube.com/@andimath06" target="_blank" class="social-icon">
+            <i class="fab fa-youtube"></i>
+          </a>
+        </div>
+      </aside>
+
+      <!-- Content -->
+      <main class="content">
+        <header>
+          <h1>Latihan Soal Deret Paket 3</h1>
+          <div class="meta-info">
+            <span class="author">Oleh: Andi Ardiansyah Nasir</span>
+            <span class="last-update">Terakhir diperbarui: 2 Oktober 2025</span>
+          </div>
+        </header>
+
+        <!-- Soal -->
+        <div class="soal">
+          <h3>Soal 1:</h3>
+          <h4>4, 5, 4, 6, 7, 6, 8, 9, 8, ...</h4>
+
+          <div class="pilihan">
+            <p>A. 9, 9</p>
+            <p>B. 10, 11</p>
+            <p>C. 9, 10</p>
+            <p>D. 10, 10</p>
+            <p>E. 11, 10</p>
+          </div>
+          <button class="btn-toggle">Show Solution</button>
+          <div class="pembahasan">
+            <p>
+              <b>B. 10, 11</b>. <br /><br />
+              <strong>Penjelasan:</strong> <br />
+              Deret Loncat 2: \[ 4 \xrightarrow{+ 2} 6 \xrightarrow{+ 2} 8 \xrightarrow{+ 2} 10 \] \[5 \xrightarrow{+ 2} 7 \xrightarrow{+ 2} 9 \xrightarrow{+ 2} 11 \] \[4 \xrightarrow{+ 2} 6 \xrightarrow{+ 2} 8 \xrightarrow{+ 2} 10 \] Jadi,
+              angka selanjutnya adalah 10, 11.
+            </p>
+          </div>
+        </div>
+
+        <div class="soal">
+          <h3>Soal 2:</h3>
+          <h4>5, 25, 6, 36, 7, 49, ...</h4>
+
+          <div class="pilihan">
+            <p>A. 9</p>
+            <p>B. 36</p>
+            <p>C. 56</p>
+            <p>D. 8</p>
+            <p>E. 64</p>
+          </div>
+          <button class="btn-toggle">Show Solution</button>
+          <div class="pembahasan">
+            <p>
+              <b>D. 8</b>. <br /><br />
+              <strong>Penjelasan:</strong> <br />
+              \[5 \xrightarrow{5 \times 5} 25 \xrightarrow{} 6 \xrightarrow{6 \times 6} 36 \xrightarrow{} 7 \xrightarrow{7 \times 7} 49 \xrightarrow{} 8 \]
+            </p>
+          </div>
+        </div>
+
+        <div class="soal">
+          <h3>Soal 3:</h3>
+          <h4>1, 2, 4, 8, 16, 15, 30, 60, ...</h4>
+
+          <div class="pilihan">
+            <p>A. 120</p>
+            <p>B. 75</p>
+            <p>C. 90</p>
+            <p>D. 150</p>
+            <p>E. 180</p>
+          </div>
+          <button class="btn-toggle">Show Solution</button>
+          <div class="pembahasan">
+            <p>
+              <b></b>. <br /><br />
+              <strong>Penjelasan:</strong> <br />
+            </p>
+          </div>
+        </div>
+
+        <div class="soal">
+          <h3>Soal 4:</h3>
+          <h4>32, 16, 4, 18, 9, 3, ...</h4>
+
+          <div class="pilihan">
+            <p>A. 17, 6</p>
+            <p>B. 17, 4</p>
+            <p>C. 16, 4</p>
+            <p>D. 17, 8.5</p>
+            <p>E. 14, 8</p>
+          </div>
+          <button class="btn-toggle">Show Solution</button>
+          <div class="pembahasan">
+            <p>
+              <b></b>. <br /><br />
+              <strong>Penjelasan:</strong> <br />
+            </p>
+          </div>
+        </div>
+
+        <div class="soal">
+          <h3>Soal 5:</h3>
+          <h4>21, 26, 22, 28, 25, 32, ...</h4>
+
+          <div class="pilihan">
+            <p>A. 27</p>
+            <p>B. 30</p>
+            <p>C. 28</p>
+            <p>D. 29</p>
+            <p>E. 31</p>
+          </div>
+          <button class="btn-toggle">Show Solution</button>
+          <div class="pembahasan">
+            <p>
+              <b></b>. <br /><br />
+              <strong>Penjelasan:</strong> <br />
+            </p>
+          </div>
+        </div>
+
+        <!-- Google AdSense -->
+        <ins class="adsbygoogle" style="display: block" data-ad-format="fluid" data-ad-layout-key="-gw-3+1f-3d+2z" data-ad-client="ca-pub-1624084859744468" data-ad-slot="2653926339"></ins>
+        <script>
+          (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+
+        <div class="soal">
+          <h3>Soal 6:</h3>
+          <h4>E, G, K, M,, ...</h4>
+
+          <div class="pilihan">
+            <p>A. Q</p>
+            <p>B. O</p>
+            <p>C. P</p>
+            <p>D. R</p>
+            <p>E. S</p>
+          </div>
+          <button class="btn-toggle">Show Solution</button>
+          <div class="pembahasan">
+            <p>
+              <b></b>. <br /><br />
+              <strong>Penjelasan:</strong> <br />
+            </p>
+          </div>
+        </div>
+
+        <div class="soal">
+          <h3>Soal 7:</h3>
+          <h4>E, Y, H, U, K, Q, ...</h4>
+
+          <div class="pilihan">
+            <p>A. M, M, P</p>
+            <p>B. M, N, Q</p>
+            <p>C. N, M ,Q</p>
+            <p>D. N, M, P</p>
+            <p>E. N, N, P</p>
+          </div>
+          <button class="btn-toggle">Show Solution</button>
+          <div class="pembahasan">
+            <p>
+              <b></b>. <br /><br />
+              <strong>Penjelasan:</strong> <br />
+            </p>
+          </div>
+        </div>
+
+        <div class="soal">
+          <h3>Soal 8:</h3>
+          <h4>FAG, GAF, HAI, IAH ...</h4>
+
+          <div class="pilihan">
+            <p>A. HAL</p>
+            <p>B. HAK</p>
+            <p>C. JAI</p>
+            <p>D. JAK</p>
+            <p>E. KAL</p>
+          </div>
+          <button class="btn-toggle">Show Solution</button>
+          <div class="pembahasan">
+            <p>
+              <b></b>. <br /><br />
+              <strong>Penjelasan:</strong> <br />
+            </p>
+          </div>
+        </div>
+
+        <div class="soal">
+          <h3>Soal 9:</h3>
+          <h4>D, D, F, I, M, ...</h4>
+
+          <div class="pilihan">
+            <p>A. R</p>
+            <p>B. P</p>
+            <p>C. Q</p>
+            <p>D. S</p>
+            <p>E. T</p>
+          </div>
+          <button class="btn-toggle">Show Solution</button>
+          <div class="pembahasan">
+            <p>
+              <b></b>. <br /><br />
+              <strong>Penjelasan:</strong> <br />
+            </p>
+          </div>
+        </div>
+
+        <div class="soal">
+          <h3>Soal 10:</h3>
+          <h4>C, B, A, G, E, C, K, H , E, ...</h4>
+
+          <div class="pilihan">
+            <p>A. N, K, G</p>
+            <p>B. N, L, G</p>
+            <p>C. O, K, G</p>
+            <p>D. M, L , H</p>
+            <p>E. O, K ,H</p>
+          </div>
+          <button class="btn-toggle">Show Solution</button>
+          <div class="pembahasan">
+            <p>
+              <b></b>. <br /><br />
+              <strong>Penjelasan:</strong> <br />
+            </p>
+          </div>
+        </div>
+
+        <!-- Google AdSense -->
+        <ins class="adsbygoogle" style="display: block" data-ad-format="fluid" data-ad-layout-key="-gw-3+1f-3d+2z" data-ad-client="ca-pub-1624084859744468" data-ad-slot="2653926339"></ins>
+        <script>
+          (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+
+        <!-- Footer -->
+        <footer>
+          <p>&copy; 2024 Math Alpha. Semua Hak Dilindungi.</p>
+          <p>Dukung saya dengan donasi:</p>
+          <p>
+            DANA: <strong>081524190409</strong> <br />
+            ShopeePay: <strong>081524190409</strong>
+          </p>
+        </footer>
+      </main>
+    </div>
+
+    <script src="/script.js"></script>
+  </body>
+</html>

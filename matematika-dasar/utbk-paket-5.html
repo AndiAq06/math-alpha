@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Matematika Dasar UTBK/SBMPTN</title>
+    <link rel="stylesheet" href="/styles.css" />
+    <!-- MathJax for mathematical notation -->
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <!-- Icon Logo -->
+    <link rel="icon" href="/img/logo.png" sizes="32x32" type="image/png" />
+    <!-- Script AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1624084859744468" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Hamburger Menu -->
+      <button class="hamburger-menu">
+        <i class="fas fa-bars"></i>
+      </button>
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <button class="close-btn">&times;</button>
+        <div class="logo">
+          <img src="/img/logo.png" alt="Chirpy Logo" />
+          <h2>MathAlpha</h2>
+        </div>
+        <nav class="menu">
+          <a href="/index.html" class="menu-item"> <i class="fas fa-home"></i> Home </a>
+          <a href="/statistika/index.html" class="menu-item"> <i class="fas fa-chart-bar"></i> Statistika </a>
+          <a href="/machine-learning/index.html" class="menu-item"> <i class="fas fa-robot"></i> Machine Learning </a>
+          <a href="/deep-learning/index.html" class="menu-item"> <i class="fas fa-brain"></i> Deep Learning </a>
+          <a href="/matematika.html" class="menu-item"> <i class="fas fa-square-root-alt"></i> Matematika </a>
+          <a href="/tiu.html" class="menu-item"> <i class="fas fa-file-alt"></i> TIU SKD </a>
+          <a href="/sql/index.html" class="menu-item"> <i class="fas fa-database"></i> SQL </a>
+          <a href="/pemprograman/index.html" class="menu-item"> <i class="fas fa-code"></i> Pemrograman </a>
+          <a href="/about.html" class="menu-item"> <i class="fas fa-info-circle"></i> About </a>
+        </nav>
+
+        <!-- Social Media Icons -->
+        <div class="social-media">
+          <a href="https://www.instagram.com/andiaso06/" target="_blank" class="social-icon">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/andi-ardiansyah-7b25072a9/" target="_blank" class="social-icon">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="https://github.com/AndiAq06" target="_blank" class="social-icon">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="https://www.youtube.com/@andimath06" target="_blank" class="social-icon">
+            <i class="fab fa-youtube"></i>
+          </a>
+        </div>
+      </aside>
+
+      <!-- Content -->
+      <main class="content">
+        <header>
+          <h1>Matematika Dasar UTBK/SBMPTN Paket 5</h1>
+          <div class="meta-info">
+            <span class="author">Oleh: Andi Ardiansyah Nasir</span>
+            <span class="last-update">Terakhir diperbarui: 2 September 2025</span>
+          </div>
+        </header>
+
+        <!-- Soal -->
+        <div class="soal">
+          <h3>Soal 1:</h3>
+          <p>
+            Misalkan \(A^T\) adalah transpos matriks \(A\). Jika \( A = \begin{pmatrix} a & 1 \\ 0 & b \end{pmatrix}, B = \begin{pmatrix} 1 & 2 \\ 2 & 4 \end{pmatrix} \) sehingga \(A^TB= \begin{pmatrix} 1 & 2 \\ 5 & 10 \end{pmatrix} \).
+            Maka nilai \(a+b\) adalah ...
+          </p>
+
+          <div class="pilihan">
+            <p>A. \( 1 \)</p>
+            <p>B. \( 2 \)</p>
+            <p>C. \( 3 \)</p>
+            <p>D. \( 4 \)</p>
+            <p>E. \( 5 \)</p>
+          </div>
+          <button class="btn-toggle">Show Solution</button>
+          <div class="pembahasan">
+            <p>
+              <b>C. \( 3 \)</b>. <br /><br />
+              <strong>Penjelasan:</strong> <br />
+              Diketahui matriks \( A \) dan \( B \) sebagai berikut: \[ A = \begin{pmatrix} a & 1 \\ 0 & b \end{pmatrix}, B = \begin{pmatrix} 1 & 2 \\ 2 & 4 \end{pmatrix} \] Pertama, kita hitung transpos dari matriks \( A \): \[ A^T =
+              \begin{pmatrix} a & 0 \\ 1 & b \end{pmatrix} \] Selanjutnya, kita hitung hasil perkalian matriks \( A^T B \): \[ A^T B = \begin{pmatrix} a & 0 \\ 1 & b \end{pmatrix} \begin{pmatrix} 1 & 2 \\ 2 & 4 \end{pmatrix} \] \[ =
+              \begin{pmatrix} a(1) + 0(2) & a(2) + 0(4) \\ 1(1) + b(2) & 1(2) + b(4) \end{pmatrix} \] \[ = \begin{pmatrix} a & 2a \\ 1 + 2b & 2 + 4b \end{pmatrix} \] Diketahui bahwa \( A^T B = \begin{pmatrix} 1 & 2 \\ 5 & 10 \end{pmatrix}
+              \). Dengan membandingkan elemen-elemen dari kedua matriks, kita dapatkan sistem persamaan berikut: \[ a = 1 \] \[ 2a = 2 \] \[ 1 + 2b = 5 \] \[ 2 + 4b = 10 \] Dari persamaan pertama, kita dapatkan \( a = 1 \). Substitusi nilai
+              \( a \) ke dalam persamaan ketiga: \[ 1 + 2b = 5 \] \[ 2b = 4 \] \[ b = 2 \] Sekarang kita punya \( a = 1 \) dan \( b = 2 \). Maka, nilai \( a + b = 1 + 2 = 3 \).
+            </p>
+          </div>
+        </div>
+
+        <div class="soal">
+          <h3>Soal 2:</h3>
+          <p>Jika himpunan penyelesaian \(|2x-a| < 5\) adalah \( \{x|-1 < x < 4\} \) maka nilai \(a\) adalah ...</p>
+
+          <div class="pilihan">
+            <p>A. \(-4\)</p>
+            <p>B. \(-3\)</p>
+            <p>C. \(-1\)</p>
+            <p>D. \(3\)</p>
+            <p>E. \(4\)</p>
+          </div>
+          <button class="btn-toggle">Show Solution</button>
+          <div class="pembahasan">
+            <p>
+              <b>D. \(3\)</b><br /><br />
+
+              <strong>Penjelasan:</strong><br />
+              Pertidaksamaan: \[ |2x - a| < 5 \] ekuivalen dengan: \[ -5 < 2x - a < 5. \] Tambahkan \(a\) pada semua ruas: \[ a - 5 < 2x < a + 5. \] Bagi semua ruas dengan 2: \[ \frac{a-5}{2} < x < \frac{a+5}{2}. \] Diketahui himpunan
+              penyelesaiannya adalah: \[ -1 < x < 4. \] Maka: \[ \frac{a-5}{2} = -1 \quad\text{dan}\quad \frac{a+5}{2} = 4. \] Dari persamaan pertama: \[ a - 5 = -2 \quad\Rightarrow\quad a = 3. \] Dari persamaan kedua: \[ a + 5 = 8
+              \quad\Rightarrow\quad a = 3. \] Keduanya konsisten, sehingga diperoleh: \[ a = 3. \] Jadi jawaban yang benar adalah \( 3 \).
+            </p>
+          </div>
+        </div>
+
+        <div class="soal">
+          <h3>Soal 3:</h3>
+          <p>Sumbu simetri grafik \(f(x) = ax^2+bx+c\) adalah \(x=1\), jika \(f(0) = 0\) dan \(f(4) = -16\), maka nilai \(b-a\) adalah ...</p>
+
+          <div class="pilihan">
+            <p>A. \(6\)</p>
+            <p>B. \(5\)</p>
+            <p>C. \(4\)</p>
+            <p>D. \(3\)</p>
+            <p>E. \(2\)</p>
+          </div>
+
+          <button class="btn-toggle">Show Solution</button>
+          <div class="pembahasan">
+            <p>
+              <b>A. \(6\)</b>. <br /><br />
+              <strong>Penjelasan:</strong> <br />
+              Diketahui fungsi kuadrat \( f(x) = ax^2 + bx + c \) dengan sumbu simetri \( x = 1 \). Sumbu simetri dari fungsi kuadrat dapat dihitung menggunakan rumus \( x = -\frac{b}{2a} \). Dengan demikian, kita dapat menulis: \[ 1 =
+              -\frac{b}{2a} \] Dari persamaan ini, kita dapat menyelesaikan untuk \( b \): \[ b = -2a \] Selanjutnya, kita tahu bahwa \( f(0) = 0 \). Dengan mensubstitusi \( x = 0 \) ke dalam fungsi, kita mendapatkan: \[ f(0) = a(0)^2 +
+              b(0) + c = c \] Jadi, \( c = 0 \). Selanjutnya, kita juga tahu bahwa \( f(4) = -16 \). Dengan mensubstitusi \( x = 4 \) ke dalam fungsi, kita mendapatkan: \[ f(4) = a(4)^2 + b(4) + c = 16a + 4b + c \] Karena \( c = 0 \), kita
+              dapat menyederhanakan persamaan ini menjadi: \[ 16a + 4b = -16 \] Substitusi \( b = -2a \) ke dalam persamaan di atas: \[ 16a + 4(-2a) = -16 \] \[ 16a - 8a = -16 \] \[ 8a = -16 \] \[ a = -2 \] Sekarang, substitusi nilai \( a
+              \) ke dalam persamaan untuk \( b \) \[ b = -2(-2) = 4 \] Akhirnya, kita dapat menghitung \( b - a \): \[ b - a = 4 - (-2) = 4 + 2 = 6 \]
+            </p>
+          </div>
+        </div>
+
+        <div class="soal">
+          <h3>Soal 4:</h3>
+          <p>
+            Diketahui median dan rata-rata berat badan \(5\) balita adalah sama. Setelah ditambahkan satu data berat badan balita, rata-ratanya meningkat \(1\) kg, sedangkan mediannya tetap. Jika \(6\) data berat badan tersebut diurutkan
+            dari yang paling ringan ke yang paling berat, maka selisih berat badan balita terakhir yang ditambahkan dan balita di urutan ke \(4\) adalah ... kg
+          </p>
+
+          <div class="pilihan">
+            <p>A. \( 4 \)</p>
+            <p>B. \( \dfrac{9}{2} \)</p>
+            <p>C. \( 5 \)</p>
+            <p>D. \(6 \)</p>
+            <p>E. \( \dfrac{13}{2} \)</p>
+          </div>
+          <button class="btn-toggle">Show Solution</button>
+          <div class="pembahasan">
+            <p>
+              <b>D. \(6\)</b>.<br /><br />
+
+              <strong>Penjelasan:</strong><br />
+              Misalkan berat lima balita terurut adalah \(w_1 \le w_2 \le w_3 \le w_4 \le w_5\). Diketahui median dan rata-rata dari kelima data sama, sehingga: \[ \text{Median} = w_3,\qquad \text{Rata-rata} =
+              \frac{w_1+w_2+w_3+w_4+w_5}{5}=w_3. \] Dari persamaan rata-rata diperoleh: \[ w_1+w_2+w_3+w_4+w_5 = 5w_3 \quad\Rightarrow\quad w_1+w_2+w_4+w_5 = 4w_3. \] Tambah satu data \(w_6\). Rata-rata baru meningkat 1 kg, sehingga: \[
+              \frac{w_1+w_2+w_3+w_4+w_5+w_6}{6} = w_3 + 1. \] Gunakan jumlah lima data sebelumnya \(=5w_3\): \[ \frac{5w_3 + w_6}{6} = w_3 + 1 \quad\Rightarrow\quad 5w_3 + w_6 = 6w_3 + 6 \quad\Rightarrow\quad w_6 = w_3 + 6. \] Syarat bahwa
+              median tetap berarti median dari 6 data (yang merupakan rata-rata nilai ke-3 dan ke-4) tetap sama dengan \(w_3\). Jadi: \[ \text{Median baru} = \frac{w_3 + w_4}{2} = w_3 \quad\Rightarrow\quad w_4 = w_3. \] Maka selisih antara
+              data terakhir \(w_6\) dan data ke-4 \(w_4\) adalah: \[ w_6 - w_4 = (w_3 + 6) - w_3 = 6. \] Jadi jawaban yang benar adalah \(6\) kg.
+            </p>
+          </div>
+        </div>
+
+        <div class="soal">
+          <h3>Soal 5:</h3>
+          <p>Hasil bagi suku pertama oleh suku ke-\(5\) suatu barisan aritematika adalah \(-\dfrac{1}{7}\). jika suku ke-\(6\) barisan tersebut adalah \(9\), maka suku ke-\(8\) adalah ...</p>
+
+          <div class="pilihan">
+            <p>A. \( 10 \)</p>
+            <p>B. \(11 \)</p>
+            <p>C. \(13\)</p>
+            <p>D. \(15\)</p>
+            <p>E. \(17\)</p>
+          </div>
+          <button class="btn-toggle">Show Solution</button>
+          <div class="pembahasan">
+            <p>
+              <b>C. \(13\)</b><br /><br />
+
+              <strong>Penjelasan:</strong><br />
+              Misalkan suku pertama \(a\) dan beda barisan \(d\).<br /><br />
+
+              Suku ke-5: \[ U_5 = a + 4d. \] Diketahui: \[ \frac{U_1}{U_5} = \frac{a}{a+4d} = -\frac{1}{7}. \] Kalikan silang: \[ 7a = -(a+4d) \quad\Rightarrow\quad 7a = -a - 4d \quad\Rightarrow\quad 8a = -4d \quad\Rightarrow\quad d = -2a.
+              \] Suku ke-6: \[ U_6 = a + 5d. \] Diketahui \(U_6 = 9\), sehingga: \[ a + 5d = 9. \] Substitusi \(d = -2a\): \[ a + 5(-2a) = 9 \quad\Rightarrow\quad a - 10a = 9 \quad\Rightarrow\quad -9a = 9 \quad\Rightarrow\quad a = -1. \]
+              Maka: \[ d = -2(-1) = 2. \] Suku ke-8: \[ U_8 = a + 7d = -1 + 7(2) = -1 + 14 = 13. \] Jadi suku ke-8 adalah \(13\).
+            </p>
+          </div>
+        </div>
+
+        <!-- Google AdSense -->
+        <ins class="adsbygoogle" style="display: block" data-ad-format="fluid" data-ad-layout-key="-gw-3+1f-3d+2z" data-ad-client="ca-pub-1624084859744468" data-ad-slot="2653926339"></ins>
+        <script>
+          (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+
+        <div class="soal">
+          <h3>Soal 6:</h3>
+          <p>
+            Seseorang memelihara ikan di suatu kolam. Rata-rata bobot ikan per ekor pada saat panen dari kolam tersebut adalah \(6-0,02x\) kg. Dengan \(x\) menyatakan banyak ikan yang dipelihara. Maksimum total bobot semua ikan pada saat
+            panen yang mungkin adalah ...
+          </p>
+
+          <div class="pilihan">
+            <p>A. \(400\)</p>
+            <p>B. \(420\)</p>
+            <p>C. \(435\)</p>
+            <p>D. \(450\)</p>
+            <p>E. \(465\)</p>
+          </div>
+          <button class="btn-toggle">Show Solution</button>
+          <div class="pembahasan">
+            <p>
+              <b>D. \(450\)</b><br /><br />
+
+              <strong>Penjelasan:</strong><br />
+              Rata-rata bobot ikan per ekor: \[ \bar{w} = 6 - 0.02x. \] Maka total bobot semua ikan: \[ W(x) = x \cdot (6 - 0.02x) = 6x - 0.02x^2. \] Bentuk \(W(x)\) adalah fungsi kuadrat terbuka ke bawah, sehingga maksimum dicapai di
+              puncaknya: \[ x = -\frac{b}{2a} = -\frac{6}{2(-0.02)} = \frac{6}{0.04} = 150. \] Substitusi ke \(W(x)\): \[ W(150) = 6(150) - 0.02(150^2). \] \[ = 900 - 0.02(22500) = 900 - 450 = 450. \] Jadi maksimum total bobot ikan adalah
+              \(450 \, \text{kg}. \)
+            </p>
+          </div>
+        </div>
+
+        <div class="soal">
+          <h3>Soal 7:</h3>
+          <p>Suku ke-\(3\) suatu barisan geomteri dengan rasio negatif adalah \(\dfrac{1}{2}\). Perbandingan suku ke-\(4\) terhadap suku ke-\(2\) adalah \(\dfrac{1}{4}\). jumlah \(4\) suku pertama barisan tersebut adalah ...</p>
+
+          <div class="pilihan">
+            <p>A. \(\dfrac{5}{4} \)</p>
+            <p>B. \(\dfrac{4}{3} \)</p>
+            <p>C. \( 2 \)</p>
+            <p>D. \(\dfrac{10}{3} \)</p>
+            <p>E. \(4\)</p>
+          </div>
+          <button class="btn-toggle">Show Solution</button>
+          <div class="pembahasan">
+            <p>
+              <b>A. \(\dfrac{5}{4}\)</b><br /><br />
+
+              <strong>Penjelasan:</strong><br />
+              Misalkan suku pertama \(a\) dan rasio \(r\) (dengan \(r<0\)).<br /><br />
+
+              Suku ke-3: \[ U_3 = a r^2 = \tfrac{1}{2}. \] Perbandingan suku ke-4 dan suku ke-2: \[ \frac{U_4}{U_2} = \frac{a r^3}{a r} = r^2 = \tfrac{1}{4}. \] Jadi: \[ r^2 = \tfrac{1}{4} \quad\Rightarrow\quad r = -\tfrac{1}{2} \;
+              \text{(karena rasio negatif)}. \] Substitusi ke \(U_3 = \tfrac{1}{2}\): \[ a r^2 = \tfrac{1}{2}, \quad a \cdot \tfrac{1}{4} = \tfrac{1}{2} \quad\Rightarrow\quad a = 2. \] Jumlah 4 suku pertama: \[ S_4 = a \frac{1-r^4}{1-r}. \]
+              Dengan \(a=2, r=-\tfrac{1}{2}\): \[ S_4 = 2 \cdot \frac{1-(-\tfrac{1}{2})^4}{1-(-\tfrac{1}{2})} = 2 \cdot \frac{1-\tfrac{1}{16}}{1+\tfrac{1}{2}}. \] Hitung: \[ S_4 = 2 \cdot \frac{\tfrac{15}{16}}{\tfrac{3}{2}} = 2 \cdot
+              \tfrac{15}{16} \cdot \tfrac{2}{3} = \tfrac{60}{48} = \tfrac{5}{4}. \] Jadi jumlah 4 suku pertama adalah \( \dfrac{5}{4}. \)
+            </p>
+          </div>
+        </div>
+
+        <div class="soal">
+          <h3>Soal 8:</h3>
+          <p>Diketahui \(f(x) = x^2 -1\) dan \(g(x) = \sqrt{x-3}\). Jika \(a\) dan \(b\) bilangan real sehingga \((g\circ f)(a)= (f\circ g)(b) = 0 \), maka maksimum selisih \(a\) dan \(b\) adalah ...</p>
+
+          <div class="pilihan">
+            <p>A. \(2\)</p>
+            <p>B. \(4\)</p>
+            <p>C. \(6\)</p>
+            <p>D. \(8\)</p>
+            <p>E. \(10\)</p>
+          </div>
+          <button class="btn-toggle">Show Solution</button>
+          <div class="pembahasan">
+            <p>
+              <b>C. \(6\)</b><br /><br />
+
+              <strong>Penjelasan:</strong><br />
+              Pertama cari semua nilai \(a\) yang memenuhi \((g\circ f)(a)=0\): \[ (g\circ f)(a)=g(f(a))= \sqrt{\,f(a)-3\,}=0 \quad\Rightarrow\quad f(a)-3=0. \] Karena \(f(a)=a^2-1\), diperoleh: \[ a^2-1-3=0 \quad\Rightarrow\quad a^2=4
+              \quad\Rightarrow\quad a=\pm 2. \] Selanjutnya cari \(b\) yang memenuhi \((f\circ g)(b)=0\): \[ (f\circ g)(b)=f(g(b))=(\sqrt{b-3})^2 -1 = b-3-1 = b-4. \] Jadi syaratnya \(b-4=0\), sehingga \[ b=4. \] Nilai-nilai \(a\) yang
+              mungkin adalah \(-2\) dan \(2\), sedangkan \(b=4\). Hitung selisih absolut: \[ |2-4| = 2,\qquad |-2-4| = 6. \] Maksimum selisih adalah \(6\).
+            </p>
+          </div>
+        </div>
+
+        <div class="soal">
+          <h3>Soal 9:</h3>
+          <p>Luas daerah penyelesaian sistem pertidaksamaan \(x-y \geq 3, 2x-y \leq 8 , y \geq 0\) adalah ... satuan luas</p>
+
+          <div class="pilihan">
+            <p>A. \(4\)</p>
+            <p>B. \(2\)</p>
+            <p>C. \(1\)</p>
+            <p>D. \(\dfrac{1}{2} \)</p>
+            <p>E. \(\dfrac{1}{4} \)</p>
+          </div>
+          <button class="btn-toggle">Show Solution</button>
+          <div class="pembahasan">
+            <p>
+              <b>C. \(1\)</b><br /><br />
+
+              <strong>Penyelesaian langkah demi langkah:</strong><br />
+              1. Ubah pertidaksamaan menjadi persamaan batas: \[ x - y = 3 \quad \Rightarrow \quad y = x - 3, \] \[ 2x - y = 8 \quad \Rightarrow \quad y = 2x - 8, \] \[ y = 0. \] 2. Tentukan titik potong ketiga garis ini: - Potong \(y = x -
+              3\) dengan \(y=0\): \[ 0 = x-3 \quad \Rightarrow \quad x=3. \] Titik: \((3,0)\). - Potong \(y = 2x - 8\) dengan \(y=0\): \[ 0 = 2x-8 \quad \Rightarrow \quad x=4. \] Titik: \((4,0)\). - Potong \(y = x - 3\) dengan \(y = 2x -
+              8\): \[ x-3 = 2x-8 \quad \Rightarrow \quad x=5,\; y=2. \] Titik: \((5,2)\). 3. Daerah penyelesaian adalah segitiga dengan titik-titik sudut: \((3,0), (4,0), (5,2)\). 4. Hitung luas segitiga: Gunakan rumus determinan: \[ L =
+              \tfrac{1}{2}\left| x_1(y_2-y_3)+x_2(y_3-y_1)+x_3(y_1-y_2)\right|. \] Substitusi: \[ L = \tfrac{1}{2}\left| 3(0-2)+4(2-0)+5(0-0)\right| = \tfrac{1}{2}| -6+8+0| = \tfrac{1}{2}\cdot 2 = 1. \]
+            </p>
+          </div>
+        </div>
+
+        <div class="soal">
+          <h3>Soal 10:</h3>
+          <p>Jika garis \(y = x + 2\) ditrasnlasikan dengan \(\begin{pmatrix} 1 \\ 2 \end{pmatrix} \) dan kemudian dicerminkan terhadap sumbu x, maka petanya adalah garis \(y = ax + b\), maka nilai \(a+b\) adalah ...</p>
+
+          <div class="pilihan">
+            <p>A. \(-5\)</p>
+            <p>B. \(-4\)</p>
+            <p>C. \(-2\)</p>
+            <p>D. \(2 \)</p>
+            <p>E. \(4 \)</p>
+          </div>
+          <button class="btn-toggle">Show Solution</button>
+          <div class="pembahasan">
+            <p>
+              <b>B. \(-4\)</b><br /><br />
+
+              <strong>Penyelesaian:</strong><br />
+              1. Garis awal: \[ y = x + 2 \] dengan gradien \(m = 1\).<br /><br />
+
+              2. Translasi \(\begin{pmatrix}1 \\ 2\end{pmatrix}\):<br />
+              Translasi tidak mengubah gradien, hanya menggeser posisi.<br />
+              - Titik pada garis awal: misalkan \((0,2)\).<br />
+              Setelah translasi: \((0+1, 2+2) = (1,4)\).<br />
+              - Titik lain: \((1,3)\).<br />
+              Setelah translasi: \((2,5)\).<br />
+              Jadi garis hasil translasi melalui \((1,4)\) dan \((2,5)\).<br />
+              Gradien masih \(m=1\).<br />
+              Persamaan garis: \[ y - 4 = 1(x-1) \implies y = x+3. \] 3. Cerminan terhadap sumbu-x: \((x,y) \mapsto (x,-y).\)<br />
+              Persamaan garis \(y = x+3\) dicerminkan menjadi: \[ -y = x+3 \quad \implies \quad y = -x - 3. \] 4. Persamaan akhir: \[ y = -x - 3 \] Jadi \(a = -1, b = -3\).<br />
+              Maka: \[ a+b = -1 + (-3) = -4. \] Nilai \(a+b\) adalah \(-4\).
+            </p>
+          </div>
+        </div>
+
+        <!-- Google AdSense -->
+        <ins class="adsbygoogle" style="display: block" data-ad-format="fluid" data-ad-layout-key="-gw-3+1f-3d+2z" data-ad-client="ca-pub-1624084859744468" data-ad-slot="2653926339"></ins>
+        <script>
+          (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+
+        <div class="soal">
+          <h3>Soal 11:</h3>
+          <p>Hitunglah integral berikut: \[ \int \frac{1-x}{\sqrt{x}} \, dx = \, .... \]</p>
+
+          <div class="pilihan">
+            <p>A. \(\tfrac{3}{2}(3+x)\sqrt{x} + C\)</p>
+            <p>B. \(\tfrac{2}{3}(3-x)\sqrt{x} + C\)</p>
+            <p>C. \(\tfrac{2}{3}(3+\sqrt{x})x + C\)</p>
+            <p>D. \(\tfrac{1}{3\sqrt{x}}\left(\tfrac{1}{x}-1\right) + C\)</p>
+            <p>E. \(\tfrac{1}{2\sqrt{x}}\left(\tfrac{1}{x}+1\right) + C\)</p>
+          </div>
+          <button class="btn-toggle">Show Solution</button>
+          <div class="pembahasan">
+            <p>
+              <b>B. \(\tfrac{2}{3}(3-x)\sqrt{x} + C\)</b><br /><br />
+
+              <strong>Penyelesaian:</strong><br />
+              Ubah bentuk integran: \[ \frac{1-x}{\sqrt{x}} = \frac{1}{\sqrt{x}} - \frac{x}{\sqrt{x}} = x^{-\tfrac{1}{2}} - x^{\tfrac{1}{2}}. \] Maka integralnya: \[ \int \left(x^{-\tfrac{1}{2}} - x^{\tfrac{1}{2}}\right) dx = \int
+              x^{-\tfrac{1}{2}} dx - \int x^{\tfrac{1}{2}} dx. \] Hitung masing-masing: \[ \int x^{-\tfrac{1}{2}} dx = 2\sqrt{x}, \quad \int x^{\tfrac{1}{2}} dx = \tfrac{2}{3}x^{3/2}. \] Jadi: \[ \int \frac{1-x}{\sqrt{x}} dx = 2\sqrt{x} -
+              \tfrac{2}{3}x^{3/2} + C. \] Faktorkan: \[ = \tfrac{2}{3}\left(3\sqrt{x} - x^{3/2}\right) + C = \tfrac{2}{3}(3-x)\sqrt{x} + C. \] Hasil integral adalah \( \tfrac{2}{3}(3-x)\sqrt{x} + C, \)
+            </p>
+          </div>
+        </div>
+
+        <div class="soal">
+          <h3>Soal 12:</h3>
+          <p>Jika \( f(x) = x^2 - 4 \) dan \( g(x) = 2 - x \), maka daerah asal fungsi \(\frac{f}{g}\) adalah ....</p>
+
+          <div class="pilihan">
+            <p>A. \(\{x \mid -\infty < x < \infty\}\)</p>
+            <p>B. \(\{x \mid x \neq 2\}\)</p>
+            <p>C. \(\{x \mid x \neq 4\}\)</p>
+            <p>D. \(\{x \mid x < -2\}\)</p>
+            <p>E. \(\{x \mid x \geq 2\}\)</p>
+          </div>
+          <button class="btn-toggle">Show Solution</button>
+          <div class="pembahasan">
+            <p>
+              <b>B. \(\{x \mid x \neq 2\}\)</b><br /><br />
+
+              <strong>Penyelesaian:</strong><br />
+              Fungsi \(\frac{f}{g}\) didefinisikan jika \(g(x) \neq 0\). Diketahui \(g(x) = 2 - x\). Jadi, kita cari nilai \(x\) yang membuat \(g(x) = 0\): \[ 2 - x = 0 \quad\Rightarrow\quad x = 2. \] Oleh karena itu, daerah asal fungsi
+              \(\frac{f}{g}\) adalah semua bilangan real kecuali \(x = 2\): \[ \{x \mid x \neq 2\}. \] Jadi jawaban yang benar adalah pilihan B.
+            </p>
+          </div>
+        </div>
+
+        <div class="soal">
+          <h3>Soal 13:</h3>
+          <p>Jumlah suku pertama, suku ke-\(3\) dan suku ke-\(4\) suatu barisan aritmetika adalah \(33\). Jika suku ke-\(10\) barisan tersebut adalah \(33\), maka suku pertamanya adalah ...</p>
+
+          <div class="pilihan">
+            <p>A. \( 6\)</p>
+            <p>B. \( 8\)</p>
+            <p>C. \( 10\)</p>
+            <p>D. \( 12\)</p>
+            <p>E. \( 14\)</p>
+          </div>
+          <button class="btn-toggle">Show Solution</button>
+          <div class="pembahasan">
+            <p>
+              <b>A. \( 6\)</b><br /><br />
+
+              <strong>Penyelesaian:</strong><br />
+              Diketahui jumlah suku pertama, suku ke-3, dan suku ke-4 adalah 33: \[ U_1 + U_3 + U_4 = 33. \] Misalkan suku pertama adalah \(a\) dan beda adalah \(d\). Maka: \[ a + (a + 2d) + (a + 3d) = 33 \] \[ 3a + 5d = 33 \quad (1) \]
+              Diketahui suku ke-10 adalah 33: \[ U_{10} = a + 9d = 33 \quad (2) \] Dari persamaan (2), kita dapatkan: \[ a = 33 - 9d \] Substitusi \(a\) ke persamaan (1): \[ 3(33 - 9d) + 5d = 33 \] \[ 99 - 27d + 5d = 33 \] \[ -22d = -66 \]
+              \[ d = 3 \] Substitusi \(d\) ke persamaan untuk \(a\): \[ a = 33 - 9(3) = 33 - 27 = 6 \] Jadi, suku pertama adalah \(6\).
+            </p>
+          </div>
+        </div>
+
+        <div class="soal">
+          <h3>Soal 14:</h3>
+          <p>
+            Akan dikontruksi beberapa barisan geometri. Setiap barisan memenuhi syarat bahwa hasil kali tiga suku berurutannya adalah \(27\) dan jumlahnya adalah \(10\dfrac{1}{2}\). Jumlah semua rasi barisan geomteri yang memenuhi syarat
+            tersebut adalah ...
+          </p>
+
+          <div class="pilihan">
+            <p>A. \(\dfrac{1}{3} \)</p>
+            <p>B. \(\dfrac{1}{2} \)</p>
+            <p>C. \(\dfrac{5}{2}\)</p>
+            <p>D. \(\dfrac{10}{3} \)</p>
+            <p>E. \(\dfrac{17}{4} \)</p>
+          </div>
+          <button class="btn-toggle">Show Solution</button>
+          <div class="pembahasan">
+            <p>
+              <b>C. \(\dfrac{5}{2}\)</b><br /><br />
+
+              <strong>Penyelesaian:</strong><br />
+              Misalkan tiga suku berurutan barisan geometri adalah \(a, ar, ar^2\).<br /><br />
+
+              <em>Syarat hasil kali:</em><br />
+              \[ a \cdot ar \cdot ar^2 = (ar)^3 = 27 \implies ar = 3 \]<br /><br />
+
+              <em>Syarat jumlah:</em><br />
+              \[ a + ar + ar^2 = a + 3 + \frac{9}{a} = 10\tfrac{1}{2} = \tfrac{21}{2} \]<br /><br />
+
+              Kalikan \(2a\):<br />
+              \[ 2a^2 + 6a + 18 = 21a \] \[ 2a^2 - 15a + 18 = 0 \] \[ a = \frac{15 \pm 9}{4} \implies a = 6 \; \text{atau} \; \tfrac{3}{2} \]<br /><br />
+
+              Karena \(ar = 3\):<br />
+              - Jika \(a = 6 \implies r = \tfrac{1}{2}\)<br />
+              - Jika \(a = \tfrac{3}{2} \implies r = 2\)<br /><br />
+
+              Maka jumlah semua rasio:<br />
+              \[ r_1 + r_2 = \tfrac{1}{2} + 2 = \tfrac{5}{2} \]
+            </p>
+          </div>
+        </div>
+
+        <div class="soal">
+          <h3>Soal 15:</h3>
+          <p>Diketahui \(f(x)= ax+2\) dan \(g(x) = 2x + d \) dengan \(d\neq 0\). Jika \( (f \circ g)(x) = (g \circ f)(x) \) untuk semua \(x\). maka nilai \(d(a-1) \) adalah ...</p>
+
+          <div class="pilihan">
+            <p>A. \(-2 \)</p>
+            <p>B. \(-1 \)</p>
+            <p>C. \(0\)</p>
+            <p>D. \(1 \)</p>
+            <p>E. \(2 \)</p>
+          </div>
+          <button class="btn-toggle">Show Solution</button>
+          <div class="pembahasan">
+            <p>
+              <b>C. \(0\)</b><br /><br />
+
+              <strong>Penyelesaian:</strong><br />
+              Diketahui \(f(x) = ax + 2\) dan \(g(x) = 2x + d\).<br />
+              Hitung \( (f \circ g)(x) \): \[ (f \circ g)(x) = f(g(x)) = f(2x + d) = a(2x + d) + 2 = 2ax + ad + 2. \] Hitung \( (g \circ f)(x) \): \[ (g \circ f)(x) = g(f(x)) = g(ax + 2) = 2(ax + 2) + d = 2ax + 4 + d. \] Karena \( (f \circ
+              g)(x) = (g \circ f)(x) \) untuk semua \(x\), maka koefisien \(x\) dan konstanta harus sama: \[ 2ax + ad + 2 = 2ax + 4 + d. \] Dari sini, kita dapatkan dua persamaan: 1. Koefisien \(x\): \(2a = 2a\) (selalu benar) 2. Konstanta:
+              \(ad + 2 = 4 + d\) \[ ad - d = 4 - 2 \] \[ d(a - 1) = 2 \] Jadi, nilai \(d(a-1)\) adalah \(2\).
+            </p>
+          </div>
+        </div>
+
+        <div class="soal">
+          <h3>Soal 16:</h3>
+          <p>Transformasikan yang bersesuain matriks \(A\) memetakan titik \((5,-5)\) ke titik \((-7,1) \). Jika transformasi tersebut memetakan titik \( (-1,1) \) ke titik \((x,y)\), maka nilai \(x+2y\) adalah ...</p>
+
+          <div class="pilihan">
+            <p>A. \(-1 \)</p>
+            <p>B. \(0 \)</p>
+            <p>C. \(\dfrac{2}{3}\)</p>
+            <p>D. \(\dfrac{3}{5} \)</p>
+            <p>E. \(1 \)</p>
+          </div>
+          <button class="btn-toggle">Show Solution</button>
+          <div class="pembahasan">
+            <p>
+              <b>E. \(1\)</b><br /><br />
+
+              <strong>Penyelesaian:</strong><br />
+              Diketahui transformasi matriks \(A\) memetakan titik \((5,-5)\) ke titik \((-7,1)\). Misalkan matriks transformasi adalah: \[ A = \begin{pmatrix} a & b \\ c & d \end{pmatrix}. \] Maka: \[ A \begin{pmatrix} 5 \\ -5
+              \end{pmatrix} = \begin{pmatrix} -7 \\ 1 \end{pmatrix}. \] Ini memberikan sistem persamaan: \[ 5a - 5b = -7 \quad (1) \] \[ 5c - 5d = 1 \quad (2) \] Dari (1): \[ a - b = -\frac{7}{5} \quad (3) \] Dari (2): \[ c - d =
+              \frac{1}{5} \quad (4) \] Selanjutnya, kita ingin mengetahui hasil transformasi titik \((-1,1)\): \[ A \begin{pmatrix} -1 \\ 1 \end{pmatrix} = \begin{pmatrix} -a + b \\ -c + d \end{pmatrix}. \] Gunakan persamaan (3) dan (4)
+              untuk menyatakan \(b\) dan \(d\) dalam hal \(a\) dan \(c\): \[ b = a + \frac{7}{5} \] \[ d = c - \frac{1}{5} \] Substitusi ke hasil transformasi: \[ \begin{pmatrix} -a + (a + \frac{7}{5}) \\ -c + (c - \frac{1}{5})
+              \end{pmatrix} = \begin{pmatrix} \frac{7}{5} \\ -\frac{1}{5} \end{pmatrix}. \] Jadi, titik hasil transformasi adalah: \[ (x,y) = \left(\frac{7}{5}, -\frac{1}{5}\right). \] Hitung \(x + 2y\): \[ x + 2y = \frac{7}{5} +
+              2\left(-\frac{1}{5}\right) = \frac{7}{5} - \frac{2}{5} = \frac{5}{5} = 1. \] Jadi, nilai \(x + 2y\) adalah \(1\).
+            </p>
+          </div>
+        </div>
+
+        <div class="soal">
+          <h3>Soal 17:</h3>
+          <p>Jika \(3\) laki-laki dan \(3\) perempuan duduk dalam suatu barisa sehingga tidak ada \(2\) laki-laki yang duduk berdekatan maka banyak susunan duduk berbeda yang mungkin adalah ...</p>
+
+          <div class="pilihan">
+            <p>A. \(126 \)</p>
+            <p>B. \(132 \)</p>
+            <p>C. \(138\)</p>
+            <p>D. \(144 \)</p>
+            <p>E. \(150\)</p>
+          </div>
+          <button class="btn-toggle">Show Solution</button>
+          <div class="pembahasan">
+            <p>
+              <b>D. \(144 \)</b><br /><br />
+
+              <strong>Penyelesaian:</strong><br />
+              Diketahui ada 3 laki-laki (L) dan 3 perempuan (P). Kita ingin menyusun mereka sehingga tidak ada 2 laki-laki yang duduk berdekatan.<br /><br />
+              1. Susun perempuan terlebih dahulu: \[ P_1 \; P_2 \; P_3 \] Ada \(3! = 6\) cara untuk menyusun 3 perempuan.<br /><br />
+              2. Tempatkan laki-laki di antara perempuan: Ada 4 tempat yang tersedia (di awal, di antara P1 dan P2, di antara P2 dan P3, di akhir): \[ \_ P_1 \_ P_2 \_ P_3 \_ \] Kita harus memilih 3 dari 4 tempat ini untuk laki-laki, yang
+              dapat dilakukan dalam \(\binom{4}{3} = 4\) cara.<br /><br />
+              3. Susun laki-laki di tempat yang telah dipilih: Ada \(3! = 6\) cara untuk menyusun 3 laki-laki.<br /><br />
+              Total susunan berbeda adalah: \[ 6 \times 4 \times 6 = 144. \] Jadi, banyak susunan duduk berbeda yang mungkin adalah \(144\).
+            </p>
+          </div>
+        </div>
+
+        <div class="soal">
+          <h3>Soal 18:</h3>
+          <p>Hitunglah integral berikut: \[ \int \frac{x+1}{\sqrt{x^2+2x}} \, dx = \, .... \]</p>
+
+          <div class="pilihan">
+            <p>A. \(\tfrac{1}{2}\sqrt{x^2+2x} + 2x + C\)</p>
+            <p>B. \(\sqrt{x^2+2x} + C\)</p>
+            <p>C. \(2\sqrt{x^2+2x} + C\)</p>
+            <p>D. \((x^2+x)\sqrt{x^2+2x} + C\)</p>
+            <p>E. \(\tfrac{2}{3}\dfrac{\tfrac{1}{2}x^2+x}{(x^2+2x)\sqrt{x^2+2x}} + C\)</p>
+          </div>
+          <button class="btn-toggle">Show Solution</button>
+          <div class="pembahasan">
+            <p>
+              <b>B. \(\sqrt{x^2+2x} + C\)</b><br /><br />
+
+              <strong>Penyelesaian:</strong><br />
+              Perhatikan bahwa turunan dari fungsi di bawah akar \(x^2+2x\) adalah: \[ \frac{d}{dx}(x^2+2x) = 2x+2 = 2(x+1). \] Maka integran dapat ditulis ulang sebagai: \[ \frac{x+1}{\sqrt{x^2+2x}} = \frac{1}{2} \cdot
+              \frac{2(x+1)}{\sqrt{x^2+2x}}. \] Substitusi \(u = x^2+2x \implies du = 2(x+1)dx\).<br />
+              Sehingga: \[ \int \frac{x+1}{\sqrt{x^2+2x}} \, dx = \frac{1}{2}\int \frac{du}{\sqrt{u}} = \frac{1}{2}\cdot 2\sqrt{u} + C = \sqrt{x^2+2x} + C. \]
+
+              <strong>Kesimpulan:</strong> Hasil integral adalah \(\sqrt{x^2+2x} + C\), yaitu opsi (B).
+            </p>
+          </div>
+        </div>
+
+        <div class="soal">
+          <h3>Soal 19:</h3>
+          <p>Jika \( f(x) = ax + b \) dan \(\lim_{x \to 4} \frac{f(x)}{\sqrt{x}-2} = 8\), maka \( f(2) = ....\)</p>
+
+          <div class="pilihan">
+            <p>A. \(-8\)</p>
+            <p>B. \(-6\)</p>
+            <p>C. \(0\)</p>
+            <p>D. \(6\)</p>
+            <p>E. \(10\)</p>
+          </div>
+          <button class="btn-toggle">Show Solution</button>
+          <div class="pembahasan">
+            <p>
+              <b>Jawaban: \(f(2) = -4\)</b><br /><br />
+
+              <strong>Penyelesaian:</strong><br />
+              Diketahui \( f(x) = ax + b \) dan \[ \lim_{x \to 4} \frac{f(x)}{\sqrt{x}-2} = 8. \] Substitusi \(f(x)\): \[ \lim_{x \to 4} \frac{ax + b}{\sqrt{x}-2}. \] Saat \(x \to 4\), penyebut \(\sqrt{x}-2 \to 0\). Agar limit ada,
+              pembilang juga harus nol: \[ 4a + b = 0 \quad \Rightarrow \quad b = -4a. \tag{1} \] Gunakan aturan L'Hôpital: \[ \lim_{x \to 4} \frac{f(x)}{\sqrt{x}-2} = \lim_{x \to 4} \frac{f'(x)}{\tfrac{1}{2\sqrt{x}}}. \] Karena
+              \(f'(x)=a\), maka: \[ = \lim_{x \to 4} \frac{a}{1/(2\sqrt{x})} = \lim_{x \to 4} 2a\sqrt{x} = 4a. \] Diketahui limit = 8, maka: \[ 4a = 8 \quad \Rightarrow \quad a = 2. \] Substitusi ke (1): \[ b = -4a = -8. \] Sehingga: \[
+              f(x) = 2x - 8. \] Hitung nilai di \(x=2\): \[ f(2) = 2(2) - 8 = -4. \]
+            </p>
+          </div>
+        </div>
+
+        <!-- Google AdSense -->
+        <ins class="adsbygoogle" style="display: block" data-ad-format="fluid" data-ad-layout-key="-gw-3+1f-3d+2z" data-ad-client="ca-pub-1624084859744468" data-ad-slot="2653926339"></ins>
+        <script>
+          (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+
+        <!-- Footer -->
+        <footer>
+          <p>&copy; 2024 Math Alpha. Semua Hak Dilindungi.</p>
+          <p>Dukung saya dengan donasi:</p>
+          <p>
+            DANA: <strong>081524190409</strong> <br />
+            ShopeePay: <strong>081524190409</strong>
+          </p>
+        </footer>
+      </main>
+    </div>
+
+    <script src="/script.js"></script>
+  </body>
+</html>
