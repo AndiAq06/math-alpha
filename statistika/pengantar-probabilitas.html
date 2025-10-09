@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pengantar Probabilitas - MathAlpha</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles.css" />
+    <meta name="google-site-verification" content="wSwaOWra1NglT7WH5RGbaNJ2Jrsv1nRoWawtwszrBws" />
+    <link rel="icon" href="/img/logo.png" sizes="32x32" type="image/png" />
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1624084859744468" crossorigin="anonymous"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Hamburger Menu -->
+      <button class="hamburger-menu">
+        <i class="fas fa-bars"></i>
+      </button>
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <button class="close-btn">&times;</button>
+        <div class="logo">
+          <img src="/img/logo.png" alt="Chirpy Logo" />
+          <h2>MathAlpha</h2>
+        </div>
+        <nav class="menu">
+          <a href="/index.html" class="menu-item"> <i class="fas fa-home"></i> Home </a>
+          <a href="/statistika/index.html" class="menu-item"> <i class="fas fa-chart-bar"></i> Statistika </a>
+          <a href="/machine-learning/index.html" class="menu-item"> <i class="fas fa-robot"></i> Machine Learning </a>
+          <a href="/deep-learning/index.html" class="menu-item"> <i class="fas fa-brain"></i> Deep Learning </a>
+          <a href="/matematika.html" class="menu-item"> <i class="fas fa-square-root-alt"></i> Matematika </a>
+          <a href="/tiu.html" class="menu-item"> <i class="fas fa-file-alt"></i> TIU SKD </a>
+          <a href="/sql/index.html" class="menu-item"> <i class="fas fa-database"></i> SQL </a>
+          <a href="/pemprograman/index.html" class="menu-item"> <i class="fas fa-code"></i> Pemrograman </a>
+          <a href="/about.html" class="menu-item"> <i class="fas fa-info-circle"></i> About </a>
+        </nav>
+
+        <!-- Social Media Icons -->
+        <div class="social-media">
+          <a href="https://www.instagram.com/andiaso06/" target="_blank" class="social-icon">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/andi-ardiansyah-7b25072a9/" target="_blank" class="social-icon">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="https://github.com/AndiAq06" target="_blank" class="social-icon">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="https://www.youtube.com/@andimath06" target="_blank" class="social-icon">
+            <i class="fab fa-youtube"></i>
+          </a>
+          <a href="https://www.twitter.com" target="_blank" class="social-icon">
+            <i class="fab fa-x-twitter"></i>
+          </a>
+        </div>
+      </aside>
+
+      <!-- Main Content -->
+      <main class="content">
+        <div class="article">
+          <div class="content-statistik">
+            <header>
+              <h1>Pengantar Probabilitas: Dasar dari Statistik Inferensial</h1>
+              <div class="meta-info">
+                <span class="author">Oleh: Andi Ardiansyah Nasir</span>
+                <span class="last-update">Terakhir diperbarui: 4 Oktober 2025</span>
+              </div>
+            </header>
+            <main>
+              <p>
+                Ketika mendengar kata “statistik,” banyak orang langsung membayangkan perhitungan rata-rata, persentase, tabel angka, atau grafik yang dipajang dalam sebuah laporan. Gambaran ini tidak salah, tetapi sangat terbatas. Bagian
+                itu disebut statistik deskriptif – sekadar merangkum data. Padahal, kekuatan utama statistik justru ada pada statistik inferensial, yaitu kemampuan untuk menarik kesimpulan tentang suatu populasi besar hanya dengan
+                menggunakan informasi dari sebagian kecil data (sampel). Nah, untuk bisa melakukan inferensi dengan benar, kita memerlukan probabilitas. Probabilitas adalah cabang matematika yang mempelajari ketidakpastian dan peluang
+                terjadinya suatu peristiwa. Dalam konteks statistik inferensial, probabilitas membantu kita memahami bagaimana sampel yang kita ambil dari populasi dapat memberikan gambaran yang akurat tentang keseluruhan populasi tersebut.
+              </p>
+
+              <div class="image-container">
+                <img src="/img/probabilitas.webp" alt="Ilustrasi Margin of Error dan Confidence Interval" class="article-image" />
+                <p class="image-source">Sumber: https://www.revou.co/kosakata/probabilitas</p>
+              </div>
+
+              <section>
+                <h2>Contoh Nyata: Survei Politik</h2>
+                <p>Mari kita lihat contoh sederhana dari dunia nyata. Dalam sebuah artikel Sydney Morning Herald tahun 2010, disebutkan hasil survei bahwa hanya 23% pemilih di NSW yang mendukung Partai Buruh (ALP).</p>
+                <p>
+                  Bagaimana angka itu didapatkan? Katakanlah sebuah lembaga survei menelpon 1000 pemilih acak, dan 230 orang di antaranya menyatakan dukungan pada ALP. Dari sinilah muncul angka 23%. Tetapi, jumlah pemilih sebenarnya lebih
+                  dari 4,6 juta orang. Artinya, kita hanya tahu pendapat 0,02% pemilih! Lalu mengapa kita bisa percaya bahwa dukungan nyata di seluruh NSW juga berada di sekitar 23%?
+                </p>
+              </section>
+
+              <!-- Google AdSense -->
+              <ins class="adsbygoogle" style="display: block" data-ad-format="fluid" data-ad-layout-key="-gw-3+1f-3d+2z" data-ad-client="ca-pub-1624084859744468" data-ad-slot="2653926339"></ins>
+              <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+              </script>
+
+              <section>
+                <h2>Intuisi Representativitas</h2>
+                <p>
+                  Alasannya adalah kita menganggap sampel survei mewakili populasi. Jika <strong>230 dari 1000</strong> orang mendukung ALP, maka hampir pasti bahwa ada jutaan orang lain yang juga mendukung — bukan hanya 230 orang itu saja.
+                </p>
+                <p>Tapi, muncul pertanyaan: seberapa besar kemungkinan hasil sebenarnya sedikit berbeda? Misalnya:</p>
+                <ul>
+                  <li>Apakah dukungan nyata mungkin <strong>24%</strong>?</li>
+                  <li>Bagaimana kalau <strong>29%</strong>?</li>
+                  <li>Atau bahkan <strong>37%</strong>?</li>
+                </ul>
+                <p>
+                  Secara intuisi, <em>24%</em> masih mungkin, <em>29%</em> agak meragukan, dan <em>37%</em> terasa mustahil. Namun, intuisi saja tidak cukup. Kita butuh angka pasti untuk menjawab:
+                  <q><strong>Seberapa mungkin perbedaan ini terjadi?</strong></q>
+                </p>
+                <p>Di sinilah probabilitas berperan.</p>
+              </section>
+
+              <section>
+                <h2>Peran Probabilitas dalam Statistik</h2>
+                <p><strong>Probabilitas</strong> adalah teori tentang ketidakpastian. Ia menjawab pertanyaan seperti:</p>
+                <ul>
+                  <li>Seberapa besar peluang mendapatkan hasil tertentu dari suatu percobaan acak?</li>
+                  <li>Seberapa sering hasil sampel berbeda dari kondisi sebenarnya?</li>
+                  <li>Apa rentang nilai yang paling mungkin terjadi?</li>
+                </ul>
+                <p>Dalam kasus survei politik tadi, probabilitas membantu kita menghitung seberapa sering sampel 1000 orang bisa menghasilkan angka 23% jika dukungan nyata di seluruh populasi adalah 25%, 30%, atau 35%.</p>
+                <p>
+                  Misalnya, jika dukungan sebenarnya adalah <strong>25%</strong>, cukup wajar jika sebuah sampel acak menghasilkan angka sedikit lebih kecil, seperti 23%. Namun jika dukungan nyata adalah <strong>30%</strong>, peluang sampel
+                  1000 orang hanya menunjukkan 23% menjadi jauh lebih kecil. Dan jika dukungan nyata <strong>35%</strong>, hasil 23% nyaris mustahil terjadi.
+                </p>
+                <p>
+                  Dengan cara ini, probabilitas membantu kita menilai apakah suatu hasil sampel masuk akal untuk menggambarkan populasi. Jadi, probabilitas menjadi jembatan antara <strong>data sampel</strong> dan
+                  <strong>kesimpulan tentang populasi</strong>. Tanpa probabilitas, kita hanya bisa menebak. Dengan probabilitas, kita bisa mengukur ketidakpastian dan membuat inferensi yang lebih rasional serta dapat dipercaya.
+                </p>
+              </section>
+
+              <!-- Google AdSense -->
+              <ins class="adsbygoogle" style="display: block" data-ad-format="fluid" data-ad-layout-key="-gw-3+1f-3d+2z" data-ad-client="ca-pub-1624084859744468" data-ad-slot="2653926339"></ins>
+              <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+              </script>
+
+              <section>
+                <h2>Kesimpulan</h2>
+                <p>Probabilitas adalah fondasi dari seluruh bangunan statistik inferensial. Tanpa memahami probabilitas, kita tidak bisa menjawab pertanyaan penting seperti:</p>
+                <ul>
+                  <li>Apakah sampel benar-benar mewakili populasi?</li>
+                  <li>Berapa besar kemungkinan kesalahan dalam survei?</li>
+                  <li>Apa rentang nilai yang bisa kita percaya?</li>
+                </ul>
+                <p>
+                  Maka, sebelum melangkah lebih jauh dalam statistik inferensial, kita perlu memahami dasar-dasar probabilitas terlebih dahulu. Dengan begitu, kita bisa berpindah dari sekadar menghitung angka menjadi
+                  <strong>membuat kesimpulan ilmiah yang dapat dipercaya</strong>.
+                </p>
+              </section>
+
+              <h2>Referensi</h2>
+              <ul>
+                <li>https://stats.libretexts.org/Bookshelves/Applied_Statistics/Learning_Statistics_with_R_-_A_tutorial_for_Psychology_Students_and_other_Beginners_(Navarro)/09%3A_Introduction_to_Probability</li>
+                <li>https://www.revou.co/kosakata/probabilitas</li>
+              </ul>
+            </main>
+
+            <!-- Footer -->
+            <footer>
+              <p>&copy; 2024 Math Alpha. Semua Hak Dilindungi.</p>
+              <p>Dukung saya dengan donasi:</p>
+              <p>
+                DANA: <strong>081524190409</strong> <br />
+                ShopeePay: <strong>081524190409</strong>
+              </p>
+            </footer>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <script src="/script.js"></script>
+  </body>
+</html>
