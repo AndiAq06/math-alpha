@@ -1887,24 +1887,45 @@ header.site-header img {
   gap: 10px;
 }
 
-.nav-theme-btn {
-  background: rgba(255, 255, 255, 0.15);
-  border: 1px solid rgba(255, 255, 255, 0.25);
-  color: #ffffff;
-  width: 34px;
-  height: 34px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  transition: all 0.2s ease;
-  font-size: 0.9rem;
+.nav-theme-btn,
+.theme-toggle-btn,
+#themeToggle,
+#navThemeToggle {
+  background: rgba(255, 255, 255, 0.15) !important;
+  border: 1px solid rgba(255, 255, 255, 0.25) !important;
+  color: #ffffff !important;
+  width: 34px !important;
+  height: 34px !important;
+  min-width: 34px !important;
+  min-height: 34px !important;
+  max-width: 34px !important;
+  max-height: 34px !important;
+  border-radius: 50% !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  cursor: pointer !important;
+  transition: all 0.2s ease !important;
+  font-size: 0.92rem !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  box-shadow: none !important;
 }
 
-.nav-theme-btn:hover {
-  background: rgba(255, 255, 255, 0.3);
-  transform: scale(1.05);
+.nav-theme-btn:hover,
+.theme-toggle-btn:hover,
+#themeToggle:hover,
+#navThemeToggle:hover {
+  background: rgba(255, 255, 255, 0.3) !important;
+  transform: scale(1.08) !important;
+}
+
+/* Hide any text label inside theme toggle button so it remains a pure clean icon */
+.nav-theme-btn .btn-label,
+.theme-toggle-btn .btn-label,
+#themeToggle .btn-label,
+#navThemeToggle .btn-label {
+  display: none !important;
 }
 
 .mobile-nav-toggle {
@@ -2750,6 +2771,122 @@ main.content footer:not(.clean-site-footer) {
     font-size: 0.85rem;
   }
 }
+
+/* ==========================================================================
+   Comprehensive Dark Mode Consistency
+   ========================================================================== */
+[data-theme="dark"] body,
+body.theme-dark {
+  background-color: #0d140e !important;
+  color: #f1f5f9 !important;
+}
+
+[data-theme="dark"] .content,
+[data-theme="dark"] main,
+[data-theme="dark"] .main-quiz-page,
+[data-theme="dark"] .clean-page-main {
+  background-color: transparent !important;
+  color: #f1f5f9 !important;
+}
+
+[data-theme="dark"] .soal,
+[data-theme="dark"] .soal.single-mode {
+  background: #18261b !important;
+  border-color: #27402c !important;
+  color: #f1f5f9 !important;
+}
+
+[data-theme="dark"] .soal.single-mode .pilihan p {
+  background: #142017 !important;
+  border-color: #27402c !important;
+  color: #f1f5f9 !important;
+}
+
+[data-theme="dark"] .soal.single-mode .pilihan p:hover {
+  background: rgba(22, 163, 74, 0.16) !important;
+  border-color: #4ade80 !important;
+}
+
+[data-theme="dark"] .soal.single-mode .pilihan p.selected {
+  background: rgba(22, 163, 74, 0.25) !important;
+  border-color: #4ade80 !important;
+  color: #86efac !important;
+}
+
+[data-theme="dark"] .soal.single-mode .pembahasan {
+  background: rgba(22, 163, 74, 0.14) !important;
+  border-color: rgba(74, 222, 128, 0.35) !important;
+  color: #dcfce7 !important;
+}
+
+[data-theme="dark"] .quiz-nav-controller {
+  background: #18261b !important;
+  border-color: #27402c !important;
+  color: #f1f5f9 !important;
+}
+
+[data-theme="dark"] .btn-quiz-nav {
+  background: #142017 !important;
+  border-color: #27402c !important;
+  color: #cbd5e1 !important;
+}
+
+[data-theme="dark"] .btn-quiz-nav:hover:not(:disabled) {
+  background: rgba(22, 163, 74, 0.2) !important;
+  border-color: #4ade80 !important;
+  color: #4ade80 !important;
+}
+
+[data-theme="dark"] .clean-card-item {
+  background: #18261b !important;
+  border-color: #27402c !important;
+}
+
+[data-theme="dark"] .clean-card-item:hover {
+  border-color: #4ade80 !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4) !important;
+}
+
+[data-theme="dark"] .clean-adsense-card {
+  background: #18261b !important;
+  border-color: #27402c !important;
+}
+
+[data-theme="dark"] .related-topic-card {
+  background: #18261b !important;
+  border-color: #27402c !important;
+  color: #f1f5f9 !important;
+}
+
+[data-theme="dark"] .related-topic-card:hover {
+  border-color: #4ade80 !important;
+}
+
+/* MathJax dark mode crystal clear text & formula visibility */
+mjx-container {
+  color: inherit !important;
+}
+
+[data-theme="dark"] mjx-container,
+[data-theme="dark"] mjx-container *,
+[data-theme="dark"] mjx-container svg {
+  color: #f1f5f9 !important;
+  fill: #f1f5f9 !important;
+}
+
+[data-theme="dark"] .clean-breadcrumb a {
+  color: #94a3b8 !important;
+}
+
+[data-theme="dark"] .clean-breadcrumb a:hover {
+  color: #4ade80 !important;
+}
+
+[data-theme="dark"] .clean-breadcrumb .breadcrumb-current,
+[data-theme="dark"] .clean-breadcrumb .current {
+  color: #f1f5f9 !important;
+}
+
 
 
 

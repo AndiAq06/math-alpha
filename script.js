@@ -26,20 +26,31 @@
     document.body.classList.add(theme === "dark" ? "theme-dark" : "theme-light");
     localStorage.setItem(THEME_STORAGE_KEY, theme);
 
-    // Update all theme toggle buttons
-    const toggles = document.querySelectorAll(".theme-toggle-btn");
+    // Update all theme toggle buttons to sleek pure icon
+    const toggles = document.querySelectorAll(".theme-toggle-btn, .nav-theme-btn, #themeToggle, #navThemeToggle");
     toggles.forEach((btn) => {
       if (theme === "dark") {
-        btn.innerHTML = '<i class="fas fa-sun"></i><span class="btn-label"> Mode Terang</span>';
+        btn.innerHTML = '<i class="fas fa-sun"></i>';
         btn.setAttribute("title", "Ganti ke Mode Terang");
         btn.setAttribute("aria-label", "Ganti ke Mode Terang");
       } else {
-        btn.innerHTML = '<i class="fas fa-moon"></i><span class="btn-label"> Mode Gelap</span>';
+        btn.innerHTML = '<i class="fas fa-moon"></i>';
         btn.setAttribute("title", "Ganti ke Mode Gelap");
         btn.setAttribute("aria-label", "Ganti ke Mode Gelap");
       }
     });
   }
+
+  // Global delegation for instant theme toggling across any page
+  document.addEventListener("click", function (e) {
+    const toggleBtn = e.target.closest(".theme-toggle-btn, .nav-theme-btn, #themeToggle, #navThemeToggle");
+    if (toggleBtn) {
+      e.preventDefault();
+      const current = document.documentElement.getAttribute("data-theme") || "light";
+      const next = current === "dark" ? "light" : "dark";
+      applyTheme(next);
+    }
+  });
 
   // Apply immediately before DOMContentLoaded to avoid flash of wrong theme
   applyTheme(getPreferredTheme());
@@ -197,7 +208,7 @@
           </ul>
         </nav>
         <div class="site-nav-actions">
-          <button class="nav-theme-btn" id="navThemeToggle" type="button" aria-label="Ubah Tema" title="Ubah Tema">
+          <button class="nav-theme-btn theme-toggle-btn" id="navThemeToggle" type="button" aria-label="Ubah Tema" title="Ubah Tema">
             <i class="fas fa-moon"></i>
           </button>
           <button class="mobile-nav-toggle" id="mobileNavToggle" type="button" aria-label="Buka Menu">
