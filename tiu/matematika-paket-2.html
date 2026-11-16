@@ -3,71 +3,88 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Soal Aritematika & Matematika TIU</title>
+    <title>Soal Aritematika & Matematika TIU - MathAlpha</title>
     <link rel="stylesheet" href="/styles.css" />
     <!-- MathJax for mathematical notation -->
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-    <!-- Icon Logo -->
     <link rel="icon" href="/img/logo.png" sizes="32x32" type="image/png" />
-    <!-- Script AdSense -->
+    <!-- Google AdSense -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1624084859744468" crossorigin="anonymous"></script>
   </head>
-  <body>
-    <div class="container">
-      <!-- Hamburger Menu -->
-      <button class="hamburger-menu">
-        <i class="fas fa-bars"></i>
-      </button>
-      <!-- Sidebar -->
-      <aside class="sidebar">
-        <button class="close-btn">&times;</button>
-        <div class="logo">
-          <img src="/img/logo.png" alt="Chirpy Logo" />
-          <h2>MathAlpha</h2>
-        </div>
-        <nav class="menu">
-          <a href="/index.html" class="menu-item"> <i class="fas fa-home"></i> Home </a>
-          <a href="/statistika/index.html" class="menu-item"> <i class="fas fa-chart-bar"></i> Statistika </a>
-          <a href="/machine-learning/index.html" class="menu-item"> <i class="fas fa-robot"></i> Machine Learning </a>
-          <a href="/deep-learning/index.html" class="menu-item"> <i class="fas fa-brain"></i> Deep Learning </a>
-          <a href="/matematika.html" class="menu-item"> <i class="fas fa-square-root-alt"></i> Matematika </a>
-          <a href="/tiu.html" class="menu-item"> <i class="fas fa-file-alt"></i> TIU SKD </a>
-          <a href="/sql/index.html" class="menu-item"> <i class="fas fa-database"></i> SQL </a>
-          <a href="/pemprograman/index.html" class="menu-item"> <i class="fas fa-code"></i> Pemrograman </a>
-          <a href="/about.html" class="menu-item"> <i class="fas fa-info-circle"></i> About </a>
+  <body class="clean-page-layout">
+    <!-- Top Header: Simple & Sleek, Exactly 4 Menus -->
+    <header class="site-header">
+      <div class="site-nav-container">
+        <a href="/index.html" class="site-brand">
+          <img src="/img/logo.png" alt="MathAlpha Logo" />
+          <span>MathAlpha</span>
+        </a>
+
+        <!-- 4 Menus Only: TIU, TWK, TKP, Matematika (Dropdown) -->
+        <nav>
+          <ul class="site-nav-menu" id="siteNavMenu">
+            <li class="site-nav-item">
+              <a href="/tiu.html" class="site-nav-link active"><i class="fas fa-brain"></i> TIU</a>
+            </li>
+            <li class="site-nav-item">
+              <a href="/twk.html" class="site-nav-link "><i class="fas fa-landmark"></i> TWK</a>
+            </li>
+            <li class="site-nav-item">
+              <a href="/tkp.html" class="site-nav-link "><i class="fas fa-user-check"></i> TKP</a>
+            </li>
+            <li class="site-nav-item nav-dropdown">
+              <a href="/matematika.html" class="site-nav-link ">
+                <i class="fas fa-square-root-alt"></i> Matematika
+                <i class="fas fa-chevron-down" style="font-size: 0.72rem; margin-left: 4px;"></i>
+              </a>
+              <div class="nav-dropdown-menu">
+                <a href="/matematika-sd.html" class="nav-dropdown-item "><i class="fas fa-shapes"></i> Matematika SD</a>
+                <a href="/matematika-smp.html" class="nav-dropdown-item "><i class="fas fa-calculator"></i> Matematika SMP</a>
+                <a href="/matematika-sma.html" class="nav-dropdown-item "><i class="fas fa-square-root-alt"></i> Matematika SMA</a>
+              </div>
+            </li>
+          </ul>
         </nav>
 
-        <!-- Social Media Icons -->
-        <div class="social-media">
-          <a href="https://www.instagram.com/andiaso06/" target="_blank" class="social-icon">
-            <i class="fab fa-instagram"></i>
-          </a>
-          <a href="https://www.linkedin.com/in/andi-ardiansyah-7b25072a9/" target="_blank" class="social-icon">
-            <i class="fab fa-linkedin"></i>
-          </a>
-          <a href="https://github.com/AndiAq06" target="_blank" class="social-icon">
-            <i class="fab fa-github"></i>
-          </a>
-          <a href="https://www.youtube.com/@andimath06" target="_blank" class="social-icon">
-            <i class="fab fa-youtube"></i>
-          </a>
+        <div class="site-nav-actions">
+          <button id="themeToggle" class="theme-toggle-btn" aria-label="Ganti Tema">
+            <i class="fas fa-moon"></i>
+          </button>
         </div>
-      </aside>
+      </div>
+    </header>
 
-      <!-- Content -->
-      <main class="content">
-        <header>
-          <h1>Soal Aritematika & Matematika TIU Paket 1</h1>
-          <div class="meta-info">
-            <span class="author">Oleh: Andi Ardiansyah Nasir</span>
-            <span class="last-update">Terakhir diperbarui: 2 September 2025</span>
-          </div>
-        </header>
+    <!-- Main Content -->
+    <main class="content main-quiz-page">
+      <nav class="clean-breadcrumb" aria-label="breadcrumb">
+        <a href="/index.html"><i class="fas fa-home"></i> Home</a>
+        <span class="breadcrumb-sep">&gt;</span>
+        <a href="/tiu.html">TIU</a>
+        <span class="breadcrumb-sep">&gt;</span>
+        <span class="breadcrumb-current">Soal Aritematika & Matematika TIU Paket 1</span>
+      </nav>
 
-        <!-- Soal -->
-        <div class="soal">
+      <header class="quiz-header">
+        <h1>Soal Aritematika & Matematika TIU Paket 1</h1>
+        <div class="meta-info">
+          <span class="author"><i class="fas fa-user-edit"></i> Oleh: Tim Guru MathAlpha</span>
+          <span class="last-update"><i class="fas fa-clock"></i> Terakhir diperbarui: 2026</span>
+        </div>
+      </header>
+
+      <!-- TOP ADSENSE -->
+      <div class="clean-adsense-card quiz-top-ad">
+        <span class="adsense-label">Iklan Bersponsor</span>
+        <ins class="adsbygoogle" style="display: block" data-ad-format="fluid" data-ad-layout-key="-gw-3+1f-3d+2z" data-ad-client="ca-pub-1624084859744468" data-ad-slot="2653926339"></ins>
+        <script>
+          (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+
+      <!-- Quiz Container -->
+      <div class="quiz-container">
+<div class="soal">
           <h3>Soal 1:</h3>
           <p>Jika \(a=5\) dan \(b=2\), maka nilai dari \(a^3-3a^2b+3ab^2-b^3 = \) ...</p>
 
@@ -78,7 +95,7 @@
             <p>D. \(81\)</p>
             <p>E. \(343\)</p>
           </div>
-          <button class="btn-toggle">Show Solution</button>
+          <button class="btn-toggle" type="button"><i class="fas fa-lightbulb"></i> Lihat Pembahasan</button>
           <div class="pembahasan">
             <p>
               <b>C. \(27\)</b> <br /><br />
@@ -100,7 +117,7 @@
             <p>D. \(25\)</p>
             <p>E. \(6,25\)</p>
           </div>
-          <button class="btn-toggle">Show Solution</button>
+          <button class="btn-toggle" type="button"><i class="fas fa-lightbulb"></i> Lihat Pembahasan</button>
           <div class="pembahasan">
             <p>
               <b>B. \(35\)</b> <br /><br />
@@ -122,7 +139,7 @@
             <p>D. \(25\)</p>
             <p>E. \(6,25\)</p>
           </div>
-          <button class="btn-toggle">Show Solution</button>
+          <button class="btn-toggle" type="button"><i class="fas fa-lightbulb"></i> Lihat Pembahasan</button>
           <div class="pembahasan">
             <p>
               <b>C. \(0,75\)</b><br /><br />
@@ -146,7 +163,7 @@
             <p>D. \(42,5\)</p>
             <p>E. \(40\)</p>
           </div>
-          <button class="btn-toggle">Show Solution</button>
+          <button class="btn-toggle" type="button"><i class="fas fa-lightbulb"></i> Lihat Pembahasan</button>
           <div class="pembahasan">
             <p>
               <b>E. \(40\)</b> <br /><br />
@@ -167,7 +184,7 @@
             <p>D. \(\dfrac{36}{44} \)</p>
             <p>E. \(\dfrac{99}{16} \)</p>
           </div>
-          <button class="btn-toggle">Show Solution</button>
+          <button class="btn-toggle" type="button"><i class="fas fa-lightbulb"></i> Lihat Pembahasan</button>
           <div class="pembahasan">
             <p>
               <b>B atau E. \(6\dfrac{5}{16}\) atau \(\dfrac{99}{16}\) </b> <br /><br />
@@ -179,10 +196,8 @@
         </div>
 
         <!-- Google AdSense -->
-        <ins class="adsbygoogle" style="display: block" data-ad-format="fluid" data-ad-layout-key="-gw-3+1f-3d+2z" data-ad-client="ca-pub-1624084859744468" data-ad-slot="2653926339"></ins>
-        <script>
-          (adsbygoogle = window.adsbygoogle || []).push({});
-        </script>
+        
+        
 
         <div class="soal">
           <h3>Soal 6:</h3>
@@ -195,7 +210,7 @@
             <p>D. \(265\)</p>
             <p>E. \(425\)</p>
           </div>
-          <button class="btn-toggle">Show Solution</button>
+          <button class="btn-toggle" type="button"><i class="fas fa-lightbulb"></i> Lihat Pembahasan</button>
           <div class="pembahasan">
             <p>
               <b>D. \(265\)</b> <br /><br />
@@ -216,7 +231,7 @@
             <p>D. \(60\) Anak</p>
             <p>E. \(70\) Anak</p>
           </div>
-          <button class="btn-toggle">Show Solution</button>
+          <button class="btn-toggle" type="button"><i class="fas fa-lightbulb"></i> Lihat Pembahasan</button>
           <div class="pembahasan">
             <p>
               <b>A. \(30\) Anak</b> <br /><br />
@@ -240,7 +255,7 @@
             <p>D. \(\text{Rp}80.000,00 \)</p>
             <p>E. \(\text{Rp}58.000,00 \)</p>
           </div>
-          <button class="btn-toggle">Show Solution</button>
+          <button class="btn-toggle" type="button"><i class="fas fa-lightbulb"></i> Lihat Pembahasan</button>
           <div class="pembahasan">
             <p>
               <b>C. \(\text{Rp}68.000,00 \)</b> <br /><br />
@@ -262,7 +277,7 @@
             <p>D. \(\text{Rp}718.000,00 \)</p>
             <p>E. \(\text{Rp}716.000,00 \)</p>
           </div>
-          <button class="btn-toggle">Show Solution</button>
+          <button class="btn-toggle" type="button"><i class="fas fa-lightbulb"></i> Lihat Pembahasan</button>
           <div class="pembahasan">
             <p>
               <b>C. \(\text{Rp}687.500,00 \)</b> <br /><br />
@@ -289,7 +304,7 @@
             <p>D. \(10.12\)</p>
             <p>D. \(10.25\)</p>
           </div>
-          <button class="btn-toggle">Show Solution</button>
+          <button class="btn-toggle" type="button"><i class="fas fa-lightbulb"></i> Lihat Pembahasan</button>
           <div class="pembahasan">
             <p>
               <b>C \(10.36\) </b><br /><br />
@@ -301,10 +316,8 @@
         </div>
 
         <!-- Google AdSense -->
-        <ins class="adsbygoogle" style="display: block" data-ad-format="fluid" data-ad-layout-key="-gw-3+1f-3d+2z" data-ad-client="ca-pub-1624084859744468" data-ad-slot="2653926339"></ins>
-        <script>
-          (adsbygoogle = window.adsbygoogle || []).push({});
-        </script>
+        
+        
 
         <div class="soal">
           <h3>Soal 11:</h3>
@@ -320,7 +333,7 @@
             <p>D. \(\text{Rp}16.500,00 \)</p>
             <p>E. \(\text{Rp}17.000,00 \)</p>
           </div>
-          <button class="btn-toggle">Show Solution</button>
+          <button class="btn-toggle" type="button"><i class="fas fa-lightbulb"></i> Lihat Pembahasan</button>
           <div class="pembahasan">
             <p>
               <b>D. \(\text{Rp}16.500,00 \)</b><br /><br />
@@ -342,7 +355,7 @@
             <p>D. \(\text{Rp}20.000,00 \)</p>
             <p>E. \(\text{Rp}20.500,00 \)</p>
           </div>
-          <button class="btn-toggle">Show Solution</button>
+          <button class="btn-toggle" type="button"><i class="fas fa-lightbulb"></i> Lihat Pembahasan</button>
           <div class="pembahasan">
             <p>
               <b>B. \(\text{Rp}15.000,00 \)</b><br /><br />
@@ -363,7 +376,7 @@
             <p>D. \(98\) Potong</p>
             <p>E. \(90\) Potong</p>
           </div>
-          <button class="btn-toggle">Show Solution</button>
+          <button class="btn-toggle" type="button"><i class="fas fa-lightbulb"></i> Lihat Pembahasan</button>
           <div class="pembahasan">
             <p>
               <b>C. \(96\) Potong</b><br /><br />
@@ -388,7 +401,7 @@
             <p>D. \(35\) Orang</p>
             <p>E. \(40\) Orang</p>
           </div>
-          <button class="btn-toggle">Show Solution</button>
+          <button class="btn-toggle" type="button"><i class="fas fa-lightbulb"></i> Lihat Pembahasan</button>
           <div class="pembahasan">
             <p>
               <b>A. \(20\) Orang</b><br /><br />
@@ -412,7 +425,7 @@
             <p>D. \(82\) km/jam</p>
             <p>E. \(73\) km/jam</p>
           </div>
-          <button class="btn-toggle">Show Solution</button>
+          <button class="btn-toggle" type="button"><i class="fas fa-lightbulb"></i> Lihat Pembahasan</button>
           <div class="pembahasan">
             <p>
               <b>B. \(76\) km/jam</b><br /><br />
@@ -433,7 +446,7 @@
             <p>D. \(\text{Rp}45.000 \)</p>
             <p>E. \(\text{Rp}40.000 \)</p>
           </div>
-          <button class="btn-toggle">Show Solution</button>
+          <button class="btn-toggle" type="button"><i class="fas fa-lightbulb"></i> Lihat Pembahasan</button>
           <div class="pembahasan">
             <p>
               <b>B. \(\text{Rp}32.500 \)</b><br /><br />
@@ -459,7 +472,7 @@
             <p>D. \(174\)</p>
             <p>E. \(124\)</p>
           </div>
-          <button class="btn-toggle">Show Solution</button>
+          <button class="btn-toggle" type="button"><i class="fas fa-lightbulb"></i> Lihat Pembahasan</button>
           <div class="pembahasan">
             <p>
               <b>B. \(154\)</b><br /><br />
@@ -472,10 +485,8 @@
         </div>
 
         <!-- Google AdSense -->
-        <ins class="adsbygoogle" style="display: block" data-ad-format="fluid" data-ad-layout-key="-gw-3+1f-3d+2z" data-ad-client="ca-pub-1624084859744468" data-ad-slot="2653926339"></ins>
-        <script>
-          (adsbygoogle = window.adsbygoogle || []).push({});
-        </script>
+        
+        
 
         <div class="soal">
           <h3>Soal 18:</h3>
@@ -488,7 +499,7 @@
             <p>D. \(\text{Rp}7.500.000,00 \)</p>
             <p>E. \(\text{Rp}3.800.000,00 \)</p>
           </div>
-          <button class="btn-toggle">Show Solution</button>
+          <button class="btn-toggle" type="button"><i class="fas fa-lightbulb"></i> Lihat Pembahasan</button>
           <div class="pembahasan">
             <p>
               <b>C. \(\text{Rp}4.800.000,00 \)</b><br /><br />
@@ -510,7 +521,7 @@
             <p>D. \(277,20\) m</p>
             <p>E. \(254\) m</p>
           </div>
-          <button class="btn-toggle">Show Solution</button>
+          <button class="btn-toggle" type="button"><i class="fas fa-lightbulb"></i> Lihat Pembahasan</button>
           <div class="pembahasan">
             <p>
               <b>B. \(132\) m</b><br /><br />
@@ -535,7 +546,7 @@
             <p>D. \(11\)</p>
             <p>E. \(19\)</p>
           </div>
-          <button class="btn-toggle">Show Solution</button>
+          <button class="btn-toggle" type="button"><i class="fas fa-lightbulb"></i> Lihat Pembahasan</button>
           <div class="pembahasan">
             <p>
               <b>E. \(19\)</b><br /><br />
@@ -545,18 +556,69 @@
             </p>
           </div>
         </div>
+      </div>
 
-        <!-- Footer -->
-        <footer>
-          <p>&copy; 2024 Math Alpha. Semua Hak Dilindungi.</p>
-          <p>Dukung saya dengan donasi:</p>
-          <p>
-            DANA: <strong>081524190409</strong> <br />
-            ShopeePay: <strong>081524190409</strong>
-          </p>
-        </footer>
-      </main>
-    </div>
+      <!-- BOTTOM ADSENSE -->
+      <div class="clean-adsense-card quiz-bottom-ad">
+        <span class="adsense-label">Iklan Bersponsor</span>
+        <ins class="adsbygoogle" style="display: block" data-ad-format="fluid" data-ad-layout-key="-gw-3+1f-3d+2z" data-ad-client="ca-pub-1624084859744468" data-ad-slot="2653926339"></ins>
+        <script>
+          (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+
+      <!-- RELATED TOPICS -->
+      <section class="related-topics-section">
+        <h3 class="related-topics-title"><i class="fas fa-layer-group"></i> Rekomendasi Topik Lainnya</h3>
+        <div class="related-topics-grid">
+          <a href="/tiu/sinonim-paket-1.html" class="related-topic-card">
+            <h4>Sinonim SKD Paket 1</h4>
+            <span class="topic-meta">30 Soal &bull; Persamaan Kata</span>
+          </a>
+          <a href="/tiu/deret-angka-1.html" class="related-topic-card">
+            <h4>Deret Angka Paket 1</h4>
+            <span class="topic-meta">20 Soal &bull; Pola Bilangan</span>
+          </a>
+          <a href="/tiu/silogisme-paket-1.html" class="related-topic-card">
+            <h4>Silogisme Logis Paket 1</h4>
+            <span class="topic-meta">20 Soal &bull; Logika Penarikan Kesimpulan</span>
+          </a>
+          <a href="/tiu/matematika-paket-1.html" class="related-topic-card">
+            <h4>Aritmatika TIU Paket 1</h4>
+            <span class="topic-meta">30 Soal &bull; Berhitung Cepat</span>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <!-- Clean Modern Footer -->
+    <footer class="clean-site-footer">
+      <div class="clean-footer-inner">
+        <div class="clean-footer-brand">
+          <img src="/img/logo.png" alt="MathAlpha Logo" />
+          <span>MathAlpha</span>
+        </div>
+        <div class="clean-footer-links">
+          <a href="/index.html">Home</a>
+          <a href="/tiu.html">TIU</a>
+          <a href="/twk.html">TWK</a>
+          <a href="/tkp.html">TKP</a>
+          <a href="/matematika.html">Matematika</a>
+          <a href="/matematika-sd.html">Matematika SD</a>
+          <a href="/matematika-smp.html">Matematika SMP</a>
+          <a href="/matematika-sma.html">Matematika SMA</a>
+          <a href="/about.html">About</a>
+        </div>
+        <div class="footer-donation-box">
+          <span style="font-weight: 600"><i class="fas fa-heart" style="color: #ef4444; margin-right: 6px"></i>Dukungan Donasi &amp; Pengembangan MathAlpha:</span>
+          <div class="donation-badges">
+            <span class="donation-badge">DANA: <strong>081524190409</strong></span>
+            <span class="donation-badge">ShopeePay: <strong>081524190409</strong></span>
+          </div>
+        </div>
+        <p class="clean-footer-copy">&copy; 2026 MathAlpha. Semua Hak Dilindungi.</p>
+      </div>
+    </footer>
 
     <script src="/script.js"></script>
   </body>
