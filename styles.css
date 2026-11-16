@@ -1752,14 +1752,32 @@ mjx-container::-webkit-scrollbar-thumb {
   top: 0;
   left: 0;
   width: 100%;
-  background: #15803d; /* Solid modern emerald green */
-  background: linear-gradient(135deg, #166534 0%, #15803d 100%);
-  color: #ffffff;
+  background: #15803d !important; /* Solid modern emerald green */
+  background: linear-gradient(135deg, #166534 0%, #15803d 100%) !important;
+  color: #ffffff !important;
   z-index: 1000;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
 }
 
-.site-nav-container {
+/* Universal protection for any image inside header */
+.site-header img,
+.site-brand img,
+.brand-logo img,
+header.site-header img {
+  width: 32px !important;
+  height: 32px !important;
+  max-width: 32px !important;
+  max-height: 32px !important;
+  min-width: 32px !important;
+  min-height: 32px !important;
+  border-radius: 50% !important;
+  border: 2px solid rgba(255, 255, 255, 0.4) !important;
+  object-fit: cover !important;
+  display: inline-block !important;
+}
+
+.site-nav-container,
+.header-inner {
   max-width: 1140px;
   margin: 0 auto;
   height: 60px;
@@ -1769,11 +1787,12 @@ mjx-container::-webkit-scrollbar-thumb {
   justify-content: space-between;
 }
 
-.site-brand {
+.site-brand,
+.brand-logo {
   display: flex;
   align-items: center;
   gap: 10px;
-  color: #ffffff;
+  color: #ffffff !important;
   text-decoration: none;
   font-size: 1.25rem;
   font-weight: 800;
@@ -1781,15 +1800,12 @@ mjx-container::-webkit-scrollbar-thumb {
   white-space: nowrap;
 }
 
-.site-brand img {
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-  border: 2px solid rgba(255, 255, 255, 0.4);
-}
-
-.site-brand span {
-  color: #ffffff;
+.site-brand span,
+.brand-logo span,
+.brand-text {
+  color: #ffffff !important;
+  font-size: 1.25rem;
+  font-weight: 800;
 }
 
 .site-nav-menu {

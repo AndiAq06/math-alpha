@@ -12,47 +12,42 @@
   </head>
   <body>
     <!-- HEADER NAVBAR -->
+    <!-- Top Header: Simple & Sleek, Exactly 4 Menus -->
     <header class="site-header">
-      <div class="header-inner">
-        <a href="/index.html" class="brand-logo">
+      <div class="site-nav-container">
+        <a href="/index.html" class="site-brand">
           <img src="/img/logo.png" alt="MathAlpha Logo" />
-          <span class="brand-text">MathAlpha</span>
+          <span>MathAlpha</span>
         </a>
 
-        <nav class="top-nav" aria-label="Menu Utama">
-          <a href="/tiu.html" class="nav-btn">
-            <i class="fas fa-brain"></i>
-            <span>TIU</span>
-          </a>
-          <a href="/twk.html" class="nav-btn active">
-            <i class="fas fa-landmark"></i>
-            <span>TWK</span>
-          </a>
-          <a href="/tkp.html" class="nav-btn">
-            <i class="fas fa-user-check"></i>
-            <span>TKP</span>
-          </a>
-          <div class="nav-dropdown">
-            <a href="/matematika.html" class="nav-btn dropdown-toggle">
-              <i class="fas fa-square-root-variable"></i>
-              <span>Matematika <i class="fas fa-chevron-down nav-arrow"></i></span>
-            </a>
-            <div class="dropdown-menu">
-              <a href="/matematika-sd.html" class="dropdown-item">
-                <i class="fas fa-shapes"></i> Matematika SD (Kelas 1 - 6)
+        <!-- 4 Menus Only: TIU, TWK, TKP, Matematika (Dropdown) -->
+        <nav>
+          <ul class="site-nav-menu" id="siteNavMenu">
+            <li class="site-nav-item">
+              <a href="/tiu.html" class="site-nav-link"><i class="fas fa-brain"></i> TIU</a>
+            </li>
+            <li class="site-nav-item">
+              <a href="/twk.html" class="site-nav-link active"><i class="fas fa-landmark"></i> TWK</a>
+            </li>
+            <li class="site-nav-item">
+              <a href="/tkp.html" class="site-nav-link"><i class="fas fa-user-check"></i> TKP</a>
+            </li>
+            <li class="site-nav-item nav-dropdown">
+              <a href="/matematika.html" class="site-nav-link">
+                <i class="fas fa-square-root-alt"></i> Matematika
+                <i class="fas fa-chevron-down" style="font-size: 0.72rem; margin-left: 4px;"></i>
               </a>
-              <a href="/matematika-smp.html" class="dropdown-item">
-                <i class="fas fa-calculator"></i> Matematika SMP (Kelas 7, 8, 9)
-              </a>
-              <a href="/matematika-sma.html" class="dropdown-item">
-                <i class="fas fa-infinity"></i> Matematika SMA & UTBK
-              </a>
-            </div>
-          </div>
+              <div class="nav-dropdown-menu">
+                <a href="/matematika-sd.html" class="nav-dropdown-item"><i class="fas fa-shapes"></i> Matematika SD</a>
+                <a href="/matematika-smp.html" class="nav-dropdown-item"><i class="fas fa-calculator"></i> Matematika SMP</a>
+                <a href="/matematika-sma.html" class="nav-dropdown-item"><i class="fas fa-square-root-alt"></i> Matematika SMA</a>
+              </div>
+            </li>
+          </ul>
         </nav>
 
-        <div class="header-actions">
-          <button id="themeToggle" class="theme-toggle-btn" title="Ganti Tema">
+        <div class="site-nav-actions">
+          <button id="themeToggle" class="theme-toggle-btn" aria-label="Ganti Tema">
             <i class="fas fa-moon"></i>
           </button>
         </div>
