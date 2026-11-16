@@ -2147,13 +2147,9 @@ header.site-header img {
   line-height: 1.5;
 }
 
-/* Auto-hide unfilled AdSense slots only on production (keeps visible in localhost preview) */
-body:not(.is-localhost) .clean-adsense-card:has(ins[data-ad-status="unfilled"]) {
-  display: none !important;
-}
-
-body.is-localhost .clean-adsense-card {
-  display: block !important;
+/* AdSense Slot container remains stably visible */
+.clean-adsense-card {
+  display: block;
 }
 
 /* Clean Footer (Full-width, Modern Forest Dark) */
