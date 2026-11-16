@@ -2,7 +2,37 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 	<url>
 		<loc>https://localhost/tiu</loc>
-		<lastmod>2025-08-29-T22:19:45+07:00</lastmod>
+		<lastmod>2026-11-15-T12:00:00+07:00</lastmod>
+		<changefreq>daily</changefreq>
+		<priority>1</priority>
+	</url>
+	<url>
+		<loc>https://localhost/twk</loc>
+		<lastmod>2026-11-15-T12:00:00+07:00</lastmod>
+		<changefreq>daily</changefreq>
+		<priority>1</priority>
+	</url>
+	<url>
+		<loc>https://localhost/tkp</loc>
+		<lastmod>2026-11-15-T12:00:00+07:00</lastmod>
+		<changefreq>daily</changefreq>
+		<priority>1</priority>
+	</url>
+	<url>
+		<loc>https://localhost/matematika-sd</loc>
+		<lastmod>2026-11-15-T12:00:00+07:00</lastmod>
+		<changefreq>daily</changefreq>
+		<priority>1</priority>
+	</url>
+	<url>
+		<loc>https://localhost/matematika-smp</loc>
+		<lastmod>2026-11-15-T12:00:00+07:00</lastmod>
+		<changefreq>daily</changefreq>
+		<priority>1</priority>
+	</url>
+	<url>
+		<loc>https://localhost/matematika-sma</loc>
+		<lastmod>2026-11-15-T12:00:00+07:00</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1</priority>
 	</url>

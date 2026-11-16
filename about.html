@@ -1,150 +1,173 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tentang MathAlpha - Belajar Matematika & Sains Data</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
+    <title>Tentang Kami - MathAlpha</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
-    <!-- Icon Logo -->
-    <link rel="icon" href="/img/logo.png" sizes="32x32" type="image/png" />
+    <meta name="description" content="Tentang MathAlpha: Platform belajar mandiri matematika, SKD CPNS, kedinasan, dan data science." />
+    <link rel="icon" href="img/logo.png" sizes="32x32" type="image/png" />
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1624084859744468" crossorigin="anonymous"></script>
   </head>
-  <body>
-    <div class="container">
-      <!-- Sidebar (same as your existing sidebar) -->
-      <!-- Hamburger Menu -->
-      <button class="hamburger-menu">
-        <i class="fas fa-bars"></i>
-      </button>
+  <body class="clean-page-layout">
+    <!-- Top Navigation Bar -->
+    <header class="site-header">
+      <div class="site-nav-container">
+        <a href="index.html" class="site-brand">
+          <img src="img/logo.png" alt="MathAlpha Logo" />
+          <span>MathAlpha</span>
+        </a>
 
-      <!-- Sidebar Overlay -->
-      <div class="sidebar-overlay"></div>
-      <aside class="sidebar">
-        <button class="close-btn">&times;</button>
-        <div class="logo">
-          <img src="/img/logo.png" alt="Chirpy Logo" />
-          <h2>MathAlpha</h2>
-        </div>
-        <nav class="menu">
-          <a href="/index.html" class="menu-item"> <i class="fas fa-home"></i> Home </a>
-          <a href="/statistika/index.html" class="menu-item"> <i class="fas fa-chart-bar"></i> Statistika </a>
-          <a href="/pemberitahuan.html" class="menu-item"> <i class="fas fa-robot"></i> Machine Learning </a>
-          <a href="/pemberitahuan.html" class="menu-item"> <i class="fas fa-brain"></i> Deep Learning </a>
-          <a href="/matematika/index.html" class="menu-item"> <i class="fas fa-square-root-alt"></i> Matematika </a>
-          <a href="/sql/index.html" class="menu-item"> <i class="fas fa-database"></i> SQL </a>
-          <a href="/pemprograman/index.html" class="menu-item"> <i class="fas fa-code"></i> Pemrograman </a>
-          <a href="/about.html" class="menu-item"> <i class="fas fa-info-circle"></i> About </a>
+        <!-- 4 Menus Only: TIU, TWK, TKP, Matematika (Dropdown) -->
+        <nav>
+          <ul class="site-nav-menu" id="siteNavMenu">
+            <li class="site-nav-item">
+              <a href="tiu.html" class="site-nav-link"><i class="fas fa-brain"></i> TIU</a>
+            </li>
+            <li class="site-nav-item">
+              <a href="twk.html" class="site-nav-link"><i class="fas fa-landmark"></i> TWK</a>
+            </li>
+            <li class="site-nav-item">
+              <a href="tkp.html" class="site-nav-link"><i class="fas fa-user-check"></i> TKP</a>
+            </li>
+            <li class="site-nav-item nav-dropdown">
+              <a href="matematika.html" class="site-nav-link">
+                <i class="fas fa-square-root-alt"></i> Matematika
+                <i class="fas fa-chevron-down" style="font-size: 0.72rem; margin-left: 4px;"></i>
+              </a>
+              <div class="nav-dropdown-menu">
+                <a href="matematika-sd.html" class="nav-dropdown-item"><i class="fas fa-shapes"></i> Matematika SD</a>
+                <a href="matematika-smp.html" class="nav-dropdown-item"><i class="fas fa-calculator"></i> Matematika SMP</a>
+                <a href="matematika-sma.html" class="nav-dropdown-item"><i class="fas fa-square-root-alt"></i> Matematika SMA</a>
+              </div>
+            </li>
+          </ul>
         </nav>
 
-        <!-- Social Media Icons -->
-        <div class="social-media">
-          <a href="https://www.instagram.com/andiaso06/" target="_blank" class="social-icon">
-            <i class="fab fa-instagram"></i>
-          </a>
-          <a href="https://www.linkedin.com/in/andi-ardiansyah-7b25072a9/" target="_blank" class="social-icon">
-            <i class="fab fa-linkedin"></i>
-          </a>
-          <a href="https://github.com/AndiAq06" target="_blank" class="social-icon">
-            <i class="fab fa-github"></i>
-          </a>
-          <a href="https://www.youtube.com/@andimath06" target="_blank" class="social-icon">
-            <i class="fab fa-youtube"></i>
-          </a>
-          <a href="https://www.twitter.com" target="_blank" class="social-icon">
-            <i class="fab fa-x-twitter"></i>
-          </a>
+        <!-- Right Action Controls -->
+        <div class="site-nav-actions">
+          <button class="nav-theme-btn" id="navThemeToggle" type="button" aria-label="Ubah Tema" title="Ubah Tema">
+            <i class="fas fa-moon"></i>
+          </button>
+          <button class="mobile-nav-toggle" id="mobileNavToggle" type="button" aria-label="Buka Menu">
+            <i class="fas fa-bars"></i>
+          </button>
         </div>
-      </aside>
+      </div>
+    </header>
 
-      <!-- Main Content -->
-      <main class="content">
-        <section class="about-header">
-          <h1>Tentang MathAlpha</h1>
-          <p class="subtitle">Membuat Matematika dan Sains Data Mudah Dipahami</p>
-        </section>
+    <!-- Main Container -->
+    <main class="clean-main-container">
+      <!-- Breadcrumb -->
+      <nav class="clean-breadcrumb" aria-label="Breadcrumb">
+        <a href="index.html"><i class="fas fa-home"></i> Home</a>
+        <span class="sep"><i class="fas fa-chevron-right"></i></span>
+        <span class="current">Tentang MathAlpha</span>
+      </nav>
 
-        <section class="about-mission">
-          <div class="mission-content">
-            <h2>Misi Kami</h2>
-            <p>
-              MathAlpha hadir untuk memecahkan kesulitan belajar matematika, statistika, dan pemrograman dengan pendekatan yang sederhana dan aplikatif. Kami percaya setiap orang bisa menguasai konsep matematika jika dijelaskan dengan cara
-              yang tepat.
+      <!-- Page Title & Subtitle -->
+      <header class="page-hero-banner">
+        <h1>Tentang MathAlpha</h1>
+        <p class="hero-subtitle">Membuat Matematika dan Persiapan Ujian CPNS/Kedinasan Mudah Dipahami & Menyenangkan</p>
+      </header>
+
+      <!-- Content -->
+      <section style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 12px; padding: 32px; margin-bottom: 30px;">
+        <h2 style="font-size: 1.5rem; font-weight: 700; color: var(--primary-color); margin-bottom: 16px;">Misi Kami</h2>
+        <p style="color: var(--text-color); font-size: 1.05rem; line-height: 1.8;">
+          MathAlpha hadir untuk memecahkan kesulitan belajar matematika dan seleksi kompetensi dasar (SKD) CPNS & Kedinasan dengan pendekatan sederhana, cepat, dan aplikatif. Kami percaya setiap orang bisa menguasai konsep kuantitatif jika disajikan dengan penjelasan terstruktur dan ramah pembaca.
+        </p>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 18px; margin-top: 24px;">
+          <div style="padding: 20px; background: var(--bg-subtle); border-radius: 10px; border: 1px solid var(--border-color);">
+            <i class="fas fa-lightbulb" style="font-size: 1.8rem; color: var(--primary-color); margin-bottom: 10px;"></i>
+            <h3 style="font-size: 1.1rem; margin-bottom: 6px;">Sederhana</h3>
+            <p style="font-size: 0.9rem; color: var(--text-muted); margin: 0;">Penjelasan to the point tanpa rumus rumit berbelit.</p>
+          </div>
+          <div style="padding: 20px; background: var(--bg-subtle); border-radius: 10px; border: 1px solid var(--border-color);">
+            <i class="fas fa-laptop-code" style="font-size: 1.8rem; color: var(--primary-color); margin-bottom: 10px;"></i>
+            <h3 style="font-size: 1.1rem; margin-bottom: 6px;">Aplikatif</h3>
+            <p style="font-size: 0.9rem; color: var(--text-muted); margin: 0;">Contoh nyata sesuai kisi-kisi resmi BKN & kurikulum sekolah.</p>
+          </div>
+          <div style="padding: 20px; background: var(--bg-subtle); border-radius: 10px; border: 1px solid var(--border-color);">
+            <i class="fas fa-layer-group" style="font-size: 1.8rem; color: var(--primary-color); margin-bottom: 10px;"></i>
+            <h3 style="font-size: 1.1rem; margin-bottom: 6px;">Terstruktur</h3>
+            <p style="font-size: 0.9rem; color: var(--text-muted); margin: 0;">Disusun sistematis dari tingkat pemula hingga mahir.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Google AdSense Container -->
+      <div class="clean-adsense-card">
+        <span class="adsense-label">Iklan Bersponsor</span>
+        <!-- Google AdSense -->
+        <ins class="adsbygoogle" style="display: block" data-ad-format="fluid" data-ad-layout-key="-gw-3+1f-3d+2z" data-ad-client="ca-pub-1624084859744468" data-ad-slot="2653926339"></ins>
+        <script>
+          (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+
+      <!-- Pendiri Profile -->
+      <section style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 12px; padding: 32px;">
+        <h2 style="font-size: 1.5rem; font-weight: 700; color: var(--text-color); margin-bottom: 20px;">Pengelola Platform</h2>
+        <div style="display: flex; gap: 24px; align-items: center; flex-wrap: wrap;">
+          <img src="img/my-self.JPG" alt="Andi Ardiansyah" style="width: 120px; height: 120px; border-radius: 50%; object-fit: cover; border: 3px solid var(--primary-color);" />
+          <div style="flex: 1; min-width: 250px;">
+            <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 4px;">Andi Ardiansyah</h3>
+            <p style="color: var(--primary-color); font-weight: 600; font-size: 0.95rem; margin-bottom: 10px;">Pendidik Matematika & Analis Data</p>
+            <p style="color: var(--text-muted); font-size: 0.92rem; line-height: 1.6; margin-bottom: 16px;">
+              Memiliki dedikasi mendalam dalam pendidikan matematika dan komputasi statistika, membantu ratusan pelajar dan calon ASN lolos ujian seleksi.
             </p>
-
-            <div class="mission-values">
-              <div class="value-card">
-                <i class="fas fa-lightbulb"></i>
-                <h3>Sederhana</h3>
-                <p>Penjelasan yang mudah dimengerti tanpa jargon berlebihan</p>
-              </div>
-              <div class="value-card">
-                <i class="fas fa-laptop-code"></i>
-                <h3>Aplikatif</h3>
-                <p>Contoh nyata dan studi kasus relevan</p>
-              </div>
-              <div class="value-card">
-                <i class="fas fa-chart-line"></i>
-                <h3>Terstruktur</h3>
-                <p>Materi disusun dari dasar hingga lanjutan</p>
-              </div>
-            </div>
+            <a href="https://wa.me/6282343757829" target="_blank" class="category-filter-btn" style="background: var(--primary-color); color: #fff;">
+              <i class="fab fa-whatsapp"></i> Hubungi Pengelola
+            </a>
           </div>
-        </section>
+        </div>
+      </section>
 
-        <section class="about-founder">
-          <h2>Pendiri MathAlpha</h2>
-          <div class="founder-profile">
-            <div class="founder-image">
-              <img src="img/my-self.JPG" alt="Andi Ardiansyah" />
-            </div>
-            <div class="founder-bio">
-              <h3>Andi Ardiansyah</h3>
-              <p class="title">Pengajar Matematika & Data Science</p>
-              <p>Saya merupakan mahasiswa di salah satu perguruan tinggi dengan jurusan Komputasi Statistika. Saya memiliki pengalaman lebih dari 5 tahun dalam bidang matematika serta 2 tahun dalam analisis data dan data science.</p>
+      <!-- Second Google AdSense Container -->
+      <div class="clean-adsense-card">
+        <span class="adsense-label">Iklan Bersponsor</span>
+        <!-- Google AdSense -->
+        <ins class="adsbygoogle" style="display: block" data-ad-format="fluid" data-ad-layout-key="-gw-3+1f-3d+2z" data-ad-client="ca-pub-1624084859744468" data-ad-slot="2653926339"></ins>
+        <script>
+          (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+    </main>
 
-              <div class="bimbel-offer">
-                <div class="icon">
-                  <i class="fas fa-chalkboard-teacher"></i>
-                </div>
-                <div class="offer-text">
-                  <h4>Butuh Bimbingan Belajar Matematika dan Statistika?</h4>
-                  <p>Saya juga menyediakan les privat matematika untuk SMP/SMA secara online maupun tatap muka (area Jakarta). Materi bisa disesuaikan dengan kebutuhan Anda.</p>
-                  <a href="https://wa.me/6282343757829" class="contact-btn"> <i class="fas fa-envelope"></i> Hubungi Saya </a>
-                </div>
-              </div>
-            </div>
+    <!-- Clean Modern Footer -->
+    <footer class="clean-site-footer">
+      <div class="clean-footer-inner">
+        <div class="clean-footer-brand">
+          <img src="img/logo.png" alt="MathAlpha Logo" />
+          <span>MathAlpha</span>
+        </div>
+        <p class="clean-footer-desc">
+          Platform belajar mandiri matematika dan persiapan ujian seleksi CPNS/Kedinasan dengan materi terstruktur dan latihan soal interaktif.
+        </p>
+        <div class="clean-footer-links">
+          <a href="index.html">Home</a>
+          <a href="tiu.html">TIU</a>
+          <a href="twk.html">TWK</a>
+          <a href="tkp.html">TKP</a>
+          <a href="matematika-sd.html">Matematika SD</a>
+          <a href="matematika-smp.html">Matematika SMP</a>
+          <a href="matematika-sma.html">Matematika SMA</a>
+          <a href="about.html">About</a>
+        </div>
+        <div class="footer-donation-box">
+          <span style="font-weight: 600;"><i class="fas fa-heart" style="color: #ef4444; margin-right: 6px;"></i>Dukungan Donasi & Pengembangan MathAlpha:</span>
+          <div class="donation-badges">
+            <span class="donation-badge">DANA: <strong>081524190409</strong></span>
+            <span class="donation-badge">ShopeePay: <strong>081524190409</strong></span>
           </div>
-        </section>
+        </div>
+        <p class="clean-footer-copy">&copy; 2026 MathAlpha. Semua Hak Dilindungi.</p>
+      </div>
+    </footer>
 
-        <section class="about-testimonials">
-          <h2>Apa Kata Mereka</h2>
-          <div class="testimonials-grid">
-            <div class="testimonial-card">
-              <div class="quote">"Penjelasan tentang statistika di MathAlpha sangat membantu tugas akhir saya!"</div>
-              <div class="author">- Rina, Mahasiswa Teknik</div>
-            </div>
-            <div class="testimonial-card">
-              <div class="quote">"Berkat bimbel dengan Pak Andi, nilai matematika saya naik signifikan."</div>
-              <div class="author">- Dito, Siswa SMA</div>
-            </div>
-            <div class="testimonial-card">
-              <div class="quote">"Tutorial SQL-nya praktis banget, langsung bisa dipakai kerja."</div>
-              <div class="author">- Sari, Data Analyst</div>
-            </div>
-          </div>
-        </section>
-
-        <section class="about-cta">
-          <h2>Mari Belajar Bersama</h2>
-          <p>Jelajahi ratusan artikel gratis kami atau hubungi untuk bimbingan belajar privat.</p>
-          <div class="cta-buttons">
-            <a href="/index.html" class="btn-explore">Jelajahi Materi</a>
-            <a href="https://wa.me/6282343757829" target="_blank" class="btn-contact">Konsultasi Belajar</a>
-          </div>
-        </section>
-      </main>
-    </div>
-
-    <script src="/script.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>

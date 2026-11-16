@@ -1,83 +1,231 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Latihan Soal Matematika</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="/styles.css" />
+    <title>Pusat Belajar Matematika SD, SMP, SMA - MathAlpha</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <meta name="description" content="Pusat belajar matematika lengkap: Matematika SD, Matematika SMP, dan Matematika SMA dengan ribuan soal dan pembahasan terstruktur." />
     <meta name="google-site-verification" content="wSwaOWra1NglT7WH5RGbaNJ2Jrsv1nRoWawtwszrBws" />
-    <link rel="icon" href="/img/logo.png" sizes="32x32" type="image/png" />
+    <link rel="icon" href="img/logo.png" sizes="32x32" type="image/png" />
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1624084859744468" crossorigin="anonymous"></script>
   </head>
-  <body>
-    <div class="container">
-      <!-- Hamburger Menu -->
-      <button class="hamburger-menu">
-        <i class="fas fa-bars"></i>
-      </button>
-      <!-- Sidebar -->
-      <aside class="sidebar">
-        <button class="close-btn">&times;</button>
-        <div class="logo">
-          <img src="/img/logo.png" alt="Chirpy Logo" />
-          <h2>MathAlpha</h2>
-        </div>
-        <nav class="menu">
-          <a href="/index.html" class="menu-item"> <i class="fas fa-home"></i> Home </a>
-          <a href="/statistika/index.html" class="menu-item"> <i class="fas fa-chart-bar"></i> Statistika </a>
-          <a href="/machine-learning/index.html" class="menu-item"> <i class="fas fa-robot"></i> Machine Learning </a>
-          <a href="/deep-learning/index.html" class="menu-item"> <i class="fas fa-brain"></i> Deep Learning </a>
-          <a href="/matematika.html" class="menu-item"> <i class="fas fa-square-root-alt"></i> Matematika </a>
-          <a href="/tiu.html" class="menu-item"> <i class="fas fa-file-alt"></i> TIU SKD </a>
-          <a href="/sql/index.html" class="menu-item"> <i class="fas fa-database"></i> SQL </a>
-          <a href="/pemprograman/index.html" class="menu-item"> <i class="fas fa-code"></i> Pemrograman </a>
-          <a href="/about.html" class="menu-item"> <i class="fas fa-info-circle"></i> About </a>
+  <body class="clean-page-layout">
+    <!-- Top Navigation Bar -->
+    <header class="site-header">
+      <div class="site-nav-container">
+        <a href="index.html" class="site-brand">
+          <img src="img/logo.png" alt="MathAlpha Logo" />
+          <span>MathAlpha</span>
+        </a>
+
+        <!-- 4 Menus Only: TIU, TWK, TKP, Matematika (Dropdown) -->
+        <nav>
+          <ul class="site-nav-menu" id="siteNavMenu">
+            <li class="site-nav-item">
+              <a href="tiu.html" class="site-nav-link"><i class="fas fa-brain"></i> TIU</a>
+            </li>
+            <li class="site-nav-item">
+              <a href="twk.html" class="site-nav-link"><i class="fas fa-landmark"></i> TWK</a>
+            </li>
+            <li class="site-nav-item">
+              <a href="tkp.html" class="site-nav-link"><i class="fas fa-user-check"></i> TKP</a>
+            </li>
+            <li class="site-nav-item nav-dropdown">
+              <a href="matematika.html" class="site-nav-link active">
+                <i class="fas fa-square-root-alt"></i> Matematika
+                <i class="fas fa-chevron-down" style="font-size: 0.72rem; margin-left: 4px;"></i>
+              </a>
+              <div class="nav-dropdown-menu">
+                <a href="matematika-sd.html" class="nav-dropdown-item"><i class="fas fa-shapes"></i> Matematika SD</a>
+                <a href="matematika-smp.html" class="nav-dropdown-item"><i class="fas fa-calculator"></i> Matematika SMP</a>
+                <a href="matematika-sma.html" class="nav-dropdown-item"><i class="fas fa-square-root-alt"></i> Matematika SMA</a>
+              </div>
+            </li>
+          </ul>
         </nav>
 
-        <!-- Social Media Icons -->
-        <div class="social-media">
-          <a href="https://www.instagram.com/andiaso06/" target="_blank" class="social-icon">
-            <i class="fab fa-instagram"></i>
+        <!-- Right Action Controls -->
+        <div class="site-nav-actions">
+          <button class="nav-theme-btn" id="navThemeToggle" type="button" aria-label="Ubah Tema" title="Ubah Tema">
+            <i class="fas fa-moon"></i>
+          </button>
+          <button class="mobile-nav-toggle" id="mobileNavToggle" type="button" aria-label="Buka Menu">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Container -->
+    <main class="clean-main-container">
+      <!-- Breadcrumb -->
+      <nav class="clean-breadcrumb" aria-label="Breadcrumb">
+        <a href="index.html"><i class="fas fa-home"></i> Home</a>
+        <span class="sep"><i class="fas fa-chevron-right"></i></span>
+        <span class="current">Matematika</span>
+      </nav>
+
+      <!-- Page Title & Subtitle -->
+      <header class="page-hero-banner">
+        <h1>Pusat Belajar Matematika Terlengkap</h1>
+        <p class="hero-subtitle">Pilih jenjang pendidikan Anda untuk mempelajari konsep fundamental, rumus praktis, dan latihan soal bertingkat.</p>
+        <span class="hero-stat-badge">3480+ Soal Matematika Tersedia Lengkap</span>
+      </header>
+
+      <!-- Google AdSense - Top Banner -->
+      <div class="clean-adsense-card">
+        <span class="adsense-label">Iklan Bersponsor</span>
+        <!-- Google AdSense -->
+        <ins class="adsbygoogle" style="display: block" data-ad-format="fluid" data-ad-layout-key="-gw-3+1f-3d+2z" data-ad-client="ca-pub-1624084859744468" data-ad-slot="2653926339"></ins>
+        <script>
+          (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+
+      <!-- Jenjang Pendidikan Filter Navigation -->
+      <nav class="category-filter-nav" aria-label="Pilihan Jenjang">
+        <a href="matematika-sd.html" class="category-filter-btn">
+          <i class="fas fa-shapes"></i> Matematika SD
+        </a>
+        <a href="matematika-smp.html" class="category-filter-btn">
+          <i class="fas fa-calculator"></i> Matematika SMP
+        </a>
+        <a href="matematika-sma.html" class="category-filter-btn">
+          <i class="fas fa-square-root-alt"></i> Matematika SMA & UTBK
+        </a>
+      </nav>
+
+      <!-- 3 Jenjang Utama Cards -->
+      <section class="clean-cards-grid">
+        <a href="matematika-sd.html" class="clean-card-item">
+          <div class="card-text">
+            <h3 class="card-title">Matematika Sekolah Dasar (SD)</h3>
+            <p class="card-desc">Operasi hitung bilangan bulat, pecahan desimal, FPB KPK, geometri dasar, dan soal cerita</p>
+          </div>
+          <span class="card-pill">850 soal</span>
+        </a>
+
+        <a href="matematika-smp.html" class="clean-card-item">
+          <div class="card-text">
+            <h3 class="card-title">Matematika Sekolah Menengah Pertama (SMP)</h3>
+            <p class="card-desc">Bentuk aljabar, PLSV, perbandingan, aritmatika sosial, pythagoras, lingkaran, dan peluang</p>
+          </div>
+          <span class="card-pill">1180 soal</span>
+        </a>
+
+        <a href="matematika-sma.html" class="clean-card-item">
+          <div class="card-text">
+            <h3 class="card-title">Matematika SMA / MA / SMK</h3>
+            <p class="card-desc">Eksponen, logaritma, persamaan kuadrat, trigonometri, limit, diferensial, dan integral</p>
+          </div>
+          <span class="card-pill">1450 soal</span>
+        </a>
+
+        <a href="matematika-sma.html" class="clean-card-item">
+          <div class="card-text">
+            <h3 class="card-title">Penalaran Matematika UTBK SNBT</h3>
+            <p class="card-desc">Latihan soal tes potensi skolastik penalaran kuantitatif standar seleksi nasional PTN</p>
+          </div>
+          <span class="card-pill">Bank Soal</span>
+        </a>
+      </section>
+
+      <!-- Google AdSense Container -->
+      <div class="clean-adsense-card">
+        <span class="adsense-label">Iklan Bersponsor</span>
+        <!-- Google AdSense -->
+        <ins class="adsbygoogle" style="display: block" data-ad-format="fluid" data-ad-layout-key="-gw-3+1f-3d+2z" data-ad-client="ca-pub-1624084859744468" data-ad-slot="2653926339"></ins>
+        <script>
+          (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+
+      <!-- Topik Populer Matematika -->
+      <section style="margin-top: 36px;">
+        <h2 style="font-size: 1.45rem; font-weight: 700; margin-bottom: 20px; color: var(--text-color);">
+          <i class="fas fa-book-open" style="color: var(--primary-color); margin-right: 8px;"></i>
+          Topik Materi Pilihan
+        </h2>
+
+        <div class="clean-cards-grid">
+          <a href="matematika-sma/eksponen.html" class="clean-card-item">
+            <div class="card-text">
+              <h3 class="card-title">Eksponen & Sifat-Sifat Pangkat</h3>
+              <p class="card-desc">Aturan perkalian eksponen, pembagian, pangkat nol, dan pangkat negatif</p>
+            </div>
+            <span class="card-pill">Materi & Soal</span>
           </a>
-          <a href="https://www.linkedin.com/in/andi-ardiansyah-7b25072a9/" target="_blank" class="social-icon">
-            <i class="fab fa-linkedin"></i>
+
+          <a href="matematika-sma/sifat-logaritma.html" class="clean-card-item">
+            <div class="card-text">
+              <h3 class="card-title">Sifat-Sifat Logaritma Lengkap</h3>
+              <p class="card-desc">Identitas basis, perkalian pembagian logaritma, dan perubahan basis</p>
+            </div>
+            <span class="card-pill">Materi & Soal</span>
           </a>
-          <a href="https://github.com/AndiAq06" target="_blank" class="social-icon">
-            <i class="fab fa-github"></i>
+
+          <a href="matematika-sma/persamaan_kuadrat.html" class="clean-card-item">
+            <div class="card-text">
+              <h3 class="card-title">Persamaan Kuadrat & Rumus ABC</h3>
+              <p class="card-desc">Metode faktorisasi kuadrat sempurna, rumus diskriminan, dan tipe akar</p>
+            </div>
+            <span class="card-pill">Materi & Soal</span>
           </a>
-          <a href="https://www.youtube.com/@andimath06" target="_blank" class="social-icon">
-            <i class="fab fa-youtube"></i>
-          </a>
-          <a href="https://www.twitter.com" target="_blank" class="social-icon">
-            <i class="fab fa-x-twitter"></i>
+
+          <a href="matematika-sd/pecahan.html" class="clean-card-item">
+            <div class="card-text">
+              <h3 class="card-title">Operasi Pecahan Dasar & Lanjutan</h3>
+              <p class="card-desc">Menyamakan penyebut, perkalian silang, pecahan senilai, dan persen</p>
+            </div>
+            <span class="card-pill">Materi & Soal</span>
           </a>
         </div>
-      </aside>
+      </section>
 
-      <!-- Main Content -->
-      <main class="content">
-        <h3><a href="/index.html" class="home">Home</a> > Matematika</h3>
-        <ul>
-          <li>
-            <div class="post-details">
-              <h3><a href="/kelas-7.html">Materi Matematika Kelas 7</a></h3>
-            </div>
-          </li>
-          <li>
-            <div class="post-details">
-              <h3><a href="/matematika-dasar.html">Soal SBMPTN/UTBK Matematika Dasar</a></h3>
-            </div>
-          </li>
-          <li>
-            <div class="post-details">
-              <h3><a href="/stan.html">Soal Matematika Dasar PKN STAN</a></h3>
-            </div>
-          </li>
-        </ul>
-      </main>
-    </div>
+      <!-- Second Google AdSense Container -->
+      <div class="clean-adsense-card">
+        <span class="adsense-label">Iklan Bersponsor</span>
+        <!-- Google AdSense -->
+        <ins class="adsbygoogle" style="display: block" data-ad-format="fluid" data-ad-layout-key="-gw-3+1f-3d+2z" data-ad-client="ca-pub-1624084859744468" data-ad-slot="2653926339"></ins>
+        <script>
+          (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+    </main>
 
-    <script src="/script.js"></script>
+    <!-- Clean Modern Footer -->
+    <footer class="clean-site-footer">
+      <div class="clean-footer-inner">
+        <div class="clean-footer-brand">
+          <img src="img/logo.png" alt="MathAlpha Logo" />
+          <span>MathAlpha</span>
+        </div>
+        <p class="clean-footer-desc">
+          Platform belajar mandiri matematika dan persiapan ujian seleksi CPNS/Kedinasan dengan materi terstruktur dan latihan soal interaktif.
+        </p>
+        <div class="clean-footer-links">
+          <a href="index.html">Home</a>
+          <a href="tiu.html">TIU</a>
+          <a href="twk.html">TWK</a>
+          <a href="tkp.html">TKP</a>
+          <a href="matematika-sd.html">Matematika SD</a>
+          <a href="matematika-smp.html">Matematika SMP</a>
+          <a href="matematika-sma.html">Matematika SMA</a>
+          <a href="about.html">About</a>
+        </div>
+        <div class="footer-donation-box">
+          <span style="font-weight: 600;"><i class="fas fa-heart" style="color: #ef4444; margin-right: 6px;"></i>Dukungan Donasi & Pengembangan MathAlpha:</span>
+          <div class="donation-badges">
+            <span class="donation-badge">DANA: <strong>081524190409</strong></span>
+            <span class="donation-badge">ShopeePay: <strong>081524190409</strong></span>
+          </div>
+        </div>
+        <p class="clean-footer-copy">&copy; 2026 MathAlpha. Semua Hak Dilindungi.</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
   </body>
 </html>

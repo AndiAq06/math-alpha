@@ -1,223 +1,190 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>MathAlpha - Belajar Matematika, Statistika & Pemrograman</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
+    <title>MathAlpha - Latihan Soal CPNS 2026 & Matematika</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
-    <meta name="description" content="Tempat belajar matematika, statistika, machine learning, dan pemrograman dengan penjelasan sederhana dan contoh praktis" />
+    <meta name="description" content="Platform belajar & latihan soal SKD CPNS (TIU, TWK, TKP) serta Matematika SD, SMP, dan SMA." />
     <meta name="google-site-verification" content="wSwaOWra1NglT7WH5RGbaNJ2Jrsv1nRoWawtwszrBws" />
     <link rel="icon" href="img/logo.png" sizes="32x32" type="image/png" />
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1624084859744468" crossorigin="anonymous"></script>
   </head>
-  <body>
-    <div class="container">
-      <!-- Hamburger Menu -->
-      <button class="hamburger-menu">
-        <i class="fas fa-bars"></i>
-      </button>
-
-      <!-- Sidebar Overlay -->
-      <div class="sidebar-overlay"></div>
-      <!-- Sidebar -->
-      <aside class="sidebar">
-        <button class="close-btn">&times;</button>
-        <div class="logo">
+  <body class="clean-page-layout">
+    <!-- Top Header: Simple & Sleek, Exactly 4 Menus -->
+    <header class="site-header">
+      <div class="site-nav-container">
+        <a href="index.html" class="site-brand">
           <img src="img/logo.png" alt="MathAlpha Logo" />
-          <h2>MathAlpha</h2>
-        </div>
-        <nav class="menu">
-          <a href="/index.html" class="menu-item"> <i class="fas fa-home"></i> Home </a>
-          <a href="/statistika/index.html" class="menu-item"> <i class="fas fa-chart-bar"></i> Statistika </a>
-          <a href="/machine-learning/index.html" class="menu-item"> <i class="fas fa-robot"></i> Machine Learning </a>
-          <a href="/deep-learning/index.html" class="menu-item"> <i class="fas fa-brain"></i> Deep Learning </a>
-          <a href="/matematika.html" class="menu-item"> <i class="fas fa-square-root-alt"></i> Matematika </a>
-          <a href="/tiu.html" class="menu-item"> <i class="fas fa-file-alt"></i> TIU SKD </a>
-          <a href="/sql/index.html" class="menu-item"> <i class="fas fa-database"></i> SQL </a>
-          <a href="/pemprograman/index.html" class="menu-item"> <i class="fas fa-code"></i> Pemrograman </a>
-          <a href="/about.html" class="menu-item"> <i class="fas fa-info-circle"></i> About </a>
+          <span>MathAlpha</span>
+        </a>
+
+        <!-- 4 Menus Only: TIU, TWK, TKP, Matematika (Dropdown) -->
+        <nav>
+          <ul class="site-nav-menu" id="siteNavMenu">
+            <li class="site-nav-item">
+              <a href="tiu.html" class="site-nav-link"><i class="fas fa-brain"></i> TIU</a>
+            </li>
+            <li class="site-nav-item">
+              <a href="twk.html" class="site-nav-link"><i class="fas fa-landmark"></i> TWK</a>
+            </li>
+            <li class="site-nav-item">
+              <a href="tkp.html" class="site-nav-link"><i class="fas fa-user-check"></i> TKP</a>
+            </li>
+            <li class="site-nav-item nav-dropdown">
+              <a href="matematika.html" class="site-nav-link">
+                <i class="fas fa-square-root-alt"></i> Matematika
+                <i class="fas fa-chevron-down" style="font-size: 0.72rem; margin-left: 4px;"></i>
+              </a>
+              <div class="nav-dropdown-menu">
+                <a href="matematika-sd.html" class="nav-dropdown-item"><i class="fas fa-shapes"></i> Matematika SD</a>
+                <a href="matematika-smp.html" class="nav-dropdown-item"><i class="fas fa-calculator"></i> Matematika SMP</a>
+                <a href="matematika-sma.html" class="nav-dropdown-item"><i class="fas fa-square-root-alt"></i> Matematika SMA</a>
+              </div>
+            </li>
+          </ul>
         </nav>
 
-        <!-- Social Media Icons -->
-        <div class="social-media">
-          <a href="https://www.instagram.com/andiaso06/" target="_blank" class="social-icon">
-            <i class="fab fa-instagram"></i>
-          </a>
-          <a href="https://www.linkedin.com/in/andi-ardiansyah-7b25072a9/" target="_blank" class="social-icon">
-            <i class="fab fa-linkedin"></i>
-          </a>
-          <a href="https://github.com/AndiAq06" target="_blank" class="social-icon">
-            <i class="fab fa-github"></i>
-          </a>
-          <a href="https://www.youtube.com/@andimath06" target="_blank" class="social-icon">
-            <i class="fab fa-youtube"></i>
-          </a>
-          <a href="https://www.twitter.com" target="_blank" class="social-icon">
-            <i class="fab fa-x-twitter"></i>
-          </a>
+        <!-- Right Controls -->
+        <div class="site-nav-actions">
+          <button class="nav-theme-btn" id="navThemeToggle" type="button" aria-label="Ubah Tema" title="Ubah Tema">
+            <i class="fas fa-moon"></i>
+          </button>
+          <button class="mobile-nav-toggle" id="mobileNavToggle" type="button" aria-label="Buka Menu">
+            <i class="fas fa-bars"></i>
+          </button>
         </div>
-      </aside>
+      </div>
+    </header>
 
-      <!-- Main Content -->
-      <main class="content">
-        <!-- Hero Section -->
-        <section class="hero">
-          <div class="hero-content">
-            <h1>Belajar Matematika, Statistika & Pemrograman dengan Mudah</h1>
-            <p class="hero-text">Temukan ratusan tutorial, contoh soal, dan penjelasan praktis untuk membantu Anda menguasai konsep penting dalam dunia matematika,sains data dan pemrograman.</p>
-            <div class="search-box">
-              <input type="text" placeholder="Cari artikel atau tutorial..." />
-              <button><i class="fas fa-search"></i></button>
-            </div>
+    <!-- Main Content -->
+    <main class="clean-main-container">
+      <!-- Breadcrumb -->
+      <nav class="clean-breadcrumb" aria-label="Breadcrumb">
+        <a href="index.html"><i class="fas fa-home"></i></a>
+        <span class="sep"><i class="fas fa-chevron-right"></i></span>
+        <span class="current">Pusat Belajar & Latihan Soal</span>
+      </nav>
+
+      <!-- Page Header -->
+      <header class="page-hero-banner">
+        <h1>Pusat Latihan Soal CPNS 2026 & Matematika</h1>
+        <p class="hero-subtitle">
+          Platform belajar sederhana, cepat, dan terstruktur untuk menguasai materi SKD CPNS serta matematika berjenjang.
+        </p>
+        <span class="hero-stat-badge">Tersedia Ribuan Soal Interaktif & Pembahasan</span>
+      </header>
+
+      <!-- Google AdSense - Top Banner -->
+      <div class="clean-adsense-card">
+        <span class="adsense-label">Iklan Bersponsor</span>
+        <!-- Google AdSense -->
+        <ins class="adsbygoogle" style="display: block" data-ad-format="fluid" data-ad-layout-key="-gw-3+1f-3d+2z" data-ad-client="ca-pub-1624084859744468" data-ad-slot="2653926339"></ins>
+        <script>
+          (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+
+      <!-- Clean Cards Grid (Matching the Screenshot: Minimalist & Spacious) -->
+      <section class="clean-cards-grid">
+        <!-- 1. TIU -->
+        <a href="tiu.html" class="clean-card-item">
+          <div class="card-text">
+            <h3 class="card-title">Tes Intelegensi Umum (TIU)</h3>
+            <p class="card-desc">Numerik berhitung, perbandingan kuantitatif, deret angka, soal cerita, verbal, dan figural</p>
           </div>
-          <div class="hero-image">
-            <img src="/img/math.jpg" alt="Ilustrasi Belajar Matematika" />
+          <span class="card-pill">1672 soal</span>
+        </a>
+
+        <!-- 2. TWK -->
+        <a href="twk.html" class="clean-card-item">
+          <div class="card-text">
+            <h3 class="card-title">Tes Wawasan Kebangsaan (TWK)</h3>
+            <p class="card-desc">Pancasila, UUD 1945, NKRI, Bhinneka Tunggal Ika, Bela Negara, dan Integritas ASN</p>
           </div>
-        </section>
+          <span class="card-pill">1250 soal</span>
+        </a>
 
-        <!-- Featured Categories -->
-        <section class="categories">
-          <h2 class="section-title">Jelajahi Kategori</h2>
-          <div class="category-grid">
-            <a href="/tiu.html" class="category-card">
-              <div class="category-icon">
-                <i class="fas fa-chart-bar"></i>
-              </div>
-              <h3>SKD CPNS/KEDINASAN/POLRI</h3>
-              <p>Latihan soal-soal SKD untuk memperbesar peluangmu lolos SKD</p>
-            </a>
-            <a href="/matematika.html" class="category-card">
-              <div class="category-icon">
-                <i class="fas fa-square-root-alt"></i>
-              </div>
-              <h3>Matematika</h3>
-              <p>Kumpulan materi dan soal matematika berbagai level</p>
-            </a>
-            <a href="/pemberitahuan.html" class="category-card">
-              <div class="category-icon">
-                <i class="fas fa-robot"></i>
-              </div>
-              <h3>Machine Learning</h3>
-              <p>Teknik prediksi data dan kecerdasan buatan</p>
-            </a>
-            <a href="/pemprograman/index.html" class="category-card">
-              <div class="category-icon">
-                <i class="fas fa-code"></i>
-              </div>
-              <h3>Pemrograman</h3>
-              <p>Dasar-dasar coding untuk analisis data</p>
-            </a>
-            <a href="/sql/index.html" class="category-card">
-              <div class="category-icon">
-                <i class="fas fa-code"></i>
-              </div>
-              <h3>Structured Query Language(SQL)</h3>
-              <p>Dasar-dasar materi SQL</p>
-            </a>
-            <a href="/pemberitahuan.html" class="category-card">
-              <div class="category-icon">
-                <i class="fas fa-robot"></i>
-              </div>
-              <h3>Deep Learning</h3>
-              <p>Teknik prediksi data dan kecerdasan buatan</p>
-            </a>
+        <!-- 3. TKP -->
+        <a href="tkp.html" class="clean-card-item">
+          <div class="card-text">
+            <h3 class="card-title">Tes Karakteristik Pribadi (TKP)</h3>
+            <p class="card-desc">Pelayanan publik, jejaring kerja, sosial budaya, TIK, profesionalisme, dan anti radikalisme</p>
           </div>
-        </section>
+          <span class="card-pill">1420 soal</span>
+        </a>
 
-        <!-- Popular Articles -->
-        <section class="popular-articles">
-          <div class="section-header">
-            <h2 class="section-title">Artikel Populer</h2>
+        <!-- 4. Matematika SD -->
+        <a href="matematika-sd.html" class="clean-card-item">
+          <div class="card-text">
+            <h3 class="card-title">Matematika SD (Kelas 1 - 6)</h3>
+            <p class="card-desc">Operasi hitung bilangan bulat, pecahan, desimal, FPB KPK, bangun datar, dan soal cerita</p>
           </div>
-          <div class="article-grid">
-            <article class="article-card featured">
-              <div class="article-image">
-                <img src="img/stat1.jpg" alt="Pengantar Statistika" />
-              </div>
-              <div class="article-content">
-                <div class="article-meta">
-                  <span class="category">Statistika</span>
-                  <span class="date"><i class="far fa-calendar"></i> Dec 27, 2024</span>
-                </div>
-                <h3><a href="/statistika/pengantar-statistika.html">Pengantar Statistika untuk Pemula</a></h3>
-                <p>Panduan lengkap memahami konsep dasar statistika dengan contoh aplikasi nyata dalam penelitian dan bisnis.</p>
-                <div class="article-footer">
-                  <span class="read-time"><i class="far fa-clock"></i> 8 min read</span>
-                  <a href="/statistika/pengantar-statistika.html" class="read-more">Baca Selengkapnya <i class="fas fa-arrow-right"></i></a>
-                </div>
-              </div>
-            </article>
+          <span class="card-pill">850 soal</span>
+        </a>
 
-            <article class="article-card">
-              <div class="article-content">
-                <div class="article-meta">
-                  <span class="category">Pemrograman</span>
-                  <span class="date"><i class="far fa-calendar"></i> Dec 31, 2024</span>
-                </div>
-                <h3><a href="/pemprograman/pengantar-javascript.html">Dasar-Dasar JavaScript Modern</a></h3>
-                <p>Pelajari fundamental JavaScript ES6+ untuk pengembangan web interaktif.</p>
-                <div class="article-footer">
-                  <span class="read-time"><i class="far fa-clock"></i> 12 min read</span>
-                  <a href="/pemprograman/pengantar-javascript.html" class="read-more">Baca Selengkapnya</a>
-                </div>
-              </div>
-            </article>
-
-            <article class="article-card">
-              <div class="article-content">
-                <div class="article-meta">
-                  <span class="category">Pemrograman</span>
-                  <span class="date"><i class="far fa-calendar"></i> Dec 27, 2024</span>
-                </div>
-                <h3><a href="/sql/pengantar-sql.html">Git commit --amend dan Cara Menggunakannya</a></h3>
-                <p>Pelajari perintah git --amend yang memungkinkan Anda untuk memodifikasi commit terbaru.</p>
-                <div class="article-footer">
-                  <span class="read-time"><i class="far fa-clock"></i> 10 min read</span>
-                  <a href="/pemprograman/git-amend.html" class="read-more">Baca Selengkapnya</a>
-                </div>
-              </div>
-            </article>
+        <!-- 5. Matematika SMP -->
+        <a href="matematika-smp.html" class="clean-card-item">
+          <div class="card-text">
+            <h3 class="card-title">Matematika SMP (Kelas 7, 8, 9)</h3>
+            <p class="card-desc">Aljabar, persamaan linear, perbandingan, aritmatika sosial, pythagoras, dan peluang</p>
           </div>
-        </section>
+          <span class="card-pill">1180 soal</span>
+        </a>
 
-        <!-- Call to Action -->
-        <section class="cta">
-          <div class="cta-content">
-            <h2 class="ready">Siap Memulai Perjalanan Belajar Anda?</h2>
-            <p>Daftar sekarang untuk mendapatkan akses ke konten eksklusif, latihan soal, dan panduan belajar terstruktur.</p>
-            <div class="cta-buttons">
-              <a href="/" class="btn-primary">Mulai Gratis</a>
-            </div>
+        <!-- 6. Matematika SMA -->
+        <a href="matematika-sma.html" class="clean-card-item">
+          <div class="card-text">
+            <h3 class="card-title">Matematika SMA & UTBK SNBT</h3>
+            <p class="card-desc">Eksponen, logaritma, persamaan kuadrat, trigonometri, kalkulus diferensial, dan integral</p>
           </div>
-        </section>
+          <span class="card-pill">1450 soal</span>
+        </a>
+      </section>
 
-        <!-- Latest Updates -->
-        <section class="latest-updates">
-          <h2 class="section-title">Update Terbaru</h2>
-          <div class="update-grid">
-            <div class="update-card">
-              <div class="update-badge">BARU</div>
-              <h3><a href="/statistika/statistika-deskriptif.html">Statistika Deskriptif: Pengertian, Rumus, dan Kegunaannya </a></h3>
-              <p>Penjelasan mengenai Statistika Deskriptif mulai dari Pengertian, Rumus, dan Kegunaannya.</p>
-              <span class="update-date">7 Juni 2025</span>
-            </div>
-            <div class="update-card">
-              <div class="update-badge">BARU</div>
-              <h3><a href="/statistika/skewness_kurtosis.html">Skewness dan Kurtosis dalam Statistika: Pengertian, Rumus, dan Contoh</a></h3>
-              <p>Belajar Skewness dan Kurtosis dalam Statistika</p>
-              <span class="update-date">14 Juni 2025.</span>
-            </div>
-            <div class="update-card">
-              <div class="update-badge">BARU</div>
-              <h3><a href="/statistika/soal-statistika-deskriptif.html">20 Contoh Soal Statistika Deskriptif Beserta Pembahasan</a></h3>
-              <p>Belajar 20 Contoh Soal Statistika Deskriptif.</p>
-              <span class="update-date">14 Juni 2025</span>
-            </div>
+      <!-- Google AdSense Container -->
+      <div class="clean-adsense-card">
+        <span class="adsense-label">Iklan Bersponsor</span>
+        <!-- Google AdSense -->
+        <ins class="adsbygoogle" style="display: block" data-ad-format="fluid" data-ad-layout-key="-gw-3+1f-3d+2z" data-ad-client="ca-pub-1624084859744468" data-ad-slot="2653926339"></ins>
+        <script>
+          (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+    </main>
+
+    <!-- Clean Modern Footer -->
+    <footer class="clean-site-footer">
+      <div class="clean-footer-inner">
+        <div class="clean-footer-brand">
+          <img src="img/logo.png" alt="MathAlpha Logo" />
+          <span>MathAlpha</span>
+        </div>
+        <p class="clean-footer-desc">
+          Platform belajar mandiri matematika dan persiapan ujian seleksi CPNS/Kedinasan dengan materi terstruktur dan latihan soal interaktif.
+        </p>
+        <div class="clean-footer-links">
+          <a href="index.html">Home</a>
+          <a href="tiu.html">TIU</a>
+          <a href="twk.html">TWK</a>
+          <a href="tkp.html">TKP</a>
+          <a href="matematika-sd.html">Matematika SD</a>
+          <a href="matematika-smp.html">Matematika SMP</a>
+          <a href="matematika-sma.html">Matematika SMA</a>
+          <a href="about.html">About</a>
+        </div>
+        <div class="footer-donation-box">
+          <span style="font-weight: 600;"><i class="fas fa-heart" style="color: #ef4444; margin-right: 6px;"></i>Dukungan Donasi & Pengembangan MathAlpha:</span>
+          <div class="donation-badges">
+            <span class="donation-badge">DANA: <strong>081524190409</strong></span>
+            <span class="donation-badge">ShopeePay: <strong>081524190409</strong></span>
           </div>
-        </section>
-      </main>
-    </div>
+        </div>
+        <p class="clean-footer-copy">&copy; 2026 MathAlpha. Semua Hak Dilindungi.</p>
+      </div>
+    </footer>
 
-    <script src="/script.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>

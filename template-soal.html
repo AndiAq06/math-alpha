@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Template Latihan Soal - MathAlpha</title>
+    <!-- Stylesheet Utama -->
+    <link rel="stylesheet" href="/styles.css" />
+    <!-- MathJax untuk Notasi Matematika & Rumus -->
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <!-- Favicon -->
+    <link rel="icon" href="/img/logo.png" sizes="32x32" type="image/png" />
+    <!-- Google AdSense Script Resmi -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1624084859744468" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <!-- 1. HEADER & NAVBAR UTAMA (4 MENU: TIU, TWK, TKP, MATEMATIKA) -->
+    <header class="site-header">
+      <div class="header-inner">
+        <a href="/index.html" class="brand-logo">
+          <img src="/img/logo.png" alt="MathAlpha Logo" />
+          <span class="brand-text">MathAlpha</span>
+        </a>
+
+        <nav class="top-nav" aria-label="Menu Utama">
+          <a href="/tiu.html" class="nav-btn active">
+            <i class="fas fa-brain"></i>
+            <span>TIU</span>
+          </a>
+          <a href="/twk.html" class="nav-btn">
+            <i class="fas fa-landmark"></i>
+            <span>TWK</span>
+          </a>
+          <a href="/tkp.html" class="nav-btn">
+            <i class="fas fa-user-check"></i>
+            <span>TKP</span>
+          </a>
+          <div class="nav-dropdown">
+            <a href="/matematika.html" class="nav-btn dropdown-toggle">
+              <i class="fas fa-square-root-variable"></i>
+              <span>Matematika <i class="fas fa-chevron-down nav-arrow"></i></span>
+            </a>
+            <div class="dropdown-menu">
+              <a href="/matematika-sd.html" class="dropdown-item">
+                <i class="fas fa-shapes"></i> Matematika SD (Kelas 1 - 6)
+              </a>
+              <a href="/matematika-smp.html" class="dropdown-item">
+                <i class="fas fa-calculator"></i> Matematika SMP (Kelas 7, 8, 9)
+              </a>
+              <a href="/matematika-sma.html" class="dropdown-item">
+                <i class="fas fa-infinity"></i> Matematika SMA & UTBK
+              </a>
+            </div>
+          </div>
+        </nav>
+
+        <div class="header-actions">
+          <button id="themeToggle" class="theme-toggle-btn" title="Ganti Tema">
+            <i class="fas fa-moon"></i>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- 2. KONTEN UTAMA SOAL -->
+    <main class="content main-quiz-page">
+      <!-- Breadcrumb Navigasi -->
+      <nav class="clean-breadcrumb" aria-label="breadcrumb">
+        <a href="/index.html"><i class="fas fa-home"></i> Home</a>
+        <span class="breadcrumb-sep">&gt;</span>
+        <a href="/tiu.html">TIU</a>
+        <span class="breadcrumb-sep">&gt;</span>
+        <span class="breadcrumb-current">Judul Paket Soal</span>
+      </nav>
+
+      <!-- Judul & Meta Informasi Halaman -->
+      <header class="quiz-header">
+        <h1>Judul Paket Latihan Soal</h1>
+        <div class="meta-info">
+          <span class="author"><i class="fas fa-user-edit"></i> Oleh: Andi Ardiansyah Nasir</span>
+          <span class="last-update"><i class="fas fa-clock"></i> Terakhir diperbarui: September 2025</span>
+        </div>
+      </header>
+
+      <!-- 3. GOOGLE ADSENSE - SLOT ATAS (Posisi Strategis Sebelum Soal) -->
+      <div class="clean-adsense-card quiz-top-ad">
+        <span class="adsense-label">Iklan Bersponsor</span>
+        <!-- Google AdSense -->
+        <ins
+          class="adsbygoogle"
+          style="display: block"
+          data-ad-format="fluid"
+          data-ad-layout-key="-gw-3+1f-3d+2z"
+          data-ad-client="ca-pub-1624084859744468"
+          data-ad-slot="2653926339"
+        ></ins>
+        <script>
+          (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+
+      <!-- 4. DAFTAR SOAL (Otomatis tampil 1-per-1 oleh script.js) -->
+      <div class="quiz-container">
+        <!-- CONTOH SOAL 1 -->
+        <div class="soal">
+          <div class="soal-header-meta">
+            <span class="soal-counter-title">Soal <strong>1</strong> dari 3</span>
+            <span class="soal-diff-badge">Latihan Soal</span>
+          </div>
+          <p>
+            Hitunglah nilai dari operasi berikut: <br />
+            \( (27 + 34)^2 - 2345 = \dots \)
+          </p>
+          <div class="pilihan">
+            <p>A. \(1176\)</p>
+            <p>B. \(1276\)</p>
+            <p>C. \(1376\)</p>
+            <p>D. \(1476\)</p>
+            <p>E. \(1576\)</p>
+          </div>
+          <!-- Tombol bisa langsung diklik untuk melihat jawaban tanpa harus memilih dulu -->
+          <button class="btn-toggle" type="button">
+            <i class="fas fa-lightbulb"></i> Lihat Pembahasan
+          </button>
+          <div class="pembahasan">
+            <p>
+              <b>Jawaban Benar: C. \(1376\)</b> <br /><br />
+              <strong>Pembahasan Rinci:</strong> <br />
+              1. Jumlahkan terlebih dahulu angka dalam kurung: <br />
+              \( 27 + 34 = 61 \) <br /><br />
+              2. Kuadratkan hasilnya: <br />
+              \( 61^2 = 3721 \) <br /><br />
+              3. Kurangkan dengan angka pengurang: <br />
+              \( 3721 - 2345 = 1376 \) <br /><br />
+              <strong>Cara Cepat:</strong> Perhatikan angka satuan. \( (7+4) = 11 \) (satuan \(1\)). Kuadrat dari satuan \(1\) adalah \(1\). Lalu dikurangi satuan \(5\): \( ( \dots 1 ) - 5 \rightarrow (11 - 5) = 6 \). Satuan jawabannya pasti 6!
+            </p>
+          </div>
+        </div>
+
+        <!-- CONTOH SOAL 2 -->
+        <div class="soal">
+          <div class="soal-header-meta">
+            <span class="soal-counter-title">Soal <strong>2</strong> dari 3</span>
+            <span class="soal-diff-badge">Latihan Soal</span>
+          </div>
+          <p>
+            Berapakah hasil dari penyederhanaan bentuk akar berikut: <br />
+            \( \sqrt{1369} \times \sqrt{2401} : 4 = \dots \)
+          </p>
+          <div class="pilihan">
+            <p>A. \(453,25\)</p>
+            <p>B. \(452,50\)</p>
+            <p>C. \(450,75\)</p>
+            <p>D. \(448,25\)</p>
+            <p>E. \(445,50\)</p>
+          </div>
+          <button class="btn-toggle" type="button">
+            <i class="fas fa-lightbulb"></i> Lihat Pembahasan
+          </button>
+          <div class="pembahasan">
+            <p>
+              <b>Jawaban Benar: A. \(453,25\)</b> <br /><br />
+              <strong>Pembahasan:</strong> <br />
+              \( \sqrt{1369} = 37 \) <br />
+              \( \sqrt{2401} = 49 \) <br />
+              Maka: \( 37 \times 49 : 4 = 1813 : 4 = 453,25 \).
+            </p>
+          </div>
+        </div>
+
+        <!-- CONTOH SOAL 3 -->
+        <div class="soal">
+          <div class="soal-header-meta">
+            <span class="soal-counter-title">Soal <strong>3</strong> dari 3</span>
+            <span class="soal-diff-badge">Latihan Soal</span>
+          </div>
+          <p>
+            Jika sebuah roda berdiameter \(1,25\text{ m}\) berputar sebanyak \(133\) kali, berapa kali selisih putaran jika dilakukan roda berdiameter \(35\text{ cm}\) untuk menempuh jarak yang sama?
+          </p>
+          <div class="pilihan">
+            <p>A. \(342\) kali</p>
+            <p>B. \(324\) kali</p>
+            <p>C. \(234\) kali</p>
+            <p>D. \(243\) kali</p>
+            <p>E. \(242\) kali</p>
+          </div>
+          <button class="btn-toggle" type="button">
+            <i class="fas fa-lightbulb"></i> Lihat Pembahasan
+          </button>
+          <div class="pembahasan">
+            <p>
+              <b>Jawaban Benar: A. \(342\) kali</b> <br /><br />
+              <strong>Pembahasan:</strong> <br />
+              Jarak tempuh roda pertama = Jarak tempuh roda kedua. <br />
+              \( 125 \times 133 = 35 \times n \) <br />
+              \( n = \dfrac{125 \times 133}{35} = 475 \text{ putaran} \) <br />
+              Selisih putaran = \( 475 - 133 = 342 \text{ kali} \).
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 5. GOOGLE ADSENSE - SLOT TENGAH/BAWAH (Setelah Soal / Sebelum Topik Lainnya) -->
+      <div class="clean-adsense-card quiz-bottom-ad">
+        <span class="adsense-label">Iklan Bersponsor</span>
+        <!-- Google AdSense -->
+        <ins
+          class="adsbygoogle"
+          style="display: block"
+          data-ad-format="fluid"
+          data-ad-layout-key="-gw-3+1f-3d+2z"
+          data-ad-client="ca-pub-1624084859744468"
+          data-ad-slot="2653926339"
+        ></ins>
+        <script>
+          (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+
+      <!-- 6. BAGIAN TOPIK LAINNYA (Rekomendasi Paket Soal Lain) -->
+      <section class="related-topics-section">
+        <h3 class="related-topics-title">
+          <i class="fas fa-layer-group"></i> Rekomendasi Topik Lainnya
+        </h3>
+        <div class="related-topics-grid">
+          <a href="/tiu/matematika-paket-1.html" class="related-topic-card">
+            <h4>Numerik Berhitung TIU</h4>
+            <span class="topic-meta">30 Soal &bull; Lengkap Pembahasan</span>
+          </a>
+          <a href="/tiu/deret-angka-1.html" class="related-topic-card">
+            <h4>Numerik Deret Angka</h4>
+            <span class="topic-meta">Latihan Pola Bilangan</span>
+          </a>
+          <a href="/tiu/silogisme-paket-1.html" class="related-topic-card">
+            <h4>Verbal Silogisme</h4>
+            <span class="topic-meta">Penalaran Logis</span>
+          </a>
+          <a href="/tiu/sinonim-paket-1.html" class="related-topic-card">
+            <h4>Verbal Sinonim</h4>
+            <span class="topic-meta">Kosakata & Persamaan Kata</span>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <!-- 7. FOOTER RESMI (Warna Hijau Tua Gelap & Donasi DANA / ShopeePay) -->
+    <footer class="clean-site-footer">
+      <div class="clean-footer-inner">
+        <div class="clean-footer-brand">
+          <img src="/img/logo.png" alt="MathAlpha Logo" />
+          <span>MathAlpha</span>
+        </div>
+        <div class="clean-footer-links">
+          <a href="/index.html">Home</a>
+          <a href="/tiu.html">TIU</a>
+          <a href="/twk.html">TWK</a>
+          <a href="/tkp.html">TKP</a>
+          <a href="/matematika.html">Matematika</a>
+          <a href="/matematika-sd.html">Matematika SD</a>
+          <a href="/matematika-smp.html">Matematika SMP</a>
+          <a href="/matematika-sma.html">Matematika SMA</a>
+          <a href="/about.html">About</a>
+        </div>
+        <div class="footer-donation-box">
+          <span style="font-weight: 600">
+            <i class="fas fa-heart" style="color: #ef4444; margin-right: 6px"></i>
+            Dukungan Donasi &amp; Pengembangan MathAlpha:
+          </span>
+          <div class="donation-badges">
+            <span class="donation-badge">DANA: <strong>081524190409</strong></span>
+            <span class="donation-badge">ShopeePay: <strong>081524190409</strong></span>
+          </div>
+        </div>
+        <p class="clean-footer-copy">&copy; 2026 MathAlpha. Semua Hak Dilindungi.</p>
+      </div>
+    </footer>
+
+    <!-- Script Interaktif (Navigasi Soal 1-per-1, Pembahasan, Dark Mode, AdSense) -->
+    <script src="/script.js"></script>
+  </body>
+</html>
+
