@@ -64,6 +64,9 @@
     ensureModernNavbar();
     modernizeFooters();
     initQuestionViewer();
+    document.querySelectorAll(".soal").forEach((soal) => {
+      setupQuestionOptions(soal);
+    });
     handleLocalhostAdSenseNotice();
 
     // --- Dynamic UI Injection (Reading Bar) ---
@@ -306,6 +309,100 @@
     `;
   }
 
+  // --- Smart Answer Extraction for Quiz Interactivity ---
+  function getOptionLetter(choiceElement, fallbackIndex) {
+    if (!choiceElement) return null;
+    const text = (choiceElement.textContent || "").trim();
+    const match = text.match(/^\s*\(?([A-Ea-e])[\.\)]/);
+    if (match) {
+      return match[1].toUpperCase();
+    }
+    return ["A", "B", "C", "D", "E"][fallbackIndex] || null;
+  }
+
+  function getCorrectAnswerFromSoal(soal) {
+    if (!soal) return null;
+
+    // Check data attribute first if explicitly set
+    if (soal.dataset && (soal.dataset.answer || soal.dataset.jawaban)) {
+      return (soal.dataset.answer || soal.dataset.jawaban).trim().toUpperCase();
+    }
+
+    const pembahasan = soal.querySelector(".pembahasan, .solution");
+    if (!pembahasan) return null;
+
+    // 1. Look for bold or strong tag content at the start of pembahasan
+    const bolds = pembahasan.querySelectorAll("b, strong");
+    for (let i = 0; i < Math.min(bolds.length, 4); i++) {
+      const bText = (bolds[i].textContent || "").trim();
+      const m = bText.match(/(?:Jawaban\s*(?:Benar)?\s*[:\-]?\s*)?([A-Ea-e])[\.\:\s\)\b]/) ||
+                bText.match(/^\s*([A-Ea-e])\s*$/);
+      if (m) {
+        return m[1].toUpperCase();
+      }
+    }
+
+    // 2. Look in HTML for <b>[A-E]</b> or similar
+    const html = pembahasan.innerHTML || "";
+    const mHtml = html.match(/(?:Jawaban\s*(?:Benar)?\s*[:\-]?\s*)<(?:b|strong)[^>]*>\s*([A-Ea-e])[\.\:\s\)<]/i);
+    if (mHtml) {
+      return mHtml[1].toUpperCase();
+    }
+
+    // 3. Look in raw text
+    const text = (pembahasan.textContent || "").trim();
+    const mText = text.match(/Jawaban\s*(?:Benar)?\s*[:\-]?\s*([A-Ea-e])[\.\:\s\)\b]/i) ||
+                  text.match(/^\s*([A-Ea-e])\.\s/);
+    if (mText) {
+      return mText[1].toUpperCase();
+    }
+
+    return null;
+  }
+
+  function setupQuestionOptions(soal) {
+    const choices = soal.querySelectorAll(".pilihan p");
+    if (choices.length === 0) return;
+
+    choices.forEach((choice) => {
+      choice.addEventListener("click", function () {
+        // Reset previous state on all options in this question
+        choices.forEach((c) => {
+          c.classList.remove("selected", "correct", "wrong");
+        });
+
+        const choiceIndex = Array.from(choices).indexOf(choice);
+        const clickedLetter = getOptionLetter(choice, choiceIndex);
+        const correctLetter = getCorrectAnswerFromSoal(soal);
+
+        if (correctLetter && clickedLetter) {
+          // Find option element corresponding to correct letter
+          let correctChoiceElement = null;
+          choices.forEach((c, i) => {
+            const letter = getOptionLetter(c, i);
+            if (letter === correctLetter) {
+              correctChoiceElement = c;
+            }
+          });
+
+          if (clickedLetter === correctLetter) {
+            // User picked the correct answer! -> Green (Gambar 2)
+            choice.classList.add("correct");
+          } else {
+            // User picked the wrong answer! -> Clicked is Red, Correct is Green (Gambar 2)
+            choice.classList.add("wrong");
+            if (correctChoiceElement) {
+              correctChoiceElement.classList.add("correct");
+            }
+          }
+        } else {
+          // Fallback if correct letter could not be determined
+          choice.classList.add("selected");
+        }
+      });
+    });
+  }
+
   // --- Single Question Interactive Viewer (1 Soal per Halaman with Next/Prev) ---
   function initQuestionViewer() {
     if (document.querySelector(".quiz-wrapper")) return;
@@ -343,14 +440,8 @@
         soal.prepend(headerMeta);
       }
 
-      // Make options clickable to mark them, but user DOES NOT have to pick any option
-      const choices = soal.querySelectorAll(".pilihan p");
-      choices.forEach((choice) => {
-        choice.addEventListener("click", function () {
-          choices.forEach((c) => c.classList.remove("selected"));
-          this.classList.add("selected");
-        });
-      });
+      // Setup interactive options (Green for correct, Red for wrong + Green for correct)
+      setupQuestionOptions(soal);
 
       // Update button text to "Lihat Pembahasan"
       const toggleBtn = soal.querySelector(".btn-toggle");
@@ -717,6 +808,24 @@
           void pembahasan.offsetHeight;
           pembahasan.classList.add("show");
           updateButtonState(button, true);
+
+          // If user opens pembahasan, highlight the correct option in green if not already answered
+          const parentSoal = button.closest(".soal, .question-card") || button.parentElement;
+          if (parentSoal) {
+            const hasFeedback = parentSoal.querySelector(".pilihan p.correct, .pilihan p.wrong");
+            if (!hasFeedback) {
+              const correctLetter = getCorrectAnswerFromSoal(parentSoal);
+              if (correctLetter) {
+                const choices = parentSoal.querySelectorAll(".pilihan p");
+                choices.forEach((c, idx) => {
+                  const letter = getOptionLetter(c, idx);
+                  if (letter === correctLetter) {
+                    c.classList.add("correct");
+                  }
+                });
+              }
+            }
+          }
         } else {
           pembahasan.classList.remove("show");
           updateButtonState(button, false);

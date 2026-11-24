@@ -2582,22 +2582,61 @@ main.content footer:not(.clean-site-footer) {
   background: #f0fdf4;
 }
 
-.soal.single-mode .pilihan p.selected {
+.soal.single-mode .pilihan p.selected,
+.soal .pilihan p.selected {
   border: 2px solid #16a34a !important;
   background: #dcfce7 !important;
   color: #14532d !important;
   font-weight: 600;
 }
 
-[data-theme="dark"] .soal.single-mode .pilihan p:hover {
+/* Opsi Jawaban Benar (Hijau sesuai Gambar 2) */
+.soal .pilihan p.correct,
+.soal.single-mode .pilihan p.correct {
+  border: 1.5px solid #16a34a !important;
+  background: #f0fdf4 !important;
+  color: #15803d !important;
+  font-weight: 600 !important;
+}
+
+/* Opsi Jawaban Salah (Merah sesuai Gambar 2) */
+.soal .pilihan p.wrong,
+.soal.single-mode .pilihan p.wrong {
+  border: 1.5px solid #dc2626 !important;
+  background: #fef2f2 !important;
+  color: #b91c1c !important;
+  font-weight: 600 !important;
+}
+
+[data-theme="dark"] .soal.single-mode .pilihan p:hover,
+[data-theme="dark"] .soal .pilihan p:hover {
   border-color: #4ade80;
   background: rgba(22, 163, 74, 0.12);
 }
 
-[data-theme="dark"] .soal.single-mode .pilihan p.selected {
+[data-theme="dark"] .soal.single-mode .pilihan p.selected,
+[data-theme="dark"] .soal .pilihan p.selected {
   border: 2px solid #4ade80 !important;
   background: rgba(22, 163, 74, 0.22) !important;
   color: #86efac !important;
+}
+
+/* Opsi Jawaban Benar - Dark Mode */
+[data-theme="dark"] .soal .pilihan p.correct,
+[data-theme="dark"] .soal.single-mode .pilihan p.correct {
+  border: 1.5px solid #22c55e !important;
+  background: rgba(34, 197, 94, 0.18) !important;
+  color: #86efac !important;
+  font-weight: 600 !important;
+}
+
+/* Opsi Jawaban Salah - Dark Mode */
+[data-theme="dark"] .soal .pilihan p.wrong,
+[data-theme="dark"] .soal.single-mode .pilihan p.wrong {
+  border: 1.5px solid #ef4444 !important;
+  background: rgba(239, 68, 68, 0.18) !important;
+  color: #fca5a5 !important;
+  font-weight: 600 !important;
 }
 
 /* Button Lihat Pembahasan */
